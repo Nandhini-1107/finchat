@@ -1,0 +1,225 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "fixture-02-excel-formulas-and-errors",
+    "fileName": "fixture_02_formulas_errors.xlsx",
+    "fileType": "xlsx",
+    "metadata": {
+      "documentTitle": "Contoso Logistics LLC - Formula & Error Matrix",
+      "issuer": "Contoso Logistics LLC",
+      "reportingPeriod": "Q1 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "asOfDate": "2026-04-30",
+      "reportingBasis": "Actual",
+      "reportingScope": "Entity",
+      "currency": "AED"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "fixture-02_table_1",
+      "documentId": "fixture-02-excel-formulas-and-errors",
+      "elementType": "table",
+      "source": {
+        "sheetName": "Sheet1"
+      },
+      "structure": {
+        "rowCount": 3,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Freight surcharge"
+            },
+            {
+              "columnIndex": 1,
+              "value": 15000,
+              "rawValue": 15000,
+              "formattedValue": "15,000",
+              "formula": "=C2*0.15",
+              "cachedValue": 15000
+            }
+          ],
+          "cellValues": {
+            "Line item": "Freight surcharge",
+            "Q1 2026": "15,000"
+          },
+          "rawValues": [
+            "Freight surcharge",
+            "15,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Fuel index adjustment"
+            },
+            {
+              "columnIndex": 1,
+              "value": "#DIV/0!",
+              "rawValue": "#DIV/0!",
+              "formattedValue": "#DIV/0!",
+              "formula": "=D3/E3",
+              "cellType": "error",
+              "error": "#DIV/0!"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Fuel index adjustment",
+            "Q1 2026": "#DIV/0!"
+          },
+          "rawValues": [
+            "Fuel index adjustment",
+            "#DIV/0!"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-excel",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "fixture-02-excel-formulas-and-errors",
+  "fullMarkdown": "Contoso Logistics LLC - Formula & Error Matrix\nCurrency: AED",
+  "tables": [
+    {
+      "elementId": "fixture-02_table_1",
+      "documentId": "fixture-02-excel-formulas-and-errors",
+      "elementType": "table",
+      "source": {
+        "sheetName": "Sheet1"
+      },
+      "structure": {
+        "rowCount": 3,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Freight surcharge"
+            },
+            {
+              "columnIndex": 1,
+              "value": 15000,
+              "rawValue": 15000,
+              "formattedValue": "15,000",
+              "formula": "=C2*0.15",
+              "cachedValue": 15000
+            }
+          ],
+          "cellValues": {
+            "Line item": "Freight surcharge",
+            "Q1 2026": "15,000"
+          },
+          "rawValues": [
+            "Freight surcharge",
+            "15,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Fuel index adjustment"
+            },
+            {
+              "columnIndex": 1,
+              "value": "#DIV/0!",
+              "rawValue": "#DIV/0!",
+              "formattedValue": "#DIV/0!",
+              "formula": "=D3/E3",
+              "cellType": "error",
+              "error": "#DIV/0!"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Fuel index adjustment",
+            "Q1 2026": "#DIV/0!"
+          },
+          "rawValues": [
+            "Fuel index adjustment",
+            "#DIV/0!"
+          ]
+        }
+      ],
+      "table_id": "fixture-02_table_1",
+      "headers": [
+        "Line item",
+        "Q1 2026"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Line item",
+          "Q1 2026"
+        ],
+        [
+          "Freight surcharge",
+          "15,000"
+        ],
+        [
+          "Fuel index adjustment",
+          "#DIV/0!"
+        ]
+      ]
+    }
+  ]
+}

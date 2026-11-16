@@ -1,0 +1,596 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-06-contoso-properties-q1-management-pack",
+    "fileName": "Contoso_Properties_LLC_Q1_2026_Management_Pack.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Contoso Properties LLC - Management Pack Q1 2026",
+      "issuer": "Contoso Properties LLC",
+      "reportingPeriod": "Q1 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "asOfDate": "2026-04-14",
+      "reportingBasis": "Actual",
+      "auditStatus": "Final management pack",
+      "reportingScope": "Entity",
+      "currency": "AED"
+    },
+    "sourceMetadata": {
+      "authorityRank": 2,
+      "sourceType": "Management Pack"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-06_table_1",
+      "documentId": "doc-06-contoso-properties-q1-management-pack",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 6,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Rental revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 5240000,
+              "formattedValue": "5,240,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Rental revenue",
+            "Q1 2026": "5,240,000"
+          },
+          "rawValues": [
+            "Rental revenue",
+            "5,240,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Direct property costs"
+            },
+            {
+              "columnIndex": 1,
+              "value": -1324600,
+              "formattedValue": "(1,324,600)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Direct property costs",
+            "Q1 2026": "(1,324,600)"
+          },
+          "rawValues": [
+            "Direct property costs",
+            "(1,324,600)"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Net rental income"
+            },
+            {
+              "columnIndex": 1,
+              "value": 3915400,
+              "formattedValue": "3,915,400"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Net rental income",
+            "Q1 2026": "3,915,400"
+          },
+          "rawValues": [
+            "Net rental income",
+            "3,915,400"
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Operating expenses"
+            },
+            {
+              "columnIndex": 1,
+              "value": -3215400,
+              "formattedValue": "(3,215,400)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Operating expenses",
+            "Q1 2026": "(3,215,400)"
+          },
+          "rawValues": [
+            "Operating expenses",
+            "(3,215,400)"
+          ]
+        },
+        {
+          "rowIndex": 5,
+          "rowType": "total",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Net profit"
+            },
+            {
+              "columnIndex": 1,
+              "value": 640276,
+              "formattedValue": "640,276"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Net profit",
+            "Q1 2026": "640,276"
+          },
+          "rawValues": [
+            "Net profit",
+            "640,276"
+          ]
+        }
+      ]
+    },
+    {
+      "elementId": "doc-06_table_2",
+      "documentId": "doc-06-contoso-properties-q1-management-pack",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 2
+      },
+      "structure": {
+        "rowCount": 4,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Liquidity metric",
+          "headerPath": [
+            "Liquidity metric"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "As of 31 March 2026",
+          "headerPath": [
+            "As of 31 March 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Closing cash"
+            },
+            {
+              "columnIndex": 1,
+              "value": 180000,
+              "formattedValue": "180,000"
+            }
+          ],
+          "cellValues": {
+            "Liquidity metric": "Closing cash",
+            "As of 31 March 2026": "180,000"
+          },
+          "rawValues": [
+            "Closing cash",
+            "180,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Minimum operating cash"
+            },
+            {
+              "columnIndex": 1,
+              "value": 500000,
+              "formattedValue": "500,000"
+            }
+          ],
+          "cellValues": {
+            "Liquidity metric": "Minimum operating cash",
+            "As of 31 March 2026": "500,000"
+          },
+          "rawValues": [
+            "Minimum operating cash",
+            "500,000"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Cash shortfall"
+            },
+            {
+              "columnIndex": 1,
+              "value": 320000,
+              "formattedValue": "320,000"
+            }
+          ],
+          "cellValues": {
+            "Liquidity metric": "Cash shortfall",
+            "As of 31 March 2026": "320,000"
+          },
+          "rawValues": [
+            "Cash shortfall",
+            "320,000"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-pdf",
+    "pageCount": 2,
+    "tableCount": 2,
+    "paragraphCount": 0
+  },
+  "document_id": "doc-06-contoso-properties-q1-management-pack",
+  "fullMarkdown": "Contoso Properties LLC\nManagement Pack – Statement of Profit or Loss and Liquidity for the quarter ended 31 March 2026\nCurrency: AED",
+  "tables": [
+    {
+      "elementId": "doc-06_table_1",
+      "documentId": "doc-06-contoso-properties-q1-management-pack",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 6,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Rental revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 5240000,
+              "formattedValue": "5,240,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Rental revenue",
+            "Q1 2026": "5,240,000"
+          },
+          "rawValues": [
+            "Rental revenue",
+            "5,240,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Direct property costs"
+            },
+            {
+              "columnIndex": 1,
+              "value": -1324600,
+              "formattedValue": "(1,324,600)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Direct property costs",
+            "Q1 2026": "(1,324,600)"
+          },
+          "rawValues": [
+            "Direct property costs",
+            "(1,324,600)"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Net rental income"
+            },
+            {
+              "columnIndex": 1,
+              "value": 3915400,
+              "formattedValue": "3,915,400"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Net rental income",
+            "Q1 2026": "3,915,400"
+          },
+          "rawValues": [
+            "Net rental income",
+            "3,915,400"
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Operating expenses"
+            },
+            {
+              "columnIndex": 1,
+              "value": -3215400,
+              "formattedValue": "(3,215,400)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Operating expenses",
+            "Q1 2026": "(3,215,400)"
+          },
+          "rawValues": [
+            "Operating expenses",
+            "(3,215,400)"
+          ]
+        },
+        {
+          "rowIndex": 5,
+          "rowType": "total",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Net profit"
+            },
+            {
+              "columnIndex": 1,
+              "value": 640276,
+              "formattedValue": "640,276"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Net profit",
+            "Q1 2026": "640,276"
+          },
+          "rawValues": [
+            "Net profit",
+            "640,276"
+          ]
+        }
+      ],
+      "table_id": "doc-06_table_1",
+      "headers": [
+        "Line item",
+        "Q1 2026"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Line item",
+          "Q1 2026"
+        ],
+        [
+          "Rental revenue",
+          "5,240,000"
+        ],
+        [
+          "Direct property costs",
+          "(1,324,600)"
+        ],
+        [
+          "Net rental income",
+          "3,915,400"
+        ],
+        [
+          "Operating expenses",
+          "(3,215,400)"
+        ],
+        [
+          "Net profit",
+          "640,276"
+        ]
+      ]
+    },
+    {
+      "elementId": "doc-06_table_2",
+      "documentId": "doc-06-contoso-properties-q1-management-pack",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 2
+      },
+      "structure": {
+        "rowCount": 4,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Liquidity metric",
+          "headerPath": [
+            "Liquidity metric"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "As of 31 March 2026",
+          "headerPath": [
+            "As of 31 March 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Closing cash"
+            },
+            {
+              "columnIndex": 1,
+              "value": 180000,
+              "formattedValue": "180,000"
+            }
+          ],
+          "cellValues": {
+            "Liquidity metric": "Closing cash",
+            "As of 31 March 2026": "180,000"
+          },
+          "rawValues": [
+            "Closing cash",
+            "180,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Minimum operating cash"
+            },
+            {
+              "columnIndex": 1,
+              "value": 500000,
+              "formattedValue": "500,000"
+            }
+          ],
+          "cellValues": {
+            "Liquidity metric": "Minimum operating cash",
+            "As of 31 March 2026": "500,000"
+          },
+          "rawValues": [
+            "Minimum operating cash",
+            "500,000"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Cash shortfall"
+            },
+            {
+              "columnIndex": 1,
+              "value": 320000,
+              "formattedValue": "320,000"
+            }
+          ],
+          "cellValues": {
+            "Liquidity metric": "Cash shortfall",
+            "As of 31 March 2026": "320,000"
+          },
+          "rawValues": [
+            "Cash shortfall",
+            "320,000"
+          ]
+        }
+      ],
+      "table_id": "doc-06_table_2",
+      "headers": [
+        "Liquidity metric",
+        "As of 31 March 2026"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Liquidity metric",
+          "As of 31 March 2026"
+        ],
+        [
+          "Closing cash",
+          "180,000"
+        ],
+        [
+          "Minimum operating cash",
+          "500,000"
+        ],
+        [
+          "Cash shortfall",
+          "320,000"
+        ]
+      ]
+    }
+  ]
+}

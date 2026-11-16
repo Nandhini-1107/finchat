@@ -1,0 +1,102 @@
+[
+  {
+    "factId": "fixture-01_fact_1",
+    "metricLabel": "Revenue",
+    "entityLabel": "Contoso Retail LLC",
+    "periodLabel": "Q1 2026",
+    "temporalType": "duration",
+    "periodStart": "2026-01-01",
+    "periodEnd": "2026-03-31",
+    "asOfDate": "2026-04-28",
+    "reportingBasis": "Actual",
+    "reportingScope": "Entity",
+    "dimensions": {
+      "channel": "Retail Outlets",
+      "geography": "UAE"
+    },
+    "rawValue": 8200000,
+    "originalTextValue": "8,200,000",
+    "normalizedValue": "8200000.00000000",
+    "originalUnit": "amount",
+    "normalizedUnit": "amount",
+    "currency": "AED",
+    "sourceFileName": "fixture_01_multilevel_segments.pdf",
+    "sourceLocation": "Table fixture-01_table_1, Row 2, Col 1",
+    "expectedValidationStatus": "valid"
+  },
+  {
+    "factId": "fixture-01_fact_2",
+    "metricLabel": "Revenue",
+    "entityLabel": "Contoso Retail LLC",
+    "periodLabel": "Q1 2026",
+    "temporalType": "duration",
+    "periodStart": "2026-01-01",
+    "periodEnd": "2026-03-31",
+    "asOfDate": "2026-04-28",
+    "reportingBasis": "Actual",
+    "reportingScope": "Entity",
+    "dimensions": {
+      "channel": "E-Commerce",
+      "geography": "UAE"
+    },
+    "rawValue": 4280000,
+    "originalTextValue": "4,280,000",
+    "normalizedValue": "4280000.00000000",
+    "originalUnit": "amount",
+    "normalizedUnit": "amount",
+    "currency": "AED",
+    "sourceFileName": "fixture_01_multilevel_segments.pdf",
+    "sourceLocation": "Table fixture-01_table_1, Row 2, Col 2",
+    "expectedValidationStatus": "valid"
+  },
+  {
+    "factId": "fixture-01_fact_3",
+    "metricLabel": "Gross margin",
+    "entityLabel": "Contoso Retail LLC",
+    "periodLabel": "Q1 2026",
+    "temporalType": "duration",
+    "periodStart": "2026-01-01",
+    "periodEnd": "2026-03-31",
+    "asOfDate": "2026-04-28",
+    "reportingBasis": "Actual",
+    "reportingScope": "Entity",
+    "dimensions": {
+      "channel": "Retail Outlets",
+      "geography": "UAE"
+    },
+    "rawValue": 0.37,
+    "originalTextValue": "37.0%",
+    "normalizedValue": "0.37000000",
+    "originalUnit": "percentage",
+    "normalizedUnit": "ratio",
+    "currency": null,
+    "sourceFileName": "fixture_01_multilevel_segments.pdf",
+    "sourceLocation": "Table fixture-01_table_1, Row 3, Col 1",
+    "expectedValidationStatus": "valid"
+  },
+  {
+    "factId": "fixture-01_fact_4",
+    "metricLabel": "Gross margin",
+    "entityLabel": "Contoso Retail LLC",
+    "periodLabel": "Q1 2026",
+    "temporalType": "duration",
+    "periodStart": "2026-01-01",
+    "periodEnd": "2026-03-31",
+    "asOfDate": "2026-04-28",
+    "reportingBasis": "Actual",
+    "reportingScope": "Entity",
+    "dimensions": {
+      "channel": "E-Commerce",
+      "geography": "UAE"
+    },
+    "rawValue": 0.345,
+    "originalTextValue": "34.5%",
+    "normalizedValue": "0.34500000",
+    "originalUnit": "percentage",
+    "normalizedUnit": "ratio",
+    "currency": null,
+    "sourceFileName": "fixture_01_multilevel_segments.pdf",
+    "sourceLocation": "Table fixture-01_table_1, Row 3, Col 2",
+    "expectedValidationStatus": "valid"
+  }
+]

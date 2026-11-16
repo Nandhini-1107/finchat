@@ -1,0 +1,708 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-11-contoso-holdings-group-actuals-tracker",
+    "fileName": "Contoso_Holdings_Group_Actuals_Tracker_2026.xlsx",
+    "fileType": "xlsx",
+    "metadata": {
+      "documentTitle": "Contoso Holdings – Group Actuals Tracker 2026",
+      "issuer": "Contoso Holdings",
+      "reportingPeriod": "Q1-Q2 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-06-30",
+      "asOfDate": "2026-07-10",
+      "reportingBasis": "Actual",
+      "auditStatus": "Working file - unaudited",
+      "reportingScope": "Consolidated",
+      "currency": "AED"
+    },
+    "sourceMetadata": {
+      "authorityRank": 3,
+      "sourceType": "Draft / Working File"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-11_table_1",
+      "documentId": "doc-11-contoso-holdings-group-actuals-tracker",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 6,
+        "columnCount": 6,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Entity",
+          "headerPath": [
+            "Entity"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Quarter",
+          "headerPath": [
+            "Quarter"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Revenue",
+          "headerPath": [
+            "Revenue"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Net profit",
+          "headerPath": [
+            "Net profit"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 4,
+          "header": "Source used",
+          "headerPath": [
+            "Source used"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 5,
+          "header": "Comment",
+          "headerPath": [
+            "Comment"
+          ],
+          "dataTypeHint": "text"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Retail LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": "Q1 2026"
+            },
+            {
+              "columnIndex": 2,
+              "value": 12480000,
+              "formattedValue": "12,480,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 1307124,
+              "formattedValue": "1,307,124"
+            },
+            {
+              "columnIndex": 4,
+              "value": "Audited statement"
+            },
+            {
+              "columnIndex": 5,
+              "value": ""
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Retail LLC",
+            "Quarter": "Q1 2026",
+            "Revenue": "12,480,000",
+            "Net profit": "1,307,124",
+            "Source used": "Audited statement",
+            "Comment": ""
+          },
+          "rawValues": [
+            "Contoso Retail LLC",
+            "Q1 2026",
+            "12,480,000",
+            "1,307,124",
+            "Audited statement",
+            ""
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Retail LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": "Q2 2026"
+            },
+            {
+              "columnIndex": 2,
+              "value": 13105000,
+              "formattedValue": "13,105,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 1467739,
+              "formattedValue": "1,467,739"
+            },
+            {
+              "columnIndex": 4,
+              "value": "Management pack"
+            },
+            {
+              "columnIndex": 5,
+              "value": ""
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Retail LLC",
+            "Quarter": "Q2 2026",
+            "Revenue": "13,105,000",
+            "Net profit": "1,467,739",
+            "Source used": "Management pack",
+            "Comment": ""
+          },
+          "rawValues": [
+            "Contoso Retail LLC",
+            "Q2 2026",
+            "13,105,000",
+            "1,467,739",
+            "Management pack",
+            ""
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Logistics LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": "Q1 2026"
+            },
+            {
+              "columnIndex": 2,
+              "value": 8720000,
+              "formattedValue": "8,720,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 895895,
+              "formattedValue": "895,895"
+            },
+            {
+              "columnIndex": 4,
+              "value": "Audited statement"
+            },
+            {
+              "columnIndex": 5,
+              "value": ""
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Logistics LLC",
+            "Quarter": "Q1 2026",
+            "Revenue": "8,720,000",
+            "Net profit": "895,895",
+            "Source used": "Audited statement",
+            "Comment": ""
+          },
+          "rawValues": [
+            "Contoso Logistics LLC",
+            "Q1 2026",
+            "8,720,000",
+            "895,895",
+            "Audited statement",
+            ""
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Logistics LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": "Q2 2026"
+            },
+            {
+              "columnIndex": 2,
+              "value": 9105000,
+              "formattedValue": "9,105,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 951041,
+              "formattedValue": "951,041"
+            },
+            {
+              "columnIndex": 4,
+              "value": "Management pack v1"
+            },
+            {
+              "columnIndex": 5,
+              "value": "To update when final pack is issued"
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Logistics LLC",
+            "Quarter": "Q2 2026",
+            "Revenue": "9,105,000",
+            "Net profit": "951,041",
+            "Source used": "Management pack v1",
+            "Comment": "To update when final pack is issued"
+          },
+          "rawValues": [
+            "Contoso Logistics LLC",
+            "Q2 2026",
+            "9,105,000",
+            "951,041",
+            "Management pack v1",
+            "To update when final pack is issued"
+          ]
+        },
+        {
+          "rowIndex": 5,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Properties LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": "Q1 2026"
+            },
+            {
+              "columnIndex": 2,
+              "value": 5240000,
+              "formattedValue": "5,240,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 640276,
+              "formattedValue": "640,276"
+            },
+            {
+              "columnIndex": 4,
+              "value": "Management pack"
+            },
+            {
+              "columnIndex": 5,
+              "value": ""
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Properties LLC",
+            "Quarter": "Q1 2026",
+            "Revenue": "5,240,000",
+            "Net profit": "640,276",
+            "Source used": "Management pack",
+            "Comment": ""
+          },
+          "rawValues": [
+            "Contoso Properties LLC",
+            "Q1 2026",
+            "5,240,000",
+            "640,276",
+            "Management pack",
+            ""
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-excel",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "doc-11-contoso-holdings-group-actuals-tracker",
+  "fullMarkdown": "Contoso Holdings – Group Actuals Tracker 2026\nWorking file maintained by Group Finance – NOT an approved source | Last updated 10 July 2026 | Currency: AED",
+  "tables": [
+    {
+      "elementId": "doc-11_table_1",
+      "documentId": "doc-11-contoso-holdings-group-actuals-tracker",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 6,
+        "columnCount": 6,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Entity",
+          "headerPath": [
+            "Entity"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Quarter",
+          "headerPath": [
+            "Quarter"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Revenue",
+          "headerPath": [
+            "Revenue"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Net profit",
+          "headerPath": [
+            "Net profit"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 4,
+          "header": "Source used",
+          "headerPath": [
+            "Source used"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 5,
+          "header": "Comment",
+          "headerPath": [
+            "Comment"
+          ],
+          "dataTypeHint": "text"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Retail LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": "Q1 2026"
+            },
+            {
+              "columnIndex": 2,
+              "value": 12480000,
+              "formattedValue": "12,480,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 1307124,
+              "formattedValue": "1,307,124"
+            },
+            {
+              "columnIndex": 4,
+              "value": "Audited statement"
+            },
+            {
+              "columnIndex": 5,
+              "value": ""
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Retail LLC",
+            "Quarter": "Q1 2026",
+            "Revenue": "12,480,000",
+            "Net profit": "1,307,124",
+            "Source used": "Audited statement",
+            "Comment": ""
+          },
+          "rawValues": [
+            "Contoso Retail LLC",
+            "Q1 2026",
+            "12,480,000",
+            "1,307,124",
+            "Audited statement",
+            ""
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Retail LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": "Q2 2026"
+            },
+            {
+              "columnIndex": 2,
+              "value": 13105000,
+              "formattedValue": "13,105,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 1467739,
+              "formattedValue": "1,467,739"
+            },
+            {
+              "columnIndex": 4,
+              "value": "Management pack"
+            },
+            {
+              "columnIndex": 5,
+              "value": ""
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Retail LLC",
+            "Quarter": "Q2 2026",
+            "Revenue": "13,105,000",
+            "Net profit": "1,467,739",
+            "Source used": "Management pack",
+            "Comment": ""
+          },
+          "rawValues": [
+            "Contoso Retail LLC",
+            "Q2 2026",
+            "13,105,000",
+            "1,467,739",
+            "Management pack",
+            ""
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Logistics LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": "Q1 2026"
+            },
+            {
+              "columnIndex": 2,
+              "value": 8720000,
+              "formattedValue": "8,720,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 895895,
+              "formattedValue": "895,895"
+            },
+            {
+              "columnIndex": 4,
+              "value": "Audited statement"
+            },
+            {
+              "columnIndex": 5,
+              "value": ""
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Logistics LLC",
+            "Quarter": "Q1 2026",
+            "Revenue": "8,720,000",
+            "Net profit": "895,895",
+            "Source used": "Audited statement",
+            "Comment": ""
+          },
+          "rawValues": [
+            "Contoso Logistics LLC",
+            "Q1 2026",
+            "8,720,000",
+            "895,895",
+            "Audited statement",
+            ""
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Logistics LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": "Q2 2026"
+            },
+            {
+              "columnIndex": 2,
+              "value": 9105000,
+              "formattedValue": "9,105,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 951041,
+              "formattedValue": "951,041"
+            },
+            {
+              "columnIndex": 4,
+              "value": "Management pack v1"
+            },
+            {
+              "columnIndex": 5,
+              "value": "To update when final pack is issued"
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Logistics LLC",
+            "Quarter": "Q2 2026",
+            "Revenue": "9,105,000",
+            "Net profit": "951,041",
+            "Source used": "Management pack v1",
+            "Comment": "To update when final pack is issued"
+          },
+          "rawValues": [
+            "Contoso Logistics LLC",
+            "Q2 2026",
+            "9,105,000",
+            "951,041",
+            "Management pack v1",
+            "To update when final pack is issued"
+          ]
+        },
+        {
+          "rowIndex": 5,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Properties LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": "Q1 2026"
+            },
+            {
+              "columnIndex": 2,
+              "value": 5240000,
+              "formattedValue": "5,240,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 640276,
+              "formattedValue": "640,276"
+            },
+            {
+              "columnIndex": 4,
+              "value": "Management pack"
+            },
+            {
+              "columnIndex": 5,
+              "value": ""
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Properties LLC",
+            "Quarter": "Q1 2026",
+            "Revenue": "5,240,000",
+            "Net profit": "640,276",
+            "Source used": "Management pack",
+            "Comment": ""
+          },
+          "rawValues": [
+            "Contoso Properties LLC",
+            "Q1 2026",
+            "5,240,000",
+            "640,276",
+            "Management pack",
+            ""
+          ]
+        }
+      ],
+      "table_id": "doc-11_table_1",
+      "headers": [
+        "Entity",
+        "Quarter",
+        "Revenue",
+        "Net profit",
+        "Source used",
+        "Comment"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Entity",
+          "Quarter",
+          "Revenue",
+          "Net profit",
+          "Source used",
+          "Comment"
+        ],
+        [
+          "Contoso Retail LLC",
+          "Q1 2026",
+          "12,480,000",
+          "1,307,124",
+          "Audited statement",
+          ""
+        ],
+        [
+          "Contoso Retail LLC",
+          "Q2 2026",
+          "13,105,000",
+          "1,467,739",
+          "Management pack",
+          ""
+        ],
+        [
+          "Contoso Logistics LLC",
+          "Q1 2026",
+          "8,720,000",
+          "895,895",
+          "Audited statement",
+          ""
+        ],
+        [
+          "Contoso Logistics LLC",
+          "Q2 2026",
+          "9,105,000",
+          "951,041",
+          "Management pack v1",
+          "To update when final pack is issued"
+        ],
+        [
+          "Contoso Properties LLC",
+          "Q1 2026",
+          "5,240,000",
+          "640,276",
+          "Management pack",
+          ""
+        ]
+      ]
+    }
+  ]
+}

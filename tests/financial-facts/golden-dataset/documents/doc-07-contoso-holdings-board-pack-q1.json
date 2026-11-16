@@ -1,0 +1,473 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-07-contoso-holdings-board-pack-q1",
+    "fileName": "Contoso_Holdings_Board_Pack_Q1_2026.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Contoso Holdings - Board Pack – Group Financial Summary, quarter ended 31 March 2026",
+      "issuer": "Contoso Holdings",
+      "reportingPeriod": "Q1 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "asOfDate": "2026-05-05",
+      "reportingBasis": "Actual",
+      "auditStatus": "Approved board pack",
+      "reportingScope": "Consolidated",
+      "currency": "AED",
+      "scale": 1000
+    },
+    "sourceMetadata": {
+      "authorityRank": 2,
+      "sourceType": "Board Pack / Final"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-07_table_1",
+      "documentId": "doc-07-contoso-holdings-board-pack-q1",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 2
+      },
+      "structure": {
+        "rowCount": 5,
+        "columnCount": 4,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Entity",
+          "headerPath": [
+            "Entity"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Revenue",
+          "headerPath": [
+            "Revenue"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Operating expenses",
+          "headerPath": [
+            "Operating expenses"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Net profit",
+          "headerPath": [
+            "Net profit"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Retail LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": 12840,
+              "formattedValue": "12,840"
+            },
+            {
+              "columnIndex": 2,
+              "value": -2995,
+              "formattedValue": "2,995"
+            },
+            {
+              "columnIndex": 3,
+              "value": 1307,
+              "formattedValue": "1,307"
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Retail LLC",
+            "Revenue": "12,840",
+            "Operating expenses": "2,995",
+            "Net profit": "1,307"
+          },
+          "rawValues": [
+            "Contoso Retail LLC",
+            "12,840",
+            "2,995",
+            "1,307"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Logistics LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": 8720,
+              "formattedValue": "8,720"
+            },
+            {
+              "columnIndex": 2,
+              "value": -1402,
+              "formattedValue": "1,402"
+            },
+            {
+              "columnIndex": 3,
+              "value": 896,
+              "formattedValue": "896"
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Logistics LLC",
+            "Revenue": "8,720",
+            "Operating expenses": "1,402",
+            "Net profit": "896"
+          },
+          "rawValues": [
+            "Contoso Logistics LLC",
+            "8,720",
+            "1,402",
+            "896"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Properties LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": 5240,
+              "formattedValue": "5,240"
+            },
+            {
+              "columnIndex": 2,
+              "value": -3215,
+              "formattedValue": "3,215"
+            },
+            {
+              "columnIndex": 3,
+              "value": 604,
+              "formattedValue": "604"
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Properties LLC",
+            "Revenue": "5,240",
+            "Operating expenses": "3,215",
+            "Net profit": "604"
+          },
+          "rawValues": [
+            "Contoso Properties LLC",
+            "5,240",
+            "3,215",
+            "604"
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "total",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Group total"
+            },
+            {
+              "columnIndex": 1,
+              "value": 26800,
+              "formattedValue": "26,800"
+            },
+            {
+              "columnIndex": 2,
+              "value": -7613,
+              "formattedValue": "7,613"
+            },
+            {
+              "columnIndex": 3,
+              "value": 2807,
+              "formattedValue": "2,807"
+            }
+          ],
+          "cellValues": {
+            "Entity": "Group total",
+            "Revenue": "26,800",
+            "Operating expenses": "7,613",
+            "Net profit": "2,807"
+          },
+          "rawValues": [
+            "Group total",
+            "26,800",
+            "7,613",
+            "2,807"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-pdf",
+    "pageCount": 2,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "doc-07-contoso-holdings-board-pack-q1",
+  "fullMarkdown": "Contoso Holdings\nBoard Pack – Group Financial Summary, quarter ended 31 March 2026\nStatus: Approved board pack (unaudited)  Prepared: 05 May 2026  Currency: AED\nAll figures in AED thousands, rounded.",
+  "tables": [
+    {
+      "elementId": "doc-07_table_1",
+      "documentId": "doc-07-contoso-holdings-board-pack-q1",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 2
+      },
+      "structure": {
+        "rowCount": 5,
+        "columnCount": 4,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Entity",
+          "headerPath": [
+            "Entity"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Revenue",
+          "headerPath": [
+            "Revenue"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Operating expenses",
+          "headerPath": [
+            "Operating expenses"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Net profit",
+          "headerPath": [
+            "Net profit"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Retail LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": 12840,
+              "formattedValue": "12,840"
+            },
+            {
+              "columnIndex": 2,
+              "value": -2995,
+              "formattedValue": "2,995"
+            },
+            {
+              "columnIndex": 3,
+              "value": 1307,
+              "formattedValue": "1,307"
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Retail LLC",
+            "Revenue": "12,840",
+            "Operating expenses": "2,995",
+            "Net profit": "1,307"
+          },
+          "rawValues": [
+            "Contoso Retail LLC",
+            "12,840",
+            "2,995",
+            "1,307"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Logistics LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": 8720,
+              "formattedValue": "8,720"
+            },
+            {
+              "columnIndex": 2,
+              "value": -1402,
+              "formattedValue": "1,402"
+            },
+            {
+              "columnIndex": 3,
+              "value": 896,
+              "formattedValue": "896"
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Logistics LLC",
+            "Revenue": "8,720",
+            "Operating expenses": "1,402",
+            "Net profit": "896"
+          },
+          "rawValues": [
+            "Contoso Logistics LLC",
+            "8,720",
+            "1,402",
+            "896"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Contoso Properties LLC"
+            },
+            {
+              "columnIndex": 1,
+              "value": 5240,
+              "formattedValue": "5,240"
+            },
+            {
+              "columnIndex": 2,
+              "value": -3215,
+              "formattedValue": "3,215"
+            },
+            {
+              "columnIndex": 3,
+              "value": 604,
+              "formattedValue": "604"
+            }
+          ],
+          "cellValues": {
+            "Entity": "Contoso Properties LLC",
+            "Revenue": "5,240",
+            "Operating expenses": "3,215",
+            "Net profit": "604"
+          },
+          "rawValues": [
+            "Contoso Properties LLC",
+            "5,240",
+            "3,215",
+            "604"
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "total",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Group total"
+            },
+            {
+              "columnIndex": 1,
+              "value": 26800,
+              "formattedValue": "26,800"
+            },
+            {
+              "columnIndex": 2,
+              "value": -7613,
+              "formattedValue": "7,613"
+            },
+            {
+              "columnIndex": 3,
+              "value": 2807,
+              "formattedValue": "2,807"
+            }
+          ],
+          "cellValues": {
+            "Entity": "Group total",
+            "Revenue": "26,800",
+            "Operating expenses": "7,613",
+            "Net profit": "2,807"
+          },
+          "rawValues": [
+            "Group total",
+            "26,800",
+            "7,613",
+            "2,807"
+          ]
+        }
+      ],
+      "table_id": "doc-07_table_1",
+      "headers": [
+        "Entity",
+        "Revenue",
+        "Operating expenses",
+        "Net profit"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Entity",
+          "Revenue",
+          "Operating expenses",
+          "Net profit"
+        ],
+        [
+          "Contoso Retail LLC",
+          "12,840",
+          "2,995",
+          "1,307"
+        ],
+        [
+          "Contoso Logistics LLC",
+          "8,720",
+          "1,402",
+          "896"
+        ],
+        [
+          "Contoso Properties LLC",
+          "5,240",
+          "3,215",
+          "604"
+        ],
+        [
+          "Group total",
+          "26,800",
+          "7,613",
+          "2,807"
+        ]
+      ]
+    }
+  ]
+}

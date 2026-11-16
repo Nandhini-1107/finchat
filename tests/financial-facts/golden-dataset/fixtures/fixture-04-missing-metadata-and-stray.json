@@ -1,0 +1,259 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "fixture-04-missing-metadata-and-stray",
+    "fileName": "fixture_04_missing_metadata.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Statutory Tax & Headcount Schedule Q1 2026",
+      "issuer": null,
+      "reportingPeriod": "Q1 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "asOfDate": null,
+      "reportingBasis": "Actual",
+      "reportingScope": null,
+      "currency": "AED"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "fixture-04_table_1",
+      "documentId": "fixture-04-missing-metadata-and-stray",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 4,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Metric",
+          "headerPath": [
+            "Metric"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "text"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Corporate tax expense"
+            },
+            {
+              "columnIndex": 1,
+              "value": 125000,
+              "formattedValue": "125,000"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Corporate tax expense",
+            "Q1 2026": "125,000"
+          },
+          "rawValues": [
+            "Corporate tax expense",
+            "125,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Full-time equivalent staff"
+            },
+            {
+              "columnIndex": 1,
+              "value": 450,
+              "formattedValue": "450"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Full-time equivalent staff",
+            "Q1 2026": "450"
+          },
+          "rawValues": [
+            "Full-time equivalent staff",
+            "450"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "note",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Unanchored footnote note"
+            },
+            {
+              "columnIndex": 1,
+              "value": "50,000"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Unanchored footnote note",
+            "Q1 2026": "50,000"
+          },
+          "rawValues": [
+            "Unanchored footnote note",
+            "50,000"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-pdf",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "fixture-04-missing-metadata-and-stray",
+  "fullMarkdown": "Statutory Tax & Headcount Schedule Q1 2026\nCurrency: AED",
+  "tables": [
+    {
+      "elementId": "fixture-04_table_1",
+      "documentId": "fixture-04-missing-metadata-and-stray",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 4,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Metric",
+          "headerPath": [
+            "Metric"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "text"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Corporate tax expense"
+            },
+            {
+              "columnIndex": 1,
+              "value": 125000,
+              "formattedValue": "125,000"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Corporate tax expense",
+            "Q1 2026": "125,000"
+          },
+          "rawValues": [
+            "Corporate tax expense",
+            "125,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Full-time equivalent staff"
+            },
+            {
+              "columnIndex": 1,
+              "value": 450,
+              "formattedValue": "450"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Full-time equivalent staff",
+            "Q1 2026": "450"
+          },
+          "rawValues": [
+            "Full-time equivalent staff",
+            "450"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "note",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Unanchored footnote note"
+            },
+            {
+              "columnIndex": 1,
+              "value": "50,000"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Unanchored footnote note",
+            "Q1 2026": "50,000"
+          },
+          "rawValues": [
+            "Unanchored footnote note",
+            "50,000"
+          ]
+        }
+      ],
+      "table_id": "fixture-04_table_1",
+      "headers": [
+        "Metric",
+        "Q1 2026"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Metric",
+          "Q1 2026"
+        ],
+        [
+          "Corporate tax expense",
+          "125,000"
+        ],
+        [
+          "Full-time equivalent staff",
+          "450"
+        ],
+        [
+          "Unanchored footnote note",
+          "50,000"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "fixture-03-ratios-and-bps",
+    "fileName": "fixture_03_ratios_bps.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Contoso Holdings - Key Ratios Q1 2026",
+      "issuer": "Contoso Holdings",
+      "reportingPeriod": "Q1 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "asOfDate": "2026-05-05",
+      "reportingBasis": "Actual",
+      "reportingScope": "Consolidated",
+      "currency": "AED"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "fixture-03_table_1",
+      "documentId": "fixture-03-ratios-and-bps",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 5,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Metric",
+          "headerPath": [
+            "Metric"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Value",
+          "headerPath": [
+            "Value"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Effective tax rate"
+            },
+            {
+              "columnIndex": 1,
+              "value": 0.09,
+              "formattedValue": "9%"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Effective tax rate",
+            "Value": "9%"
+          },
+          "rawValues": [
+            "Effective tax rate",
+            "9%"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "EBITDA margin"
+            },
+            {
+              "columnIndex": 1,
+              "value": 0.375,
+              "formattedValue": "37.5%"
+            }
+          ],
+          "cellValues": {
+            "Metric": "EBITDA margin",
+            "Value": "37.5%"
+          },
+          "rawValues": [
+            "EBITDA margin",
+            "37.5%"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Financing spread"
+            },
+            {
+              "columnIndex": 1,
+              "value": 0.018,
+              "formattedValue": "180 bps"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Financing spread",
+            "Value": "180 bps"
+          },
+          "rawValues": [
+            "Financing spread",
+            "180 bps"
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Dividend yield"
+            },
+            {
+              "columnIndex": 1,
+              "value": 0.045,
+              "formattedValue": "0.0450"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Dividend yield",
+            "Value": "0.0450"
+          },
+          "rawValues": [
+            "Dividend yield",
+            "0.0450"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-pdf",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "fixture-03-ratios-and-bps",
+  "fullMarkdown": "Contoso Holdings - Key Ratios Q1 2026\nCurrency: AED",
+  "tables": [
+    {
+      "elementId": "fixture-03_table_1",
+      "documentId": "fixture-03-ratios-and-bps",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 5,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Metric",
+          "headerPath": [
+            "Metric"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Value",
+          "headerPath": [
+            "Value"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Effective tax rate"
+            },
+            {
+              "columnIndex": 1,
+              "value": 0.09,
+              "formattedValue": "9%"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Effective tax rate",
+            "Value": "9%"
+          },
+          "rawValues": [
+            "Effective tax rate",
+            "9%"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "EBITDA margin"
+            },
+            {
+              "columnIndex": 1,
+              "value": 0.375,
+              "formattedValue": "37.5%"
+            }
+          ],
+          "cellValues": {
+            "Metric": "EBITDA margin",
+            "Value": "37.5%"
+          },
+          "rawValues": [
+            "EBITDA margin",
+            "37.5%"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Financing spread"
+            },
+            {
+              "columnIndex": 1,
+              "value": 0.018,
+              "formattedValue": "180 bps"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Financing spread",
+            "Value": "180 bps"
+          },
+          "rawValues": [
+            "Financing spread",
+            "180 bps"
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Dividend yield"
+            },
+            {
+              "columnIndex": 1,
+              "value": 0.045,
+              "formattedValue": "0.0450"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Dividend yield",
+            "Value": "0.0450"
+          },
+          "rawValues": [
+            "Dividend yield",
+            "0.0450"
+          ]
+        }
+      ],
+      "table_id": "fixture-03_table_1",
+      "headers": [
+        "Metric",
+        "Value"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Metric",
+          "Value"
+        ],
+        [
+          "Effective tax rate",
+          "9%"
+        ],
+        [
+          "EBITDA margin",
+          "37.5%"
+        ],
+        [
+          "Financing spread",
+          "180 bps"
+        ],
+        [
+          "Dividend yield",
+          "0.0450"
+        ]
+      ]
+    }
+  ]
+}

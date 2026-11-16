@@ -22,9 +22,6 @@ tests/temp/
 *.docx
 *.csv
 
-# Ignore golden benchmark dataset
-tests/financial-facts/
-
 # Legacy test scripts
 test-acceptance-suite.js
 test-sharepoint-queue.js

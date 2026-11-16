@@ -1,0 +1,299 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-10-contoso-properties-budget-fy2026",
+    "fileName": "Contoso_Properties_LLC_Budget_FY2026.xlsx",
+    "fileType": "xlsx",
+    "metadata": {
+      "documentTitle": "Contoso Properties LLC – Budget FY2026",
+      "issuer": "Contoso Properties LLC",
+      "reportingPeriod": "FY 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-12-31",
+      "asOfDate": "2025-12-15",
+      "reportingBasis": "Budget",
+      "auditStatus": "Approved budget",
+      "reportingScope": "Entity",
+      "currency": "AED",
+      "scale": 1000
+    },
+    "sourceMetadata": {
+      "authorityRank": 2,
+      "sourceType": "Approved Budget"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-10_table_1",
+      "documentId": "doc-10-contoso-properties-budget-fy2026",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 2,
+        "columnCount": 6,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Q2 2026",
+          "headerPath": [
+            "Q2 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Q3 2026",
+          "headerPath": [
+            "Q3 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 4,
+          "header": "Q4 2026",
+          "headerPath": [
+            "Q4 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 5,
+          "header": "FY 2026",
+          "headerPath": [
+            "FY 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Rental revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 5100,
+              "formattedValue": "5,100"
+            },
+            {
+              "columnIndex": 2,
+              "value": 5200,
+              "formattedValue": "5,200"
+            },
+            {
+              "columnIndex": 3,
+              "value": 5300,
+              "formattedValue": "5,300"
+            },
+            {
+              "columnIndex": 4,
+              "value": 5400,
+              "formattedValue": "5,400"
+            },
+            {
+              "columnIndex": 5,
+              "value": 21000,
+              "formattedValue": "21,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Rental revenue",
+            "Q1 2026": "5,100",
+            "Q2 2026": "5,200",
+            "Q3 2026": "5,300",
+            "Q4 2026": "5,400",
+            "FY 2026": "21,000"
+          },
+          "rawValues": [
+            "Rental revenue",
+            "5,100",
+            "5,200",
+            "5,300",
+            "5,400",
+            "21,000"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-excel",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "doc-10-contoso-properties-budget-fy2026",
+  "fullMarkdown": "Contoso Properties LLC – Budget FY2026\nApproved budget | Approved 15 December 2025 | Currency: AED thousands\nAll figures in AED thousands.",
+  "tables": [
+    {
+      "elementId": "doc-10_table_1",
+      "documentId": "doc-10-contoso-properties-budget-fy2026",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 2,
+        "columnCount": 6,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Q2 2026",
+          "headerPath": [
+            "Q2 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Q3 2026",
+          "headerPath": [
+            "Q3 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 4,
+          "header": "Q4 2026",
+          "headerPath": [
+            "Q4 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 5,
+          "header": "FY 2026",
+          "headerPath": [
+            "FY 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Rental revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 5100,
+              "formattedValue": "5,100"
+            },
+            {
+              "columnIndex": 2,
+              "value": 5200,
+              "formattedValue": "5,200"
+            },
+            {
+              "columnIndex": 3,
+              "value": 5300,
+              "formattedValue": "5,300"
+            },
+            {
+              "columnIndex": 4,
+              "value": 5400,
+              "formattedValue": "5,400"
+            },
+            {
+              "columnIndex": 5,
+              "value": 21000,
+              "formattedValue": "21,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Rental revenue",
+            "Q1 2026": "5,100",
+            "Q2 2026": "5,200",
+            "Q3 2026": "5,300",
+            "Q4 2026": "5,400",
+            "FY 2026": "21,000"
+          },
+          "rawValues": [
+            "Rental revenue",
+            "5,100",
+            "5,200",
+            "5,300",
+            "5,400",
+            "21,000"
+          ]
+        }
+      ],
+      "table_id": "doc-10_table_1",
+      "headers": [
+        "Line item",
+        "Q1 2026",
+        "Q2 2026",
+        "Q3 2026",
+        "Q4 2026",
+        "FY 2026"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Line item",
+          "Q1 2026",
+          "Q2 2026",
+          "Q3 2026",
+          "Q4 2026",
+          "FY 2026"
+        ],
+        [
+          "Rental revenue",
+          "5,100",
+          "5,200",
+          "5,300",
+          "5,400",
+          "21,000"
+        ]
+      ]
+    }
+  ]
+}

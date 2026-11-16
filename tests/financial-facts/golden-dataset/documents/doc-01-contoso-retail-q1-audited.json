@@ -1,0 +1,584 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-01-contoso-retail-q1-audited",
+    "fileName": "Contoso_Retail_LLC_Q1_2026_Audited.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Contoso Retail LLC - Statement of Profit or Loss for the quarter ended 31 March 2026",
+      "issuer": "Contoso Retail LLC",
+      "reportingPeriod": "Q1 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "asOfDate": "2026-04-28",
+      "reportingBasis": "Actual",
+      "auditStatus": "Audited",
+      "reportingScope": "Entity",
+      "currency": "AED"
+    },
+    "sourceMetadata": {
+      "authorityRank": 1,
+      "sourceType": "Audited Financials"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-01_table_1",
+      "documentId": "doc-01-contoso-retail-q1-audited",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 10,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 12480000,
+              "rawValue": 12480000,
+              "formattedValue": "12,480,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Revenue",
+            "Q1 2026": "12,480,000"
+          },
+          "rawValues": [
+            "Revenue",
+            "12,480,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Cost of sales"
+            },
+            {
+              "columnIndex": 1,
+              "value": -7862400,
+              "rawValue": -7862400,
+              "formattedValue": "(7,862,400)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Cost of sales",
+            "Q1 2026": "(7,862,400)"
+          },
+          "rawValues": [
+            "Cost of sales",
+            "(7,862,400)"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Gross profit"
+            },
+            {
+              "columnIndex": 1,
+              "value": 4617600,
+              "rawValue": 4617600,
+              "formattedValue": "4,617,600"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Gross profit",
+            "Q1 2026": "4,617,600"
+          },
+          "rawValues": [
+            "Gross profit",
+            "4,617,600"
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Operating expenses"
+            },
+            {
+              "columnIndex": 1,
+              "value": -2995200,
+              "rawValue": -2995200,
+              "formattedValue": "(2,995,200)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Operating expenses",
+            "Q1 2026": "(2,995,200)"
+          },
+          "rawValues": [
+            "Operating expenses",
+            "(2,995,200)"
+          ]
+        },
+        {
+          "rowIndex": 5,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Operating profit"
+            },
+            {
+              "columnIndex": 1,
+              "value": 1622400,
+              "rawValue": 1622400,
+              "formattedValue": "1,622,400"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Operating profit",
+            "Q1 2026": "1,622,400"
+          },
+          "rawValues": [
+            "Operating profit",
+            "1,622,400"
+          ]
+        },
+        {
+          "rowIndex": 6,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Finance costs"
+            },
+            {
+              "columnIndex": 1,
+              "value": -186000,
+              "rawValue": -186000,
+              "formattedValue": "(186,000)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Finance costs",
+            "Q1 2026": "(186,000)"
+          },
+          "rawValues": [
+            "Finance costs",
+            "(186,000)"
+          ]
+        },
+        {
+          "rowIndex": 7,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Profit before tax"
+            },
+            {
+              "columnIndex": 1,
+              "value": 1436400,
+              "rawValue": 1436400,
+              "formattedValue": "1,436,400"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Profit before tax",
+            "Q1 2026": "1,436,400"
+          },
+          "rawValues": [
+            "Profit before tax",
+            "1,436,400"
+          ]
+        },
+        {
+          "rowIndex": 8,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Corporate tax (9%)"
+            },
+            {
+              "columnIndex": 1,
+              "value": -129276,
+              "rawValue": -129276,
+              "formattedValue": "(129,276)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Corporate tax (9%)",
+            "Q1 2026": "(129,276)"
+          },
+          "rawValues": [
+            "Corporate tax (9%)",
+            "(129,276)"
+          ]
+        },
+        {
+          "rowIndex": 9,
+          "rowType": "total",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Net profit for the period"
+            },
+            {
+              "columnIndex": 1,
+              "value": 1307124,
+              "rawValue": 1307124,
+              "formattedValue": "1,307,124"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Net profit for the period",
+            "Q1 2026": "1,307,124"
+          },
+          "rawValues": [
+            "Net profit for the period",
+            "1,307,124"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-pdf",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "doc-01-contoso-retail-q1-audited",
+  "fullMarkdown": "Contoso Retail LLC\nStatement of Profit or Loss for the quarter ended 31 March 2026\nStatus: Audited  Prepared: 28 April 2026  Currency: AED",
+  "tables": [
+    {
+      "elementId": "doc-01_table_1",
+      "documentId": "doc-01-contoso-retail-q1-audited",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 10,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 12480000,
+              "rawValue": 12480000,
+              "formattedValue": "12,480,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Revenue",
+            "Q1 2026": "12,480,000"
+          },
+          "rawValues": [
+            "Revenue",
+            "12,480,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Cost of sales"
+            },
+            {
+              "columnIndex": 1,
+              "value": -7862400,
+              "rawValue": -7862400,
+              "formattedValue": "(7,862,400)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Cost of sales",
+            "Q1 2026": "(7,862,400)"
+          },
+          "rawValues": [
+            "Cost of sales",
+            "(7,862,400)"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Gross profit"
+            },
+            {
+              "columnIndex": 1,
+              "value": 4617600,
+              "rawValue": 4617600,
+              "formattedValue": "4,617,600"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Gross profit",
+            "Q1 2026": "4,617,600"
+          },
+          "rawValues": [
+            "Gross profit",
+            "4,617,600"
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Operating expenses"
+            },
+            {
+              "columnIndex": 1,
+              "value": -2995200,
+              "rawValue": -2995200,
+              "formattedValue": "(2,995,200)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Operating expenses",
+            "Q1 2026": "(2,995,200)"
+          },
+          "rawValues": [
+            "Operating expenses",
+            "(2,995,200)"
+          ]
+        },
+        {
+          "rowIndex": 5,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Operating profit"
+            },
+            {
+              "columnIndex": 1,
+              "value": 1622400,
+              "rawValue": 1622400,
+              "formattedValue": "1,622,400"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Operating profit",
+            "Q1 2026": "1,622,400"
+          },
+          "rawValues": [
+            "Operating profit",
+            "1,622,400"
+          ]
+        },
+        {
+          "rowIndex": 6,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Finance costs"
+            },
+            {
+              "columnIndex": 1,
+              "value": -186000,
+              "rawValue": -186000,
+              "formattedValue": "(186,000)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Finance costs",
+            "Q1 2026": "(186,000)"
+          },
+          "rawValues": [
+            "Finance costs",
+            "(186,000)"
+          ]
+        },
+        {
+          "rowIndex": 7,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Profit before tax"
+            },
+            {
+              "columnIndex": 1,
+              "value": 1436400,
+              "rawValue": 1436400,
+              "formattedValue": "1,436,400"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Profit before tax",
+            "Q1 2026": "1,436,400"
+          },
+          "rawValues": [
+            "Profit before tax",
+            "1,436,400"
+          ]
+        },
+        {
+          "rowIndex": 8,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Corporate tax (9%)"
+            },
+            {
+              "columnIndex": 1,
+              "value": -129276,
+              "rawValue": -129276,
+              "formattedValue": "(129,276)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Corporate tax (9%)",
+            "Q1 2026": "(129,276)"
+          },
+          "rawValues": [
+            "Corporate tax (9%)",
+            "(129,276)"
+          ]
+        },
+        {
+          "rowIndex": 9,
+          "rowType": "total",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Net profit for the period"
+            },
+            {
+              "columnIndex": 1,
+              "value": 1307124,
+              "rawValue": 1307124,
+              "formattedValue": "1,307,124"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Net profit for the period",
+            "Q1 2026": "1,307,124"
+          },
+          "rawValues": [
+            "Net profit for the period",
+            "1,307,124"
+          ]
+        }
+      ],
+      "table_id": "doc-01_table_1",
+      "headers": [
+        "Line item",
+        "Q1 2026"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Line item",
+          "Q1 2026"
+        ],
+        [
+          "Revenue",
+          "12,480,000"
+        ],
+        [
+          "Cost of sales",
+          "(7,862,400)"
+        ],
+        [
+          "Gross profit",
+          "4,617,600"
+        ],
+        [
+          "Operating expenses",
+          "(2,995,200)"
+        ],
+        [
+          "Operating profit",
+          "1,622,400"
+        ],
+        [
+          "Finance costs",
+          "(186,000)"
+        ],
+        [
+          "Profit before tax",
+          "1,436,400"
+        ],
+        [
+          "Corporate tax (9%)",
+          "(129,276)"
+        ],
+        [
+          "Net profit for the period",
+          "1,307,124"
+        ]
+      ]
+    }
+  ]
+}

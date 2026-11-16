@@ -1,0 +1,408 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-08-contoso-retail-budget-fy2026",
+    "fileName": "Contoso_Retail_LLC_Budget_FY2026.xlsx",
+    "fileType": "xlsx",
+    "metadata": {
+      "documentTitle": "Contoso Retail LLC – Budget FY2026",
+      "issuer": "Contoso Retail LLC",
+      "reportingPeriod": "FY 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-12-31",
+      "asOfDate": "2025-12-15",
+      "reportingBasis": "Budget",
+      "auditStatus": "Approved budget",
+      "reportingScope": "Entity",
+      "currency": "AED"
+    },
+    "sourceMetadata": {
+      "authorityRank": 2,
+      "sourceType": "Approved Budget"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-08_table_1",
+      "documentId": "doc-08-contoso-retail-budget-fy2026",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 3,
+        "columnCount": 6,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Q2 2026",
+          "headerPath": [
+            "Q2 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Q3 2026",
+          "headerPath": [
+            "Q3 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 4,
+          "header": "Q4 2026",
+          "headerPath": [
+            "Q4 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 5,
+          "header": "FY 2026",
+          "headerPath": [
+            "FY 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 12000000,
+              "formattedValue": "12,000,000"
+            },
+            {
+              "columnIndex": 2,
+              "value": 13500000,
+              "formattedValue": "13,500,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 13800000,
+              "formattedValue": "13,800,000"
+            },
+            {
+              "columnIndex": 4,
+              "value": 14700000,
+              "formattedValue": "14,700,000"
+            },
+            {
+              "columnIndex": 5,
+              "value": 54000000,
+              "formattedValue": "54,000,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Revenue",
+            "Q1 2026": "12,000,000",
+            "Q2 2026": "13,500,000",
+            "Q3 2026": "13,800,000",
+            "Q4 2026": "14,700,000",
+            "FY 2026": "54,000,000"
+          },
+          "rawValues": [
+            "Revenue",
+            "12,000,000",
+            "13,500,000",
+            "13,800,000",
+            "14,700,000",
+            "54,000,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Gross profit"
+            },
+            {
+              "columnIndex": 1,
+              "value": 4440000,
+              "formattedValue": "4,440,000"
+            },
+            {
+              "columnIndex": 2,
+              "value": 4995000,
+              "formattedValue": "4,995,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 5106000,
+              "formattedValue": "5,106,000"
+            },
+            {
+              "columnIndex": 4,
+              "value": 5439000,
+              "formattedValue": "5,439,000"
+            },
+            {
+              "columnIndex": 5,
+              "value": 19980000,
+              "formattedValue": "19,980,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Gross profit",
+            "Q1 2026": "4,440,000",
+            "Q2 2026": "4,995,000",
+            "Q3 2026": "5,106,000",
+            "Q4 2026": "5,439,000",
+            "FY 2026": "19,980,000"
+          },
+          "rawValues": [
+            "Gross profit",
+            "4,440,000",
+            "4,995,000",
+            "5,106,000",
+            "5,439,000",
+            "19,980,000"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-excel",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "doc-08-contoso-retail-budget-fy2026",
+  "fullMarkdown": "Contoso Retail LLC – Budget FY2026\nApproved budget | Approved 15 December 2025 | Currency: AED",
+  "tables": [
+    {
+      "elementId": "doc-08_table_1",
+      "documentId": "doc-08-contoso-retail-budget-fy2026",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 3,
+        "columnCount": 6,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Q2 2026",
+          "headerPath": [
+            "Q2 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Q3 2026",
+          "headerPath": [
+            "Q3 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 4,
+          "header": "Q4 2026",
+          "headerPath": [
+            "Q4 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 5,
+          "header": "FY 2026",
+          "headerPath": [
+            "FY 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 12000000,
+              "formattedValue": "12,000,000"
+            },
+            {
+              "columnIndex": 2,
+              "value": 13500000,
+              "formattedValue": "13,500,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 13800000,
+              "formattedValue": "13,800,000"
+            },
+            {
+              "columnIndex": 4,
+              "value": 14700000,
+              "formattedValue": "14,700,000"
+            },
+            {
+              "columnIndex": 5,
+              "value": 54000000,
+              "formattedValue": "54,000,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Revenue",
+            "Q1 2026": "12,000,000",
+            "Q2 2026": "13,500,000",
+            "Q3 2026": "13,800,000",
+            "Q4 2026": "14,700,000",
+            "FY 2026": "54,000,000"
+          },
+          "rawValues": [
+            "Revenue",
+            "12,000,000",
+            "13,500,000",
+            "13,800,000",
+            "14,700,000",
+            "54,000,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Gross profit"
+            },
+            {
+              "columnIndex": 1,
+              "value": 4440000,
+              "formattedValue": "4,440,000"
+            },
+            {
+              "columnIndex": 2,
+              "value": 4995000,
+              "formattedValue": "4,995,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 5106000,
+              "formattedValue": "5,106,000"
+            },
+            {
+              "columnIndex": 4,
+              "value": 5439000,
+              "formattedValue": "5,439,000"
+            },
+            {
+              "columnIndex": 5,
+              "value": 19980000,
+              "formattedValue": "19,980,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Gross profit",
+            "Q1 2026": "4,440,000",
+            "Q2 2026": "4,995,000",
+            "Q3 2026": "5,106,000",
+            "Q4 2026": "5,439,000",
+            "FY 2026": "19,980,000"
+          },
+          "rawValues": [
+            "Gross profit",
+            "4,440,000",
+            "4,995,000",
+            "5,106,000",
+            "5,439,000",
+            "19,980,000"
+          ]
+        }
+      ],
+      "table_id": "doc-08_table_1",
+      "headers": [
+        "Line item",
+        "Q1 2026",
+        "Q2 2026",
+        "Q3 2026",
+        "Q4 2026",
+        "FY 2026"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Line item",
+          "Q1 2026",
+          "Q2 2026",
+          "Q3 2026",
+          "Q4 2026",
+          "FY 2026"
+        ],
+        [
+          "Revenue",
+          "12,000,000",
+          "13,500,000",
+          "13,800,000",
+          "14,700,000",
+          "54,000,000"
+        ],
+        [
+          "Gross profit",
+          "4,440,000",
+          "4,995,000",
+          "5,106,000",
+          "5,439,000",
+          "19,980,000"
+        ]
+      ]
+    }
+  ]
+}

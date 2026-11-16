@@ -1,0 +1,316 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-04-contoso-logistics-q2-draft-v1",
+    "fileName": "Contoso_Logistics_LLC_Q2_2026_Draft_v1.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Contoso Logistics LLC - Management Pack Q2 2026 (version 1)",
+      "issuer": "Contoso Logistics LLC",
+      "reportingPeriod": "Q2 2026",
+      "periodStart": "2026-04-01",
+      "periodEnd": "2026-06-30",
+      "asOfDate": "2026-07-08",
+      "reportingBasis": "Actual",
+      "auditStatus": "Unaudited",
+      "reportingScope": "Entity",
+      "currency": "AED"
+    },
+    "sourceMetadata": {
+      "authorityRank": 3,
+      "sourceType": "Draft / Working File"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-04_table_1",
+      "documentId": "doc-04-contoso-logistics-q2-draft-v1",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 5,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q2 2026",
+          "headerPath": [
+            "Q2 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 9105000,
+              "formattedValue": "9,105,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Revenue",
+            "Q2 2026": "9,105,000"
+          },
+          "rawValues": [
+            "Revenue",
+            "9,105,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Direct operating costs"
+            },
+            {
+              "columnIndex": 1,
+              "value": -6591800,
+              "formattedValue": "(6,591,800)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Direct operating costs",
+            "Q2 2026": "(6,591,800)"
+          },
+          "rawValues": [
+            "Direct operating costs",
+            "(6,591,800)"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Gross profit"
+            },
+            {
+              "columnIndex": 1,
+              "value": 2513200,
+              "formattedValue": "2,513,200"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Gross profit",
+            "Q2 2026": "2,513,200"
+          },
+          "rawValues": [
+            "Gross profit",
+            "2,513,200"
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "total",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Net profit for the period"
+            },
+            {
+              "columnIndex": 1,
+              "value": 951041,
+              "formattedValue": "951,041"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Net profit for the period",
+            "Q2 2026": "951,041"
+          },
+          "rawValues": [
+            "Net profit for the period",
+            "951,041"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-pdf",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "doc-04-contoso-logistics-q2-draft-v1",
+  "fullMarkdown": "Contoso Logistics LLC\nManagement Pack Q2 2026 (version 1) - DRAFT\nPrepared: 08 July 2026  Currency: AED",
+  "tables": [
+    {
+      "elementId": "doc-04_table_1",
+      "documentId": "doc-04-contoso-logistics-q2-draft-v1",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 5,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q2 2026",
+          "headerPath": [
+            "Q2 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 9105000,
+              "formattedValue": "9,105,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Revenue",
+            "Q2 2026": "9,105,000"
+          },
+          "rawValues": [
+            "Revenue",
+            "9,105,000"
+          ]
+        },
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Direct operating costs"
+            },
+            {
+              "columnIndex": 1,
+              "value": -6591800,
+              "formattedValue": "(6,591,800)"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Direct operating costs",
+            "Q2 2026": "(6,591,800)"
+          },
+          "rawValues": [
+            "Direct operating costs",
+            "(6,591,800)"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Gross profit"
+            },
+            {
+              "columnIndex": 1,
+              "value": 2513200,
+              "formattedValue": "2,513,200"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Gross profit",
+            "Q2 2026": "2,513,200"
+          },
+          "rawValues": [
+            "Gross profit",
+            "2,513,200"
+          ]
+        },
+        {
+          "rowIndex": 4,
+          "rowType": "total",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Net profit for the period"
+            },
+            {
+              "columnIndex": 1,
+              "value": 951041,
+              "formattedValue": "951,041"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Net profit for the period",
+            "Q2 2026": "951,041"
+          },
+          "rawValues": [
+            "Net profit for the period",
+            "951,041"
+          ]
+        }
+      ],
+      "table_id": "doc-04_table_1",
+      "headers": [
+        "Line item",
+        "Q2 2026"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Line item",
+          "Q2 2026"
+        ],
+        [
+          "Revenue",
+          "9,105,000"
+        ],
+        [
+          "Direct operating costs",
+          "(6,591,800)"
+        ],
+        [
+          "Gross profit",
+          "2,513,200"
+        ],
+        [
+          "Net profit for the period",
+          "951,041"
+        ]
+      ]
+    }
+  ]
+}

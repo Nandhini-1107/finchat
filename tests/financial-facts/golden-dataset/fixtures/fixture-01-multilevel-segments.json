@@ -1,0 +1,263 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "fixture-01-multilevel-segments",
+    "fileName": "fixture_01_multilevel_segments.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Contoso Retail LLC - Segmental Analysis Q1 2026",
+      "issuer": "Contoso Retail LLC",
+      "reportingPeriod": "Q1 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "asOfDate": "2026-04-28",
+      "reportingBasis": "Actual",
+      "reportingScope": "Entity",
+      "currency": "AED"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "fixture-01_table_1",
+      "documentId": "fixture-01-multilevel-segments",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 4,
+        "columnCount": 3,
+        "headerRowIndex": 1,
+        "hasMultiLevelHeaders": true
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Metric",
+          "headerPath": [
+            "Metric"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Retail Outlets / UAE",
+          "headerPath": [
+            "Retail Outlets",
+            "UAE"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "E-Commerce / UAE",
+          "headerPath": [
+            "E-Commerce",
+            "UAE"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 8200000,
+              "formattedValue": "8,200,000"
+            },
+            {
+              "columnIndex": 2,
+              "value": 4280000,
+              "formattedValue": "4,280,000"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Revenue",
+            "Retail Outlets / UAE": "8,200,000",
+            "E-Commerce / UAE": "4,280,000"
+          },
+          "rawValues": [
+            "Revenue",
+            "8,200,000",
+            "4,280,000"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Gross margin"
+            },
+            {
+              "columnIndex": 1,
+              "value": 0.37,
+              "formattedValue": "37.0%"
+            },
+            {
+              "columnIndex": 2,
+              "value": 0.345,
+              "formattedValue": "34.5%"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Gross margin",
+            "Retail Outlets / UAE": "37.0%",
+            "E-Commerce / UAE": "34.5%"
+          },
+          "rawValues": [
+            "Gross margin",
+            "37.0%",
+            "34.5%"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-pdf",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "fixture-01-multilevel-segments",
+  "fullMarkdown": "Contoso Retail LLC - Segmental Analysis Q1 2026\nCurrency: AED",
+  "tables": [
+    {
+      "elementId": "fixture-01_table_1",
+      "documentId": "fixture-01-multilevel-segments",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 4,
+        "columnCount": 3,
+        "headerRowIndex": 1,
+        "hasMultiLevelHeaders": true
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Metric",
+          "headerPath": [
+            "Metric"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Retail Outlets / UAE",
+          "headerPath": [
+            "Retail Outlets",
+            "UAE"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "E-Commerce / UAE",
+          "headerPath": [
+            "E-Commerce",
+            "UAE"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 2,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 8200000,
+              "formattedValue": "8,200,000"
+            },
+            {
+              "columnIndex": 2,
+              "value": 4280000,
+              "formattedValue": "4,280,000"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Revenue",
+            "Retail Outlets / UAE": "8,200,000",
+            "E-Commerce / UAE": "4,280,000"
+          },
+          "rawValues": [
+            "Revenue",
+            "8,200,000",
+            "4,280,000"
+          ]
+        },
+        {
+          "rowIndex": 3,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Gross margin"
+            },
+            {
+              "columnIndex": 1,
+              "value": 0.37,
+              "formattedValue": "37.0%"
+            },
+            {
+              "columnIndex": 2,
+              "value": 0.345,
+              "formattedValue": "34.5%"
+            }
+          ],
+          "cellValues": {
+            "Metric": "Gross margin",
+            "Retail Outlets / UAE": "37.0%",
+            "E-Commerce / UAE": "34.5%"
+          },
+          "rawValues": [
+            "Gross margin",
+            "37.0%",
+            "34.5%"
+          ]
+        }
+      ],
+      "table_id": "fixture-01_table_1",
+      "headers": [
+        "Metric",
+        "Retail Outlets / UAE",
+        "E-Commerce / UAE"
+      ],
+      "header_row_index": 1,
+      "raw_grid": [
+        [
+          "Metric",
+          "Retail Outlets / UAE",
+          "E-Commerce / UAE"
+        ],
+        [
+          "Revenue",
+          "8,200,000",
+          "4,280,000"
+        ],
+        [
+          "Gross margin",
+          "37.0%",
+          "34.5%"
+        ]
+      ]
+    }
+  ]
+}

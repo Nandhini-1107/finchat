@@ -1,0 +1,52 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "fixture-05-narrative-commentary-bilingual",
+    "fileName": "fixture_05_bilingual_commentary.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Contoso Holdings - Management Discussion & Analysis Q1 2026",
+      "issuer": "Contoso Holdings",
+      "reportingPeriod": "Q1 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-03-31",
+      "asOfDate": "2026-05-05",
+      "reportingBasis": "Actual",
+      "reportingScope": "Consolidated",
+      "currency": "AED"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "fixture-05_para_1",
+      "documentId": "fixture-05-narrative-commentary-bilingual",
+      "elementType": "paragraph",
+      "paragraphIndex": 0,
+      "paragraphRole": "commentary",
+      "content": "حققت الشركة إيرادات مجمعة قدرها 34.5 مليون درهم خلال الربع الأول من عام 2026 مقارنة بالربع السابق.",
+      "source": {
+        "pageNumber": 1
+      }
+    },
+    {
+      "elementId": "fixture-05_para_2",
+      "documentId": "fixture-05-narrative-commentary-bilingual",
+      "elementType": "paragraph",
+      "paragraphIndex": 1,
+      "paragraphRole": "commentary",
+      "content": "Operating expenses increased by AED 450,000 due to marketing campaigns in Q1 2026.",
+      "source": {
+        "pageNumber": 1
+      }
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-pdf",
+    "pageCount": 1,
+    "tableCount": 0,
+    "paragraphCount": 2
+  },
+  "document_id": "fixture-05-narrative-commentary-bilingual",
+  "fullMarkdown": "Contoso Holdings - Management Discussion & Analysis Q1 2026\nCurrency: AED\n\nحققت الشركة إيرادات مجمعة قدرها 34.5 مليون درهم خلال الربع الأول من عام 2026 مقارنة بالربع السابق.\n\nOperating expenses increased by AED 450,000 due to marketing campaigns in Q1 2026.",
+  "tables": []
+}

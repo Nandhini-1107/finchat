@@ -1,0 +1,406 @@
+{
+  "evaluationVersion": "v2.0.0-strict-business-identity",
+  "evaluationMode": "strict_v2",
+  "evaluationTimestamp": "2026-11-16T04:45:53.384Z",
+  "datasetSummary": {
+    "totalDocuments": 16,
+    "benchmarkDocuments": 11,
+    "edgeCaseFixtures": 5,
+    "totalExpectedFacts": 100,
+    "totalExtractedFacts": 100
+  },
+  "overallPerformance": {
+    "truePositives": 100,
+    "falsePositives": 0,
+    "falseNegatives": 0,
+    "precision": 1,
+    "recall": 1,
+    "f1Score": 1,
+    "accountingInvariants": {
+      "tpPlusFnEqualsExpected": true,
+      "tpPlusFpEqualsExtracted": true
+    }
+  },
+  "fieldLevelAccuracy": {
+    "totalEvaluatedPairs": 100,
+    "metricAccuracy": 1,
+    "entityAccuracy": 1,
+    "periodAccuracy": 1,
+    "reportingBasisAccuracy": 1,
+    "dimensionsAccuracy": 1,
+    "valueAccuracy": 1,
+    "unitAccuracy": 1,
+    "currencyAccuracy": 1,
+    "locationAccuracy": 1
+  },
+  "fieldAccuracyReporting": {
+    "conditionalAccuracyOnMatchedFacts": {
+      "denominator": 100,
+      "metricAccuracy": 1,
+      "entityAccuracy": 1,
+      "periodAccuracy": 1,
+      "reportingBasisAccuracy": 1,
+      "dimensionsAccuracy": 1,
+      "valueAccuracy": 1,
+      "unitAccuracy": 1,
+      "currencyAccuracy": 1,
+      "locationAccuracy": 1
+    },
+    "unconditionalGroundTruthAccuracy": {
+      "denominator": 100,
+      "metricAccuracy": 1,
+      "entityAccuracy": 1,
+      "periodAccuracy": 1,
+      "reportingBasisAccuracy": 1,
+      "dimensionsAccuracy": 1,
+      "valueAccuracy": 1,
+      "unitAccuracy": 1,
+      "currencyAccuracy": 1,
+      "locationAccuracy": 1
+    }
+  },
+  "weakMatchBreakdown": {
+    "INCORRECT_ENTITY": 0,
+    "INCORRECT_VALUE": 0,
+    "INCORRECT_PERIOD": 0,
+    "INCORRECT_REPORTING_BASIS": 0,
+    "INCORRECT_DIMENSIONS": 0,
+    "INCORRECT_UNIT": 0,
+    "INCORRECT_CURRENCY": 0
+  },
+  "documentResults": [
+    {
+      "documentId": "doc-01-contoso-retail-q1-audited",
+      "fileName": "doc-01-contoso-retail-q1-audited.json",
+      "isFixture": false,
+      "expected": 9,
+      "extracted": 9,
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 9,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "doc-02-contoso-retail-q2-management-pack",
+      "fileName": "doc-02-contoso-retail-q2-management-pack.json",
+      "isFixture": false,
+      "expected": 10,
+      "extracted": 10,
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 10,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "doc-03-contoso-logistics-q1-audited",
+      "fileName": "doc-03-contoso-logistics-q1-audited.json",
+      "isFixture": false,
+      "expected": 9,
+      "extracted": 9,
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 9,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "doc-04-contoso-logistics-q2-draft-v1",
+      "fileName": "doc-04-contoso-logistics-q2-draft-v1.json",
+      "isFixture": false,
+      "expected": 4,
+      "extracted": 4,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 4,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "doc-05-contoso-logistics-q2-final-v2",
+      "fileName": "doc-05-contoso-logistics-q2-final-v2.json",
+      "isFixture": false,
+      "expected": 4,
+      "extracted": 4,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 4,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "doc-06-contoso-properties-q1-management-pack",
+      "fileName": "doc-06-contoso-properties-q1-management-pack.json",
+      "isFixture": false,
+      "expected": 8,
+      "extracted": 8,
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 8,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "doc-07-contoso-holdings-board-pack-q1",
+      "fileName": "doc-07-contoso-holdings-board-pack-q1.json",
+      "isFixture": false,
+      "expected": 12,
+      "extracted": 12,
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 12,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "doc-08-contoso-retail-budget-fy2026",
+      "fileName": "doc-08-contoso-retail-budget-fy2026.json",
+      "isFixture": false,
+      "expected": 10,
+      "extracted": 10,
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 10,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "doc-09-contoso-logistics-budget-fy2026",
+      "fileName": "doc-09-contoso-logistics-budget-fy2026.json",
+      "isFixture": false,
+      "expected": 5,
+      "extracted": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 5,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "doc-10-contoso-properties-budget-fy2026",
+      "fileName": "doc-10-contoso-properties-budget-fy2026.json",
+      "isFixture": false,
+      "expected": 5,
+      "extracted": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 5,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "doc-11-contoso-holdings-group-actuals-tracker",
+      "fileName": "doc-11-contoso-holdings-group-actuals-tracker.json",
+      "isFixture": false,
+      "expected": 10,
+      "extracted": 10,
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 10,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "fixture-01-multilevel-segments",
+      "fileName": "fixture-01-multilevel-segments.json",
+      "isFixture": true,
+      "expected": 4,
+      "extracted": 4,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 4,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "fixture-02-excel-formulas-and-errors",
+      "fileName": "fixture-02-excel-formulas-and-errors.json",
+      "isFixture": true,
+      "expected": 2,
+      "extracted": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 2,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "fixture-03-ratios-and-bps",
+      "fileName": "fixture-03-ratios-and-bps.json",
+      "isFixture": true,
+      "expected": 4,
+      "extracted": 4,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 4,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "fixture-04-missing-metadata-and-stray",
+      "fileName": "fixture-04-missing-metadata-and-stray.json",
+      "isFixture": true,
+      "expected": 2,
+      "extracted": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 2,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    },
+    {
+      "documentId": "fixture-05-narrative-commentary-bilingual",
+      "fileName": "fixture-05-narrative-commentary-bilingual.json",
+      "isFixture": true,
+      "expected": 2,
+      "extracted": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "conditionalAccuracy": {
+        "denominator": 2,
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1
+      }
+    }
+  ],
+  "discrepancyCatalog": {
+    "totalDiscrepancies": 0,
+    "weakMatchesByReason": {
+      "INCORRECT_ENTITY": 0,
+      "INCORRECT_VALUE": 0,
+      "INCORRECT_PERIOD": 0,
+      "INCORRECT_REPORTING_BASIS": 0,
+      "INCORRECT_DIMENSIONS": 0,
+      "INCORRECT_UNIT": 0,
+      "INCORRECT_CURRENCY": 0
+    },
+    "failures": []
+  }
+}

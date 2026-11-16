@@ -1,0 +1,1332 @@
+{
+  "evaluationTimestamp": "2026-11-15T05:32:12.453Z",
+  "datasetSummary": {
+    "totalDocuments": 16,
+    "benchmarkDocuments": 11,
+    "edgeCaseFixtures": 5,
+    "totalExpectedFacts": 100,
+    "totalExtractedFacts": 97
+  },
+  "overallPerformance": {
+    "truePositives": 80,
+    "falsePositives": 17,
+    "falseNegatives": 20,
+    "precision": 0.8247,
+    "recall": 0.8,
+    "f1Score": 0.8122
+  },
+  "fieldLevelAccuracy": {
+    "totalEvaluatedPairs": 92,
+    "metricAccuracy": 1,
+    "entityAccuracy": 0.2391,
+    "periodAccuracy": 0.837,
+    "valueAccuracy": 0.8043,
+    "unitAccuracy": 0.9457,
+    "currencyAccuracy": 0.9457,
+    "locationAccuracy": 1
+  },
+  "documentResults": [
+    {
+      "documentId": "doc-01-contoso-retail-q1-audited",
+      "fileName": "doc-01-contoso-retail-q1-audited.json",
+      "isFixture": false,
+      "expected": 9,
+      "extracted": 9,
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 1,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "doc-02-contoso-retail-q2-management-pack",
+      "fileName": "doc-02-contoso-retail-q2-management-pack.json",
+      "isFixture": false,
+      "expected": 10,
+      "extracted": 9,
+      "tp": 9,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.9474,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 1,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "doc-03-contoso-logistics-q1-audited",
+      "fileName": "doc-03-contoso-logistics-q1-audited.json",
+      "isFixture": false,
+      "expected": 9,
+      "extracted": 9,
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 1,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "doc-04-contoso-logistics-q2-draft-v1",
+      "fileName": "doc-04-contoso-logistics-q2-draft-v1.json",
+      "isFixture": false,
+      "expected": 4,
+      "extracted": 4,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 1,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "doc-05-contoso-logistics-q2-final-v2",
+      "fileName": "doc-05-contoso-logistics-q2-final-v2.json",
+      "isFixture": false,
+      "expected": 4,
+      "extracted": 4,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 1,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "doc-06-contoso-properties-q1-management-pack",
+      "fileName": "doc-06-contoso-properties-q1-management-pack.json",
+      "isFixture": false,
+      "expected": 8,
+      "extracted": 8,
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 0.63,
+        "value": 1,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "doc-07-contoso-holdings-board-pack-q1",
+      "fileName": "doc-07-contoso-holdings-board-pack-q1.json",
+      "isFixture": false,
+      "expected": 12,
+      "extracted": 12,
+      "tp": 0,
+      "fp": 12,
+      "fn": 12,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 1,
+        "period": 0,
+        "value": 0,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "doc-08-contoso-retail-budget-fy2026",
+      "fileName": "doc-08-contoso-retail-budget-fy2026.json",
+      "isFixture": false,
+      "expected": 10,
+      "extracted": 10,
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 1,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "doc-09-contoso-logistics-budget-fy2026",
+      "fileName": "doc-09-contoso-logistics-budget-fy2026.json",
+      "isFixture": false,
+      "expected": 5,
+      "extracted": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 1,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "doc-10-contoso-properties-budget-fy2026",
+      "fileName": "doc-10-contoso-properties-budget-fy2026.json",
+      "isFixture": false,
+      "expected": 5,
+      "extracted": 5,
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 0,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "doc-11-contoso-holdings-group-actuals-tracker",
+      "fileName": "doc-11-contoso-holdings-group-actuals-tracker.json",
+      "isFixture": false,
+      "expected": 10,
+      "extracted": 10,
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 1,
+        "period": 1,
+        "value": 1,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "fixture-01-multilevel-segments",
+      "fileName": "fixture-01-multilevel-segments.json",
+      "isFixture": true,
+      "expected": 4,
+      "extracted": 4,
+      "tp": 0,
+      "fp": 4,
+      "fn": 4,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "fieldAccuracy": {
+        "metric": 0,
+        "entity": 0,
+        "period": 0,
+        "value": 0,
+        "unit": 0,
+        "currency": 0
+      }
+    },
+    {
+      "documentId": "fixture-02-excel-formulas-and-errors",
+      "fileName": "fixture-02-excel-formulas-and-errors.json",
+      "isFixture": true,
+      "expected": 2,
+      "extracted": 1,
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 1,
+        "unit": 1,
+        "currency": 1
+      }
+    },
+    {
+      "documentId": "fixture-03-ratios-and-bps",
+      "fileName": "fixture-03-ratios-and-bps.json",
+      "isFixture": true,
+      "expected": 4,
+      "extracted": 4,
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 0.75,
+        "unit": 0,
+        "currency": 0
+      }
+    },
+    {
+      "documentId": "fixture-04-missing-metadata-and-stray",
+      "fileName": "fixture-04-missing-metadata-and-stray.json",
+      "isFixture": true,
+      "expected": 2,
+      "extracted": 3,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.6667,
+      "recall": 1,
+      "f1": 0.8,
+      "fieldAccuracy": {
+        "metric": 1,
+        "entity": 0,
+        "period": 1,
+        "value": 1,
+        "unit": 0.5,
+        "currency": 0.5
+      }
+    },
+    {
+      "documentId": "fixture-05-narrative-commentary-bilingual",
+      "fileName": "fixture-05-narrative-commentary-bilingual.json",
+      "isFixture": true,
+      "expected": 2,
+      "extracted": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "fieldAccuracy": {
+        "metric": 0,
+        "entity": 0,
+        "period": 0,
+        "value": 0,
+        "unit": 0,
+        "currency": 0
+      }
+    }
+  ],
+  "discrepancyCatalog": {
+    "totalDiscrepancies": 106,
+    "breakdownByType": {
+      "ENTITY_MISMATCH_OR_FALLBACK": 70,
+      "VALUE_MISMATCH_OR_SCALING": 18,
+      "UNIT_NORMALIZATION_GAP": 5,
+      "FALSE_NEGATIVE_EXTRACTION_MISSED": 8,
+      "FALSE_POSITIVE_EXTRACTION_SPURIOUS": 5
+    },
+    "failures": [
+      {
+        "document": "doc-01-contoso-retail-q1-audited.json",
+        "factId": "doc-01_fact_1",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-01-contoso-retail-q1-audited.json",
+        "factId": "doc-01_fact_2",
+        "metric": "Cost of sales",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-01-contoso-retail-q1-audited.json",
+        "factId": "doc-01_fact_3",
+        "metric": "Gross profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-01-contoso-retail-q1-audited.json",
+        "factId": "doc-01_fact_4",
+        "metric": "Operating expenses",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-01-contoso-retail-q1-audited.json",
+        "factId": "doc-01_fact_5",
+        "metric": "Operating profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-01-contoso-retail-q1-audited.json",
+        "factId": "doc-01_fact_6",
+        "metric": "Finance costs",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-01-contoso-retail-q1-audited.json",
+        "factId": "doc-01_fact_7",
+        "metric": "Profit before tax",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-01-contoso-retail-q1-audited.json",
+        "factId": "doc-01_fact_8",
+        "metric": "Corporate tax (9%)",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-01-contoso-retail-q1-audited.json",
+        "factId": "doc-01_fact_9",
+        "metric": "Net profit for the period",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-02-contoso-retail-q2-management-pack.json",
+        "factId": "doc-02_fact_1",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-02-contoso-retail-q2-management-pack.json",
+        "factId": "doc-02_fact_2",
+        "metric": "Cost of sales",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-02-contoso-retail-q2-management-pack.json",
+        "factId": "doc-02_fact_3",
+        "metric": "Gross profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-02-contoso-retail-q2-management-pack.json",
+        "factId": "doc-02_fact_4",
+        "metric": "Operating expenses",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-02-contoso-retail-q2-management-pack.json",
+        "factId": "doc-02_fact_5",
+        "metric": "Operating profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-02-contoso-retail-q2-management-pack.json",
+        "factId": "doc-02_fact_6",
+        "metric": "Finance costs",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-02-contoso-retail-q2-management-pack.json",
+        "factId": "doc-02_fact_7",
+        "metric": "Profit before tax",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-02-contoso-retail-q2-management-pack.json",
+        "factId": "doc-02_fact_8",
+        "metric": "Corporate tax (9%)",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-02-contoso-retail-q2-management-pack.json",
+        "factId": "doc-02_fact_9",
+        "metric": "Net profit for the period",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-02-contoso-retail-q2-management-pack.json",
+        "factId": "doc-02_fact_10",
+        "metric": "Revenue growth",
+        "type": "FALSE_NEGATIVE_EXTRACTION_MISSED",
+        "expected": "5.0%",
+        "extracted": null,
+        "detail": "Expected fact was not extracted. Likely paragraph/narrative text, formula error cell skipped, or multi-level header structure."
+      },
+      {
+        "document": "doc-03-contoso-logistics-q1-audited.json",
+        "factId": "doc-03_fact_1",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-03-contoso-logistics-q1-audited.json",
+        "factId": "doc-03_fact_2",
+        "metric": "Direct operating costs",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-03-contoso-logistics-q1-audited.json",
+        "factId": "doc-03_fact_3",
+        "metric": "Gross profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-03-contoso-logistics-q1-audited.json",
+        "factId": "doc-03_fact_4",
+        "metric": "Operating expenses",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-03-contoso-logistics-q1-audited.json",
+        "factId": "doc-03_fact_5",
+        "metric": "Operating profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-03-contoso-logistics-q1-audited.json",
+        "factId": "doc-03_fact_6",
+        "metric": "Finance costs",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-03-contoso-logistics-q1-audited.json",
+        "factId": "doc-03_fact_7",
+        "metric": "Profit before tax",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-03-contoso-logistics-q1-audited.json",
+        "factId": "doc-03_fact_8",
+        "metric": "Corporate tax (9%)",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-03-contoso-logistics-q1-audited.json",
+        "factId": "doc-03_fact_9",
+        "metric": "Net profit for the period",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-04-contoso-logistics-q2-draft-v1.json",
+        "factId": "doc-04_fact_1",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-04-contoso-logistics-q2-draft-v1.json",
+        "factId": "doc-04_fact_2",
+        "metric": "Direct operating costs",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-04-contoso-logistics-q2-draft-v1.json",
+        "factId": "doc-04_fact_3",
+        "metric": "Gross profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-04-contoso-logistics-q2-draft-v1.json",
+        "factId": "doc-04_fact_4",
+        "metric": "Net profit for the period",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-05-contoso-logistics-q2-final-v2.json",
+        "factId": "doc-05_fact_1",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-05-contoso-logistics-q2-final-v2.json",
+        "factId": "doc-05_fact_2",
+        "metric": "Direct operating costs",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-05-contoso-logistics-q2-final-v2.json",
+        "factId": "doc-05_fact_3",
+        "metric": "Gross profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-05-contoso-logistics-q2-final-v2.json",
+        "factId": "doc-05_fact_4",
+        "metric": "Net profit for the period",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-06-contoso-properties-q1-management-pack.json",
+        "factId": "doc-06_fact_1",
+        "metric": "Rental revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-06-contoso-properties-q1-management-pack.json",
+        "factId": "doc-06_fact_2",
+        "metric": "Direct property costs",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-06-contoso-properties-q1-management-pack.json",
+        "factId": "doc-06_fact_3",
+        "metric": "Net rental income",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-06-contoso-properties-q1-management-pack.json",
+        "factId": "doc-06_fact_4",
+        "metric": "Operating expenses",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-06-contoso-properties-q1-management-pack.json",
+        "factId": "doc-06_fact_5",
+        "metric": "Net profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-06-contoso-properties-q1-management-pack.json",
+        "factId": "doc-06_fact_6",
+        "metric": "Closing cash",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-06-contoso-properties-q1-management-pack.json",
+        "factId": "doc-06_fact_7",
+        "metric": "Minimum operating cash",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-06-contoso-properties-q1-management-pack.json",
+        "factId": "doc-06_fact_8",
+        "metric": "Cash shortfall",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_1",
+        "metric": "Revenue",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "12840000.00000000",
+        "extracted": 12840,
+        "detail": "Expected normalized value 12840000.00000000 but extracted was 12840. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_2",
+        "metric": "Operating expenses",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "-2995000.00000000",
+        "extracted": 2995,
+        "detail": "Expected normalized value -2995000.00000000 but extracted was 2995. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_3",
+        "metric": "Net profit",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "1307000.00000000",
+        "extracted": 1307,
+        "detail": "Expected normalized value 1307000.00000000 but extracted was 1307. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_4",
+        "metric": "Revenue",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "8720000.00000000",
+        "extracted": 8720,
+        "detail": "Expected normalized value 8720000.00000000 but extracted was 8720. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_5",
+        "metric": "Operating expenses",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "-1402000.00000000",
+        "extracted": 1402,
+        "detail": "Expected normalized value -1402000.00000000 but extracted was 1402. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_6",
+        "metric": "Net profit",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "896000.00000000",
+        "extracted": 896,
+        "detail": "Expected normalized value 896000.00000000 but extracted was 896. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_7",
+        "metric": "Revenue",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "5240000.00000000",
+        "extracted": 5240,
+        "detail": "Expected normalized value 5240000.00000000 but extracted was 5240. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_8",
+        "metric": "Operating expenses",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "-3215000.00000000",
+        "extracted": 3215,
+        "detail": "Expected normalized value -3215000.00000000 but extracted was 3215. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_9",
+        "metric": "Net profit",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "604000.00000000",
+        "extracted": 604,
+        "detail": "Expected normalized value 604000.00000000 but extracted was 604. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_10",
+        "metric": "Revenue",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "26800000.00000000",
+        "extracted": 26800,
+        "detail": "Expected normalized value 26800000.00000000 but extracted was 26800. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_11",
+        "metric": "Operating expenses",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "-7613000.00000000",
+        "extracted": 7613,
+        "detail": "Expected normalized value -7613000.00000000 but extracted was 7613. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-07-contoso-holdings-board-pack-q1.json",
+        "factId": "doc-07_fact_12",
+        "metric": "Net profit",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "2807000.00000000",
+        "extracted": 2807,
+        "detail": "Expected normalized value 2807000.00000000 but extracted was 2807. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-08-contoso-retail-budget-fy2026.json",
+        "factId": "doc-08_fact_1",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-08-contoso-retail-budget-fy2026.json",
+        "factId": "doc-08_fact_2",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-08-contoso-retail-budget-fy2026.json",
+        "factId": "doc-08_fact_3",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-08-contoso-retail-budget-fy2026.json",
+        "factId": "doc-08_fact_4",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-08-contoso-retail-budget-fy2026.json",
+        "factId": "doc-08_fact_5",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-08-contoso-retail-budget-fy2026.json",
+        "factId": "doc-08_fact_6",
+        "metric": "Gross profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-08-contoso-retail-budget-fy2026.json",
+        "factId": "doc-08_fact_7",
+        "metric": "Gross profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-08-contoso-retail-budget-fy2026.json",
+        "factId": "doc-08_fact_8",
+        "metric": "Gross profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-08-contoso-retail-budget-fy2026.json",
+        "factId": "doc-08_fact_9",
+        "metric": "Gross profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-08-contoso-retail-budget-fy2026.json",
+        "factId": "doc-08_fact_10",
+        "metric": "Gross profit",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Retail LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Retail LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-09-contoso-logistics-budget-fy2026.json",
+        "factId": "doc-09_fact_1",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-09-contoso-logistics-budget-fy2026.json",
+        "factId": "doc-09_fact_2",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-09-contoso-logistics-budget-fy2026.json",
+        "factId": "doc-09_fact_3",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-09-contoso-logistics-budget-fy2026.json",
+        "factId": "doc-09_fact_4",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-09-contoso-logistics-budget-fy2026.json",
+        "factId": "doc-09_fact_5",
+        "metric": "Revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-10-contoso-properties-budget-fy2026.json",
+        "factId": "doc-10_fact_1",
+        "metric": "Rental revenue",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "5100000.00000000",
+        "extracted": 5100,
+        "detail": "Expected normalized value 5100000.00000000 but extracted was 5100. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-10-contoso-properties-budget-fy2026.json",
+        "factId": "doc-10_fact_1",
+        "metric": "Rental revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-10-contoso-properties-budget-fy2026.json",
+        "factId": "doc-10_fact_2",
+        "metric": "Rental revenue",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "5200000.00000000",
+        "extracted": 5200,
+        "detail": "Expected normalized value 5200000.00000000 but extracted was 5200. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-10-contoso-properties-budget-fy2026.json",
+        "factId": "doc-10_fact_2",
+        "metric": "Rental revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-10-contoso-properties-budget-fy2026.json",
+        "factId": "doc-10_fact_3",
+        "metric": "Rental revenue",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "5300000.00000000",
+        "extracted": 5300,
+        "detail": "Expected normalized value 5300000.00000000 but extracted was 5300. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-10-contoso-properties-budget-fy2026.json",
+        "factId": "doc-10_fact_3",
+        "metric": "Rental revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-10-contoso-properties-budget-fy2026.json",
+        "factId": "doc-10_fact_4",
+        "metric": "Rental revenue",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "5400000.00000000",
+        "extracted": 5400,
+        "detail": "Expected normalized value 5400000.00000000 but extracted was 5400. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-10-contoso-properties-budget-fy2026.json",
+        "factId": "doc-10_fact_4",
+        "metric": "Rental revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "doc-10-contoso-properties-budget-fy2026.json",
+        "factId": "doc-10_fact_5",
+        "metric": "Rental revenue",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "21000000.00000000",
+        "extracted": 21000,
+        "detail": "Expected normalized value 21000000.00000000 but extracted was 21000. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "doc-10-contoso-properties-budget-fy2026.json",
+        "factId": "doc-10_fact_5",
+        "metric": "Rental revenue",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Properties LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Properties LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "fixture-01-multilevel-segments.json",
+        "factId": "fixture-01_fact_1",
+        "metric": "Revenue",
+        "type": "FALSE_NEGATIVE_EXTRACTION_MISSED",
+        "expected": "8,200,000",
+        "extracted": null,
+        "detail": "Expected fact was not extracted. Likely paragraph/narrative text, formula error cell skipped, or multi-level header structure."
+      },
+      {
+        "document": "fixture-01-multilevel-segments.json",
+        "factId": "fixture-01_fact_2",
+        "metric": "Revenue",
+        "type": "FALSE_NEGATIVE_EXTRACTION_MISSED",
+        "expected": "4,280,000",
+        "extracted": null,
+        "detail": "Expected fact was not extracted. Likely paragraph/narrative text, formula error cell skipped, or multi-level header structure."
+      },
+      {
+        "document": "fixture-01-multilevel-segments.json",
+        "factId": "fixture-01_fact_3",
+        "metric": "Gross margin",
+        "type": "FALSE_NEGATIVE_EXTRACTION_MISSED",
+        "expected": "37.0%",
+        "extracted": null,
+        "detail": "Expected fact was not extracted. Likely paragraph/narrative text, formula error cell skipped, or multi-level header structure."
+      },
+      {
+        "document": "fixture-01-multilevel-segments.json",
+        "factId": "fixture-01_fact_4",
+        "metric": "Gross margin",
+        "type": "FALSE_NEGATIVE_EXTRACTION_MISSED",
+        "expected": "34.5%",
+        "extracted": null,
+        "detail": "Expected fact was not extracted. Likely paragraph/narrative text, formula error cell skipped, or multi-level header structure."
+      },
+      {
+        "document": "fixture-01-multilevel-segments.json",
+        "factId": null,
+        "metric": "Retail Outlets / UAE",
+        "type": "FALSE_POSITIVE_EXTRACTION_SPURIOUS",
+        "expected": null,
+        "extracted": "8,200,000",
+        "detail": "Fact was extracted but not in expected benchmark. Likely spurious extraction of footnote or stray note number."
+      },
+      {
+        "document": "fixture-01-multilevel-segments.json",
+        "factId": null,
+        "metric": "E-Commerce / UAE",
+        "type": "FALSE_POSITIVE_EXTRACTION_SPURIOUS",
+        "expected": null,
+        "extracted": "4,280,000",
+        "detail": "Fact was extracted but not in expected benchmark. Likely spurious extraction of footnote or stray note number."
+      },
+      {
+        "document": "fixture-01-multilevel-segments.json",
+        "factId": null,
+        "metric": "Retail Outlets / UAE",
+        "type": "FALSE_POSITIVE_EXTRACTION_SPURIOUS",
+        "expected": null,
+        "extracted": "37.0%",
+        "detail": "Fact was extracted but not in expected benchmark. Likely spurious extraction of footnote or stray note number."
+      },
+      {
+        "document": "fixture-01-multilevel-segments.json",
+        "factId": null,
+        "metric": "E-Commerce / UAE",
+        "type": "FALSE_POSITIVE_EXTRACTION_SPURIOUS",
+        "expected": null,
+        "extracted": "34.5%",
+        "detail": "Fact was extracted but not in expected benchmark. Likely spurious extraction of footnote or stray note number."
+      },
+      {
+        "document": "fixture-02-excel-formulas-and-errors.json",
+        "factId": "fixture-02_fact_1",
+        "metric": "Freight surcharge",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Logistics LLC",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Logistics LLC' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "fixture-02-excel-formulas-and-errors.json",
+        "factId": "fixture-02_fact_2",
+        "metric": "Fuel index adjustment",
+        "type": "FALSE_NEGATIVE_EXTRACTION_MISSED",
+        "expected": "#DIV/0!",
+        "extracted": null,
+        "detail": "Expected fact was not extracted. Likely paragraph/narrative text, formula error cell skipped, or multi-level header structure."
+      },
+      {
+        "document": "fixture-03-ratios-and-bps.json",
+        "factId": "fixture-03_fact_1",
+        "metric": "Effective tax rate",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Holdings",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Holdings' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "fixture-03-ratios-and-bps.json",
+        "factId": "fixture-03_fact_1",
+        "metric": "Effective tax rate",
+        "type": "UNIT_NORMALIZATION_GAP",
+        "expected": "ratio",
+        "extracted": "percentage",
+        "detail": "Expected unit 'ratio' but extracted was 'percentage'."
+      },
+      {
+        "document": "fixture-03-ratios-and-bps.json",
+        "factId": "fixture-03_fact_2",
+        "metric": "EBITDA margin",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Holdings",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Holdings' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "fixture-03-ratios-and-bps.json",
+        "factId": "fixture-03_fact_2",
+        "metric": "EBITDA margin",
+        "type": "UNIT_NORMALIZATION_GAP",
+        "expected": "ratio",
+        "extracted": "percentage",
+        "detail": "Expected unit 'ratio' but extracted was 'percentage'."
+      },
+      {
+        "document": "fixture-03-ratios-and-bps.json",
+        "factId": "fixture-03_fact_3",
+        "metric": "Financing spread",
+        "type": "VALUE_MISMATCH_OR_SCALING",
+        "expected": "0.01800000",
+        "extracted": 180,
+        "detail": "Expected normalized value 0.01800000 but extracted was 180. Likely unit scaling or decimal normalization gap."
+      },
+      {
+        "document": "fixture-03-ratios-and-bps.json",
+        "factId": "fixture-03_fact_3",
+        "metric": "Financing spread",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Holdings",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Holdings' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "fixture-03-ratios-and-bps.json",
+        "factId": "fixture-03_fact_3",
+        "metric": "Financing spread",
+        "type": "UNIT_NORMALIZATION_GAP",
+        "expected": "ratio",
+        "extracted": "amount",
+        "detail": "Expected unit 'ratio' but extracted was 'amount'."
+      },
+      {
+        "document": "fixture-03-ratios-and-bps.json",
+        "factId": "fixture-03_fact_4",
+        "metric": "Dividend yield",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": "Contoso Holdings",
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'Contoso Holdings' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "fixture-03-ratios-and-bps.json",
+        "factId": "fixture-03_fact_4",
+        "metric": "Dividend yield",
+        "type": "UNIT_NORMALIZATION_GAP",
+        "expected": "ratio",
+        "extracted": "amount",
+        "detail": "Expected unit 'ratio' but extracted was 'amount'."
+      },
+      {
+        "document": "fixture-04-missing-metadata-and-stray.json",
+        "factId": "fixture-04_fact_1",
+        "metric": "Corporate tax expense",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": null,
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'null' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "fixture-04-missing-metadata-and-stray.json",
+        "factId": "fixture-04_fact_2",
+        "metric": "Full-time equivalent staff",
+        "type": "ENTITY_MISMATCH_OR_FALLBACK",
+        "expected": null,
+        "extracted": "Consolidated",
+        "detail": "Expected entity 'null' but extracted was 'Consolidated'. Engine defaulted to Consolidated without reading document metadata or row labels."
+      },
+      {
+        "document": "fixture-04-missing-metadata-and-stray.json",
+        "factId": "fixture-04_fact_2",
+        "metric": "Full-time equivalent staff",
+        "type": "UNIT_NORMALIZATION_GAP",
+        "expected": "headcount",
+        "extracted": "amount",
+        "detail": "Expected unit 'headcount' but extracted was 'amount'."
+      },
+      {
+        "document": "fixture-04-missing-metadata-and-stray.json",
+        "factId": null,
+        "metric": "Unanchored footnote note",
+        "type": "FALSE_POSITIVE_EXTRACTION_SPURIOUS",
+        "expected": null,
+        "extracted": "50,000",
+        "detail": "Fact was extracted but not in expected benchmark. Likely spurious extraction of footnote or stray note number."
+      },
+      {
+        "document": "fixture-05-narrative-commentary-bilingual.json",
+        "factId": "fixture-05_fact_1",
+        "metric": "إيرادات مجمعة",
+        "type": "FALSE_NEGATIVE_EXTRACTION_MISSED",
+        "expected": "34.5 مليون درهم",
+        "extracted": null,
+        "detail": "Expected fact was not extracted. Likely paragraph/narrative text, formula error cell skipped, or multi-level header structure."
+      },
+      {
+        "document": "fixture-05-narrative-commentary-bilingual.json",
+        "factId": "fixture-05_fact_2",
+        "metric": "Operating expenses",
+        "type": "FALSE_NEGATIVE_EXTRACTION_MISSED",
+        "expected": "AED 450,000",
+        "extracted": null,
+        "detail": "Expected fact was not extracted. Likely paragraph/narrative text, formula error cell skipped, or multi-level header structure."
+      }
+    ]
+  }
+}

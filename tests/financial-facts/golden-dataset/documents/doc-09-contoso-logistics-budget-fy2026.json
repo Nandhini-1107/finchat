@@ -1,0 +1,298 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-09-contoso-logistics-budget-fy2026",
+    "fileName": "Contoso_Logistics_LLC_Budget_FY2026.xlsx",
+    "fileType": "xlsx",
+    "metadata": {
+      "documentTitle": "Contoso Logistics LLC – Budget FY2026",
+      "issuer": "Contoso Logistics LLC",
+      "reportingPeriod": "FY 2026",
+      "periodStart": "2026-01-01",
+      "periodEnd": "2026-12-31",
+      "asOfDate": "2025-12-15",
+      "reportingBasis": "Budget",
+      "auditStatus": "Approved budget",
+      "reportingScope": "Entity",
+      "currency": "AED"
+    },
+    "sourceMetadata": {
+      "authorityRank": 2,
+      "sourceType": "Approved Budget"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-09_table_1",
+      "documentId": "doc-09-contoso-logistics-budget-fy2026",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 2,
+        "columnCount": 6,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Q2 2026",
+          "headerPath": [
+            "Q2 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Q3 2026",
+          "headerPath": [
+            "Q3 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 4,
+          "header": "Q4 2026",
+          "headerPath": [
+            "Q4 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 5,
+          "header": "FY 2026",
+          "headerPath": [
+            "FY 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 8500000,
+              "formattedValue": "8,500,000"
+            },
+            {
+              "columnIndex": 2,
+              "value": 9000000,
+              "formattedValue": "9,000,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 9200000,
+              "formattedValue": "9,200,000"
+            },
+            {
+              "columnIndex": 4,
+              "value": 9800000,
+              "formattedValue": "9,800,000"
+            },
+            {
+              "columnIndex": 5,
+              "value": 36500000,
+              "formattedValue": "36,500,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Revenue",
+            "Q1 2026": "8,500,000",
+            "Q2 2026": "9,000,000",
+            "Q3 2026": "9,200,000",
+            "Q4 2026": "9,800,000",
+            "FY 2026": "36,500,000"
+          },
+          "rawValues": [
+            "Revenue",
+            "8,500,000",
+            "9,000,000",
+            "9,200,000",
+            "9,800,000",
+            "36,500,000"
+          ]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-excel",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 0
+  },
+  "document_id": "doc-09-contoso-logistics-budget-fy2026",
+  "fullMarkdown": "Contoso Logistics LLC – Budget FY2026\nApproved budget | Approved 15 December 2025 | Currency: AED",
+  "tables": [
+    {
+      "elementId": "doc-09_table_1",
+      "documentId": "doc-09-contoso-logistics-budget-fy2026",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 2,
+        "columnCount": 6,
+        "headerRowIndex": 0,
+        "hasMultiLevelHeaders": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Line item",
+          "headerPath": [
+            "Line item"
+          ],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Q1 2026",
+          "headerPath": [
+            "Q1 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Q2 2026",
+          "headerPath": [
+            "Q2 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Q3 2026",
+          "headerPath": [
+            "Q3 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 4,
+          "header": "Q4 2026",
+          "headerPath": [
+            "Q4 2026"
+          ],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 5,
+          "header": "FY 2026",
+          "headerPath": [
+            "FY 2026"
+          ],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "rowType": "data",
+          "cells": [
+            {
+              "columnIndex": 0,
+              "value": "Revenue"
+            },
+            {
+              "columnIndex": 1,
+              "value": 8500000,
+              "formattedValue": "8,500,000"
+            },
+            {
+              "columnIndex": 2,
+              "value": 9000000,
+              "formattedValue": "9,000,000"
+            },
+            {
+              "columnIndex": 3,
+              "value": 9200000,
+              "formattedValue": "9,200,000"
+            },
+            {
+              "columnIndex": 4,
+              "value": 9800000,
+              "formattedValue": "9,800,000"
+            },
+            {
+              "columnIndex": 5,
+              "value": 36500000,
+              "formattedValue": "36,500,000"
+            }
+          ],
+          "cellValues": {
+            "Line item": "Revenue",
+            "Q1 2026": "8,500,000",
+            "Q2 2026": "9,000,000",
+            "Q3 2026": "9,200,000",
+            "Q4 2026": "9,800,000",
+            "FY 2026": "36,500,000"
+          },
+          "rawValues": [
+            "Revenue",
+            "8,500,000",
+            "9,000,000",
+            "9,200,000",
+            "9,800,000",
+            "36,500,000"
+          ]
+        }
+      ],
+      "table_id": "doc-09_table_1",
+      "headers": [
+        "Line item",
+        "Q1 2026",
+        "Q2 2026",
+        "Q3 2026",
+        "Q4 2026",
+        "FY 2026"
+      ],
+      "header_row_index": 0,
+      "raw_grid": [
+        [
+          "Line item",
+          "Q1 2026",
+          "Q2 2026",
+          "Q3 2026",
+          "Q4 2026",
+          "FY 2026"
+        ],
+        [
+          "Revenue",
+          "8,500,000",
+          "9,000,000",
+          "9,200,000",
+          "9,800,000",
+          "36,500,000"
+        ]
+      ]
+    }
+  ]
+}
