@@ -13,8 +13,24 @@ const {
     completeIngestionRun
 } = require('../services/sql');
 
-/// Dynamically bind schedule to environment variable %DOCUMENT_QUEUE_CRON% with fallback to monthly schedule
-const timerSchedule = process.env.DOCUMENT_QUEUE_CRON ? process.env.DOCUMENT_QUEUE_CRON : '%DOCUMENT_QUEUE_CRON%';
+/**
+ * Normalizes cron expression: converts standard 5-field Unix cron to 6-field NCRONTAB required by Azure Functions.
+ */
+function resolveTimerSchedule(rawSchedule) {
+    if (!rawSchedule) return '0 */5 * * * *';
+    const trimmed = rawSchedule.trim();
+    if (trimmed.startsWith('%') && trimmed.endsWith('%')) {
+        return trimmed;
+    }
+    const parts = trimmed.split(/\s+/);
+    if (parts.length === 5) {
+        // Prepend second '0' so 5-field cron (e.g. '*/1 * * * *') becomes valid 6-field NCRONTAB ('0 */1 * * * *')
+        return `0 ${trimmed}`;
+    }
+    return trimmed;
+}
+
+const timerSchedule = resolveTimerSchedule(process.env.DOCUMENT_QUEUE_CRON || '%DOCUMENT_QUEUE_CRON%');
 const CONCURRENCY_LIMIT = 3;
 
 app.timer('processDocumentQueue', {
@@ -173,5 +189,49 @@ app.timer('processDocumentQueue', {
         }
 
         context.log(`[QueueProcessor] Queue cycle finished. Succeeded=${processedCount}, Failed=${failedCount}.`);
+    }
+});
+
+/**
+ * Storage Queue Trigger for Asynchronous Ingestion (WP15 & Architecture Rule B):
+ * Decouples HTTP 202 acceptance from long-running document ingestion.
+ * Enforces poison message handling after 5 dequeues.
+ */
+app.storageQueue('processIngestionQueue', {
+    queueName: 'finchat-ingestion-queue',
+    connection: 'AzureWebJobsStorage',
+    handler: async (queueItem, context) => {
+        const dequeueCount = Number(context?.triggerMetadata?.dequeueCount || 1);
+        const item = typeof queueItem === 'string' ? JSON.parse(queueItem) : queueItem;
+        const correlationId = item.correlationId || `queue-${Date.now()}`;
+        context.log(`[QueueTrigger] [${correlationId}] Dequeued job for DocumentId=${item.documentId} ("${item.fileName}"). DequeueCount=${dequeueCount}`);
+
+        // Poison queue rule: after 5 dequeues, quarantine and mark Failed
+        if (dequeueCount >= 5) {
+            context.error(`[QueueTrigger] [${correlationId}] POISON MESSAGE DETECTED: DequeueCount=${dequeueCount} reached cap of 5. Quarantining DocumentId=${item.documentId}.`);
+            if (item.documentId) {
+                const { updateDocumentStatus } = require('../services/sql');
+                await updateDocumentStatus(item.documentId, 'Failed', 'Poison message quarantined after 5 failed dequeues.').catch(() => null);
+            }
+            return;
+        }
+
+        try {
+            await processDocumentIngestion({
+                fileBuffer: item.fileBuffer ? Buffer.from(item.fileBuffer, 'base64') : null,
+                fileName: item.fileName,
+                sourceType: item.sourceType || 'ManualUpload',
+                authorityRank: item.authorityRank || 4,
+                allowedUserGroups: item.allowedUserGroups || null,
+                correlationId,
+                context,
+                existingDocumentId: item.documentId,
+                existingRunId: item.runId
+            });
+            context.log(`[QueueTrigger] [${correlationId}] Successfully processed DocumentId=${item.documentId}.`);
+        } catch (err) {
+            context.error(`[QueueTrigger] [${correlationId}] Ingestion failed on attempt ${dequeueCount}: ${err.message}`);
+            throw err; // Re-throw so Azure Functions Storage Queue runtime retries or moves to poison queue
+        }
     }
 });

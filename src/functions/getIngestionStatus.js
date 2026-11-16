@@ -37,6 +37,8 @@ app.http('getIngestionStatus', {
                     sourceType: doc.SourceType,
                     authorityRank: doc.AuthorityRank,
                     ingestionStatus: doc.IngestionStatus,
+                    conflictHold: Boolean(doc.ConflictHold),
+                    openConflictId: doc.OpenConflictId || null,
                     createdAt: doc.CreatedAt,
                     lastProcessedAt: doc.LastProcessedAt,
                     factsCount: facts.length,

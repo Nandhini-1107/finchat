@@ -721,6 +721,9 @@ async function getPendingQueueItems(
                         getField(fields, 'AuthorityRank')
                     ) || 4,
 
+                // TODO(PHASE2): In Phase 2, integrate SharePoint item-level permission inheritance / ACL sync
+                // to enforce fine-grained document security trimming. In Phase 1, basic group metadata is stored
+                // but document-level ACL enforcement is deferred (Operating Rule A.7, ENFORCE_AUTH=false).
                 AllowedUserGroups:
                     getField(fields, 'AllowedUserGroups') ||
                     null

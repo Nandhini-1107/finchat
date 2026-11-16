@@ -1,4 +1,6 @@
 require('../utils/config');
+const fs = require('fs');
+const path = require('path');
 const { validateDocumentBuffer } = require('../utils/validation');
 const { ValidationError, sanitizeErrorMessage } = require('../utils/errors');
 const { analyzeDocument } = require('./document-intelligence');
@@ -14,9 +16,87 @@ const {
     createDocument,
     updateDocumentStatus,
     insertFinancialFacts,
-    deleteDocumentFacts
+    deleteDocumentFacts,
+    getCompleteFinancialFacts,
+    savePendingFactsAndConflicts
 } = require('./sql');
+<<<<<<< Updated upstream
 const { detectAndResolveConflicts } = require('./conflict-resolver');
+<<<<<<< Updated upstream
+=======
+const { logConflictDetected } = require('./audit-log');
+const { sendConflictNotificationEmail } = require('./notification');
+=======
+const { detectFinancialFactConflicts, detectAndResolveConflicts } = require('./conflict-resolver');
+const { sendConflictNotification } = require('./conflict-notifier');
+
+/**
+ * Saves full extracted and normalized content to a temporary JSON file in the project folder.
+ */
+function saveExtractedContentToTemp({
+    documentId,
+    fileName,
+    correlationId,
+    authorityRank,
+    docIntelResult,
+    normalized,
+    extractedFacts,
+    conflicts,
+    chunks
+}) {
+    try {
+        const tempDir = path.resolve(process.cwd(), 'temp');
+        if (!fs.existsSync(tempDir)) {
+            fs.mkdirSync(tempDir, { recursive: true });
+        }
+        const safeBaseName = (fileName || 'doc').replace(/[^a-zA-Z0-9_\-\.]/g, '_');
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+        const fileTarget = `extracted-${timestamp}-doc-${documentId || 'unassigned'}-${safeBaseName}.json`;
+        const fullPath = path.join(tempDir, fileTarget);
+
+        const payload = {
+            metadata: {
+                timestamp: new Date().toISOString(),
+                correlationId,
+                documentId,
+                fileName,
+                authorityRank
+            },
+            rawExtraction: {
+                pageCount: docIntelResult?.pages?.length || 0,
+                tableCount: docIntelResult?.tables?.length || 0,
+                paragraphCount: docIntelResult?.paragraphs?.length || 0,
+                contentLength: (docIntelResult?.content || '').length,
+                pages: docIntelResult?.pages || [],
+                tables: docIntelResult?.tables || [],
+                paragraphs: docIntelResult?.paragraphs || [],
+                rawContent: docIntelResult?.content || ''
+            },
+            normalizedContent: {
+                document_id: normalized?.document_id,
+                tables: normalized?.tables || [],
+                paragraphs: normalized?.paragraphs || [],
+                fullMarkdown: normalized?.fullMarkdown || ''
+            },
+            extractedFacts: extractedFacts || [],
+            conflicts: conflicts || [],
+            chunks: chunks || []
+        };
+
+        fs.writeFileSync(fullPath, JSON.stringify(payload, null, 2), 'utf8');
+
+        // Also save latest copy for quick access
+        const latestPath = path.join(tempDir, 'latest-extracted-content.json');
+        fs.writeFileSync(latestPath, JSON.stringify(payload, null, 2), 'utf8');
+
+        return { fullPath, relativePath: path.join('temp', fileTarget) };
+    } catch (err) {
+        console.warn(`[TempWriter] Failed to write extracted content to temp file: ${err.message}`);
+        return null;
+    }
+}
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 /**
  * Orchestrates the full 10-step enterprise ingestion pipeline.
@@ -49,7 +129,20 @@ async function processDocumentIngestion({
     authoritySource = null,
     existingRunId = null,
     manageRun = null,
+<<<<<<< Updated upstream
     existingDocumentId = null
+=======
+    existingDocumentId = null,
+    modifiedByEmail = null,
+<<<<<<< Updated upstream
+    modifiedByName = null,
+    modifiedByUserId = null,
+    baseUrl = null
+=======
+    createdByEmail = null,
+    modifiedUserEmail = null
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 }) {
     const corrId = correlationId || `ingest-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     const log = (msg) => (context.log ? context.log(`[${corrId}] ${msg}`) : console.log(`[${corrId}] ${msg}`));
@@ -88,21 +181,79 @@ async function processDocumentIngestion({
         currentStep = 'STEP 3: DOCUMENT EXTRACTION (PDF / EXCEL)';
         log(`=== ${currentStep} ===`);
 
-        const docIntelResult = await analyzeDocument(fileBuffer, fileName);
+        const docIntelResult = await analyzeDocument(fileBuffer, fileName, { log });
         const extractedPages = docIntelResult.pages || [];
         const extractedTables = docIntelResult.tables || [];
+        const extractedParagraphs = docIntelResult.paragraphs || [];
         const rawContentLen = (docIntelResult.content || '').length;
 
-        log(`Step 3 Output: Extracted ${extractedPages.length} page(s), ${extractedTables.length} table(s), ${rawContentLen} chars text.`);
+        log(`Step 3 Output: Extracted ${extractedPages.length} page(s), ${extractedTables.length} table(s), ${extractedParagraphs.length} paragraph(s), ${rawContentLen} chars raw content.`);
+
+        if (extractedTables.length > 0) {
+            log(`Step 3 Extracted Tables Summary (${extractedTables.length} table(s)):`);
+            extractedTables.forEach((t, i) => {
+                const sheetInfo = t.sheetName ? `Sheet="${t.sheetName}", ` : '';
+                const pageInfo = t.boundingRegions?.[0]?.pageNumber ? `Page=${t.boundingRegions[0].pageNumber}, ` : '';
+                log(`  [Table ${i + 1}] ${sheetInfo}${pageInfo}Dimensions=${t.rowCount} rows x ${t.columnCount} cols (${t.cells?.length || 0} cells)`);
+            });
+        } else {
+            log('Step 3 Notice: 0 structured tables detected by extractor (document will be processed via paragraph text stream).');
+        }
+
+        if (extractedParagraphs.length > 0) {
+            const sampleParaLimit = Math.min(extractedParagraphs.length, 2);
+            log(`Step 3 Extracted Paragraphs Sample (First ${sampleParaLimit} of ${extractedParagraphs.length}):`);
+            for (let i = 0; i < sampleParaLimit; i++) {
+                const snippet = (extractedParagraphs[i].content || '').slice(0, 120).replace(/\r?\n/g, ' ');
+                log(`  [Para ${i + 1}] Page ${extractedParagraphs[i].boundingRegions?.[0]?.pageNumber || 1}: "${snippet}${extractedParagraphs[i].content?.length > 120 ? '...' : ''}"`);
+            }
+        }
 
         // STEP 4: CONTENT NORMALIZATION
         currentStep = 'STEP 4: CONTENT NORMALIZATION';
         log(`=== ${currentStep} ===`);
 
-        const normalized = normalizeContent(docIntelResult, documentId);
+        const normalized = normalizeContent(docIntelResult, documentId, { log });
         const normMarkdownLen = (normalized.fullMarkdown || normalized.content || '').length;
 
-        log(`Step 4 Output: Normalized ${normalized.tables.length} table(s), ${normalized.paragraphs.length} paragraph(s) (${normMarkdownLen} chars).`);
+        log(`Step 4 Output: Normalized ${normalized.tables.length} table(s), ${normalized.paragraphs.length} paragraph(s) (${normMarkdownLen} chars markdown).`);
+
+        if (normalized.tables.length > 0) {
+            log(`Step 4 Normalized Tables Detail (${normalized.tables.length} table(s)):`);
+            normalized.tables.forEach((t, i) => {
+                const headerStr = (t.headers || []).join(' | ');
+                log(`  [Norm Table ${i + 1}] ElementID="${t.element_id}", Page=${t.page_number}, Rows=${t.rows?.length || 0}, Headers: [${headerStr}]`);
+                if (t.rows && t.rows.length > 0) {
+                    const firstRowVals = (t.rows[0].rawValues || []).slice(0, 4).join(', ');
+                    log(`    Sample Row 1: [${firstRowVals}${t.rows[0].rawValues?.length > 4 ? ', ...' : ''}]`);
+                }
+            });
+        } else {
+            log('Step 4 Notice: 0 normalized tables (markdown text only).');
+        }
+
+        if (normalized.paragraphs.length > 0) {
+            const sampleNormLimit = Math.min(normalized.paragraphs.length, 2);
+            log(`Step 4 Normalized Paragraphs Detail (First ${sampleNormLimit} of ${normalized.paragraphs.length}):`);
+            for (let i = 0; i < sampleNormLimit; i++) {
+                const p = normalized.paragraphs[i];
+                const snippet = (p.content || '').slice(0, 100).replace(/\r?\n/g, ' ');
+                log(`  [Norm Para ${i + 1}] ElementID="${p.element_id}", Page=${p.page_number}: "${snippet}${p.content?.length > 100 ? '...' : ''}"`);
+            }
+        }
+
+        // Save raw extraction & normalized content to temp file immediately after Step 4
+        const savedTemp = saveExtractedContentToTemp({
+            documentId,
+            fileName,
+            correlationId: corrId,
+            authorityRank,
+            docIntelResult,
+            normalized
+        });
+        if (savedTemp) {
+            log(`[Artifact] Extracted & normalized content saved to temp file: "${savedTemp.relativePath}" (and "temp/latest-extracted-content.json").`);
+        }
 
         // STEP 5: STRUCTURED FACT EXTRACTION (IFRS & HR FIGURES)
         currentStep = 'STEP 5: STRUCTURED FACT EXTRACTION';
@@ -126,21 +277,125 @@ async function processDocumentIngestion({
         log(`=== ${currentStep} ===`);
 
         let conflicts = [];
-        if (extractedFacts.length > 0) {
-            const insertedCount = await insertFinancialFacts(documentId, extractedFacts, authorityRank, fileName);
-            log(`Step 6 Output (dbo.FinancialFacts): Inserted ${insertedCount.length || extractedFacts.length} row(s).`);
+        let insertedFactIds = [];
+        let hasUnresolvedConflicts = false;
+        const effectiveModifiedEmail = modifiedUserEmail || modifiedByEmail || createdByEmail || null;
 
-            conflicts = await detectAndResolveConflicts(documentId);
-            log(`Step 6 Output (dbo.FactConflicts): Discovered & registered ${conflicts.length} conflict(s).`);
+        if (extractedFacts.length > 0) {
+            // 1. Fetch existing approved master facts from database for dynamic conflict comparison
+            let existingApprovedFacts = [];
+            try {
+                existingApprovedFacts = await getCompleteFinancialFacts();
+            } catch (err) {
+                log(`Step 6 Warning: Could not retrieve existing facts for conflict comparison: ${err.message}`);
+            }
+
+            // 2. Run dynamic conflict detection
+            conflicts = detectFinancialFactConflicts(extractedFacts, existingApprovedFacts, {
+                authorityRank,
+                authoritySource,
+                fileName,
+                documentId,
+                modifiedUserEmail: effectiveModifiedEmail
+            });
+
+            log(`Step 6 Conflict Detection: Discovered ${conflicts.length} conflict(s).`);
+
             if (conflicts.length > 0) {
+<<<<<<< Updated upstream
                 for (const c of conflicts) {
                     log(`  - Discrepancy on "${c.fact1?.Metric}": ${c.status} (${c.fact1?.SourceFileName}: ${c.fact1?.NumericValue} vs ${c.fact2?.SourceFileName}: ${c.fact2?.NumericValue})`);
                 }
+<<<<<<< Updated upstream
+=======
+
+                // Log audit trail
+                await logConflictDetected({ documentId, conflicts, correlationId: corrId });
+
+                // Dispatch conflict notification email with resolution links
+                await sendConflictNotificationEmail({
+                    documentId,
+                    fileName,
+                    modifiedByEmail,
+                    modifiedByName,
+                    conflicts,
+                    baseUrl,
+                    correlationId: corrId,
+                    context
+                });
+=======
+                hasUnresolvedConflicts = true;
+                log(`Step 6 Notice: Document contains ${conflicts.length} unresolved financial conflict(s). Staging all facts as Pending and holding document in PendingApproval.`);
+
+                // 3. Stage facts with MappingStatus = 'Pending' and create FactConflicts with decision tokens
+                const staged = await savePendingFactsAndConflicts({
+                    documentId,
+                    incomingFacts: extractedFacts,
+                    conflicts,
+                    authorityRank,
+                    fileName,
+                    modifiedUserEmail: effectiveModifiedEmail
+                });
+
+                insertedFactIds = staged.insertedFactIds;
+                conflicts = staged.conflicts;
+
+                // 4. Send email notifications with secure decision links to document owner
+                for (const conflict of conflicts) {
+                    log(`  - Discrepancy on "${conflict.metric}": Held for review (Existing [${conflict.existingFileName}]: ${conflict.existingValue} vs Incoming: ${conflict.incomingValue})`);
+                    if (conflict.token) {
+                        try {
+                            const notifResult = await sendConflictNotification({
+                                conflict,
+                                token: conflict.token,
+                                recipientEmail: effectiveModifiedEmail
+                            });
+                            log(`  - Dispatched notification to ${notifResult.recipient}: Success=${notifResult.success}`);
+                        } catch (notifErr) {
+                            log(`  - Notification warning: ${notifErr.message}`);
+                        }
+                    }
+                }
+            } else {
+                // No conflicts detected: insert facts as Approved
+                const insertedCount = await insertFinancialFacts(documentId, extractedFacts, authorityRank, fileName, { mappingStatus: 'Approved' });
+                insertedFactIds = insertedCount;
+                log(`Step 6 Output (dbo.FinancialFacts): Inserted ${insertedCount.length || extractedFacts.length} approved row(s).`);
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
             }
         } else {
             log('Step 6 Output: Skipped SQL fact insertion (0 facts extracted).');
         }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+        const hasConflicts = conflicts.length > 0;
+=======
+        // If conflicts were detected, hold ingestion in PendingApproval status (do not index into search)
+        if (hasUnresolvedConflicts) {
+            log(`Step 7-9 Notice: Retrieval chunking and vector search indexing deferred while document has pending conflicts.`);
+            currentStep = 'STEP 10: INGESTION HOLD (PENDING APPROVAL)';
+            log(`=== ${currentStep} ===`);
+            log(`Step 10 Output: DocumentId=${documentId} held in PendingApproval due to ${conflicts.length} active conflict(s).`);
+
+            return {
+                status: 'PendingApproval',
+                documentId,
+                runId,
+                fileName,
+                authorityRank,
+                factsExtracted: extractedFacts.length,
+                chunksIndexed: 0,
+                conflictsProcessed: conflicts.length,
+                conflicts,
+                correlationId: corrId
+            };
+        }
+>>>>>>> Stashed changes
+
+>>>>>>> Stashed changes
         /// STEP 7: RETRIEVAL CHUNKING
         currentStep = 'STEP 7: RETRIEVAL CHUNKING';
         log(`=== ${currentStep} ===`);
@@ -153,6 +408,22 @@ async function processDocumentIngestion({
                 const lastIdx = chunks.length - 1;
                 log(`  - Chunk ${lastIdx}: ID="${chunks[lastIdx].id}", Title="${chunks[lastIdx].title}", Length=${chunks[lastIdx].content.length} chars`);
             }
+        }
+
+        // Update temp file with complete pipeline artifacts (facts, conflicts, chunks)
+        const updatedTemp = saveExtractedContentToTemp({
+            documentId,
+            fileName,
+            correlationId: corrId,
+            authorityRank,
+            docIntelResult,
+            normalized,
+            extractedFacts,
+            conflicts,
+            chunks
+        });
+        if (updatedTemp) {
+            log(`[Artifact] Pipeline artifacts updated in temp file: "${updatedTemp.relativePath}" (and "temp/latest-extracted-content.json").`);
         }
 
         // STEP 8 & 9: MULTILINGUAL EMBEDDINGS & AZURE AI SEARCH INDEXING
@@ -209,7 +480,7 @@ async function processDocumentIngestion({
         }
         log(`>>> INGESTION FINISHED SUCCESSFULLY <<< DocumentId=${documentId}, Facts=${extractedFacts.length}, Chunks=${chunks.length}`);
 
-        return {
+        const finalResult = {
             status: 'success',
             documentId,
             runId,
@@ -217,9 +488,20 @@ async function processDocumentIngestion({
             authorityRank,
             factsExtracted: extractedFacts.length,
             chunksIndexed: chunks.length,
+<<<<<<< Updated upstream
             conflictsProcessed: conflicts.length,
+=======
+<<<<<<< Updated upstream
+            conflictsProcessed: 0,
+=======
+            conflictsProcessed: conflicts.length,
+            tempArtifactPath: savedTemp?.relativePath || null,
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
             correlationId: corrId
         };
+
+        return finalResult;
 
     } catch (err) {
         errorLog(`!!! INGESTION FAILED AT [${currentStep}] !!!`);

@@ -1,13 +1,17 @@
 const { app } = require('@azure/functions');
+const crypto = require('crypto');
+const path = require('path');
 const { validateDocumentBuffer } = require('../utils/validation');
 const { ValidationError, toErrorResponse } = require('../utils/errors');
 const { processDocumentIngestion } = require('../services/ingestion-pipeline');
 const { blankToNull } = require('../services/search-document');
+const { uploadBufferToBlob } = require('../services/blob-storage');
 const {
     createDocument,
     startIngestionRun,
     updateIngestionRunProgress,
-    completeIngestionRun
+    completeIngestionRun,
+    findDocumentByContentHash
 } = require('../services/sql');
 
 function firstText(...values) {
@@ -70,6 +74,8 @@ app.http('ingestDocument', {
                 if (match && match[1]) defaultFileName = decodeURIComponent(match[1]).trim();
             }
 
+            // TODO(PHASE2): In Phase 2, verify caller identity and validate Entra ID Bearer token.
+            // In Phase 1, authLevel is anonymous and user identity is extracted from x-user-email or defaults (ENFORCE_AUTH=false).
             let allowedUserGroups = request.query.get('allowedUserGroups') || request.headers.get('x-user-groups') || null;
             let authorityRank = Number(request.query.get('authorityRank') || request.headers.get('x-authority-rank') || 4);
             let sourceType = request.query.get('sourceType') || request.headers.get('x-source-type') || 'ManualUpload';
@@ -83,11 +89,13 @@ app.http('ingestDocument', {
             // Check async parameter (?async=false allows synchronous mode if explicitly requested)
             const isAsync = request.query.get('async') !== 'false' && request.headers.get('x-async') !== 'false';
 
+            // Route-level format restrictions: Hard-reject CSV, plain text, markdown, JSON, Word
             if (contentType.includes('text/plain') || contentType.includes('text/markdown') || contentType.includes('text/csv')) {
-                const textContent = await request.text();
-                const fileBuffer = Buffer.from(textContent, 'utf8');
-                const fileName = defaultFileName || `report_${Date.now()}.${contentType.includes('csv') ? 'csv' : 'txt'}`;
-                filesToProcess.push({ fileBuffer, fileName });
+                throw new ValidationError('Unsupported file format. Plain text, markdown, and CSV files are not accepted. Only PDF (.pdf) and Excel (.xlsx, .xls) files are supported.', 'UnsupportedFileFormat');
+            } else if (contentType.includes('application/json')) {
+                throw new ValidationError('Unsupported file format. JSON ingestion payloads are not accepted. Only PDF (.pdf) and Excel (.xlsx, .xls) files are supported.', 'UnsupportedFileFormat');
+            } else if (contentType.includes('application/msword') || contentType.includes('wordprocessingml')) {
+                throw new ValidationError('Unsupported file format. Word documents (.doc, .docx) are not accepted. Only PDF (.pdf) and Excel (.xlsx, .xls) files are supported.', 'UnsupportedFileFormat');
             } else if (contentType.includes('application/pdf') ||
                 contentType.includes('application/octet-stream') ||
                 contentType.includes('spreadsheetml') ||
@@ -126,6 +134,7 @@ app.http('ingestDocument', {
                 if (filesToProcess.length === 0) {
                     throw new ValidationError('form-data request must include one or more files in "file", "document", or "files" fields.');
                 }
+<<<<<<< Updated upstream
             } else if (contentType.includes('application/json')) {
                 const jsonBody = await request.json().catch(() => null);
                 if (!jsonBody) throw new ValidationError('JSON body is malformed or empty.');
@@ -151,33 +160,85 @@ app.http('ingestDocument', {
                     throw new ValidationError('JSON request must include "text", "content", or "base64".');
                 }
                 filesToProcess.push({ fileBuffer, fileName });
+=======
+>>>>>>> Stashed changes
             } else {
-                throw new ValidationError(`Unsupported Content-Type: "${contentType}". Finora AI accepts form-data, PDF/Binary, CSV, Excel (.xlsx/.xls), Text, or JSON.`);
+                throw new ValidationError(`Unsupported Content-Type: "${contentType}". Finora AI strictly accepts PDF (.pdf) and Excel (.xlsx/.xls) files.`, 'UnsupportedFileFormat');
             }
 
-            // Sanitize file names and validate each buffer upfront synchronously
+            // Sanitize file names, compute ContentHash, and validate each buffer upfront synchronously
             for (let i = 0; i < filesToProcess.length; i++) {
                 const item = filesToProcess[i];
-                const isPdf = item.fileBuffer && item.fileBuffer.length >= 4 && item.fileBuffer.toString('utf8', 0, 4) === '%PDF';
-                const isZipOrExcel = item.fileBuffer && item.fileBuffer.length >= 4 && item.fileBuffer.toString('hex', 0, 4) === '504b0304';
+                if (!item.fileBuffer || item.fileBuffer.length === 0) {
+                    throw new ValidationError('Uploaded file is empty.');
+                }
+
+                // Size limit check (50 MB HTTP)
+                const MAX_HTTP_SIZE_BYTES = 50 * 1024 * 1024;
+                if (item.fileBuffer.length > MAX_HTTP_SIZE_BYTES) {
+                    throw new ValidationError('File size exceeds the maximum allowed limit of 50 MB.', 'PayloadTooLarge');
+                }
+
+                const isPdf = item.fileBuffer.length >= 4 && item.fileBuffer.toString('utf8', 0, 4) === '%PDF';
+                const isZipOrExcel = item.fileBuffer.length >= 4 && item.fileBuffer.toString('hex', 0, 4) === '504b0304';
+                const isOlexls = item.fileBuffer.length >= 8 && item.fileBuffer.subarray(0, 8).equals(Buffer.from([0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1]));
 
                 if (item.fileName) {
                     if (!item.fileName.includes('.')) {
                         if (isPdf) item.fileName += '.pdf';
                         else if (isZipOrExcel) item.fileName += '.xlsx';
-                        else if (contentType.includes('csv')) item.fileName += '.csv';
-                        else item.fileName += '.txt';
+                        else if (isOlexls) item.fileName += '.xls';
+                        else item.fileName += '.pdf';
                     }
                 } else {
                     const timestamp = Date.now() + i;
                     if (isPdf) item.fileName = `document_${timestamp}.pdf`;
                     else if (isZipOrExcel) item.fileName = `spreadsheet_${timestamp}.xlsx`;
-                    else if (contentType.includes('csv')) item.fileName = `data_${timestamp}.csv`;
-                    else item.fileName = `document_${timestamp}.txt`;
+                    else if (isOlexls) item.fileName = `spreadsheet_${timestamp}.xls`;
+                    else item.fileName = `document_${timestamp}.pdf`;
                 }
 
+                const ext = path.extname(item.fileName).toLowerCase();
+                if (ext === '.xlsm') {
+                    throw new ValidationError('Macro workbooks (.xlsm) are not accepted due to security policy.', 'MacroWorkbooksNotSupported');
+                }
+
+                if (!['.pdf', '.xlsx', '.xls'].includes(ext)) {
+                    throw new ValidationError(`Unsupported file extension "${ext}". Finora AI strictly accepts PDF (.pdf) and Excel (.xlsx, .xls) files.`, 'UnsupportedFileFormat');
+                }
+
+                // Check for embedded VBA macro in binary
+                if (isZipOrExcel && item.fileBuffer.includes(Buffer.from('vbaProject.bin'))) {
+                    throw new ValidationError('Macro workbooks containing VBA projects are not accepted due to security policy.', 'MacroWorkbooksNotSupported');
+                }
+
+                // Compute SHA-256 ContentHash
+                item.contentHash = crypto.createHash('sha256').update(item.fileBuffer).digest('hex');
+
                 await validateDocumentBuffer(item.fileBuffer, item.fileName);
-                context.log(`[${correlationId}] File [${i + 1}/${filesToProcess.length}] validated: "${item.fileName}" (${(item.fileBuffer.length / 1024).toFixed(1)} KB).`);
+                context.log(`[${correlationId}] File [${i + 1}/${filesToProcess.length}] validated: "${item.fileName}" (${(item.fileBuffer.length / 1024).toFixed(1)} KB, ContentHash=${item.contentHash.substring(0, 12)}...).`);
+            }
+
+            // WP2 ContentHash Idempotency Check:
+            // If single file upload matches an existing Succeeded, Processing, or PendingApproval document, return existing record
+            if (filesToProcess.length === 1 && filesToProcess[0].contentHash) {
+                const existing = await findDocumentByContentHash(filesToProcess[0].contentHash);
+                if (existing && ['Succeeded', 'Processing', 'PendingApproval'].includes(existing.IngestionStatus)) {
+                    context.log(`[${correlationId}] Idempotent match: ContentHash ${filesToProcess[0].contentHash} matches existing DocumentId=${existing.DocumentId} (Status: ${existing.IngestionStatus}).`);
+                    return {
+                        status: 200,
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            status: 'IDEMPOTENT_SKIPPED',
+                            message: `Document with identical content already ingested (DocumentId: ${existing.DocumentId}). Returning existing record.`,
+                            documentId: existing.DocumentId,
+                            fileName: existing.FileName,
+                            ingestionStatus: existing.IngestionStatus,
+                            contentHash: filesToProcess[0].contentHash,
+                            correlationId
+                        })
+                    };
+                }
             }
 
             // -------------------------------------------------------------------------
@@ -187,7 +248,35 @@ app.http('ingestDocument', {
                 // Pre-register all documents in Azure SQL immediately (Status: Processing)
                 const registeredDocs = [];
                 for (const item of filesToProcess) {
+<<<<<<< Updated upstream
                     const docId = await createDocument(item.fileName, sourceType, authorityRank, allowedUserGroups);
+=======
+<<<<<<< Updated upstream
+                    const docId = await createDocument(item.fileName, sourceType, authorityRank, allowedUserGroups, {
+                        modifiedByEmail,
+                        modifiedByName,
+                        modifiedDate,
+                        department
+=======
+                    const blobRes = await uploadBufferToBlob({
+                        blobName: `${Date.now()}_${item.fileName}`,
+                        buffer: item.fileBuffer,
+                        contentType: item.fileName.toLowerCase().endsWith('.pdf') ? 'application/pdf' : 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+                    }).catch(err => {
+                        context.warn?.(`[${correlationId}] Blob upload notice: ${err.message}`);
+                        return null;
+                    });
+
+                    const docId = await createDocument({
+                        fileName: item.fileName,
+                        sourceType,
+                        authorityRank,
+                        allowedUserGroups,
+                        contentHash: item.contentHash,
+                        blobUri: blobRes?.blobUri || null
+>>>>>>> Stashed changes
+                    });
+>>>>>>> Stashed changes
                     registeredDocs.push({
                         documentId: docId,
                         fileName: item.fileName,
@@ -205,6 +294,7 @@ app.http('ingestDocument', {
                     context.warn?.(`[${correlationId}] Notice: Failed to register IngestionRun: ${runErr.message}`);
                 }
 
+<<<<<<< Updated upstream
                 // Fire-and-forget background worker pool using background-safe logger
                 (async () => {
                     const batchLogger = createBackgroundLogger(correlationId);
@@ -253,20 +343,24 @@ app.http('ingestDocument', {
                                 docLogger.error(`[AsyncIngest] Ingestion failed for DocumentId=${doc.documentId}: ${docErr.message}`);
                             }
                         }
+=======
+                // WP15 Decoupled Queue Ingestion (No detached in-process background workers):
+                // Enqueue jobs to durable ingestion queue and return 202 Accepted immediately.
+                const { durableQueue } = require('../services/durable-queue');
+                for (const doc of registeredDocs) {
+                    await durableQueue.enqueueIngestionJob({
+                        documentId: doc.documentId,
+                        fileName: doc.fileName,
+                        fileBuffer: doc.fileBuffer,
+                        sourceType,
+                        authorityRank,
+                        allowedUserGroups,
+                        runId: batchRunId,
+                        correlationId: `${correlationId}-${doc.documentId}`
+>>>>>>> Stashed changes
                     });
-
-                    await Promise.all(workers);
-
-                    if (batchRunId) {
-                        const overallStatus = failedCount === 0 ? 'Succeeded' : (succeededCount === 0 ? 'Failed' : 'CompletedWithErrors');
-                        const summary = errors.length > 0 ? errors.slice(0, 5).join(' | ') : null;
-                        await completeIngestionRun(batchRunId, succeededCount, failedCount, overallStatus, summary).catch(() => null);
-                    }
-                    batchLogger.log(`[AsyncIngest] Batch finished. Succeeded=${succeededCount}, Failed=${failedCount}.`);
-                })().catch(unhandled => {
-                    const fallbackLogger = createBackgroundLogger(correlationId);
-                    fallbackLogger.error(`[AsyncIngest] Unhandled background error: ${unhandled.message}`);
-                });
+                    context.log(`[${correlationId}] Enqueued DocumentId=${doc.documentId} ("${doc.fileName}") to durable ingestion queue.`);
+                }
 
                 const firstDoc = registeredDocs[0];
                 const responseBody = {
