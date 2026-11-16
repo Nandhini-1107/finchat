@@ -7,6 +7,12 @@ AzuriteConfig
 local.settings.json
 *.log
 
-#test
-test-acceptance-suite.js
-test-sharepoint-queue.js
+# Test outputs & scratch test files
+coverage/
+.nyc_output/
+test-results/
+junit.xml
+tests/local/
+tests/scratch/
+tests/temp/
+*.test.log
