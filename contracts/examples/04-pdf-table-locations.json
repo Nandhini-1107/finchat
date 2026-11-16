@@ -1,0 +1,55 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-pdf-spatial-004",
+    "fileName": "Audited_Financial_Statements_2026.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Independent Auditor's Report and Financial Statements",
+      "currency": "AED",
+      "documentStatus": "Audited"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-pdf-spatial-004_table_1",
+      "documentId": "doc-pdf-spatial-004",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 3,
+        "startLine": 14,
+        "boundingRegions": [
+          {
+            "pageNumber": 3,
+            "polygon": [0.5, 2.1, 7.8, 2.1, 7.8, 6.5, 0.5, 6.5]
+          }
+        ],
+        "boundingBox": [0.5, 2.1, 7.8, 6.5]
+      },
+      "structure": {
+        "rowCount": 3,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "headerDetectionConfidence": 0.88,
+        "requiresReview": false
+      },
+      "columns": [
+        { "columnIndex": 0, "header": "Component", "rawHeader": "Component" },
+        { "columnIndex": 1, "header": "Amount (AED)", "rawHeader": "Amount (AED)" }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "isHeader": false,
+          "rowType": "data",
+          "cells": [
+            { "columnIndex": 0, "value": "Cash and cash equivalents", "rawValue": "Cash and cash equivalents" },
+            { "columnIndex": 1, "value": 4500000, "rawValue": "4,500,000", "formattedValue": "4,500,000" }
+          ],
+          "rawValues": ["Cash and cash equivalents", "4,500,000"]
+        }
+      ]
+    }
+  ]
+}
+

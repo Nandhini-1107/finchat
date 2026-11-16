@@ -1,0 +1,42 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-management-commentary-006",
+    "fileName": "Contoso_Retail_CFO_Commentary_Q2.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Contoso Retail LLC - Management Pack Q2 2026",
+      "currency": {
+        "value": "AED",
+        "sourceElementId": "doc-management-commentary-006_para_1",
+        "confidence": 0.99
+      },
+      "asOfDate": {
+        "value": "2026-06-30",
+        "sourceElementId": "doc-management-commentary-006_para_1",
+        "confidence": 0.95
+      }
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-management-commentary-006_para_1",
+      "documentId": "doc-management-commentary-006",
+      "elementType": "paragraph",
+      "paragraphIndex": 0,
+      "content": "Status: Final management pack (unaudited) | Prepared: 15 July 2026 | Currency: AED | Period ended 30 June 2026",
+      "paragraphRole": "currency_declaration",
+      "source": { "pageNumber": 1 }
+    },
+    {
+      "elementId": "doc-management-commentary-006_para_2",
+      "documentId": "doc-management-commentary-006",
+      "elementType": "paragraph",
+      "paragraphIndex": 1,
+      "content": "Revenue grew 5.0% on the first quarter, helped by the Eid trading period and continued growth in online orders. Collections reached AED 450,000 during the final week.",
+      "paragraphRole": "narrative",
+      "source": { "pageNumber": 1 }
+    }
+  ]
+}
+

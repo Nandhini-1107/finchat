@@ -1,0 +1,108 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-contoso-tracker-354",
+    "fileName": "Contoso_Holdings_Actuals_Tracker_2026.xlsx",
+    "fileType": "xlsx",
+    "metadata": {
+      "documentTitle": "Contoso Holdings – Group Actuals Tracker 2026",
+      "reportingBasis": {
+        "value": "Actual",
+        "sourceElementId": "doc-contoso-tracker-354_para_1",
+        "confidence": 0.99
+      },
+      "currency": {
+        "value": "AED",
+        "sourceElementId": "doc-contoso-tracker-354_para_1",
+        "confidence": 0.98
+      },
+      "issuer": "Contoso Holdings"
+    },
+    "sourceMetadata": {
+      "sourceType": "SharePoint",
+      "sharePointFileId": "sp-site-contoso-actuals-2026",
+      "authorityRank": 5
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-contoso-tracker-354_para_1",
+      "documentId": "doc-contoso-tracker-354",
+      "elementType": "paragraph",
+      "paragraphIndex": 0,
+      "content": "Working file maintained by Group Finance – NOT an approved source | Currency: AED",
+      "paragraphRole": "currency_declaration",
+      "source": {
+        "sheetName": "Group Actuals",
+        "rowIndex": 2,
+        "pageNumber": 1
+      }
+    },
+    {
+      "elementId": "doc-contoso-tracker-354_table_1",
+      "documentId": "doc-contoso-tracker-354",
+      "elementType": "table",
+      "source": {
+        "sheetName": "Group Actuals",
+        "range": "A4:F10",
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 6,
+        "columnCount": 6,
+        "headerRowIndex": 0,
+        "headerDetectionConfidence": 1.0,
+        "headerDetectionStatus": "detected",
+        "hasMultiLevelHeaders": false,
+        "requiresReview": false
+      },
+      "columns": [
+        { "columnIndex": 0, "header": "Entity", "rawHeader": "Entity", "sourceAddress": "A4", "dataTypeHint": "text" },
+        { "columnIndex": 1, "header": "Quarter", "rawHeader": "Quarter", "sourceAddress": "B4", "dataTypeHint": "text" },
+        { "columnIndex": 2, "header": "Revenue", "rawHeader": "Revenue", "sourceAddress": "C4", "dataTypeHint": "numeric" },
+        { "columnIndex": 3, "header": "Net profit", "rawHeader": "Net profit", "sourceAddress": "D4", "dataTypeHint": "numeric" },
+        { "columnIndex": 4, "header": "Source used", "rawHeader": "Source used", "sourceAddress": "E4", "dataTypeHint": "text" },
+        { "columnIndex": 5, "header": "Comment", "rawHeader": "Comment", "sourceAddress": "F4", "dataTypeHint": "text" }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "sourceRowIndex": 5,
+          "isHeader": false,
+          "rowType": "data",
+          "cells": [
+            { "columnIndex": 0, "value": "Contoso Retail LLC", "rawValue": "Contoso Retail LLC", "sourceAddress": "A5" },
+            { "columnIndex": 1, "value": "Q1 2026", "rawValue": "Q1 2026", "sourceAddress": "B5" },
+            { "columnIndex": 2, "value": 12480000, "rawValue": 12480000, "formattedValue": "12,480,000", "sourceAddress": "C5" },
+            { "columnIndex": 3, "value": 1307124, "rawValue": 1307124, "formattedValue": "1,307,124", "sourceAddress": "D5" },
+            { "columnIndex": 4, "value": "Audited statement", "rawValue": "Audited statement", "sourceAddress": "E5" },
+            { "columnIndex": 5, "value": "", "rawValue": null, "sourceAddress": "F5" }
+          ],
+          "rawValues": ["Contoso Retail LLC", "Q1 2026", "12,480,000", "1,307,124", "Audited statement", ""]
+        },
+        {
+          "rowIndex": 2,
+          "sourceRowIndex": 6,
+          "isHeader": false,
+          "rowType": "data",
+          "cells": [
+            { "columnIndex": 0, "value": "Contoso Retail LLC", "rawValue": "Contoso Retail LLC", "sourceAddress": "A6" },
+            { "columnIndex": 1, "value": "Q2 2026", "rawValue": "Q2 2026", "sourceAddress": "B6" },
+            { "columnIndex": 2, "value": 13105000, "rawValue": 13105000, "formattedValue": "13,105,000", "sourceAddress": "C6" },
+            { "columnIndex": 3, "value": 1467739, "rawValue": 1467739, "formattedValue": "1,467,739", "sourceAddress": "D6" },
+            { "columnIndex": 4, "value": "Management pack", "rawValue": "Management pack", "sourceAddress": "E6" },
+            { "columnIndex": 5, "value": "", "rawValue": null, "sourceAddress": "F6" }
+          ],
+          "rawValues": ["Contoso Retail LLC", "Q2 2026", "13,105,000", "1,467,739", "Management pack", ""]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-excel",
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 1
+  }
+}
+

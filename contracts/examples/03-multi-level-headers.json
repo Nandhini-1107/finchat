@@ -1,0 +1,77 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-board-pack-007",
+    "fileName": "Contoso_Holdings_Board_Pack_Q1_2026.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Contoso Holdings - Board Pack Q1 2026",
+      "currency": "AED",
+      "reportingPeriod": "Q1 2026",
+      "reportingBasis": "Actual",
+      "reportingScope": "Consolidated"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-board-pack-007_table_1",
+      "documentId": "doc-board-pack-007",
+      "elementType": "table",
+      "source": { "pageNumber": 2 },
+      "structure": {
+        "rowCount": 5,
+        "columnCount": 4,
+        "headerRowIndex": 1,
+        "headerDetectionConfidence": 0.90,
+        "headerDetectionStatus": "detected",
+        "hasMultiLevelHeaders": true,
+        "requiresReview": false
+      },
+      "columns": [
+        {
+          "columnIndex": 0,
+          "header": "Metric",
+          "rawHeader": "Metric",
+          "headerPath": ["Metric"],
+          "dataTypeHint": "text"
+        },
+        {
+          "columnIndex": 1,
+          "header": "Retail_Q1_2026",
+          "rawHeader": "Q1 2026",
+          "headerPath": ["Contoso Retail LLC", "Q1 2026"],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 2,
+          "header": "Logistics_Q1_2026",
+          "rawHeader": "Q1 2026",
+          "headerPath": ["Contoso Logistics LLC", "Q1 2026"],
+          "dataTypeHint": "numeric"
+        },
+        {
+          "columnIndex": 3,
+          "header": "Consolidated_Q1_2026",
+          "rawHeader": "Q1 2026",
+          "headerPath": ["Group Consolidated", "Q1 2026"],
+          "dataTypeHint": "numeric"
+        }
+      ],
+      "rows": [
+        {
+          "rowIndex": 2,
+          "isHeader": false,
+          "rowType": "data",
+          "cells": [
+            { "columnIndex": 0, "value": "Revenue (AED '000)", "rawValue": "Revenue (AED '000)" },
+            { "columnIndex": 1, "value": 12480, "rawValue": "12,480", "formattedValue": "12,480" },
+            { "columnIndex": 2, "value": 8720, "rawValue": "8,720", "formattedValue": "8,720" },
+            { "columnIndex": 3, "value": 21200, "rawValue": "21,200", "formattedValue": "21,200" }
+          ],
+          "rawValues": ["Revenue (AED '000)", "12,480", "8,720", "21,200"]
+        }
+      ]
+    }
+  ]
+}
+

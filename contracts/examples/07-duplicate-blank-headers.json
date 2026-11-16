@@ -1,0 +1,45 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-dup-headers-007",
+    "fileName": "Multi_Branch_Summary.xlsx",
+    "fileType": "xlsx",
+    "metadata": {
+      "documentTitle": "Branch Comparison Report"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-dup-headers-007_table_1",
+      "documentId": "doc-dup-headers-007",
+      "elementType": "table",
+      "structure": {
+        "rowCount": 3,
+        "columnCount": 4,
+        "headerRowIndex": 0,
+        "requiresReview": true
+      },
+      "columns": [
+        { "columnIndex": 0, "header": "Metric", "rawHeader": "Metric" },
+        { "columnIndex": 1, "header": "Amount", "rawHeader": "Amount" },
+        { "columnIndex": 2, "header": "Amount", "rawHeader": "Amount" },
+        { "columnIndex": 3, "header": "", "rawHeader": "" }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "isHeader": false,
+          "rowType": "data",
+          "cells": [
+            { "columnIndex": 0, "value": "Revenue", "rawValue": "Revenue" },
+            { "columnIndex": 1, "value": 1000, "rawValue": 1000 },
+            { "columnIndex": 2, "value": 2000, "rawValue": 2000 },
+            { "columnIndex": 3, "value": "Unlabeled Note", "rawValue": "Unlabeled Note" }
+          ],
+          "rawValues": ["Revenue", "1000", "2000", "Unlabeled Note"]
+        }
+      ]
+    }
+  ]
+}
+

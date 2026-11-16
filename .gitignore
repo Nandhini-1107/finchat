@@ -1,11 +1,21 @@
 node_modules
 .azurite
+__azurite_db_*
+__blobstorage__/
+__queuestorage__/
+AzuriteConfig
 .env
 local.settings.json
 *.log
+temp/
+scratch/
 
-
-
-#test
-test-acceptance-suite.js
-test-sharepoint-queue.js
+# Test outputs & scratch test files
+coverage/
+.nyc_output/
+test-results/
+junit.xml
+tests/local/
+tests/scratch/
+tests/temp/
+*.test.log

@@ -1,0 +1,64 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-excel-calc-005",
+    "fileName": "Contoso_Budget_Model_2026.xlsx",
+    "fileType": "xlsx",
+    "metadata": {
+      "documentTitle": "Annual Operating Budget FY2026",
+      "reportingBasis": "Budget",
+      "currency": "AED"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-excel-calc-005_table_1",
+      "documentId": "doc-excel-calc-005",
+      "elementType": "table",
+      "source": {
+        "sheetName": "P&L_Budget",
+        "range": "B2:D6",
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 5,
+        "columnCount": 3,
+        "headerRowIndex": 0,
+        "headerDetectionConfidence": 1.0,
+        "requiresReview": false
+      },
+      "columns": [
+        { "columnIndex": 0, "header": "Account", "rawHeader": "Account", "sourceAddress": "B2" },
+        { "columnIndex": 1, "header": "Rate", "rawHeader": "Rate", "sourceAddress": "C2" },
+        { "columnIndex": 2, "header": "Total", "rawHeader": "Total", "sourceAddress": "D2" }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "sourceRowIndex": 3,
+          "isHeader": false,
+          "rowType": "data",
+          "cells": [
+            { "columnIndex": 0, "value": "Base Fee", "rawValue": "Base Fee", "sourceAddress": "B3", "cellType": "string" },
+            { "columnIndex": 1, "value": 500, "rawValue": 500, "formattedValue": "500", "sourceAddress": "C3", "cellType": "number" },
+            { "columnIndex": 2, "value": 15000, "rawValue": 15000, "formula": "=C3*30", "formattedValue": "15,000", "sourceAddress": "D3", "cellType": "formula" }
+          ],
+          "rawValues": ["Base Fee", "500", "15,000"]
+        },
+        {
+          "rowIndex": 2,
+          "sourceRowIndex": 4,
+          "isHeader": false,
+          "rowType": "total",
+          "cells": [
+            { "columnIndex": 0, "value": "Total Budget", "rawValue": "Total Budget", "sourceAddress": "B4", "cellType": "string" },
+            { "columnIndex": 1, "value": null, "rawValue": null, "sourceAddress": "C4", "cellType": "blank" },
+            { "columnIndex": 2, "value": 15000, "rawValue": 15000, "formula": "=SUM(D3:D3)", "formattedValue": "15,000", "sourceAddress": "D4", "cellType": "formula" }
+          ],
+          "rawValues": ["Total Budget", "", "15,000"]
+        }
+      ]
+    }
+  ]
+}
+

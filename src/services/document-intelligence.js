@@ -102,7 +102,7 @@ async function azureAnalyzeDocument(fileBuffer, fileName = '') {
  * Main analyzeDocument function used by ingestDocument and processDocumentQueue.
  * Uses local extraction (pdf-parse + xlsx) to bypass page limits and avoid extra cloud cost.
  */
-async function analyzeDocument(fileBuffer, fileName = '') {
+async function analyzeDocument(fileBuffer, fileName = '', options = {}) {
     // -------------------------------------------------------------------------
     // If you want to use Azure Document Intelligence in future, uncomment:
     // const azureResult = await azureAnalyzeDocument(fileBuffer, fileName);
@@ -110,7 +110,7 @@ async function analyzeDocument(fileBuffer, fileName = '') {
     // -------------------------------------------------------------------------
 
     // Use local extraction directly (handles PDF, Excel, CSV, text without page limits)
-    return await extractDocumentLocally(fileBuffer, fileName);
+    return await extractDocumentLocally(fileBuffer, fileName, options);
 }
 
 module.exports = {

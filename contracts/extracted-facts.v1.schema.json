@@ -1,0 +1,346 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://finchat.internal/schemas/contracts/extracted-facts.v1.schema.json",
+  "title": "ExtractedFactsV1",
+  "description": "Standardized dynamic JSON contract for financial facts extracted from NormalizedDocumentV1.",
+  "type": "object",
+  "required": [
+    "contractVersion",
+    "documentId",
+    "extractionMetadata",
+    "facts",
+    "validationSummary"
+  ],
+  "properties": {
+    "contractVersion": {
+      "type": "string",
+      "const": "ExtractedFactsV1"
+    },
+    "documentId": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier of the source document."
+    },
+    "extractionMetadata": {
+      "type": "object",
+      "required": [
+        "extractedAt",
+        "engineVersion",
+        "totalFactsCount"
+      ],
+      "properties": {
+        "extractedAt": { "type": "string", "format": "date-time" },
+        "engineVersion": { "type": "string" },
+        "sourceFileName": { "type": ["string", "null"] },
+        "documentPublicationDate": { "type": ["string", "null"], "format": "date" },
+        "totalFactsCount": { "type": "integer", "minimum": 0 },
+        "tableFactsCount": { "type": "integer", "minimum": 0 },
+        "paragraphFactsCount": { "type": "integer", "minimum": 0 },
+        "llmFallbackFactsCount": { "type": "integer", "minimum": 0 },
+        "processingTimeMs": { "type": "number", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "facts": {
+      "type": "array",
+      "description": "List of individual extracted financial facts.",
+      "items": {
+        "$ref": "#/$defs/fact"
+      }
+    },
+    "validationSummary": {
+      "type": "object",
+      "required": [
+        "totalFactsCount",
+        "validFactsCount",
+        "suspectFactsCount",
+        "unvalidatedFactsCount",
+        "calculationMismatchCount",
+        "outOfRangeCount",
+        "invalidFactsCount",
+        "pendingMappingCount",
+        "conflictsDetectedCount"
+      ],
+      "properties": {
+        "totalFactsCount": { "type": "integer", "minimum": 0 },
+        "validFactsCount": { "type": "integer", "minimum": 0 },
+        "suspectFactsCount": { "type": "integer", "minimum": 0 },
+        "unvalidatedFactsCount": { "type": "integer", "minimum": 0 },
+        "calculationMismatchCount": { "type": "integer", "minimum": 0 },
+        "outOfRangeCount": { "type": "integer", "minimum": 0 },
+        "invalidFactsCount": { "type": "integer", "minimum": 0 },
+        "pendingMappingCount": { "type": "integer", "minimum": 0 },
+        "unmappedCount": { "type": "integer", "minimum": 0 },
+        "conflictsDetectedCount": { "type": "integer", "minimum": 0 },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "fact": {
+      "type": "object",
+      "required": [
+        "factId",
+        "logicalIdentity",
+        "rawValue",
+        "extractionMethod",
+        "extractionStatus",
+        "validationStatus",
+        "mappingStatus",
+        "conflictStatus",
+        "confidence",
+        "sourceEvidence"
+      ],
+      "properties": {
+        "factId": {
+          "type": "string",
+          "description": "Unique identifier for this fact instance within the document."
+        },
+        "logicalIdentity": {
+          "$ref": "#/$defs/logicalIdentity"
+        },
+        "metricLabel": {
+          "type": ["string", "null"],
+          "description": "Original raw metric name from source document (verbatim text)."
+        },
+        "canonicalMetricId": {
+          "type": ["string", "integer", "null"]
+        },
+        "canonicalMetricName": {
+          "type": ["string", "null"]
+        },
+        "entityLabel": {
+          "type": ["string", "null"],
+          "description": "Original raw entity name from source document."
+        },
+        "canonicalEntityId": {
+          "type": ["string", "integer", "null"]
+        },
+        "canonicalEntityName": {
+          "type": ["string", "null"]
+        },
+        "periodLabel": {
+          "type": ["string", "null"]
+        },
+        "canonicalPeriodId": {
+          "type": ["string", "integer", "null"]
+        },
+        "periodType": {
+          "type": ["string", "null"],
+          "enum": ["Quarter", "Annual", "Month", "CustomRange", "Instant", "Unknown", null]
+        },
+        "temporalType": {
+          "type": ["string", "null"],
+          "enum": ["duration", "instant", "unknown", null]
+        },
+        "periodStart": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "periodEnd": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "asOfDate": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "documentPublicationDate": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "reportingBasis": {
+          "type": ["string", "null"],
+          "enum": ["Actual", "Budget", "Forecast", "Plan", "Restated", "Unknown", null]
+        },
+        "auditStatus": {
+          "type": ["string", "null"],
+          "enum": ["Audited", "Unaudited", "Reviewed", "Unknown", null]
+        },
+        "reportingScope": {
+          "type": ["string", "null"],
+          "enum": ["Consolidated", "Entity", "Segment", "Division", "Group", "Unknown", null]
+        },
+        "dimensions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["string", "null"]
+          }
+        },
+        "rawValue": {
+          "description": "Raw un-normalized cell or text value from parser."
+        },
+        "originalTextValue": {
+          "type": ["string", "null"]
+        },
+        "normalizedValue": {
+          "type": ["string", "null"],
+          "description": "Precision-safe fixed-point decimal string representation in base units, up to 8 decimal places."
+        },
+        "numericValue": {
+          "type": ["number", "null"]
+        },
+        "originalUnit": {
+          "type": ["string", "null"]
+        },
+        "normalizedUnit": {
+          "type": ["string", "null"]
+        },
+        "scale": {
+          "type": ["number", "null"]
+        },
+        "currency": {
+          "type": ["string", "null"]
+        },
+        "factCategory": {
+          "type": ["string", "null"],
+          "enum": ["ProfitLoss", "BalanceSheet", "CashFlow", "KPI", "Headcount", "Payroll", "Other", null]
+        },
+        "extractionMethod": {
+          "type": "string",
+          "enum": ["deterministic_table", "deterministic_paragraph", "llm_fallback"]
+        },
+        "extractionStatus": {
+          "type": "string",
+          "enum": ["success", "partial", "uncertain", "failed"]
+        },
+        "validationStatus": {
+          "type": "string",
+          "enum": ["valid", "suspect", "unvalidated", "calculation_mismatch", "out_of_range", "invalid"]
+        },
+        "mappingStatus": {
+          "type": "string",
+          "enum": ["approved", "pending_review", "unknown", "unmapped", "ambiguous"]
+        },
+        "conflictStatus": {
+          "type": "string",
+          "enum": ["clean", "potential_conflict", "confirmed_conflict", "unresolved", "not_checked"]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "sourceEvidence": {
+          "$ref": "#/$defs/sourceEvidence"
+        },
+        "additionalContext": {
+          "type": ["object", "null"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "logicalIdentity": {
+      "type": "object",
+      "required": [
+        "identityKeyVersion",
+        "keyString",
+        "keyHash",
+        "completeness",
+        "isComparableForConflict",
+        "components"
+      ],
+      "properties": {
+        "identityKeyVersion": {
+          "type": "string",
+          "const": "v1.2"
+        },
+        "keyString": {
+          "type": "string"
+        },
+        "keyHash": {
+          "type": "string"
+        },
+        "completeness": {
+          "type": "string",
+          "enum": ["complete", "partial", "sparse"]
+        },
+        "isComparableForConflict": {
+          "type": "boolean"
+        },
+        "components": {
+          "type": "object",
+          "required": [
+            "entity",
+            "metric",
+            "period",
+            "temporalType",
+            "reportingBasis",
+            "reportingScope",
+            "normalizedUnit",
+            "currency",
+            "dimensions"
+          ],
+          "properties": {
+            "entity": { "type": ["string", "null"] },
+            "metric": { "type": ["string", "null"] },
+            "period": { "type": ["string", "null"] },
+            "temporalType": { "type": ["string", "null"] },
+            "reportingBasis": { "type": ["string", "null"] },
+            "reportingScope": { "type": ["string", "null"] },
+            "normalizedUnit": { "type": ["string", "null"] },
+            "currency": { "type": ["string", "null"] },
+            "dimensions": { "type": "object" }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "sourceEvidence": {
+      "type": "object",
+      "required": [
+        "documentId",
+        "elementId",
+        "elementType"
+      ],
+      "properties": {
+        "documentId": { "type": "string" },
+        "elementId": { "type": "string" },
+        "elementType": { "type": "string", "enum": ["table", "paragraph"] },
+        "tableId": { "type": ["string", "null"] },
+        "pageNumber": { "type": ["integer", "null"], "minimum": 1 },
+        "sheetName": { "type": ["string", "null"] },
+        "rowIndex": { "type": ["integer", "null"], "minimum": 0 },
+        "columnIndex": { "type": ["integer", "null"], "minimum": 0 },
+        "cellAddress": { "type": ["string", "null"] },
+        "headerPath": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "originalCellValue": {},
+        "formattedValue": { "type": ["string", "null"] },
+        "formula": { "type": ["string", "null"] },
+        "paragraphIndex": { "type": ["integer", "null"], "minimum": 0 },
+        "textSnippet": { "type": ["string", "null"] },
+        "exactQuote": { "type": ["string", "null"] },
+        "sourceAuthorityRank": { "type": ["integer", "null"] },
+        "sourceFileName": { "type": ["string", "null"] },
+        "boundingRegions": { "type": "array", "items": { "type": "object" } },
+        "localOccurrences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "elementId": { "type": "string" },
+              "elementType": { "type": "string" },
+              "pageNumber": { "type": ["integer", "null"] },
+              "sheetName": { "type": ["string", "null"] },
+              "cellAddress": { "type": ["string", "null"] },
+              "paragraphIndex": { "type": ["integer", "null"] },
+              "textSnippet": { "type": ["string", "null"] },
+              "formattedValue": { "type": ["string", "null"] }
+            }
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}
+

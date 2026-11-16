@@ -1,0 +1,82 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-contoso-retail-q1-001",
+    "fileName": "Contoso_Retail_Q1_2026_Audited.pdf",
+    "fileType": "pdf",
+    "metadata": {
+      "documentTitle": "Contoso Retail LLC - Statement of Profit or Loss for the quarter ended 31 March 2026",
+      "issuer": "Contoso Retail LLC",
+      "reportingPeriod": "Q1 2026",
+      "reportingBasis": "Actual",
+      "reportingScope": "Entity",
+      "currency": "AED",
+      "documentStatus": "Audited"
+    },
+    "sourceMetadata": {
+      "authorityRank": 1,
+      "sourceType": "ManualUpload"
+    }
+  },
+  "elements": [
+    {
+      "elementId": "doc-contoso-retail-q1-001_table_1",
+      "documentId": "doc-contoso-retail-q1-001",
+      "elementType": "table",
+      "source": {
+        "pageNumber": 1
+      },
+      "structure": {
+        "rowCount": 4,
+        "columnCount": 2,
+        "headerRowIndex": 0,
+        "headerDetectionConfidence": 0.95,
+        "headerDetectionStatus": "detected",
+        "hasMultiLevelHeaders": false,
+        "requiresReview": false
+      },
+      "columns": [
+        { "columnIndex": 0, "header": "Line item", "rawHeader": "Line item", "dataTypeHint": "text" },
+        { "columnIndex": 1, "header": "Q1 2026", "rawHeader": "Q1 2026", "dataTypeHint": "numeric" }
+      ],
+      "rows": [
+        {
+          "rowIndex": 1,
+          "isHeader": false,
+          "rowType": "data",
+          "cells": [
+            { "columnIndex": 0, "value": "Revenue", "rawValue": "Revenue" },
+            { "columnIndex": 1, "value": 12480000, "rawValue": "12,480,000", "formattedValue": "12,480,000" }
+          ],
+          "rawValues": ["Revenue", "12,480,000"]
+        },
+        {
+          "rowIndex": 2,
+          "isHeader": false,
+          "rowType": "data",
+          "cells": [
+            { "columnIndex": 0, "value": "Cost of sales", "rawValue": "Cost of sales" },
+            { "columnIndex": 1, "value": -7862400, "rawValue": "(7,862,400)", "formattedValue": "(7,862,400)" }
+          ],
+          "rawValues": ["Cost of sales", "(7,862,400)"]
+        },
+        {
+          "rowIndex": 3,
+          "isHeader": false,
+          "rowType": "subtotal",
+          "cells": [
+            { "columnIndex": 0, "value": "Gross profit", "rawValue": "Gross profit" },
+            { "columnIndex": 1, "value": 4617600, "rawValue": "4,617,600", "formattedValue": "4,617,600" }
+          ],
+          "rawValues": ["Gross profit", "4,617,600"]
+        }
+      ]
+    }
+  ],
+  "extractionMetadata": {
+    "parser": "local-pdf",
+    "pageCount": 1,
+    "tableCount": 1
+  }
+}
+

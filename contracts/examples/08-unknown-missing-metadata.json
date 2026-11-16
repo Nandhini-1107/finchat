@@ -1,0 +1,41 @@
+{
+  "contractVersion": "NormalizedDocumentV1",
+  "document": {
+    "documentId": "doc-unknown-008"
+  },
+  "elements": [
+    {
+      "elementId": "doc-unknown-008_table_1",
+      "documentId": "doc-unknown-008",
+      "elementType": "table",
+      "structure": {
+        "rowCount": 2,
+        "columnCount": 2,
+        "headerRowIndex": null,
+        "headerDetectionConfidence": 0.40,
+        "requiresReview": true
+      },
+      "columns": [
+        { "columnIndex": 0, "header": "Column_1" },
+        { "columnIndex": 1, "header": "Column_2" }
+      ],
+      "rows": [
+        {
+          "rowIndex": 0,
+          "isHeader": false,
+          "cells": [
+            { "columnIndex": 0, "value": "Unknown metric" },
+            { "columnIndex": 1, "value": "Unknown value" }
+          ]
+        }
+      ]
+    },
+    {
+      "elementId": "doc-unknown-008_other_1",
+      "documentId": "doc-unknown-008",
+      "elementType": "other",
+      "content": "Raw unstructured footer snippet"
+    }
+  ]
+}
+

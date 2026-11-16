@@ -1,0 +1,744 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://finora.ai/schemas/normalized-document.v1.schema.json",
+  "title": "NormalizedDocumentV1",
+  "description": "Standard intermediate normalized document contract between content-normalizer.js and fact-extraction.js in the FinChat codebase.",
+  "type": "object",
+  "required": [
+    "contractVersion",
+    "document",
+    "elements"
+  ],
+  "properties": {
+    "contractVersion": {
+      "type": "string",
+      "const": "NormalizedDocumentV1",
+      "description": "Version identifier of the normalized document contract."
+    },
+    "document": {
+      "type": "object",
+      "description": "Document-level metadata and source information.",
+      "required": [
+        "documentId"
+      ],
+      "properties": {
+        "documentId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Canonical document ID assigned during ingestion."
+        },
+        "fileName": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Original file name."
+        },
+        "fileType": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "File extension or format (e.g. pdf, xlsx, csv, docx, txt)."
+        },
+        "metadata": {
+          "type": "object",
+          "description": "Extensible document-level context (e.g., currency, basis, dates, issuer).",
+          "properties": {
+            "documentTitle": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "documentType": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "documentStatus": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "reportingBasis": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "reportingScope": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "currency": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "asOfDate": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "preparedDate": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "approvalDate": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "reportingPeriod": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "issuer": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "preparer": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            },
+            "department": {
+              "type": [
+                "string",
+                "object",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "sourceMetadata": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Originating storage metadata (e.g., SharePoint, HTTP upload, local filesystem).",
+          "properties": {
+            "sourceType": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "sharePointFileId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "sourceUrl": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fileHash": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fileSize": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "modifiedDate": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "authorityRank": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "allowedUserGroups": {
+              "type": [
+                "string",
+                "array",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "elements": {
+      "type": "array",
+      "description": "Ordered collection of all structural elements (tables, paragraphs, headings, etc.) in the document.",
+      "items": {
+        "$ref": "#/$defs/element"
+      }
+    },
+    "extractionMetadata": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Engine and runtime metadata regarding the extraction process.",
+      "properties": {
+        "parser": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pageCount": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "tableCount": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "paragraphCount": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "extractedAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "tables": {
+      "type": "array",
+      "description": "Backward-compatibility projection for existing callers expecting normalized.tables."
+    },
+    "paragraphs": {
+      "type": "array",
+      "description": "Backward-compatibility projection for existing callers expecting normalized.paragraphs."
+    },
+    "fullMarkdown": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Backward-compatibility markdown text of the full document."
+    },
+    "fullContent": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Backward-compatibility raw text content of the full document."
+    },
+    "document_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Backward-compatibility alias for document.documentId."
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "tableContext": {
+      "type": "object",
+      "description": "Table-level contextual metadata that can inherit or override document-level context.",
+      "additionalProperties": true
+    },
+    "contextValue": {
+      "type": "object",
+      "description": "Context attribute enriched with provenance and extraction confidence.",
+      "required": [
+        "value"
+      ],
+      "properties": {
+        "value": {
+          "description": "The contextual value (string, number, or boolean)."
+        },
+        "sourceElementId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "ID of the element from which this context was extracted."
+        },
+        "sourceLocation": {
+          "description": "Detailed source location or bounding coordinate information."
+        },
+        "confidence": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Extraction confidence score between 0.0 and 1.0."
+        },
+        "extractionMethod": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Method used to extract this context (e.g. RegexPattern, HeaderAnalysis, LLM)."
+        }
+      },
+      "additionalProperties": true
+    },
+    "sourceLocation": {
+      "type": "object",
+      "description": "Physical origin coordinates in the source document.",
+      "properties": {
+        "pageNumber": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "sheetName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rowIndex": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "columnIndex": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "cellAddress": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "paragraphIndex": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "startLine": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "range": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "boundingRegions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pageNumber": {
+                "type": "integer"
+              },
+              "polygon": {
+                "type": "array"
+              }
+            }
+          }
+        },
+        "boundingBox": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "[x0, y0, x1, y1] coordinates on the page."
+        }
+      },
+      "additionalProperties": true
+    },
+    "element": {
+      "type": "object",
+      "required": [
+        "elementId",
+        "documentId",
+        "elementType"
+      ],
+      "properties": {
+        "elementId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Globally unique identifier for this element within the document."
+        },
+        "documentId": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Canonical document ID matching root document.documentId."
+        },
+        "elementType": {
+          "type": "string",
+          "enum": [
+            "table",
+            "paragraph",
+            "heading",
+            "other"
+          ],
+          "description": "Type of the structural element."
+        },
+        "source": {
+          "$ref": "#/$defs/sourceLocation"
+        },
+        "content": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Textual or Markdown representation of the element."
+        },
+        "extractionMetadata": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": true
+        },
+        "structure": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Table-specific structural information.",
+          "properties": {
+            "rowCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "columnCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "headerRowIndex": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "headerDetectionConfidence": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 1
+            },
+            "headerDetectionStatus": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "hasMultiLevelHeaders": {
+              "type": "boolean"
+            },
+            "requiresReview": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": true
+        },
+        "columns": {
+          "type": "array",
+          "description": "Positional column definitions for tables.",
+          "items": {
+            "$ref": "#/$defs/column"
+          }
+        },
+        "rows": {
+          "type": "array",
+          "description": "Positional row definitions for tables.",
+          "items": {
+            "$ref": "#/$defs/row"
+          }
+        },
+        "tableContext": {
+          "$ref": "#/$defs/tableContext"
+        },
+        "rawGrid": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Raw 2D string grid of the table."
+        },
+        "rawCells": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Raw un-normalized cell objects from the underlying parser."
+        },
+        "mergedRanges": {
+          "type": "array",
+          "description": "Merged cell ranges detected in Excel or PDF tables.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "start": {
+                "type": "object",
+                "properties": {
+                  "rowIndex": {
+                    "type": "integer"
+                  },
+                  "columnIndex": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "end": {
+                "type": "object",
+                "properties": {
+                  "rowIndex": {
+                    "type": "integer"
+                  },
+                  "columnIndex": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "range": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "paragraphIndex": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "rawContent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "paragraphRole": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Role of the paragraph (narrative, title, footnote, table_row_duplicate, commentary, etc.)."
+        },
+        "level": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 6,
+          "description": "Heading level (H1 - H6)."
+        }
+      },
+      "additionalProperties": true
+    },
+    "column": {
+      "type": "object",
+      "required": [
+        "columnIndex"
+      ],
+      "properties": {
+        "columnIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "header": {
+          "type": "string",
+          "description": "Resolved column header string (may be empty string for unlabeled columns)."
+        },
+        "rawHeader": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "headerPath": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "description": "Hierarchical header path for multi-level headers (e.g. ['Contoso Retail', 'Q1 2026'])."
+        },
+        "sourceAddress": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Source column letter or cell address (e.g. 'A' or 'B3')."
+        },
+        "dataTypeHint": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Inferred data type hint for the column (numeric, text, date, percentage, etc.)."
+        }
+      },
+      "additionalProperties": true
+    },
+    "row": {
+      "type": "object",
+      "required": [
+        "rowIndex",
+        "cells"
+      ],
+      "properties": {
+        "rowIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourceRowIndex": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "description": "Original row index in the source spreadsheet or document (e.g. 1-based Excel row)."
+        },
+        "isHeader": {
+          "type": "boolean"
+        },
+        "rowType": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Role of the row: header, data, subtotal, total, note, empty, banner."
+        },
+        "cells": {
+          "type": "array",
+          "description": "Positional cell array. Each cell corresponds to a columnIndex.",
+          "items": {
+            "$ref": "#/$defs/cell"
+          }
+        },
+        "cellValues": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Serializable key-value map of column header to cell value for backward compatibility."
+        },
+        "cellsByHeader": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Alias for cellValues map."
+        },
+        "rawValues": {
+          "type": "array",
+          "description": "Backward-compatible string array of cell contents for this row."
+        }
+      },
+      "additionalProperties": true
+    },
+    "cell": {
+      "type": "object",
+      "required": [
+        "columnIndex"
+      ],
+      "properties": {
+        "columnIndex": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "value": {
+          "description": "Parsed or string value of the cell."
+        },
+        "rawValue": {
+          "description": "Raw unformatted value directly from parser or spreadsheet cell.v."
+        },
+        "formattedValue": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Formatted cell text as displayed in Excel or document (cell.w)."
+        },
+        "formula": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Spreadsheet formula if cell is computed (cell.f)."
+        },
+        "cellType": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Type of cell: string, number, boolean, date, formula, blank."
+        },
+        "sourceAddress": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Exact cell address in spreadsheet (e.g. 'B4')."
+        },
+        "sourceLocation": {
+          "description": "Detailed source location reference."
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}
