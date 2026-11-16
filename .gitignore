@@ -4,8 +4,27 @@ node_modules
 local.settings.json
 *.log
 
+# Test execution outputs and scratch
+coverage/
+.nyc_output/
+test-results/
+junit.xml
+tests/local/
+tests/scratch/
+tests/temp/
+*.test.log
 
+# Ignore all binary office, financial, PDF and Excel documents anywhere in repo
+*.pdf
+*.xlsx
+*.xlsm
+*.xls
+*.docx
+*.csv
 
-#test
+# Ignore golden benchmark dataset
+tests/financial-facts/
+
+# Legacy test scripts
 test-acceptance-suite.js
 test-sharepoint-queue.js

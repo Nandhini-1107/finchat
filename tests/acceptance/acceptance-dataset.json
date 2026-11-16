@@ -1,0 +1,377 @@
+[
+  {
+    "id": "wp1-baseline-auth-guardrail",
+    "package": "WP1",
+    "category": "phase2-guardrails",
+    "description": "Verifies that ENFORCE_AUTH defaults to 'false' and isAuthEnforced() accurately returns boolean state guarding Phase 2 boundaries.",
+    "input": {
+      "env_var": "ENFORCE_AUTH"
+    },
+    "expected": {
+      "defaultValue": "false",
+      "isAuthEnforced": false,
+      "operatingRule": "A.7"
+    }
+  },
+  {
+    "id": "wp13-missing-period-needs-review",
+    "package": "WP13",
+    "category": "fact-integrity",
+    "description": "Facts with unresolved period, unknown fiscal year, or unparseable Hijri date are assigned NeedsReview mapping status, never guessed.",
+    "input": {
+      "metric": "Revenue",
+      "entity": "Contoso Retail LLC",
+      "periodLabel": "1447 هـ (Hijri Unresolved)",
+      "periodStart": null,
+      "periodEnd": null
+    },
+    "expected": {
+      "mappingStatus": "NeedsReview"
+    }
+  },
+  {
+    "id": "wp13-duplicate-fact-identity-location-rejection",
+    "package": "WP13",
+    "category": "fact-integrity",
+    "description": "Enforces unique constraint on (DocumentId, FactIdentityHash, SourceLocationHash), preventing duplicate facts within the same document and location.",
+    "input": {
+      "documentId": 101,
+      "factIdentityHash": "a1b2c3d4e5f60718293a4b5c6d7e8f90123456789abcdef0123456789abcdef0",
+      "sourceLocationHash": "f0e1d2c3b4a5968778695a4b3c2d1e0f0123456789abcdef0123456789abcdef"
+    },
+    "expected": {
+      "duplicateAllowed": false,
+      "uniqueIndex": "UX_FinancialFacts_Doc_Identity_Location"
+    }
+  },
+  {
+    "id": "wp13-entity-alias-resolution-arabic-english",
+    "package": "WP13",
+    "category": "fact-integrity",
+    "description": "Resolves multilingual entity variants (English legal name, trade name, and Arabic translation) to canonical EntityId without creating duplicate entities.",
+    "input": {
+      "aliases": [
+        "Contoso Retail LLC",
+        "Contoso Retail",
+        "شركة كونتوسو للتجزئة ذ.م.م",
+        "كونتوسو للتجزئة"
+      ]
+    },
+    "expected": {
+      "canonicalEntityName": "Contoso Retail LLC",
+      "isApproved": true
+    }
+  },
+  {
+    "id": "wp13-fiscal-year-start-month-config",
+    "package": "WP13",
+    "category": "fact-integrity",
+    "description": "Validates per-entity FiscalYearStartMonth configuration defaults to 1 (January) and supports custom fiscal calendars.",
+    "input": {
+      "entityName": "Contoso Retail LLC"
+    },
+    "expected": {
+      "fiscalYearStartMonth": 1
+    }
+  },
+  {
+    "id": "wp2-scope-format-rejection",
+    "package": "WP2",
+    "category": "ingestion-scope",
+    "description": "Hard-rejects CSV, Word, plain text, markdown, and JSON payloads at route level, accepting strictly PDF, XLSX, and XLS.",
+    "input": {
+      "fileFormats": [".csv", ".txt", ".md", ".json", ".docx", ".doc"]
+    },
+    "expected": {
+      "accepted": false,
+      "errorCode": "UnsupportedFileFormat",
+      "httpStatus": 400
+    }
+  },
+  {
+    "id": "wp2-scanned-pdf-detection",
+    "package": "WP2",
+    "category": "ingestion-scope",
+    "description": "Detects PDFs with text density < 100 characters without embedded text layer and rejects with ScannedPdfNotSupported.",
+    "input": {
+      "extractedCharacters": 42
+    },
+    "expected": {
+      "accepted": false,
+      "errorCode": "ScannedPdfNotSupported",
+      "httpStatus": 400
+    }
+  },
+  {
+    "id": "wp2-hidden-content-needs-review",
+    "package": "WP2",
+    "category": "ingestion-scope",
+    "description": "Extracts Excel hidden sheets, rows, and columns but tags them as isFromHiddenContent and routes facts to NeedsReview.",
+    "input": {
+      "sheetHidden": true,
+      "rowHidden": true,
+      "colHidden": true
+    },
+    "expected": {
+      "isFromHiddenContent": true,
+      "mappingStatus": "NeedsReview"
+    }
+  },
+  {
+    "id": "wp2-content-hash-idempotency",
+    "package": "WP2",
+    "category": "ingestion-scope",
+    "description": "SHA-256 ContentHash idempotency check skips re-processing for Succeeded/Processing files and returns existing DocumentId.",
+    "input": {
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "existingStatus": "Succeeded"
+    },
+    "expected": {
+      "action": "IDEMPOTENT_SKIPPED",
+      "httpStatus": 200
+    }
+  },
+  {
+    "id": "wp3-decimal-calculation-zero-base",
+    "package": "WP3",
+    "category": "calculation-engine",
+    "description": "Calculation Rule 1: Zero-base denominator returns null percentChange with explicit explanation rather than division by zero.",
+    "input": {
+      "baseValue": 0,
+      "comparisonValue": 500000
+    },
+    "expected": {
+      "difference": 500000,
+      "percentChange": null,
+      "reason": "Base value is zero; percentage change undefined."
+    }
+  },
+  {
+    "id": "wp3-currency-isolation",
+    "package": "WP3",
+    "category": "calculation-engine",
+    "description": "Calculation Rule 4: Strict currency isolation throws CurrencyMismatch error and forbids arithmetic across different currencies.",
+    "input": {
+      "currencyA": "AED",
+      "currencyB": "USD"
+    },
+    "expected": {
+      "error": "CurrencyMismatch",
+      "crossCurrencyMathAllowed": false
+    }
+  },
+  {
+    "id": "wp3-one-effective-fact-resolution",
+    "package": "WP3",
+    "category": "fact-retrieval",
+    "description": "One Effective Fact Rule: When duplicate Approved facts share an identity, query selects the fact from the latest document version.",
+    "input": {
+      "duplicateFacts": [
+        { "factId": 1, "version": 1, "value": 10000000 },
+        { "factId": 2, "version": 2, "value": 10500000 }
+      ]
+    },
+    "expected": {
+      "effectiveFactId": 2,
+      "effectiveValue": 10500000
+    }
+  },
+  {
+    "id": "wp3-sql-view-hold-filter",
+    "package": "WP3",
+    "category": "fact-retrieval",
+    "description": "SQL View dbo.vw_FinancialFacts_Complete strictly requires MappingStatus = 'Approved' AND d.ConflictHold = 0.",
+    "input": {
+      "mappingStatus": "Approved",
+      "conflictHold": 1
+    },
+    "expected": {
+      "includedInReportingView": false
+    }
+  },
+  {
+    "id": "wp6-8-field-fact-identity",
+    "package": "WP6",
+    "category": "conflict-engine",
+    "description": "Conflict detection compares facts using 8 distinct business identity fields: Entity, Metric, Period, ReportingBasis, ReportingScope, Unit, Currency, Dimensions.",
+    "input": {
+      "metric": "Revenue",
+      "entity": "Contoso Retail LLC",
+      "period": "Q1 2026",
+      "reportingBasis": "Actual",
+      "reportingScope": "Consolidated",
+      "unit": "amount",
+      "currency": "AED",
+      "dimensions": { "department": "Retail" }
+    },
+    "expected": {
+      "identityFieldsCount": 8,
+      "exactMatchRequired": true
+    }
+  },
+  {
+    "id": "wp6-tolerance-boundary-d4",
+    "package": "WP6",
+    "category": "conflict-engine",
+    "description": "Rule D4: Conflict is detected ONLY IF |diff| > 0.001 AND % > 0.01%. Differences within rounding tolerance are not conflicts.",
+    "input": {
+      "existingValue": 1000000,
+      "subToleranceValue": 1000050,
+      "genuineConflictValue": 1000500
+    },
+    "expected": {
+      "subToleranceIsConflict": false,
+      "genuineMismatchIsConflict": true,
+      "initialStatus": "PendingApproval"
+    }
+  },
+  {
+    "id": "wp14-read-only-blob-sas",
+    "package": "WP14",
+    "category": "storage-sas",
+    "description": "Azure Blob Storage generates read-only SAS URLs with 72-hour TTL and HMAC-SHA256 signature for secure document access.",
+    "input": {
+      "blobName": "reports/contoso_q1.xlsx",
+      "ttlHours": 72
+    },
+    "expected": {
+      "permission": "r",
+      "protocol": "https",
+      "resource": "b",
+      "ttlHours": 72
+    }
+  },
+  {
+    "id": "wp8-decision-tokens-safe-endpoints",
+    "package": "WP8",
+    "category": "conflict-api",
+    "description": "GET /api/confirmConflict is strictly read-only preview; POST executes decision; replay returns 409, expired returns 410.",
+    "input": {
+      "conflictId": 501,
+      "action": "keep_existing"
+    },
+    "expected": {
+      "getIsReadOnly": true,
+      "postExecutesMutation": true,
+      "replayStatusCode": 409,
+      "expiredStatusCode": 410
+    }
+  },
+  {
+    "id": "wp7-uploader-conflict-email-dual-links",
+    "package": "WP7",
+    "category": "conflict-notifier",
+    "description": "Uploader email validates domain against ALLOWED_UPLOADER_EMAIL_DOMAINS with admin fallback, includes dual links (SharePoint + Blob SAS), and discloses figures lost.",
+    "input": {
+      "uploader": "analyst@contoso.com",
+      "externalUploader": "user@unapproved.org"
+    },
+    "expected": {
+      "hasSharePointLink": true,
+      "hasBlobSasLink": true,
+      "disclosesFiguresLost": true,
+      "unapprovedFallsBackToAdmin": true
+    }
+  },
+  {
+    "id": "wp16-decision-cascade-engine",
+    "package": "WP16",
+    "category": "decision-cascade",
+    "description": "Multi-document cascade propagates decisions: accept_incoming supersedes older documents when all facts are superseded; keep_existing sets Rejected if all rejected.",
+    "input": {
+      "actionAccept": "accept_incoming",
+      "actionReject": "keep_existing"
+    },
+    "expected": {
+      "promotesIncoming": true,
+      "supersedesExistingFactNeverDeletes": true,
+      "recordsFactResolutionsAndAudit": true
+    }
+  },
+  {
+    "id": "wp9-soft-delete-reconciler",
+    "package": "WP9",
+    "category": "reconciler",
+    "description": "Reconciler scan clears orphaned holds and strictly enforces soft-delete (MappingStatus='Superseded', DocumentStatus='Archived'), never physical DELETE.",
+    "input": {
+      "action": "softDeleteFact"
+    },
+    "expected": {
+      "physicalDeleteExecuted": false,
+      "softDeleteStatus": "Superseded"
+    }
+  },
+  {
+    "id": "wp10-wp17-chat-conflict-hold",
+    "package": "WP10_WP17",
+    "category": "chat-governance",
+    "description": "Rule A.8 & WP17: Chat queries targeting documents with ConflictHold=1 return HTTP 409 and CONFLICT_PENDING; unapproved/held facts never leak into answers or citations.",
+    "input": {
+      "conflictHold": 1
+    },
+    "expected": {
+      "httpStatus": 409,
+      "chatStatus": "CONFLICT_PENDING",
+      "insufficientEvidence": true,
+      "leakGuardEnforced": true
+    }
+  },
+  {
+    "id": "wp15-durable-queue-dlq",
+    "package": "WP15",
+    "category": "ingestion-queue",
+    "description": "Durable queue executes exponential retry up to maxRetries (3); poison messages route to Dead-Letter Queue (DLQ) and mark document Failed.",
+    "input": {
+      "maxRetries": 3
+    },
+    "expected": {
+      "supportsRetry": true,
+      "deadLetterQueueOnExceed": true,
+      "documentStatusOnPoison": "Failed"
+    }
+  },
+  {
+    "id": "wp4-wp5-arabic-bilingual-normalization",
+    "package": "WP4_WP5",
+    "category": "router-arabic",
+    "description": "Arabic Unicode normalizer converts Alef variants, Teh Marbuta, Alef Maqsura, strips Tashkeel/Tatweel, and converts Eastern Arabic digits to ASCII 0-9.",
+    "input": {
+      "arabicWord": "إِيْرَادَاتٌ",
+      "arabicDigits": "١٢٥٠٠٠٠"
+    },
+    "expected": {
+      "normalizedWord": "ايرادات",
+      "normalizedDigits": "1250000"
+    }
+  },
+  {
+    "id": "wp11-sharepoint-scanner-rejection",
+    "package": "WP11",
+    "category": "sharepoint-scanner",
+    "description": "Automated scanner rejects Word, CSV, text, and macro workbooks (.xlsm) upfront and dispatches rejection email to uploader.",
+    "input": {
+      "fileDocx": "report.docx",
+      "fileXlsm": "budget.xlsm"
+    },
+    "expected": {
+      "rejectionEmailSent": true,
+      "macroBlocked": true,
+      "unsupportedFormatBlocked": true
+    }
+  },
+  {
+    "id": "wp18-governance-metrics-observability",
+    "package": "WP18",
+    "category": "observability",
+    "description": "Aggregates pipeline and governance metrics: documents by status/hold, facts by mapping status, conflicts by status, and provides audit trails.",
+    "input": {
+      "metricsType": "systemGovernance"
+    },
+    "expected": {
+      "documentsSummary": true,
+      "factsSummary": true,
+      "conflictsSummary": true,
+      "auditTrailExport": true
+    }
+  }
+]

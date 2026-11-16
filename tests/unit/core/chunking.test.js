@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { createChunks } = require('../src/services/chunking');
+const { createChunks } = require('../../../src/services/chunking');
 
 test('chunks keep heading and page, and versioned ids do not depend on the SQL id', () => {
     const normalized = {

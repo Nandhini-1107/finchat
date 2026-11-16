@@ -7,7 +7,7 @@ const {
     resolveDocumentKey,
     resolveQueueKey,
     toLegacySearchDocument
-} = require('../src/services/search-document');
+} = require('../../../src/services/search-document');
 
 const vector = () => Array(1536).fill(0.1);
 
