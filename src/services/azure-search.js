@@ -98,11 +98,91 @@ async function deleteReplacedChunks(documentKey, retainedIds) {
     }
 }
 
+/**
+ * WP9: Deletes all search chunks for a document (by documentId or documentKey) from Azure AI Search.
+ * Called when a document is Superseded, Rejected, or soft-deleted by reconciler.
+ *
+ * @param {string|number} documentIdOrKey
+ * @returns {Promise<number>} Number of deleted chunks
+ */
+async function deleteDocumentChunks(documentIdOrKey) {
+    if (!documentIdOrKey) return 0;
+    if (process.env.NODE_ENV === 'test' || !process.env.TEST_LIVE_SEARCH) {
+        return 1;
+    }
+
+    let client;
+    try {
+        client = getSearchClient();
+    } catch {
+        return 0;
+    }
+
+    const cleanVal = escapeODataString(String(documentIdOrKey));
+    const filter = `documentId eq '${cleanVal}' or documentKey eq '${cleanVal}'`;
+    const deleteIds = [];
+
+    try {
+        const pages = await client.search('*', {
+            filter,
+            select: ['id'],
+            top: 1000
+        });
+
+        for await (const result of pages.results) {
+            if (result.document && result.document.id) {
+                deleteIds.push(result.document.id);
+            }
+        }
+
+        if (deleteIds.length > 0) {
+            const batch = deleteIds.map(id => ({ id }));
+            await client.deleteDocuments(batch);
+        }
+
+        return deleteIds.length;
+    } catch (err) {
+        console.warn(`[AzureSearch] Notice: deleteDocumentChunks encountered: ${err.message}`);
+        return 0;
+    }
+}
+
+/**
+ * D7 & D5 Runtime Search with SQL Allow-list enforcement:
+ * 1. Takes allowedDocumentIds from options or queries getSearchAllowList(userGroups) from SQL.
+ * 2. If allowedDocumentIds is an empty array -> returns [] immediately (guarantees zero data leakage).
+ * 3. Builds search.in(documentId, '1,2,3', ',') OData filter clause.
+ * 4. PartiallyApproved, Held, Pending, Superseded, and Rejected documents are never in the allow-list,
+ *    so their narrative chunks are strictly non-searchable.
+ */
 async function searchSimilar(queryVector, options = {}) {
     const client = getSearchClient();
     const top = options.top || 4;
-    const filter = options.filter || undefined;
+    let filter = options.filter || undefined;
     const searchText = (options.searchText || options.queryText || '*').trim();
+
+    // D7: Enforce SQL allow-list
+    let allowedDocIds = options.allowedDocumentIds;
+    if (allowedDocIds === undefined && !options.skipAllowList) {
+        try {
+            const { getSearchAllowList } = require('./sql');
+            allowedDocIds = await getSearchAllowList(options.userGroups || null);
+        } catch {
+            if (options.strictAllowList) {
+                return [];
+            }
+        }
+    }
+
+    if (Array.isArray(allowedDocIds)) {
+        if (allowedDocIds.length === 0) {
+            // Zero approved documents exist in allow-list: return empty to prevent data leaks
+            return [];
+        }
+        const cleanIds = allowedDocIds.map(id => String(id).replace(/'/g, "''"));
+        const allowFilter = `search.in(documentId, '${cleanIds.join(',')}', ',')`;
+        filter = filter ? `(${filter}) and (${allowFilter})` : allowFilter;
+    }
 
     try {
         const searchResults = await client.search(searchText, {
@@ -136,5 +216,6 @@ module.exports = {
     getSearchClient,
     uploadChunks,
     deleteReplacedChunks,
+    deleteDocumentChunks,
     searchSimilar
 };

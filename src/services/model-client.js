@@ -1,104 +1,115 @@
 require('../utils/config');
-const { OpenAI, AzureOpenAI } = require('openai');
+const { AzureOpenAI } = require('openai');
 const { AppError } = require('../utils/errors');
 
-let llmClient = null;
-let activeModel = '';
-let activeProvider = '';
+let fastClient = null;
+let strongClient = null;
+
+const ARABIC_REGEX = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/;
 
 /**
- * Selects which LLM client to use:
- * 1. Checks .env for Azure OpenAI (primary production model using official AzureOpenAI client).
- * 2. If Azure is not configured, falls back to Groq (using standard OpenAI client).
- * 
- * Note: If Groq is removed in the future, only this function needs updating.
+ * Deterministic Arabic language check using Unicode character block boundaries.
  */
-function getClient() {
-    if (llmClient) {
-        return { client: llmClient, model: activeModel, provider: activeProvider };
+function isArabicText(text) {
+    if (!text || typeof text !== 'string') return false;
+    return ARABIC_REGEX.test(text);
+}
+
+/**
+ * Validates Azure OpenAI environment configuration at startup.
+ */
+function validateModelConfiguration() {
+    const endpoint = (process.env.AZURE_OPENAI_ENDPOINT || '').trim();
+    const apiKey = (process.env.AZURE_OPENAI_API_KEY || '').trim();
+    const fastDeployment = (process.env.AZURE_OPENAI_FAST_DEPLOYMENT || process.env.AZURE_OPENAI_CHAT_DEPLOYMENT || '').trim();
+    const strongDeployment = (process.env.AZURE_OPENAI_STRONG_DEPLOYMENT || process.env.AZURE_OPENAI_CHAT_DEPLOYMENT || '').trim();
+
+    if (!endpoint || !apiKey) {
+        throw new AppError('Azure OpenAI configuration missing: AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY must be set in environment.', 500);
     }
 
-    // Step 1: Check for Azure OpenAI configuration
-    const hasAzure = Boolean(
-        process.env.AZURE_OPENAI_ENDPOINT &&
-        process.env.AZURE_OPENAI_API_KEY &&
-        process.env.AZURE_OPENAI_CHAT_DEPLOYMENT
-    );
+    if (!fastDeployment && !strongDeployment) {
+        throw new AppError('Azure OpenAI deployment missing: either AZURE_OPENAI_FAST_DEPLOYMENT or AZURE_OPENAI_STRONG_DEPLOYMENT must be configured.', 500);
+    }
 
-    if (hasAzure) {
-        const rawEndpoint = process.env.AZURE_OPENAI_ENDPOINT.trim().replace(/\/+$/, '');
-        const cleanEndpoint = rawEndpoint.replace(/\/openai(\/v1)?$/, '');
-        const apiVersion = (process.env.AZURE_OPENAI_API_VERSION || process.env.OPENAI_API_VERSION || '2024-06-01').trim();
-        const deployment = process.env.AZURE_OPENAI_CHAT_DEPLOYMENT.trim();
+    return true;
+}
 
-        llmClient = new AzureOpenAI({
+/**
+ * Retrieves Azure OpenAI client for the requested tier ('fast' or 'strong').
+ * Environment-only deployment selection.
+ */
+function getClient(tier = 'fast') {
+    const rawEndpoint = (process.env.AZURE_OPENAI_ENDPOINT || '').trim().replace(/\/+$/, '');
+    const cleanEndpoint = rawEndpoint.replace(/\/openai(\/v1)?$/, '');
+    const apiKey = (process.env.AZURE_OPENAI_API_KEY || '').trim();
+    const apiVersion = (process.env.AZURE_OPENAI_API_VERSION || process.env.OPENAI_API_VERSION || '2024-06-01').trim();
+
+    if (!cleanEndpoint || !apiKey) {
+        throw new AppError('No LLM model configured in env. Please set AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY in local.settings.json or .env.', 500);
+    }
+
+    const isStrong = tier === 'strong';
+    const deployment = isStrong
+        ? (process.env.AZURE_OPENAI_STRONG_DEPLOYMENT || process.env.AZURE_OPENAI_CHAT_DEPLOYMENT || 'gpt-4o').trim()
+        : (process.env.AZURE_OPENAI_FAST_DEPLOYMENT || process.env.AZURE_OPENAI_CHAT_DEPLOYMENT || 'gpt-4o-mini').trim();
+
+    if (isStrong) {
+        if (!strongClient) {
+            strongClient = new AzureOpenAI({
+                endpoint: cleanEndpoint,
+                apiKey,
+                apiVersion,
+                deployment,
+                maxRetries: 2,
+                timeout: Number(process.env.AZURE_OPENAI_TIMEOUT_SECONDS || 45) * 1000
+            });
+        }
+        return { client: strongClient, model: deployment, provider: 'azure', tier: 'strong' };
+    }
+
+    if (!fastClient) {
+        fastClient = new AzureOpenAI({
             endpoint: cleanEndpoint,
-            apiKey: process.env.AZURE_OPENAI_API_KEY.trim(),
+            apiKey,
             apiVersion,
             deployment,
             maxRetries: 2,
             timeout: Number(process.env.AZURE_OPENAI_TIMEOUT_SECONDS || 30) * 1000
         });
-        activeModel = deployment;
-        activeProvider = 'azure';
-        return { client: llmClient, model: activeModel, provider: activeProvider };
     }
-
-    // Step 2: Fallback to Groq if Azure is not set
-    const hasGroq = Boolean(
-        process.env.GROQ_API_KEY &&
-        process.env.GROQ_BASE_URL &&
-        process.env.GROQ_MODEL
-    );
-
-    if (hasGroq) {
-        llmClient = new OpenAI({
-            apiKey: process.env.GROQ_API_KEY.trim(),
-            baseURL: process.env.GROQ_BASE_URL.trim().replace(/\/+$/, ''),
-            maxRetries: Number(process.env.GROQ_MAX_RETRIES || 2),
-            timeout: Number(process.env.GROQ_TIMEOUT_SECONDS || 45) * 1000
-        });
-        activeModel = process.env.GROQ_MODEL.trim();
-        activeProvider = 'groq';
-        return { client: llmClient, model: activeModel, provider: activeProvider };
-    }
-
-    throw new AppError(
-        'No LLM model configured in env. Please set Azure OpenAI (AZURE_OPENAI_*) or Groq (GROQ_*) in local.settings.json or .env.',
-        500
-    );
+    return { client: fastClient, model: deployment, provider: 'azure', tier: 'fast' };
 }
 
 /**
- * Returns the active model name and provider ('azure' or 'groq').
+ * Returns the active model name and provider for a given tier.
  */
-function getActiveModelInfo() {
-    const { model, provider } = getClient();
+function getActiveModelInfo(tier = 'fast') {
+    const { model, provider } = getClient(tier);
     return { model, provider };
 }
 
 /**
- * Executes a chat completion call using the active LLM (Azure or Groq).
- * Logs the chosen model and token counts for the given job ID.
+ * Executes a chat completion call using the specified Azure OpenAI tier ('fast' or 'strong').
  */
-async function chatCompletion({ messages, maxTokens, temperature, responseFormat, timeoutMs, jobId, correlationId }) {
+async function chatCompletion({ messages, maxTokens, temperature, responseFormat, timeoutMs, jobId, correlationId, tier = 'fast' }) {
     if (!messages || !Array.isArray(messages) || messages.length === 0) {
         throw new AppError('Messages array is required for chat completion.', 400);
     }
 
-    const { client, model, provider } = getClient();
+    const { client, model, provider } = getClient(tier);
     const activeJobId = jobId || correlationId || null;
     const jobTag = activeJobId ? `[Job: ${activeJobId}] ` : '';
 
-    console.log(`${jobTag}[LLM Selection] Chosen LLM for Job ID "${activeJobId || 'N/A'}": Model="${model}" (Provider: ${provider})`);
+    console.log(`${jobTag}[LLM Selection] Chosen LLM for Job ID "${activeJobId || 'N/A'}": Model="${model}" (Provider: ${provider}, Tier: ${tier})`);
 
     const options = Number.isInteger(timeoutMs) ? { timeout: timeoutMs } : undefined;
 
     const payload = {
         model,
         messages,
-        max_tokens: Number(maxTokens || process.env.LLM_MAX_TOKENS || process.env.GROQ_MAX_TOKENS || 4096),
-        temperature: Number(temperature !== undefined ? temperature : (process.env.LLM_TEMPERATURE || process.env.GROQ_TEMPERATURE || 0.1))
+        max_tokens: Number(maxTokens || process.env.LLM_MAX_TOKENS || 4096),
+        temperature: Number(temperature !== undefined ? temperature : (process.env.LLM_TEMPERATURE || 0.1))
     };
     if (responseFormat) {
         payload.response_format = responseFormat;
@@ -111,13 +122,14 @@ async function chatCompletion({ messages, maxTokens, temperature, responseFormat
         const outputTokens = response.usage?.completion_tokens || 0;
         const totalTokens = response.usage?.total_tokens || (inputTokens + outputTokens);
 
-        console.log(`${jobTag}[TokenUsage] Provider: ${provider} | Model: ${model} | Input Tokens: ${inputTokens} | Output Tokens: ${outputTokens} | Total Tokens: ${totalTokens}`);
+        console.log(`${jobTag}[TokenUsage] Provider: ${provider} | Model: ${model} | Tier: ${tier} | Input Tokens: ${inputTokens} | Output Tokens: ${outputTokens} | Total Tokens: ${totalTokens}`);
 
         return {
             text: response.choices?.[0]?.message?.content || '',
             choices: response.choices,
             provider,
             model,
+            tier,
             jobId: activeJobId,
             usage: {
                 inputTokens,
@@ -132,17 +144,18 @@ async function chatCompletion({ messages, maxTokens, temperature, responseFormat
 }
 
 /**
- * Resets the cached LLM client (used in unit tests).
+ * Resets the cached LLM clients (used in unit tests).
  */
 function resetModelClients() {
-    llmClient = null;
-    activeModel = '';
-    activeProvider = '';
+    fastClient = null;
+    strongClient = null;
 }
 
 module.exports = {
     chatCompletion,
     getClient,
     getActiveModelInfo,
-    resetModelClients
+    resetModelClients,
+    validateModelConfiguration,
+    isArabicText
 };

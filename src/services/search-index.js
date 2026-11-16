@@ -3,8 +3,36 @@ const { AppError, sanitizeErrorMessage } = require('../utils/errors');
 const { EXTENDED_INDEX_FIELDS } = require('./search-document');
 
 const API_VERSION = '2024-07-01';
+const INDEX_VERSION = 'v2.0';
 
 let schemaPromise = null;
+
+/**
+ * Returns current index version marker and checks if schema migration / re-indexing is required.
+ */
+function getIndexVersionMarker() {
+    return {
+        version: INDEX_VERSION,
+        embeddingModel: 'text-embedding-3-small',
+        dimensions: 1536
+    };
+}
+
+/**
+ * Triggers re-indexing path in SQL by marking documents IndexingStatus = 'Pending'.
+ */
+async function triggerReindexingPath(documentId = null) {
+    const { getPool } = require('./sql');
+    const p = await getPool();
+    if (documentId) {
+        await p.request()
+            .input('DocId', require('mssql').BigInt, Number(documentId))
+            .query("UPDATE dbo.Documents SET IndexingStatus = 'Pending' WHERE DocumentId = @DocId");
+    } else {
+        await p.request().query("UPDATE dbo.Documents SET IndexingStatus = 'Pending' WHERE IngestionStatus = 'Succeeded' AND ISNULL(ConflictHold, 0) = 0");
+    }
+    return { status: 'ReindexingTriggered', indexVersion: INDEX_VERSION };
+}
 
 function searchConfig() {
     const endpoint = (process.env.AZURE_SEARCH_ENDPOINT || '').replace(/\/+$/, '');
@@ -132,5 +160,8 @@ function resetSearchIndexSchemaCache() {
 
 module.exports = {
     ensureSearchIndexFields,
-    resetSearchIndexSchemaCache
+    resetSearchIndexSchemaCache,
+    getIndexVersionMarker,
+    triggerReindexingPath,
+    INDEX_VERSION
 };

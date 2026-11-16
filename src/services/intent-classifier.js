@@ -30,6 +30,34 @@ You must respond ONLY with a raw JSON object (no markdown, no backticks, no prea
 function classifyIntentByRules(question) {
     const q = (question || '').toLowerCase();
 
+    // Check for out of scope queries (weather, recipes, sports, jokes, etc.)
+    const isOutOfScope = /(weather|recipe|cook|football|soccer|joke|song|movie|capital of|who wrote|what is the distance|sports|game|celebrity|الطقس|وصفة|طبخ|كرة القدم|أغنية|فيلم|عاصمة)/i.test(q);
+    if (isOutOfScope) {
+        return {
+            route: 'OUT_OF_SCOPE',
+            intentType: 'OUT_OF_SCOPE',
+            metrics: [],
+            periods: [],
+            isComparison: false,
+            confidence: 0.95,
+            reasoning: 'Non-financial, non-HR out-of-scope question'
+        };
+    }
+
+    // Check for explicit or extreme ambiguity requiring clarification
+    const isNeedsClarification = /(clarify|unclear|ambiguous|which company|what period|غير واضح|توضيح|أي شركة|أي فترة)/i.test(q);
+    if (isNeedsClarification) {
+        return {
+            route: 'NEEDS_CLARIFICATION',
+            intentType: 'NEEDS_CLARIFICATION',
+            metrics: [],
+            periods: [],
+            isComparison: false,
+            confidence: 0.90,
+            reasoning: 'Query requires entity, period, or metric clarification'
+        };
+    }
+
     // Check for policy, guideline, or handbook keywords (English & Arabic)
     const isQualitative = /(policy|policies|guideline|guidelines|procedure|procedures|handbook|overview|terms|eligibility|rules|regulation|regulations|instructions|process|overview|شروط|سياسة|سياسات|دليل|إجراءات)/i.test(q);
 
@@ -68,11 +96,17 @@ function classifyIntentByRules(question) {
 }
 
 /**
- * Classifies user intent using the active LLM (Azure or Groq).
+ * Classifies user intent using Azure OpenAI (Fast deployment tier).
  * Falls back to rule-based routing if the LLM is unreachable.
  */
 async function classifyIntent(question, options = {}) {
     const jobId = typeof options === 'string' ? options : (options?.jobId || options?.correlationId || null);
+
+    // Fast deterministic check for OUT_OF_SCOPE and NEEDS_CLARIFICATION
+    const ruleResult = classifyIntentByRules(question);
+    if (ruleResult.intentType === 'OUT_OF_SCOPE' || ruleResult.intentType === 'NEEDS_CLARIFICATION') {
+        return ruleResult;
+    }
 
     try {
         const response = await chatCompletion({

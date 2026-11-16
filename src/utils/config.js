@@ -20,4 +20,17 @@ if (!process.env.AZURE_SQL_SERVER) {
     }
 }
 
-module.exports = process.env;
+/**
+ * Evaluates whether authentication and authorization enforcement is active.
+ * Phase 2 Boundary Guardrail (Operating Rule A.7).
+ * Reads process.env.ENFORCE_AUTH at call time without mutating process.env.
+ * Defaults to false if ENFORCE_AUTH is unset, empty, or false.
+ */
+function isAuthEnforced() {
+    const val = (process.env.ENFORCE_AUTH || '').trim().toLowerCase();
+    return val === 'true' || val === '1';
+}
+
+module.exports = {
+    isAuthEnforced
+};

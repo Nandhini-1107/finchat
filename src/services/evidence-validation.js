@@ -4,49 +4,85 @@ function findRelevantStructuredFacts(question, facts = []) {
     const q = question.toLowerCase();
     const relevant = [];
 
-    const getEntity = f => (f.Entity || f.entity || '');
-    const getMetric = f => (f.Metric || f.metric || '');
+    const getEntity = f => String(f.Entity || f.entity || f.EntityName || '').toLowerCase();
+    const getMetric = f => String(f.Metric || f.metric || f.CanonicalMetric || f.OriginalLabel || '').toLowerCase();
+    const getPeriod = f => String(f.PeriodLabel || f.periodLabel || f.PeriodName || '').toLowerCase();
 
-    // Transaction ID search (e.g. TXN-10004)
+    // 1. Transaction ID search (e.g. TXN-10004)
     const txnMatch = q.match(/txn-\d+/i);
     if (txnMatch) {
         const targetTxn = txnMatch[0].toUpperCase();
         relevant.push(...facts.filter(f => getEntity(f).toUpperCase().includes(targetTxn)));
     }
 
-    if (q.includes('pending')) {
-        relevant.push(...facts.filter(f => /pending/i.test(getEntity(f)) || /pending/i.test(getMetric(f))));
+    // 2. Conflict queries
+    const isConflictQuery = /mismatch|exception|discrepancy|difference|conflict|variance|dispute/i.test(q);
+    if (isConflictQuery) {
+        relevant.push(...facts.filter(f => f.hasConflict === true));
     }
 
-    if (q.includes('approved')) {
-        relevant.push(...facts.filter(f => /approved/i.test(getEntity(f)) || /approved/i.test(getMetric(f))));
+    // 2B. Dimension-based matching (metric, entity, period resolution)
+    try {
+        const { resolveQuestionToDimensions } = require('./calculation-engine');
+        const resolved = resolveQuestionToDimensions(question);
+        if (resolved) {
+            for (const f of facts) {
+                const m = getMetric(f);
+                const e = getEntity(f);
+                const p = getPeriod(f);
+                if (resolved.metric && m.toLowerCase().includes(resolved.metric.toLowerCase())) {
+                    relevant.push(f);
+                } else if (resolved.entity && e.toLowerCase().includes(resolved.entity.toLowerCase())) {
+                    relevant.push(f);
+                } else if (resolved.period && p.toLowerCase().includes(resolved.period.toLowerCase())) {
+                    relevant.push(f);
+                }
+            }
+        }
+    } catch {
+        // ignore
     }
 
-    if (q.includes('declined')) {
-        relevant.push(...facts.filter(f => /declined/i.test(getEntity(f)) || /declined/i.test(getMetric(f))));
+    // 3. Dynamic Keyword Matching against Metric, Entity, and Period
+    const stopWords = new Set([
+        'what', 'was', 'is', 'the', 'of', 'for', 'in', 'and', 'to', 'a', 'an', 'show', 'tell',
+        'me', 'give', 'how', 'much', 'many', 'does', 'did', 'by', 'at', 'with', 'from'
+    ]);
+    const words = q.split(/[\s,?;:()"]+/).filter(w => w.length > 1 && !stopWords.has(w));
+
+    const scoredFacts = facts.map(f => {
+        const metricStr = getMetric(f);
+        const entityStr = getEntity(f);
+        const periodStr = getPeriod(f);
+
+        let score = 0;
+        for (const w of words) {
+            if (metricStr.includes(w)) score += 3;
+            if (entityStr.includes(w)) score += 3;
+            if (periodStr.includes(w)) score += 2;
+        }
+
+        return { fact: f, score };
+    });
+
+    const matchingFacts = scoredFacts
+        .filter(item => item.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map(item => item.fact);
+
+    if (matchingFacts.length > 0) {
+        relevant.push(...matchingFacts);
     }
 
-    if (q.includes('total') || q.includes('count') || q.includes('amount') || q.includes('summary')) {
-        relevant.push(...facts.filter(f => /all transactions/i.test(getEntity(f)) || /total/i.test(getMetric(f))));
-    }
-
-    if (q.includes('mismatch') || q.includes('exception') || q.includes('discrepancy') || q.includes('difference') || q.includes('conflict') || q.includes('variance')) {
-        relevant.push(...facts.filter(f =>
-            /mismatch/i.test(getMetric(f)) ||
-            /gateway/i.test(getMetric(f)) ||
-            /settlement/i.test(getMetric(f)) ||
-            f.hasConflict === true
-        ));
-    }
-
+    // If still empty, return top 15 facts
     if (relevant.length === 0) {
-        return facts.slice(0, 10);
+        return facts.slice(0, 15);
     }
 
-    // Deduplicate facts
+    // Deduplicate facts by FactId or key
     const seen = new Set();
     return relevant.filter(f => {
-        const key = f.FactId ? String(f.FactId) : `${f.DocumentId || ''}_${getMetric(f)}_${getEntity(f)}_${f.NumericValue}`;
+        const key = f.FactId ? String(f.FactId) : `${f.DocumentId || ''}_${getMetric(f)}_${getEntity(f)}_${getPeriod(f)}_${f.NumericValue}`;
         if (seen.has(key)) return false;
         seen.add(key);
         return true;
@@ -58,24 +94,29 @@ function formatSourceReferences(retrievedChunks) {
 
     return retrievedChunks.map(chunk => {
         let pageNumber = Number(chunk.pageNumber);
-        if (!Number.isInteger(pageNumber) || pageNumber < 1) {
-            pageNumber = 1;
-            const pageMatch = (chunk.title || '').match(/Page\s+(\d+)/i) || (chunk.content || '').match(/Page\s+(\d+)/i);
-            if (pageMatch) pageNumber = parseInt(pageMatch[1], 10);
+        if (isNaN(pageNumber) || pageNumber < 1) pageNumber = null;
+
+        const heading = chunk.heading || chunk.title || null;
+        let sourceLocation = chunk.source || chunk.fileName || 'Financial Document';
+        if (heading) {
+            sourceLocation += `, Section: ${heading}`;
+        }
+        if (pageNumber) {
+            sourceLocation += `, Page ${pageNumber}`;
         }
 
         return {
-            source: chunk.fileName || chunk.source || 'Unknown',
-            fileLink: chunk.fileLink || null,
             chunkId: chunk.id,
-            title: chunk.title || chunk.heading || 'Section',
-            pageNumber,
+            documentId: chunk.documentId || null,
+            fileName: chunk.fileName || chunk.source || null,
+            sourceLocation,
             department: chunk.department || null,
             jobTitle: chunk.jobTitle || null,
-            authorityRank: chunk.authorityRank ?? null,
+            authorityRank: chunk.authorityRank || 4,
             authoritySource: chunk.authoritySource || null,
-            documentKey: chunk.documentKey || null,
-            queueKey: chunk.queueKey || null
+            pageNumber,
+            heading,
+            score: chunk['@search.score'] || null
         };
     });
 }

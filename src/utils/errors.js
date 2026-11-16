@@ -10,8 +10,9 @@ class AppError extends Error {
 }
 
 class ValidationError extends AppError {
-    constructor(message, details = null) {
-        super(message, 400, 'VALIDATION_ERROR', details);
+    constructor(message, details = null, code = null) {
+        const actualCode = (typeof details === 'string' && !code && details.length > 0) ? details : (code || 'VALIDATION_ERROR');
+        super(message, 400, actualCode, details);
     }
 }
 

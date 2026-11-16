@@ -81,10 +81,26 @@ async function validateDocumentBuffer(buffer, fileName = '', maxMb = null) {
         );
     }
 
-    // 6. Basic detection of encrypted/password-protected PDFs
+    // 6. Detection of encrypted/password-protected PDFs and Excel workbooks
     if (isPdf && buffer.includes(Buffer.from('/Encrypt'))) {
         throw new ValidationError(
-            'The uploaded document is password-protected. Please upload an unprotected document.'
+            'The uploaded document is password-protected. Please upload an unprotected document.',
+            'EncryptedFileNotSupported'
+        );
+    }
+
+    if ((isXlsx || isXls) && (buffer.includes(Buffer.from('EncryptedPackage')) || buffer.includes(Buffer.from('encryptionInfo')))) {
+        throw new ValidationError(
+            'The uploaded Excel workbook is password-protected or encrypted. Please upload an unprotected file.',
+            'EncryptedFileNotSupported'
+        );
+    }
+
+    // 6B. Detection of external links / external references in workbooks
+    if ((isXlsx || isXls) && (buffer.includes(Buffer.from('externalReferences')) || buffer.includes(Buffer.from('externalLink')) || buffer.includes(Buffer.from('[Book')))) {
+        throw new ValidationError(
+            'Workbooks containing external workbook references or external links are not accepted due to security policy.',
+            'ExternalLinksNotSupported'
         );
     }
     // 7. Validate actual PDF content
