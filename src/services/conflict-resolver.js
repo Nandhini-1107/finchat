@@ -7,7 +7,6 @@ require('../utils/config');
 const crypto = require('crypto');
 const { areValuesEqual } = require('./unit-normalizer');
 const { getPool, createFactConflict } = require('./sql');
-const { generateLogicalIdentity } = require('../../contracts/extracted-facts');
 
 /**
  * Normalizes an identity string token (trims, collapses whitespace, lowercase).
@@ -122,12 +121,12 @@ function detectFinancialFactConflicts(incomingFacts = [], existingApprovedFacts 
     if (!Array.isArray(incomingFacts) || incomingFacts.length === 0) return conflicts;
     if (!Array.isArray(existingApprovedFacts) || existingApprovedFacts.length === 0) return conflicts;
 
-    // Filter existing facts to only active, approved or pending facts
+    // Filter existing facts to only active, approved, pending, or needs-review facts
     const activeExisting = existingApprovedFacts.filter(f => {
         const mappingStatus = f.MappingStatus || f.mappingStatus || 'Approved';
         const docStatus = f.IngestionStatus || f.ingestionStatus || 'Succeeded';
-        return (mappingStatus === 'Approved' || mappingStatus === 'Pending') &&
-               (docStatus === 'Succeeded' || docStatus === 'Completed' || docStatus === 'PendingApproval' || docStatus === 'PartiallyApproved' || docStatus === null || docStatus === undefined);
+        return (mappingStatus === 'Approved' || mappingStatus === 'Pending' || mappingStatus === 'NeedsReview') &&
+               (docStatus === 'Succeeded' || docStatus === 'Completed' || docStatus === 'PendingApproval' || docStatus === 'Processing' || docStatus === 'PartiallyApproved' || docStatus === null || docStatus === undefined);
     });
 
     incomingFacts.forEach((incoming, idx) => {
@@ -154,9 +153,8 @@ function detectFinancialFactConflicts(incomingFacts = [], existingApprovedFacts 
                 continue;
             }
 
-            const existingVal = existing.NormalizedValue !== undefined && existing.NormalizedValue !== null
-                ? Number(existing.NormalizedValue)
-                : (existing.NumericValue !== undefined && existing.NumericValue !== null ? Number(existing.NumericValue) : null);
+            const rawExistingVal = existing.normalizedValue ?? existing.NormalizedValue ?? existing.numericValue ?? existing.NumericValue;
+            const existingVal = (rawExistingVal !== undefined && rawExistingVal !== null) ? Number(rawExistingVal) : null;
 
             if (existingVal === null || isNaN(existingVal)) continue;
 

@@ -19,3 +19,11 @@ tests/local/
 tests/scratch/
 tests/temp/
 *.test.log
+
+# Ignore all binary office, financial, PDF and Excel documents anywhere in repo
+*.pdf
+*.xlsx
+*.xlsm
+*.xls
+*.docx
+*.csv
