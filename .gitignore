@@ -25,3 +25,11 @@ tests/temp/
 # Legacy test scripts
 test-acceptance-suite.js
 test-sharepoint-queue.js
+
+# Ignore all binary office, financial, PDF and Excel documents anywhere in repo
+*.pdf
+*.xlsx
+*.xlsm
+*.xls
+*.docx
+*.csv

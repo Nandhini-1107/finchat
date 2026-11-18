@@ -22,7 +22,7 @@ app.timer('sharepointMonthlyScan', {
 app.http('triggerSharepointScan', {
     methods: ['POST'],
     authLevel: 'function',
-    route: 'admin/sharepoint/scan',
+    route: 'sharepoint/scan',
     handler: async (request, context) => {
         context.log('[SharePointScanner] Manual SharePoint scan invoked via HTTP');
         try {
