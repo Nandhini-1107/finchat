@@ -705,7 +705,35 @@ async function getPendingQueueItems(
 
                 FileLink: getField(fields, 'FileLinkText') || getField(fields, 'FileLink'),
 
-                ModifiedDate: getField(fields, 'ModifiedDate'),
+                ModifiedDate: getField(fields, 'ModifiedDate') || item.lastModifiedDateTime || '',
+
+                CreatedDate: getField(fields, 'CreatedDate') || item.createdDateTime || '',
+
+                ModifiedByEmail: getField(fields, 'ModifiedByEmail') ||
+                    getField(fields, 'UploaderEmail') ||
+                    getField(fields, 'EditorEmail') ||
+                    item.lastModifiedBy?.user?.email ||
+                    item.createdBy?.user?.email || '',
+
+                ModifiedByName: getField(fields, 'ModifiedByName') ||
+                    getField(fields, 'EditorName') ||
+                    item.lastModifiedBy?.user?.displayName ||
+                    item.createdBy?.user?.displayName || '',
+
+                ModifiedByUserId: getField(fields, 'ModifiedByUserId') ||
+                    item.lastModifiedBy?.user?.id ||
+                    item.createdBy?.user?.id || '',
+
+                CreatedByEmail: getField(fields, 'CreatedByEmail') ||
+                    getField(fields, 'AuthorEmail') ||
+                    item.createdBy?.user?.email || '',
+
+                CreatedByName: getField(fields, 'CreatedByName') ||
+                    getField(fields, 'AuthorName') ||
+                    item.createdBy?.user?.displayName || '',
+
+                CreatedByUserId: getField(fields, 'CreatedByUserId') ||
+                    item.createdBy?.user?.id || '',
 
                 CreatedByDepartment: getField(fields, 'CreatedByDepartment'),
 
