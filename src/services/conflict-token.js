@@ -1,11 +1,15 @@
+// src/services/conflict-token.js
+// Cryptographic single-use decision tokens and HMAC signatures for conflict resolution workflow.
+
 const crypto = require('crypto');
 require('../utils/config');
 
 const DEFAULT_SECRET = process.env.CONFLICT_TOKEN_SECRET || process.env.CLIENT_SECRET || 'finchat-default-conflict-secret-key-32ch';
+const DEFAULT_TTL_HOURS = 72;
 const DEFAULT_EXPIRY_DAYS = 7;
 
 /**
- * Encodes an object to a URL-safe Base64 string.
+ * Encodes an object or string to a URL-safe Base64 string.
  */
 function base64UrlEncode(str) {
     return Buffer.from(str, 'utf8')
@@ -27,7 +31,7 @@ function base64UrlDecode(str) {
 }
 
 /**
- * Generates an HMAC SHA-256 signature for a payload.
+ * Generates an HMAC SHA-256 signature for a payload string.
  */
 function createSignature(payloadString, secret = DEFAULT_SECRET) {
     return crypto.createHmac('sha256', secret)
@@ -39,35 +43,43 @@ function createSignature(payloadString, secret = DEFAULT_SECRET) {
 }
 
 /**
- * Generates a secure, signed token for conflict resolution action links.
+ * Computes a SHA-256 hex digest of a token string for safe database storage.
+ *
+ * @param {string} token
+ * @returns {string} SHA-256 hex string (64 characters)
+ */
+function hashToken(token) {
+    if (!token || typeof token !== 'string') return '';
+    return crypto.createHash('sha256').update(token.trim()).digest('hex');
+}
+
+/**
+ * Generates an enterprise-grade, HMAC-SHA256 signed single-use decision token for a conflict.
  *
  * @param {Object} params
- * @param {number|string} params.documentId - The DocumentId in Azure SQL
- * @param {string} [params.userEmail] - Email of the recipient / modified_user
- * @param {string} [params.action] - Optional default action ('ACCEPT_NEW', 'KEEP_EXISTING')
- * @param {number} [params.expiresInDays=7] - Validity duration in days
- * @returns {string} Signed token: `<base64Payload>.<signature>`
+ * @param {number|string} params.conflictId - Conflict ID in Azure SQL
+ * @param {string} [params.recipientEmail] - Target human recipient
+ * @param {number} [params.ttlHours=72] - Time-to-live in hours (default 72h)
+ * @returns {string} Signed token: `<base64UrlPayload>.<base64UrlSignature>`
  */
-function generateConflictResolutionToken({
-    documentId,
-    userEmail = null,
-    action = null,
-    expiresInDays = DEFAULT_EXPIRY_DAYS
+function generateDecisionToken({
+    conflictId,
+    recipientEmail = null,
+    ttlHours = DEFAULT_TTL_HOURS
 }) {
-    if (!documentId) {
-        throw new Error('documentId is required to generate a conflict resolution token.');
+    if (!conflictId) {
+        throw new Error('conflictId is required to generate a decision token.');
     }
 
     const issuedAt = Math.floor(Date.now() / 1000);
-    const expiresAt = issuedAt + (expiresInDays * 24 * 60 * 60);
+    const expiresAt = issuedAt + Math.round(ttlHours * 3600);
 
     const payload = {
-        docId: Number(documentId) || documentId,
-        email: userEmail || null,
-        act: action || null,
+        cid: Number(conflictId) || conflictId,
+        email: recipientEmail ? String(recipientEmail).trim().toLowerCase() : null,
         iat: issuedAt,
         exp: expiresAt,
-        nonce: crypto.randomBytes(6).toString('hex')
+        nonce: crypto.randomBytes(16).toString('hex')
     };
 
     const payloadString = JSON.stringify(payload);
@@ -78,13 +90,13 @@ function generateConflictResolutionToken({
 }
 
 /**
- * Validates a conflict resolution token.
+ * Validates a decision token, verifying its cryptographic signature and expiration.
  *
- * @param {string} token - The signed token string
+ * @param {string} token - Signed decision token
  * @param {string} [secret] - Optional secret override
- * @returns {{ valid: boolean, payload?: Object, error?: string }}
+ * @returns {{ valid: boolean, payload?: Object, error?: string, expired?: boolean }}
  */
-function verifyConflictResolutionToken(token, secret = DEFAULT_SECRET) {
+function verifyDecisionToken(token, secret = DEFAULT_SECRET) {
     if (!token || typeof token !== 'string') {
         return { valid: false, error: 'Token is missing or not a string.' };
     }
@@ -97,12 +109,15 @@ function verifyConflictResolutionToken(token, secret = DEFAULT_SECRET) {
     const [encodedPayload, providedSignature] = parts;
     const expectedSignature = createSignature(encodedPayload, secret);
 
-    // Constant-time signature comparison to prevent timing attacks
     const providedBuffer = Buffer.from(providedSignature);
     const expectedBuffer = Buffer.from(expectedSignature);
 
     if (providedBuffer.length !== expectedBuffer.length || !crypto.timingSafeEqual(providedBuffer, expectedBuffer)) {
-        return { valid: false, error: 'Invalid token signature (token has been tampered with or expired secret).' };
+        return {
+            valid: false,
+            reason: 'INVALID_SIGNATURE',
+            error: 'Invalid token signature (token has been tampered with or expired secret).'
+        };
     }
 
     try {
@@ -113,6 +128,8 @@ function verifyConflictResolutionToken(token, secret = DEFAULT_SECRET) {
         if (payload.exp && currentSeconds > payload.exp) {
             return {
                 valid: false,
+                expired: true,
+                reason: 'EXPIRED',
                 error: `Token expired at ${new Date(payload.exp * 1000).toISOString()}. Please request a fresh link.`
             };
         }
@@ -120,9 +137,8 @@ function verifyConflictResolutionToken(token, secret = DEFAULT_SECRET) {
         return {
             valid: true,
             payload: {
-                documentId: payload.docId,
-                userEmail: payload.email,
-                action: payload.act,
+                conflictId: payload.cid || payload.docId,
+                recipientEmail: payload.email,
                 issuedAt: new Date(payload.iat * 1000),
                 expiresAt: new Date(payload.exp * 1000)
             }
@@ -132,8 +148,54 @@ function verifyConflictResolutionToken(token, secret = DEFAULT_SECRET) {
     }
 }
 
+/**
+ * Builds the canonical decision URLs for email notification links.
+ *
+ * @param {string} token
+ * @param {string} [baseUrl]
+ * @returns {{ previewUrl: string, keepExistingUrl: string, acceptIncomingUrl: string }}
+ */
+function getDecisionUrls(token, baseUrl = null) {
+    const rawBase = baseUrl || process.env.FINCHAT_BASE_URL || 'http://localhost:7071';
+    const base = String(rawBase).replace(/\/+$/, '');
+    const encodedToken = encodeURIComponent(token);
+
+    return {
+        previewUrl: `${base}/api/confirmConflict?token=${encodedToken}`,
+        keepExistingUrl: `${base}/api/confirmConflict?token=${encodedToken}&action=keep_existing`,
+        acceptIncomingUrl: `${base}/api/confirmConflict?token=${encodedToken}&action=accept_incoming`
+    };
+}
+
+/**
+ * Backward-compatible helper for legacy document-level resolution tokens.
+ */
+function generateConflictResolutionToken({
+    documentId,
+    userEmail = null,
+    action = null,
+    expiresInDays = DEFAULT_EXPIRY_DAYS
+}) {
+    return generateDecisionToken({
+        conflictId: documentId,
+        recipientEmail: userEmail,
+        ttlHours: expiresInDays * 24
+    });
+}
+
+/**
+ * Backward-compatible helper for legacy document-level resolution token verification.
+ */
+function verifyConflictResolutionToken(token, secret = DEFAULT_SECRET) {
+    return verifyDecisionToken(token, secret);
+}
+
 module.exports = {
+    DEFAULT_TTL_HOURS,
+    generateDecisionToken,
+    verifyDecisionToken,
+    hashToken,
+    getDecisionUrls,
     generateConflictResolutionToken,
     verifyConflictResolutionToken
 };
-

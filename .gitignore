@@ -1,13 +1,10 @@
 node_modules
 .azurite
-__azurite*
-__blobstorage__
-AzuriteConfig
 .env
 local.settings.json
 *.log
 
-# Test outputs & scratch test files
+# Test execution outputs and scratch
 coverage/
 .nyc_output/
 test-results/
@@ -16,3 +13,15 @@ tests/local/
 tests/scratch/
 tests/temp/
 *.test.log
+
+# Ignore all binary office, financial, PDF and Excel documents anywhere in repo
+*.pdf
+*.xlsx
+*.xlsm
+*.xls
+*.docx
+*.csv
+
+# Legacy test scripts
+test-acceptance-suite.js
+test-sharepoint-queue.js

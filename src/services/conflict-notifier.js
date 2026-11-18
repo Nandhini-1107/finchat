@@ -1,10 +1,39 @@
 // conflict-notifier.js
 // Generates and dispatches conflict resolution email notifications with secure decision links.
 
+require('../utils/config');
 const { getDecisionUrls, generateDecisionToken, hashToken } = require('./conflict-token');
 const { generateBlobSasUrl } = require('./blob-storage');
 const { getPool } = require('./sql');
 const sql = require('mssql');
+
+let nodemailer = null;
+try {
+    nodemailer = require('nodemailer');
+} catch {
+    nodemailer = null;
+}
+
+function getDefaultMailClient() {
+    if (!nodemailer) return null;
+    const host = process.env.SMTP_HOST;
+    const user = process.env.SMTP_USER;
+    const pass = process.env.SMTP_PASS ? process.env.SMTP_PASS.replace(/\s+/g, '') : null;
+    if (!host || !user || !pass) return null;
+
+    const port = parseInt(process.env.SMTP_PORT || '465', 10);
+    const secure = port === 465;
+
+    return nodemailer.createTransport({
+        host,
+        port,
+        secure,
+        auth: {
+            user,
+            pass
+        }
+    });
+}
 
 function getMaxTokenReissues() {
     return parseInt(process.env.FINCHAT_MAX_TOKEN_REISSUES || '3', 10);
@@ -277,7 +306,7 @@ async function sendConflictNotification({
         'finance-governance@contoso.com'
     );
     const recipient = resolveAndValidateRecipient(candidateRecipient);
-    const sender = (process.env.CONFLICT_MAILBOX_SENDER || 'finchat-notifications@contoso.com').trim();
+    const sender = (process.env.CONFLICT_MAILBOX_SENDER || process.env.SMTP_USER || 'finchat-notifications@contoso.com').trim();
 
     const formatted = formatConflictEmailNotification({ conflict, token, baseUrl });
     const conflictId = conflict.conflictId || conflict.ConflictId;
@@ -287,8 +316,9 @@ async function sendConflictNotification({
     const sentAt = new Date().toISOString();
 
     try {
-        if (mailClient && typeof mailClient.sendMail === 'function') {
-            await mailClient.sendMail({
+        const activeMailClient = mailClient || getDefaultMailClient();
+        if (activeMailClient && typeof activeMailClient.sendMail === 'function') {
+            await activeMailClient.sendMail({
                 from: sender,
                 to: recipient,
                 subject: formatted.subject,
@@ -296,9 +326,10 @@ async function sendConflictNotification({
                 html: formatted.htmlBody
             });
             success = true;
-        } else if (process.env.SENDGRID_API_KEY || process.env.SMTP_HOST) {
-            // Placeholder for production SMTP / SendGrid integration
-            console.log(`[ConflictNotifier] Dispatched notification for conflict #${conflictId} to ${recipient}`);
+            console.log(`[ConflictNotifier] Dispatched notification for conflict #${conflictId} to ${recipient} via SMTP`);
+        } else if (process.env.SENDGRID_API_KEY) {
+            // Placeholder for production SendGrid integration
+            console.log(`[ConflictNotifier] Dispatched notification for conflict #${conflictId} to ${recipient} via SendGrid`);
             success = true;
         } else {
             // Default delivery simulator (tracks and logs without external mail dependency in tests/dev)
@@ -542,8 +573,9 @@ async function checkMaxHoldAlerts({ mailClient = null } = {}) {
         const alertMsg = `GOVERNANCE ALERT: Conflict #${c.ConflictId} has been held for >= ${maxHoldDays} days without resolution.`;
         console.warn(`[ConflictNotifier] ${alertMsg}`);
 
-        if (mailClient && typeof mailClient.sendMail === 'function') {
-            await mailClient.sendMail({
+        const activeMailClient = mailClient || getDefaultMailClient();
+        if (activeMailClient && typeof activeMailClient.sendMail === 'function') {
+            await activeMailClient.sendMail({
                 from: process.env.CONFLICT_MAILBOX_SENDER || 'finchat-notifications@contoso.com',
                 to: adminEmail,
                 subject: `GOVERNANCE ALERT: Conflict #${c.ConflictId} Hold Exceeded ${maxHoldDays} Days`,

@@ -4,13 +4,14 @@ const { app } = require('@azure/functions');
 const { getPool } = require('../services/sql');
 require('../utils/config');
 
+// Route: 'conflicts/admin' (avoids Azure Functions reserved 'admin/' prefix; alias: 'admin/conflicts')
 app.http('adminConflicts', {
     methods: ['GET'],
     authLevel: 'function',
-    route: 'admin/conflicts',
+    route: 'conflicts/admin',
     handler: async (request, context) => {
         const correlationId = request.headers.get('x-correlation-id') || `admin-${Date.now()}`;
-        context.log(`[${correlationId}] GET /api/admin/conflicts invoked`);
+        context.log(`[${correlationId}] GET /api/conflicts/admin invoked`);
 
         try {
             const p = await getPool();

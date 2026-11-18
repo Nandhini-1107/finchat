@@ -1,13 +1,17 @@
 const { app } = require('@azure/functions');
+const crypto = require('crypto');
+const path = require('path');
 const { validateDocumentBuffer } = require('../utils/validation');
 const { ValidationError, toErrorResponse } = require('../utils/errors');
 const { processDocumentIngestion } = require('../services/ingestion-pipeline');
 const { blankToNull } = require('../services/search-document');
+const { uploadBufferToBlob } = require('../services/blob-storage');
 const {
     createDocument,
     startIngestionRun,
     updateIngestionRunProgress,
-    completeIngestionRun
+    completeIngestionRun,
+    findDocumentByContentHash
 } = require('../services/sql');
 
 function firstText(...values) {
@@ -70,6 +74,8 @@ app.http('ingestDocument', {
                 if (match && match[1]) defaultFileName = decodeURIComponent(match[1]).trim();
             }
 
+            // TODO(PHASE2): In Phase 2, verify caller identity and validate Entra ID Bearer token.
+            // In Phase 1, authLevel is anonymous and user identity is extracted from x-user-email or defaults (ENFORCE_AUTH=false).
             let allowedUserGroups = request.query.get('allowedUserGroups') || request.headers.get('x-user-groups') || null;
             let authorityRank = Number(request.query.get('authorityRank') || request.headers.get('x-authority-rank') || 4);
             let sourceType = request.query.get('sourceType') || request.headers.get('x-source-type') || 'ManualUpload';
@@ -79,26 +85,32 @@ app.http('ingestDocument', {
             let department = firstText(request.query.get('department'), request.headers.get('x-department'));
             let jobTitle = firstText(request.query.get('jobTitle'), request.headers.get('x-job-title'));
             let modifiedDate = firstText(request.query.get('modifiedDate'), request.headers.get('x-modified-date'));
-            let modifiedByEmail = firstText(
-                request.query.get('modifiedByEmail'),
-                request.headers.get('x-modified-by-email'),
+            let uploaderEmail = firstText(
+                request.query.get('emailId'),
+                request.query.get('email_id'),
+                request.query.get('email'),
+                request.query.get('notificationEmail'),
+                request.query.get('notification_email'),
+                request.query.get('recipientEmail'),
+                request.query.get('uploaderEmail'),
+                request.query.get('userEmail'),
                 request.headers.get('x-user-email'),
-                request.headers.get('x-modified-user')
-            );
-            let modifiedByName = firstText(
-                request.query.get('modifiedByName'),
-                request.headers.get('x-modified-by-name'),
-                request.headers.get('x-user-name')
+                request.headers.get('x-notification-email'),
+                request.headers.get('x-uploader-email'),
+                request.headers.get('x-modified-by-email'),
+                request.headers.get('x-email')
             );
 
             // Check async parameter (?async=false allows synchronous mode if explicitly requested)
             const isAsync = request.query.get('async') !== 'false' && request.headers.get('x-async') !== 'false';
 
+            // Route-level format restrictions: Hard-reject CSV, plain text, markdown, JSON, Word
             if (contentType.includes('text/plain') || contentType.includes('text/markdown') || contentType.includes('text/csv')) {
-                const textContent = await request.text();
-                const fileBuffer = Buffer.from(textContent, 'utf8');
-                const fileName = defaultFileName || `report_${Date.now()}.${contentType.includes('csv') ? 'csv' : 'txt'}`;
-                filesToProcess.push({ fileBuffer, fileName });
+                throw new ValidationError('Unsupported file format. Plain text, markdown, and CSV files are not accepted. Only PDF (.pdf) and Excel (.xlsx, .xls) files are supported.', 'UnsupportedFileFormat');
+            } else if (contentType.includes('application/json')) {
+                throw new ValidationError('Unsupported file format. JSON ingestion payloads are not accepted. Only PDF (.pdf) and Excel (.xlsx, .xls) files are supported.', 'UnsupportedFileFormat');
+            } else if (contentType.includes('application/msword') || contentType.includes('wordprocessingml')) {
+                throw new ValidationError('Unsupported file format. Word documents (.doc, .docx) are not accepted. Only PDF (.pdf) and Excel (.xlsx, .xls) files are supported.', 'UnsupportedFileFormat');
             } else if (contentType.includes('application/pdf') ||
                 contentType.includes('application/octet-stream') ||
                 contentType.includes('spreadsheetml') ||
@@ -119,8 +131,17 @@ app.http('ingestDocument', {
                 department = firstText(formData.get('department'), department);
                 jobTitle = firstText(formData.get('jobTitle'), jobTitle);
                 modifiedDate = firstText(formData.get('modifiedDate'), modifiedDate);
-                modifiedByEmail = firstText(formData.get('modifiedByEmail'), formData.get('userEmail'), modifiedByEmail);
-                modifiedByName = firstText(formData.get('modifiedByName'), formData.get('userName'), modifiedByName);
+                uploaderEmail = firstText(
+                    formData.get('emailId'),
+                    formData.get('email_id'),
+                    formData.get('email'),
+                    formData.get('notificationEmail'),
+                    formData.get('notification_email'),
+                    formData.get('recipientEmail'),
+                    formData.get('uploaderEmail'),
+                    formData.get('userEmail'),
+                    uploaderEmail
+                );
 
                 // Collect all files uploaded in formData (supports single and multiple files)
                 for (const [key, val] of formData.entries()) {
@@ -153,8 +174,17 @@ app.http('ingestDocument', {
                 department = firstText(jsonBody.department, department);
                 jobTitle = firstText(jsonBody.jobTitle, jobTitle);
                 modifiedDate = firstText(jsonBody.modifiedDate, modifiedDate);
-                modifiedByEmail = firstText(jsonBody.modifiedByEmail, jsonBody.userEmail, modifiedByEmail);
-                modifiedByName = firstText(jsonBody.modifiedByName, jsonBody.userName, modifiedByName);
+                uploaderEmail = firstText(
+                    jsonBody.emailId,
+                    jsonBody.email_id,
+                    jsonBody.email,
+                    jsonBody.notificationEmail,
+                    jsonBody.notification_email,
+                    jsonBody.recipientEmail,
+                    jsonBody.uploaderEmail,
+                    jsonBody.userEmail,
+                    uploaderEmail
+                );
 
                 let fileBuffer;
                 if (jsonBody.text || jsonBody.content) {
@@ -167,32 +197,88 @@ app.http('ingestDocument', {
                 }
                 filesToProcess.push({ fileBuffer, fileName });
             } else {
-                throw new ValidationError(`Unsupported Content-Type: "${contentType}". Finora AI accepts form-data, PDF/Binary, CSV, Excel (.xlsx/.xls), Text, or JSON.`);
+                throw new ValidationError(`Unsupported Content-Type: "${contentType}". Finora AI strictly accepts PDF (.pdf) and Excel (.xlsx/.xls) files.`, 'UnsupportedFileFormat');
             }
 
-            // Sanitize file names and validate each buffer upfront synchronously
+            // Sanitize file names, compute ContentHash, and validate each buffer upfront synchronously
             for (let i = 0; i < filesToProcess.length; i++) {
                 const item = filesToProcess[i];
-                const isPdf = item.fileBuffer && item.fileBuffer.length >= 4 && item.fileBuffer.toString('utf8', 0, 4) === '%PDF';
-                const isZipOrExcel = item.fileBuffer && item.fileBuffer.length >= 4 && item.fileBuffer.toString('hex', 0, 4) === '504b0304';
+                if (!item.fileBuffer || item.fileBuffer.length === 0) {
+                    throw new ValidationError('Uploaded file is empty.');
+                }
+
+                // Size limit check (50 MB HTTP)
+                const MAX_HTTP_SIZE_BYTES = 50 * 1024 * 1024;
+                if (item.fileBuffer.length > MAX_HTTP_SIZE_BYTES) {
+                    throw new ValidationError('File size exceeds the maximum allowed limit of 50 MB.', 'PayloadTooLarge');
+                }
+
+                const isPdf = item.fileBuffer.length >= 4 && item.fileBuffer.toString('utf8', 0, 4) === '%PDF';
+                const isZipOrExcel = item.fileBuffer.length >= 4 && item.fileBuffer.toString('hex', 0, 4) === '504b0304';
+                const isOlexls = item.fileBuffer.length >= 8 && item.fileBuffer.subarray(0, 8).equals(Buffer.from([0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1]));
 
                 if (item.fileName) {
                     if (!item.fileName.includes('.')) {
                         if (isPdf) item.fileName += '.pdf';
                         else if (isZipOrExcel) item.fileName += '.xlsx';
-                        else if (contentType.includes('csv')) item.fileName += '.csv';
-                        else item.fileName += '.txt';
+                        else if (isOlexls) item.fileName += '.xls';
+                        else item.fileName += '.pdf';
                     }
                 } else {
                     const timestamp = Date.now() + i;
                     if (isPdf) item.fileName = `document_${timestamp}.pdf`;
                     else if (isZipOrExcel) item.fileName = `spreadsheet_${timestamp}.xlsx`;
-                    else if (contentType.includes('csv')) item.fileName = `data_${timestamp}.csv`;
-                    else item.fileName = `document_${timestamp}.txt`;
+                    else if (isOlexls) item.fileName = `spreadsheet_${timestamp}.xls`;
+                    else item.fileName = `document_${timestamp}.pdf`;
                 }
 
+                const ext = path.extname(item.fileName).toLowerCase();
+                if (ext === '.xlsm') {
+                    throw new ValidationError('Macro workbooks (.xlsm) are not accepted due to security policy.', 'MacroWorkbooksNotSupported');
+                }
+
+                if (!['.pdf', '.xlsx', '.xls'].includes(ext)) {
+                    throw new ValidationError(`Unsupported file extension "${ext}". Finora AI strictly accepts PDF (.pdf) and Excel (.xlsx, .xls) files.`, 'UnsupportedFileFormat');
+                }
+
+                // Check for embedded VBA macro in binary
+                if (isZipOrExcel && item.fileBuffer.includes(Buffer.from('vbaProject.bin'))) {
+                    throw new ValidationError('Macro workbooks containing VBA projects are not accepted due to security policy.', 'MacroWorkbooksNotSupported');
+                }
+
+                // Compute SHA-256 ContentHash
+                item.contentHash = crypto.createHash('sha256').update(item.fileBuffer).digest('hex');
+
                 await validateDocumentBuffer(item.fileBuffer, item.fileName);
-                context.log(`[${correlationId}] File [${i + 1}/${filesToProcess.length}] validated: "${item.fileName}" (${(item.fileBuffer.length / 1024).toFixed(1)} KB).`);
+                context.log(`[${correlationId}] File [${i + 1}/${filesToProcess.length}] validated: "${item.fileName}" (${(item.fileBuffer.length / 1024).toFixed(1)} KB, ContentHash=${item.contentHash.substring(0, 12)}...).`);
+            }
+
+            // WP2 ContentHash Idempotency Check:
+            // If single file upload matches an existing Succeeded, Processing, or PendingApproval document, return existing record
+            // Use ?force=true or header x-force: true to bypass idempotency and re-ingest
+            const isForce = request.query.get('force') === 'true' || request.headers.get('x-force') === 'true';
+
+            if (!isForce && filesToProcess.length === 1 && filesToProcess[0].contentHash) {
+                const existing = await findDocumentByContentHash(filesToProcess[0].contentHash);
+                // Stale check: if a document has been 'Processing' for > 5 minutes, consider it orphaned from a server restart and allow re-ingestion
+                const isStaleProcessing = existing?.IngestionStatus === 'Processing' && existing?.CreatedAt && (Date.now() - new Date(existing.CreatedAt).getTime() > 5 * 60 * 1000);
+
+                if (existing && !isStaleProcessing && ['Succeeded', 'Processing', 'PendingApproval'].includes(existing.IngestionStatus)) {
+                    context.log(`[${correlationId}] Idempotent match: ContentHash ${filesToProcess[0].contentHash} matches existing DocumentId=${existing.DocumentId} (Status: ${existing.IngestionStatus}).`);
+                    return {
+                        status: 200,
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            status: 'IDEMPOTENT_SKIPPED',
+                            message: `Document with identical content already ingested (DocumentId: ${existing.DocumentId}). Returning existing record.`,
+                            documentId: existing.DocumentId,
+                            fileName: existing.FileName,
+                            ingestionStatus: existing.IngestionStatus,
+                            contentHash: filesToProcess[0].contentHash,
+                            correlationId
+                        })
+                    };
+                }
             }
 
             // -------------------------------------------------------------------------
@@ -202,11 +288,23 @@ app.http('ingestDocument', {
                 // Pre-register all documents in Azure SQL immediately (Status: Processing)
                 const registeredDocs = [];
                 for (const item of filesToProcess) {
-                    const docId = await createDocument(item.fileName, sourceType, authorityRank, allowedUserGroups, {
-                        modifiedByEmail,
-                        modifiedByName,
-                        modifiedDate,
-                        department
+                    const blobRes = await uploadBufferToBlob({
+                        blobName: `${Date.now()}_${item.fileName}`,
+                        buffer: item.fileBuffer,
+                        contentType: item.fileName.toLowerCase().endsWith('.pdf') ? 'application/pdf' : 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+                    }).catch(err => {
+                        context.warn?.(`[${correlationId}] Blob upload notice: ${err.message}`);
+                        return null;
+                    });
+
+                    const docId = await createDocument({
+                        fileName: item.fileName,
+                        sourceType,
+                        authorityRank,
+                        allowedUserGroups,
+                        uploaderEmail,
+                        contentHash: item.contentHash,
+                        blobUri: blobRes?.url || null
                     });
                     registeredDocs.push({
                         documentId: docId,
@@ -223,6 +321,25 @@ app.http('ingestDocument', {
                     context.log(`[${correlationId}] Initialized IngestionRun ID=${batchRunId} for ${registeredDocs.length} file(s).`);
                 } catch (runErr) {
                     context.warn?.(`[${correlationId}] Notice: Failed to register IngestionRun: ${runErr.message}`);
+                }
+
+                // WP15 Decoupled Queue Ingestion:
+                const { durableQueue } = require('../services/durable-queue');
+                for (const doc of registeredDocs) {
+                    await durableQueue.enqueueIngestionJob({
+                        documentId: doc.documentId,
+                        fileName: doc.fileName,
+                        fileBuffer: doc.fileBuffer,
+                        sourceType,
+                        authorityRank,
+                        allowedUserGroups,
+                        modifiedUserEmail: uploaderEmail,
+                        runId: batchRunId,
+                        correlationId: `${correlationId}-${doc.documentId}`
+                    }).catch(err => {
+                        context.warn?.(`[${correlationId}] Durable queue notice: ${err.message}`);
+                    });
+                    context.log(`[${correlationId}] Enqueued DocumentId=${doc.documentId} ("${doc.fileName}") to durable ingestion queue.`);
                 }
 
                 // Fire-and-forget background worker pool using background-safe logger
@@ -255,11 +372,13 @@ app.http('ingestDocument', {
                                     department,
                                     jobTitle,
                                     modifiedDate,
-                                    modifiedByEmail,
-                                    modifiedByName,
                                     existingRunId: batchRunId,
                                     manageRun: false,
-                                    existingDocumentId: doc.documentId
+                                    existingDocumentId: doc.documentId,
+                                    modifiedUserEmail: uploaderEmail,
+                                    uploaderEmail: uploaderEmail,
+                                    modifiedByEmail: uploaderEmail,
+                                    createdByEmail: uploaderEmail
                                 });
                                 succeededCount++;
                                 if (batchRunId) {
@@ -278,16 +397,9 @@ app.http('ingestDocument', {
                     });
 
                     await Promise.all(workers);
-
-                    if (batchRunId) {
-                        const overallStatus = failedCount === 0 ? 'Succeeded' : (succeededCount === 0 ? 'Failed' : 'CompletedWithErrors');
-                        const summary = errors.length > 0 ? errors.slice(0, 5).join(' | ') : null;
-                        await completeIngestionRun(batchRunId, succeededCount, failedCount, overallStatus, summary).catch(() => null);
-                    }
-                    batchLogger.log(`[AsyncIngest] Batch finished. Succeeded=${succeededCount}, Failed=${failedCount}.`);
-                })().catch(unhandled => {
-                    const fallbackLogger = createBackgroundLogger(correlationId);
-                    fallbackLogger.error(`[AsyncIngest] Unhandled background error: ${unhandled.message}`);
+                    batchLogger.log(`[AsyncIngest] Batch finished. Succeeded=${succeededCount}, Failed=${failedCount}`);
+                })().catch(err => {
+                    context.error?.(`[${correlationId}] Fatal error in background ingestion: ${err.message}`);
                 });
 
                 const firstDoc = registeredDocs[0];
@@ -340,8 +452,10 @@ app.http('ingestDocument', {
                     department,
                     jobTitle,
                     modifiedDate,
-                    modifiedByEmail,
-                    modifiedByName
+                    modifiedUserEmail: uploaderEmail,
+                    uploaderEmail: uploaderEmail,
+                    modifiedByEmail: uploaderEmail,
+                    createdByEmail: uploaderEmail
                 });
                 syncResults.push(res);
             }

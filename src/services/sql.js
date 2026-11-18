@@ -50,7 +50,7 @@ async function ensureDatabaseSchema(p) {
                 IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE object_id = OBJECT_ID('dbo.SourceAuthorityRanks') AND name = 'CreatedAt')
                     ALTER TABLE dbo.SourceAuthorityRanks ADD CreatedAt DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME();
 
-                UPDATE dbo.SourceAuthorityRanks SET AuthorityCategory = SourceType WHERE AuthorityCategory IS NULL;
+                EXEC(N'UPDATE dbo.SourceAuthorityRanks SET AuthorityCategory = SourceType WHERE AuthorityCategory IS NULL');
             END;
         `);
 
@@ -565,7 +565,7 @@ async function getPool() {
         password: process.env.AZURE_SQL_PASSWORD,
         options: {
             encrypt: process.env.AZURE_SQL_ENCRYPT !== 'false',
-            trustServerCertificate: false
+            trustServerCertificate: process.env.AZURE_SQL_TRUST_CERT === 'true' || process.env.AZURE_SQL_ENCRYPT === 'false'
         },
         connectionTimeout: 60000,
         requestTimeout: 60000,
@@ -985,6 +985,11 @@ async function createDocument(docDataOrFileName, sourceType = 'ManualUpload', au
     const sType = opts.sourceType || 'ManualUpload';
     await ensureDefaultAuthorityRank(rank, sType);
 
+    const createdEmail = opts.createdByEmail || opts.uploaderEmail || opts.modifiedUserEmail || null;
+    const modifiedEmail = opts.modifiedByEmail || opts.uploaderEmail || opts.modifiedUserEmail || null;
+    const createdName = opts.createdByName || opts.createdByUserName || null;
+    const modifiedName = opts.modifiedByName || opts.modifiedByUserName || null;
+
     const p = await getPool();
     const result = await p.request()
         .input('FileName', sql.NVarChar(260), opts.fileName)
@@ -1003,14 +1008,29 @@ async function createDocument(docDataOrFileName, sourceType = 'ManualUpload', au
         .input('DocumentStatus', sql.NVarChar(50), opts.documentStatus || 'Draft')
         .input('ReportingBasis', sql.NVarChar(50), opts.reportingBasis || 'Actual')
         .input('ReportingScope', sql.NVarChar(50), opts.reportingScope || 'Consolidated')
+        .input('PreparedDate', sql.Date, opts.preparedDate ? new Date(opts.preparedDate) : null)
+        .input('ApprovalDate', sql.Date, opts.approvalDate ? new Date(opts.approvalDate) : null)
         .input('AsOfDate', sql.Date, opts.asOfDate ? new Date(opts.asOfDate) : null)
         .input('PeriodStart', sql.Date, opts.periodStart ? new Date(opts.periodStart) : null)
         .input('PeriodEnd', sql.Date, opts.periodEnd ? new Date(opts.periodEnd) : null)
         .input('Currency', sql.NVarChar(10), opts.currency || null)
         .input('MetadataJson', sql.NVarChar(sql.MAX), opts.metadataJson ? JSON.stringify(opts.metadataJson) : null)
+        .input('FileHash', sql.NVarChar(128), opts.fileHash || opts.contentHash || null)
         .input('ContentHash', sql.NVarChar(64), opts.contentHash || null)
         .input('IndexingStatus', sql.NVarChar(30), opts.indexingStatus || 'NotIndexed')
-        .input('UploaderEmail', sql.NVarChar(255), opts.uploaderEmail || null)
+        .input('UploaderEmail', sql.NVarChar(255), opts.uploaderEmail || modifiedEmail || createdEmail)
+        .input('CreatedByUserId', sql.NVarChar(255), opts.createdByUserId || null)
+        .input('CreatedByName', sql.NVarChar(150), createdName)
+        .input('CreatedByUserName', sql.NVarChar(150), createdName)
+        .input('CreatedByEmail', sql.NVarChar(255), createdEmail)
+        .input('CreatedByUserEmail', sql.NVarChar(255), createdEmail)
+        .input('CreatedByDepartment', sql.NVarChar(100), opts.createdByDepartment || opts.department || null)
+        .input('ModifiedByUserId', sql.NVarChar(255), opts.modifiedByUserId || null)
+        .input('ModifiedByName', sql.NVarChar(150), modifiedName)
+        .input('ModifiedByUserName', sql.NVarChar(150), modifiedName)
+        .input('ModifiedByEmail', sql.NVarChar(255), modifiedEmail)
+        .input('ModifiedByUserEmail', sql.NVarChar(255), modifiedEmail)
+        .input('ModifiedAt', sql.DateTime2, opts.modifiedAt ? new Date(opts.modifiedAt) : (opts.modifiedDate ? new Date(opts.modifiedDate) : null))
         .input('BlobUri', sql.NVarChar(1000), opts.blobUri || null)
         .input('ConflictHold', sql.Bit, opts.conflictHold ? 1 : 0)
         .input('OpenConflictId', sql.BigInt, opts.openConflictId || null)
@@ -1019,18 +1039,91 @@ async function createDocument(docDataOrFileName, sourceType = 'ManualUpload', au
                 (FileName, SourceType, AuthorityRank, AllowedUserGroups, IngestionStatus, CreatedAt,
                  LogicalDocumentId, FileType, DocumentType, DocumentIssuer, SharePointFileId, SourceUrl,
                  FileVersion, VersionNumber, SupersedesDocumentId, DocumentStatus, ReportingBasis,
-                 ReportingScope, AsOfDate, PeriodStart, PeriodEnd, Currency, MetadataJson,
-                 ContentHash, IndexingStatus, UploaderEmail, BlobUri, ConflictHold, OpenConflictId)
+                 ReportingScope, PreparedDate, ApprovalDate, AsOfDate, PeriodStart, PeriodEnd, Currency, MetadataJson,
+                 FileHash, ContentHash, IndexingStatus, UploaderEmail,
+                 CreatedByUserId, CreatedByName, CreatedByUserName, CreatedByEmail, CreatedByUserEmail, CreatedByDepartment,
+                 ModifiedByUserId, ModifiedByName, ModifiedByUserName, ModifiedByEmail, ModifiedByUserEmail, ModifiedAt,
+                 BlobUri, ConflictHold, OpenConflictId)
             OUTPUT INSERTED.DocumentId
             VALUES 
                 (@FileName, @SourceType, @AuthorityRank, @AllowedUserGroups, 'Processing', SYSUTCDATETIME(),
                  @LogicalDocumentId, @FileType, @DocumentType, @DocumentIssuer, @SharePointFileId, @SourceUrl,
                  @FileVersion, @VersionNumber, @SupersedesDocumentId, @DocumentStatus, @ReportingBasis,
-                 @ReportingScope, @AsOfDate, @PeriodStart, @PeriodEnd, @Currency, @MetadataJson,
-                 @ContentHash, @IndexingStatus, @UploaderEmail, @BlobUri, @ConflictHold, @OpenConflictId)
+                 @ReportingScope, @PreparedDate, @ApprovalDate, @AsOfDate, @PeriodStart, @PeriodEnd, @Currency, @MetadataJson,
+                 @FileHash, @ContentHash, @IndexingStatus, @UploaderEmail,
+                 @CreatedByUserId, @CreatedByName, @CreatedByUserName, @CreatedByEmail, @CreatedByUserEmail, @CreatedByDepartment,
+                 @ModifiedByUserId, @ModifiedByName, @ModifiedByUserName, @ModifiedByEmail, @ModifiedByUserEmail, @ModifiedAt,
+                 @BlobUri, @ConflictHold, @OpenConflictId)
         `);
 
     return result.recordset[0].DocumentId;
+}
+
+/**
+ * Updates enriched document metadata (issuer, currency, scope, dates, indexing status, etc.).
+ */
+async function updateDocumentMetadata(documentId, fields = {}) {
+    if (!documentId || typeof fields !== 'object') return;
+    const p = await getPool();
+    const req = p.request().input('DocumentId', sql.BigInt, Number(documentId));
+    const sets = [];
+
+    const fieldMap = {
+        DocumentIssuer: sql.NVarChar(200),
+        DocumentType: sql.NVarChar(100),
+        Currency: sql.NVarChar(10),
+        ReportingBasis: sql.NVarChar(50),
+        ReportingScope: sql.NVarChar(50),
+        DocumentStatus: sql.NVarChar(50),
+        IndexingStatus: sql.NVarChar(30),
+        AsOfDate: sql.Date,
+        PeriodStart: sql.Date,
+        PeriodEnd: sql.Date,
+        PreparedDate: sql.Date,
+        ApprovalDate: sql.Date,
+        ContentHash: sql.NVarChar(64),
+        FileHash: sql.NVarChar(128),
+        MetadataJson: sql.NVarChar(sql.MAX),
+        UploaderEmail: sql.NVarChar(255),
+        ModifiedByEmail: sql.NVarChar(255),
+        ModifiedByName: sql.NVarChar(150),
+        ModifiedByUserName: sql.NVarChar(150),
+        ModifiedByUserEmail: sql.NVarChar(255),
+        ModifiedAt: sql.DateTime2,
+        CreatedByEmail: sql.NVarChar(255),
+        CreatedByName: sql.NVarChar(150),
+        CreatedByUserName: sql.NVarChar(150),
+        CreatedByUserEmail: sql.NVarChar(255),
+        CreatedByDepartment: sql.NVarChar(100),
+        FileType: sql.NVarChar(20),
+        LogicalDocumentId: sql.NVarChar(100),
+        FileVersion: sql.NVarChar(100),
+        SourceUrl: sql.NVarChar(1000)
+    };
+
+    for (const [key, sqlType] of Object.entries(fieldMap)) {
+        if (fields[key] !== undefined && fields[key] !== null) {
+            let val = fields[key];
+            if (key === 'MetadataJson' && typeof val === 'object') {
+                val = JSON.stringify(val);
+            } else if (['AsOfDate', 'PeriodStart', 'PeriodEnd', 'PreparedDate', 'ApprovalDate'].includes(key) && typeof val === 'string') {
+                val = new Date(val);
+            } else if (key === 'ModifiedAt' && typeof val === 'string') {
+                val = new Date(val);
+            }
+            req.input(key, sqlType, val);
+            sets.push(`${key} = @${key}`);
+        }
+    }
+
+    if (sets.length === 0) return;
+    sets.push('UpdatedAt = SYSUTCDATETIME()');
+
+    await req.query(`
+        UPDATE dbo.Documents
+        SET ${sets.join(', ')}
+        WHERE DocumentId = @DocumentId
+    `);
 }
 
 async function updateDocumentStatus(documentId, status, errorMsg = null) {
@@ -1270,7 +1363,8 @@ async function getCompleteFinancialFacts({
     reportingBasis = null,
     reportingScope = null,
     mappingStatus = null,
-    userGroups = null
+    userGroups = null,
+    includeAllStatuses = false
 } = {}) {
     const p = await getPool();
     const req = p.request();
@@ -1292,12 +1386,14 @@ async function getCompleteFinancialFacts({
                FileName AS SourceFileName,
                AuthorityPriority AS AuthorityRank
         FROM dbo.vw_FinancialFacts_Complete
-        WHERE (IngestionStatus = 'Succeeded' OR IngestionStatus = 'Completed' OR IngestionStatus IS NULL)
+        WHERE (IngestionStatus IN ('Succeeded', 'Completed', 'Processing', 'PendingApproval') OR IngestionStatus IS NULL)
     `;
 
     if (mappingStatus) {
         req.input('MappingStatus', sql.NVarChar(50), mappingStatus.trim());
         query += ' AND MappingStatus = @MappingStatus';
+    } else if (includeAllStatuses) {
+        query += " AND MappingStatus IN ('Approved', 'Pending', 'NeedsReview')";
     } else {
         query += " AND MappingStatus = 'Approved'";
     }
@@ -2183,6 +2279,7 @@ module.exports = {
     getIngestionRunSummary,
     createDocument,
     updateDocumentStatus,
+    updateDocumentMetadata,
     insertFinancialFacts,
     updateFactStatus,
     getDocumentById,
