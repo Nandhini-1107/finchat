@@ -1,6 +1,7 @@
 require('../utils/config');
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { validateDocumentBuffer } = require('../utils/validation');
 const { ValidationError, sanitizeErrorMessage } = require('../utils/errors');
 const { analyzeDocument } = require('./document-intelligence');
@@ -15,20 +16,19 @@ const {
     completeIngestionRun,
     createDocument,
     updateDocumentStatus,
+    updateDocumentMetadata,
     insertFinancialFacts,
     deleteDocumentFacts,
     getCompleteFinancialFacts,
     savePendingFactsAndConflicts
 } = require('./sql');
-<<<<<<< Updated upstream
-const { detectAndResolveConflicts } = require('./conflict-resolver');
-<<<<<<< Updated upstream
-=======
-const { logConflictDetected } = require('./audit-log');
-const { sendConflictNotificationEmail } = require('./notification');
-=======
 const { detectFinancialFactConflicts, detectAndResolveConflicts } = require('./conflict-resolver');
-const { sendConflictNotification } = require('./conflict-notifier');
+let sendConflictNotification = null;
+try {
+    sendConflictNotification = require('./conflict-notifier').sendConflictNotification;
+} catch {
+    // conflict-notifier is optional on branches where conflict notification is not yet merged
+}
 
 /**
  * Saves full extracted and normalized content to a temporary JSON file in the project folder.
@@ -95,8 +95,6 @@ function saveExtractedContentToTemp({
         return null;
     }
 }
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 
 /**
  * Orchestrates the full 10-step enterprise ingestion pipeline.
@@ -129,20 +127,19 @@ async function processDocumentIngestion({
     authoritySource = null,
     existingRunId = null,
     manageRun = null,
-<<<<<<< Updated upstream
-    existingDocumentId = null
-=======
     existingDocumentId = null,
     modifiedByEmail = null,
-<<<<<<< Updated upstream
     modifiedByName = null,
     modifiedByUserId = null,
-    baseUrl = null
-=======
     createdByEmail = null,
-    modifiedUserEmail = null
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+    createdByName = null,
+    createdByUserId = null,
+    uploaderEmail = null,
+    modifiedUserEmail = null,
+    sharePointFileId = null,
+    fileVersion = null,
+    blobUri = null,
+    baseUrl = null
 }) {
     const corrId = correlationId || `ingest-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
     const log = (msg) => (context.log ? context.log(`[${corrId}] ${msg}`) : console.log(`[${corrId}] ${msg}`));
@@ -166,13 +163,44 @@ async function processDocumentIngestion({
         currentStep = 'STEP 2: INGESTION LIFECYCLE REGISTRATION (AZURE SQL)';
         log(`=== ${currentStep} ===`);
 
+        const contentHash = crypto.createHash('sha256').update(fileBuffer).digest('hex');
+        const fileExt = path.extname(fileName || '').replace('.', '').toUpperCase();
+        const fileType = fileExt === 'PDF' ? 'PDF' : (['XLSX', 'XLS', 'XLSM'].includes(fileExt) ? 'Excel' : (fileExt || 'PDF'));
+        const effectiveUploader = uploaderEmail || modifiedUserEmail || modifiedByEmail || createdByEmail || null;
+
         if (shouldManageRun && !runId) {
             runId = await startIngestionRun(1);
         }
         if (existingDocumentId) {
             documentId = existingDocumentId;
         } else {
-            documentId = await createDocument(fileName, sourceType, authorityRank, allowedUserGroups);
+            documentId = await createDocument({
+                fileName,
+                sourceType,
+                authorityRank,
+                allowedUserGroups,
+                logicalDocumentId: documentKey || `DOC-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
+                fileType,
+                documentType: authoritySource || (authorityRank === 1 ? 'Audited Financials' : (authorityRank === 2 ? 'Board Pack' : 'Financial Statement')),
+                sharePointFileId: sharePointFileId || null,
+                sourceUrl: fileLink || null,
+                fileVersion: fileVersion || '1.0',
+                versionNumber: 1,
+                documentStatus: authorityRank === 1 ? 'Final' : 'Draft',
+                contentHash,
+                fileHash: contentHash,
+                indexingStatus: 'NotIndexed',
+                uploaderEmail: effectiveUploader,
+                createdByEmail: createdByEmail || effectiveUploader,
+                createdByName: createdByName || null,
+                createdByUserId: createdByUserId || null,
+                createdByDepartment: department || null,
+                modifiedByEmail: modifiedByEmail || effectiveUploader,
+                modifiedByName: modifiedByName || null,
+                modifiedByUserId: modifiedByUserId || null,
+                modifiedAt: modifiedDate ? new Date(modifiedDate) : null,
+                blobUri: blobUri || null
+            });
         }
 
         log(`Step 2 Output: dbo.IngestionRuns ID=${runId || 'N/A'}, dbo.Documents ID=${documentId} (Status: Processing).`);
@@ -279,13 +307,13 @@ async function processDocumentIngestion({
         let conflicts = [];
         let insertedFactIds = [];
         let hasUnresolvedConflicts = false;
-        const effectiveModifiedEmail = modifiedUserEmail || modifiedByEmail || createdByEmail || null;
+        const effectiveModifiedEmail = uploaderEmail || modifiedUserEmail || modifiedByEmail || createdByEmail || null;
 
         if (extractedFacts.length > 0) {
             // 1. Fetch existing approved master facts from database for dynamic conflict comparison
             let existingApprovedFacts = [];
             try {
-                existingApprovedFacts = await getCompleteFinancialFacts();
+                existingApprovedFacts = await getCompleteFinancialFacts({ includeAllStatuses: true });
             } catch (err) {
                 log(`Step 6 Warning: Could not retrieve existing facts for conflict comparison: ${err.message}`);
             }
@@ -302,28 +330,6 @@ async function processDocumentIngestion({
             log(`Step 6 Conflict Detection: Discovered ${conflicts.length} conflict(s).`);
 
             if (conflicts.length > 0) {
-<<<<<<< Updated upstream
-                for (const c of conflicts) {
-                    log(`  - Discrepancy on "${c.fact1?.Metric}": ${c.status} (${c.fact1?.SourceFileName}: ${c.fact1?.NumericValue} vs ${c.fact2?.SourceFileName}: ${c.fact2?.NumericValue})`);
-                }
-<<<<<<< Updated upstream
-=======
-
-                // Log audit trail
-                await logConflictDetected({ documentId, conflicts, correlationId: corrId });
-
-                // Dispatch conflict notification email with resolution links
-                await sendConflictNotificationEmail({
-                    documentId,
-                    fileName,
-                    modifiedByEmail,
-                    modifiedByName,
-                    conflicts,
-                    baseUrl,
-                    correlationId: corrId,
-                    context
-                });
-=======
                 hasUnresolvedConflicts = true;
                 log(`Step 6 Notice: Document contains ${conflicts.length} unresolved financial conflict(s). Staging all facts as Pending and holding document in PendingApproval.`);
 
@@ -361,18 +367,11 @@ async function processDocumentIngestion({
                 const insertedCount = await insertFinancialFacts(documentId, extractedFacts, authorityRank, fileName, { mappingStatus: 'Approved' });
                 insertedFactIds = insertedCount;
                 log(`Step 6 Output (dbo.FinancialFacts): Inserted ${insertedCount.length || extractedFacts.length} approved row(s).`);
->>>>>>> Stashed changes
->>>>>>> Stashed changes
             }
         } else {
             log('Step 6 Output: Skipped SQL fact insertion (0 facts extracted).');
         }
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-        const hasConflicts = conflicts.length > 0;
-=======
         // If conflicts were detected, hold ingestion in PendingApproval status (do not index into search)
         if (hasUnresolvedConflicts) {
             log(`Step 7-9 Notice: Retrieval chunking and vector search indexing deferred while document has pending conflicts.`);
@@ -393,9 +392,7 @@ async function processDocumentIngestion({
                 correlationId: corrId
             };
         }
->>>>>>> Stashed changes
 
->>>>>>> Stashed changes
         /// STEP 7: RETRIEVAL CHUNKING
         currentStep = 'STEP 7: RETRIEVAL CHUNKING';
         log(`=== ${currentStep} ===`);
@@ -471,6 +468,29 @@ async function processDocumentIngestion({
         currentStep = 'STEP 10: INGESTION COMPLETION';
         log(`=== ${currentStep} ===`);
 
+        // Enrich document record with extracted financial metadata & facts summary
+        const primaryFact = extractedFacts[0] || {};
+        await updateDocumentMetadata(documentId, {
+            DocumentIssuer: primaryFact.entity || primaryFact.entityName || null,
+            Currency: primaryFact.currency || 'USD',
+            ReportingBasis: primaryFact.reportingBasis || 'Actual',
+            ReportingScope: primaryFact.reportingScope || 'Consolidated',
+            AsOfDate: primaryFact.asOfDate || primaryFact.factDate || null,
+            PeriodStart: primaryFact.periodStart || null,
+            PeriodEnd: primaryFact.periodEnd || null,
+            DocumentType: authoritySource || (authorityRank === 1 ? 'Audited Financials' : (authorityRank === 2 ? 'Board Pack' : 'Financial Statement')),
+            DocumentStatus: authorityRank === 1 ? 'Final' : 'Active',
+            IndexingStatus: chunks.length > 0 ? 'Indexed' : 'NotIndexed',
+            MetadataJson: {
+                pageCount: extractedPages.length,
+                tableCount: extractedTables.length,
+                paragraphCount: extractedParagraphs.length,
+                factCount: extractedFacts.length,
+                chunkCount: chunks.length,
+                conflictCount: conflicts.length
+            }
+        }).catch(err => log(`Step 10 Warning: Document metadata enrichment notice: ${err.message}`));
+
         await updateDocumentStatus(documentId, 'Succeeded');
         if (shouldManageRun && runId) {
             await completeIngestionRun(runId, 1, 0, 'Succeeded');
@@ -488,16 +508,8 @@ async function processDocumentIngestion({
             authorityRank,
             factsExtracted: extractedFacts.length,
             chunksIndexed: chunks.length,
-<<<<<<< Updated upstream
-            conflictsProcessed: conflicts.length,
-=======
-<<<<<<< Updated upstream
-            conflictsProcessed: 0,
-=======
             conflictsProcessed: conflicts.length,
             tempArtifactPath: savedTemp?.relativePath || null,
->>>>>>> Stashed changes
->>>>>>> Stashed changes
             correlationId: corrId
         };
 

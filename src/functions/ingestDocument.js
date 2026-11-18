@@ -85,6 +85,21 @@ app.http('ingestDocument', {
             let department = firstText(request.query.get('department'), request.headers.get('x-department'));
             let jobTitle = firstText(request.query.get('jobTitle'), request.headers.get('x-job-title'));
             let modifiedDate = firstText(request.query.get('modifiedDate'), request.headers.get('x-modified-date'));
+            let uploaderEmail = firstText(
+                request.query.get('emailId'),
+                request.query.get('email_id'),
+                request.query.get('email'),
+                request.query.get('notificationEmail'),
+                request.query.get('notification_email'),
+                request.query.get('recipientEmail'),
+                request.query.get('uploaderEmail'),
+                request.query.get('userEmail'),
+                request.headers.get('x-user-email'),
+                request.headers.get('x-notification-email'),
+                request.headers.get('x-uploader-email'),
+                request.headers.get('x-modified-by-email'),
+                request.headers.get('x-email')
+            );
 
             // Check async parameter (?async=false allows synchronous mode if explicitly requested)
             const isAsync = request.query.get('async') !== 'false' && request.headers.get('x-async') !== 'false';
@@ -116,6 +131,17 @@ app.http('ingestDocument', {
                 department = firstText(formData.get('department'), department);
                 jobTitle = firstText(formData.get('jobTitle'), jobTitle);
                 modifiedDate = firstText(formData.get('modifiedDate'), modifiedDate);
+                uploaderEmail = firstText(
+                    formData.get('emailId'),
+                    formData.get('email_id'),
+                    formData.get('email'),
+                    formData.get('notificationEmail'),
+                    formData.get('notification_email'),
+                    formData.get('recipientEmail'),
+                    formData.get('uploaderEmail'),
+                    formData.get('userEmail'),
+                    uploaderEmail
+                );
 
                 // Collect all files uploaded in formData (supports single and multiple files)
                 for (const [key, val] of formData.entries()) {
@@ -134,7 +160,6 @@ app.http('ingestDocument', {
                 if (filesToProcess.length === 0) {
                     throw new ValidationError('form-data request must include one or more files in "file", "document", or "files" fields.');
                 }
-<<<<<<< Updated upstream
             } else if (contentType.includes('application/json')) {
                 const jsonBody = await request.json().catch(() => null);
                 if (!jsonBody) throw new ValidationError('JSON body is malformed or empty.');
@@ -149,6 +174,17 @@ app.http('ingestDocument', {
                 department = firstText(jsonBody.department, department);
                 jobTitle = firstText(jsonBody.jobTitle, jobTitle);
                 modifiedDate = firstText(jsonBody.modifiedDate, modifiedDate);
+                uploaderEmail = firstText(
+                    jsonBody.emailId,
+                    jsonBody.email_id,
+                    jsonBody.email,
+                    jsonBody.notificationEmail,
+                    jsonBody.notification_email,
+                    jsonBody.recipientEmail,
+                    jsonBody.uploaderEmail,
+                    jsonBody.userEmail,
+                    uploaderEmail
+                );
 
                 let fileBuffer;
                 if (jsonBody.text || jsonBody.content) {
@@ -160,8 +196,6 @@ app.http('ingestDocument', {
                     throw new ValidationError('JSON request must include "text", "content", or "base64".');
                 }
                 filesToProcess.push({ fileBuffer, fileName });
-=======
->>>>>>> Stashed changes
             } else {
                 throw new ValidationError(`Unsupported Content-Type: "${contentType}". Finora AI strictly accepts PDF (.pdf) and Excel (.xlsx/.xls) files.`, 'UnsupportedFileFormat');
             }
@@ -221,9 +255,15 @@ app.http('ingestDocument', {
 
             // WP2 ContentHash Idempotency Check:
             // If single file upload matches an existing Succeeded, Processing, or PendingApproval document, return existing record
-            if (filesToProcess.length === 1 && filesToProcess[0].contentHash) {
+            // Use ?force=true or header x-force: true to bypass idempotency and re-ingest
+            const isForce = request.query.get('force') === 'true' || request.headers.get('x-force') === 'true';
+
+            if (!isForce && filesToProcess.length === 1 && filesToProcess[0].contentHash) {
                 const existing = await findDocumentByContentHash(filesToProcess[0].contentHash);
-                if (existing && ['Succeeded', 'Processing', 'PendingApproval'].includes(existing.IngestionStatus)) {
+                // Stale check: if a document has been 'Processing' for > 5 minutes, consider it orphaned from a server restart and allow re-ingestion
+                const isStaleProcessing = existing?.IngestionStatus === 'Processing' && existing?.CreatedAt && (Date.now() - new Date(existing.CreatedAt).getTime() > 5 * 60 * 1000);
+
+                if (existing && !isStaleProcessing && ['Succeeded', 'Processing', 'PendingApproval'].includes(existing.IngestionStatus)) {
                     context.log(`[${correlationId}] Idempotent match: ContentHash ${filesToProcess[0].contentHash} matches existing DocumentId=${existing.DocumentId} (Status: ${existing.IngestionStatus}).`);
                     return {
                         status: 200,
@@ -248,16 +288,6 @@ app.http('ingestDocument', {
                 // Pre-register all documents in Azure SQL immediately (Status: Processing)
                 const registeredDocs = [];
                 for (const item of filesToProcess) {
-<<<<<<< Updated upstream
-                    const docId = await createDocument(item.fileName, sourceType, authorityRank, allowedUserGroups);
-=======
-<<<<<<< Updated upstream
-                    const docId = await createDocument(item.fileName, sourceType, authorityRank, allowedUserGroups, {
-                        modifiedByEmail,
-                        modifiedByName,
-                        modifiedDate,
-                        department
-=======
                     const blobRes = await uploadBufferToBlob({
                         blobName: `${Date.now()}_${item.fileName}`,
                         buffer: item.fileBuffer,
@@ -272,11 +302,10 @@ app.http('ingestDocument', {
                         sourceType,
                         authorityRank,
                         allowedUserGroups,
+                        uploaderEmail,
                         contentHash: item.contentHash,
-                        blobUri: blobRes?.blobUri || null
->>>>>>> Stashed changes
+                        blobUri: blobRes?.url || null
                     });
->>>>>>> Stashed changes
                     registeredDocs.push({
                         documentId: docId,
                         fileName: item.fileName,
@@ -294,7 +323,25 @@ app.http('ingestDocument', {
                     context.warn?.(`[${correlationId}] Notice: Failed to register IngestionRun: ${runErr.message}`);
                 }
 
-<<<<<<< Updated upstream
+                // WP15 Decoupled Queue Ingestion:
+                const { durableQueue } = require('../services/durable-queue');
+                for (const doc of registeredDocs) {
+                    await durableQueue.enqueueIngestionJob({
+                        documentId: doc.documentId,
+                        fileName: doc.fileName,
+                        fileBuffer: doc.fileBuffer,
+                        sourceType,
+                        authorityRank,
+                        allowedUserGroups,
+                        modifiedUserEmail: uploaderEmail,
+                        runId: batchRunId,
+                        correlationId: `${correlationId}-${doc.documentId}`
+                    }).catch(err => {
+                        context.warn?.(`[${correlationId}] Durable queue notice: ${err.message}`);
+                    });
+                    context.log(`[${correlationId}] Enqueued DocumentId=${doc.documentId} ("${doc.fileName}") to durable ingestion queue.`);
+                }
+
                 // Fire-and-forget background worker pool using background-safe logger
                 (async () => {
                     const batchLogger = createBackgroundLogger(correlationId);
@@ -327,7 +374,11 @@ app.http('ingestDocument', {
                                     modifiedDate,
                                     existingRunId: batchRunId,
                                     manageRun: false,
-                                    existingDocumentId: doc.documentId
+                                    existingDocumentId: doc.documentId,
+                                    modifiedUserEmail: uploaderEmail,
+                                    uploaderEmail: uploaderEmail,
+                                    modifiedByEmail: uploaderEmail,
+                                    createdByEmail: uploaderEmail
                                 });
                                 succeededCount++;
                                 if (batchRunId) {
@@ -343,24 +394,13 @@ app.http('ingestDocument', {
                                 docLogger.error(`[AsyncIngest] Ingestion failed for DocumentId=${doc.documentId}: ${docErr.message}`);
                             }
                         }
-=======
-                // WP15 Decoupled Queue Ingestion (No detached in-process background workers):
-                // Enqueue jobs to durable ingestion queue and return 202 Accepted immediately.
-                const { durableQueue } = require('../services/durable-queue');
-                for (const doc of registeredDocs) {
-                    await durableQueue.enqueueIngestionJob({
-                        documentId: doc.documentId,
-                        fileName: doc.fileName,
-                        fileBuffer: doc.fileBuffer,
-                        sourceType,
-                        authorityRank,
-                        allowedUserGroups,
-                        runId: batchRunId,
-                        correlationId: `${correlationId}-${doc.documentId}`
->>>>>>> Stashed changes
                     });
-                    context.log(`[${correlationId}] Enqueued DocumentId=${doc.documentId} ("${doc.fileName}") to durable ingestion queue.`);
-                }
+
+                    await Promise.all(workers);
+                    batchLogger.log(`[AsyncIngest] Batch finished. Succeeded=${succeededCount}, Failed=${failedCount}`);
+                })().catch(err => {
+                    context.error?.(`[${correlationId}] Fatal error in background ingestion: ${err.message}`);
+                });
 
                 const firstDoc = registeredDocs[0];
                 const responseBody = {
@@ -411,7 +451,11 @@ app.http('ingestDocument', {
                     fileLink,
                     department,
                     jobTitle,
-                    modifiedDate
+                    modifiedDate,
+                    modifiedUserEmail: uploaderEmail,
+                    uploaderEmail: uploaderEmail,
+                    modifiedByEmail: uploaderEmail,
+                    createdByEmail: uploaderEmail
                 });
                 syncResults.push(res);
             }

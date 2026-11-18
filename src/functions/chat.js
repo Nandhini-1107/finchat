@@ -1,4 +1,4 @@
-﻿const { app } = require('@azure/functions');
+const { app } = require('@azure/functions');
 const { validateChatRequest } = require('../utils/validation');
 const { toErrorResponse, NotFoundError } = require('../utils/errors');
 const { classifyIntent } = require('../services/intent-classifier');
@@ -12,16 +12,8 @@ const { generateAnswer } = require('../services/answer-generation');
 const { getActiveModelInfo } = require('../services/model-client');
 const { isArabicText } = require('../services/arabic-normalizer');
 
-<<<<<<< Updated upstream
-app.http('chat', {
-    methods: ['POST'],
-    authLevel: 'anonymous',
-    handler: async (request, context) => {
-        const generatedCorrelationId = `chat-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
-=======
 const chatHandler = async (request, context) => {
     const generatedCorrelationId = `chat-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`;
->>>>>>> Stashed changes
         let correlationId = generatedCorrelationId;
         context.log(`[${correlationId}] >>> START CHAT REQUEST <<< URL=${request.url}`);
 
@@ -100,8 +92,6 @@ const chatHandler = async (request, context) => {
                     };
                 }
 
-<<<<<<< Updated upstream
-=======
                 // Rule A.8 & WP17: Conflict Hold - while conflict is open, NO answers are given for either conflicted document (HTTP 409, CONFLICT_PENDING)
                 if (targetDoc.ConflictHold === true || targetDoc.ConflictHold === 1) {
                     return {
@@ -205,7 +195,6 @@ const chatHandler = async (request, context) => {
                     }
                 }
 
->>>>>>> Stashed changes
                 if (targetDoc.IngestionStatus === 'Failed') {
                     return {
                         status: 200,
@@ -529,14 +518,10 @@ const chatHandler = async (request, context) => {
             if (error.stack) context.error(`[${correlationId}] Stack: ${error.stack}`);
             return toErrorResponse(error, correlationId);
         }
-<<<<<<< Updated upstream
-    }
-=======
 };
 
 app.http('chat', {
     methods: ['POST'],
     authLevel: 'anonymous',
     handler: chatHandler
->>>>>>> Stashed changes
 });
