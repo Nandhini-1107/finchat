@@ -1,8 +1,11 @@
-const { app } = require('@azure/functions');
+﻿const { app } = require('@azure/functions');
 const { validateChatRequest } = require('../utils/validation');
 const { toErrorResponse, NotFoundError } = require('../utils/errors');
 const { getDocumentById } = require('../services/sql');
 const { processRetrievalPipeline } = require('../services/retrieval-pipeline');
+const {
+    detectConversationalIntent
+} = require('../services/conversational-intent');
 
 app.http('chat', {
     methods: ['POST'],
@@ -84,6 +87,45 @@ app.http('chat', {
                 }
 
                 searchFilter = `source eq '${targetDoc.FileName.replace(/'/g, "''")}'`;
+            }
+
+            // =========================================================================
+            // CONVERSATIONAL INTENT HANDLING
+            // =========================================================================
+
+            currentStep = 'CONVERSATIONAL INTENT DETECTION';
+
+            const conversationalResult = detectConversationalIntent(question);
+
+            if (conversationalResult) {
+                context.log(
+                    `[${correlationId}] Conversational intent detected: ${conversationalResult.intent}`
+                );
+
+                return {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        status: 'success',
+                        routeUsed: 'CONVERSATIONAL',
+                        intentType: conversationalResult.intent,
+                        entitiesDetected: [],
+                        periodsDetected: [],
+                        metricsDetected: [],
+                        answer: conversationalResult.answer,
+                        language: 'en',
+                        grounded: false,
+                        hasUnresolvedConflict: false,
+                        documentId: targetDoc?.DocumentId || null,
+                        document_name: null,
+                        page: null,
+                        sources: [],
+                        factsUsed: [],
+                        calculations: [],
+                        insufficientEvidence: false,
+                        correlationId
+                    })
+                };
             }
 
             // =========================================================================
