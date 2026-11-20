@@ -1,0 +1,36 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.19",
+    "version": "1.0.0",
+    "id": "d495d205-d26a-4111-bd4c-7c859d9713e1",
+    "developer": {
+        "name": "Finora",
+        "websiteUrl": "https://www.microsoft.com",
+        "privacyUrl": "https://www.microsoft.com/privacy",
+        "termsOfUseUrl": "https://www.microsoft.com/legal/terms-of-use"
+    },
+    "name": {
+        "short": "FinChat",
+        "full": "Finora FinChat"
+    },
+    "description": {
+        "short": "Chat with FinChat AI.",
+        "full": "FinChat provides AI-powered answers using your organization's approved financial and HR documents."
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "accentColor": "#1E2D4B",
+    "bots": [
+        {
+            "botId": "d495d205-d26a-4111-bd4c-7c859d9713e1",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "validDomains": [
+        "finchat-functions-dmapdhggdwfhdtet.southindia-01.azurewebsites.net"
+    ]
+}
