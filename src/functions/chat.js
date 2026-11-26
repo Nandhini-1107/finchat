@@ -1,9 +1,6 @@
-const { app } = require('@azure/functions');
+﻿const { app } = require('@azure/functions');
 const { validateChatRequest } = require('../utils/validation');
 const { toErrorResponse, NotFoundError } = require('../utils/errors');
-const { classifyIntent } = require('../services/intent-classifier');
-const { generateEmbedding } = require('../services/embeddings');
-const { searchSimilar } = require('../services/azure-search');
 const { getDocumentById } = require('../services/sql');
 const { getFactsWithConflictContext } = require('../services/conflict-resolver');
 const { evaluateDeterministicCalculations, computePeriodComparison } = require('../services/calculation-engine');
