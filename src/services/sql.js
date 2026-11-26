@@ -450,23 +450,8 @@ async function ensureDatabaseSchema(p) {
                 CREATE INDEX IX_FactResolutions_ResolvedAt ON dbo.FactResolutions(ResolvedAt);
             END;
 
-            IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'FactAudit')
-            BEGIN
-                CREATE TABLE dbo.FactAudit (
-                    AuditId BIGINT IDENTITY(1,1) PRIMARY KEY,
-                    FactId BIGINT NOT NULL FOREIGN KEY REFERENCES dbo.FinancialFacts(FactId),
-                    DocumentId BIGINT NOT NULL FOREIGN KEY REFERENCES dbo.Documents(DocumentId),
-                    ActionType NVARCHAR(50) NOT NULL,
-                    OldValue NVARCHAR(500) NULL,
-                    NewValue NVARCHAR(500) NULL,
-                    ActionReason NVARCHAR(1000) NULL,
-                    ActionBy NVARCHAR(150) NULL,
-                    ActionAt DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
-                    CorrelationId NVARCHAR(100) NULL
-                );
-            END;
-
-            IF NOT EXISTS (SELECT 1 FROM sys.tables WHERE name = 'AuthorityRank')
+            -- 6. AuthorityRank Table
+            IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'AuthorityRank')
             BEGIN
                 CREATE TABLE dbo.AuthorityRank (
                     Id INT IDENTITY(1,1) PRIMARY KEY,
@@ -483,72 +468,9 @@ async function ensureDatabaseSchema(p) {
             END;
         `);
 
-        // Batch 6: Complete Reporting View
-        await p.request().batch(`
-            IF EXISTS (SELECT 1 FROM sys.views WHERE name = 'vw_FinancialFacts_Complete')
-                DROP VIEW dbo.vw_FinancialFacts_Complete;
-        `);
-
-        await p.request().batch(`
-            CREATE VIEW dbo.vw_FinancialFacts_Complete AS
-            SELECT 
-                f.FactId,
-                f.DocumentId,
-                d.FileName,
-                d.LogicalDocumentId,
-                d.VersionNumber,
-                d.DocumentStatus,
-                d.IngestionStatus,
-                r.SourceType AS AuthorityCategory,
-                ISNULL(r.Priority, ISNULL(d.AuthorityRank, 4)) AS AuthorityPriority,
-                e.EntityId,
-                ISNULL(e.EntityName, f.Entity) AS EntityName,
-                m.MetricId,
-                ISNULL(m.CanonicalMetric, f.Metric) AS CanonicalMetric,
-                f.OriginalLabel,
-                p.PeriodId,
-                ISNULL(p.PeriodName, f.PeriodLabel) AS PeriodName,
-                ISNULL(p.PeriodStart, f.FactDate) AS PeriodStart,
-                ISNULL(p.PeriodEnd, f.AsOfDate) AS PeriodEnd,
-                f.ReportingBasis,
-                f.ReportingScope,
-                f.OriginalValue,
-                f.OriginalUnit,
-                ISNULL(f.NormalizedValue, f.NumericValue) AS NormalizedValue,
-                ISNULL(f.NormalizedUnit, f.Unit) AS NormalizedUnit,
-                f.Currency,
-                f.ValidationStatus,
-                f.MappingStatus,
-                f.SourceLocationJson,
-                f.SourceLocationText,
-                f.ExtractionMethod,
-                f.ExtractionConfidence,
-                d.AllowedUserGroups,
-                f.CreatedAt
-            FROM dbo.FinancialFacts f
-            LEFT JOIN dbo.Documents d ON f.DocumentId = d.DocumentId
-            LEFT JOIN dbo.Entities e ON f.EntityId = e.EntityId
-            LEFT JOIN dbo.Metrics m ON f.MetricId = m.MetricId
-            LEFT JOIN dbo.Periods p ON f.PeriodId = p.PeriodId
-            LEFT JOIN dbo.SourceAuthorityRanks r ON d.AuthorityRank = r.AuthorityRank
-            WHERE f.MappingStatus = 'Approved' 
-              AND ISNULL(d.ConflictHold, 0) = 0
-              AND d.IngestionStatus = 'Succeeded'
-              AND (d.DocumentStatus IS NULL OR d.DocumentStatus NOT IN ('Superseded', 'Rejected', 'Held', 'PendingApproval'));
-        `);
-
-        // Batch 8: Master Schema Backfill & Data Integrity (WP13)
-        await p.request().batch(`
-            -- Backfill historical NULL-status facts to NeedsReview
-            UPDATE dbo.FinancialFacts SET MappingStatus = 'NeedsReview' WHERE MappingStatus IS NULL;
-            UPDATE dbo.Documents SET IndexingStatus = 'NotIndexed' WHERE IndexingStatus IS NULL;
-            UPDATE dbo.Documents SET ConflictHold = 0 WHERE ConflictHold IS NULL;
-            UPDATE dbo.FinancialFacts SET SourceLocationHash = CONVERT(CHAR(64), HASHBYTES('SHA2_256', ISNULL(SourceLocationJson, ISNULL(SourceLocationText, CONCAT(CAST(DocumentId AS NVARCHAR(30)), ':', ISNULL(Metric, 'UNKNOWN'), ':', ISNULL(PeriodLabel, 'UNKNOWN'))))), 2) WHERE SourceLocationHash IS NULL;
-            UPDATE dbo.FinancialFacts SET FactIdentityHash = CONVERT(CHAR(64), HASHBYTES('SHA2_256', LOWER(CONCAT(ISNULL(Entity, 'unknown'), '|', ISNULL(Metric, ISNULL(OriginalLabel, 'unknown')), '|', ISNULL(PeriodLabel, 'unknown'), '|', ISNULL(ReportingBasis, 'actual'), '|', ISNULL(Unit, ISNULL(NormalizedUnit, 'amount')), '|', ISNULL(Currency, '')))), 2) WHERE FactIdentityHash IS NULL;
-        `);
-
         schemaInitialized = true;
     } catch (err) {
+        /// Log warning if schema check cannot run yet (e.g. read-only user or initial probe)
         console.warn('Notice: Automatic database schema initialization encountered an issue:', err.message);
     }
 }
@@ -965,32 +887,8 @@ async function updateIngestionRunProgress(runId, isSuccess = true, errorSummary 
         `);
 }
 
-/**
- * Creates a new document record. Supports both legacy positional parameters
- * and a rich options object for full versioning and reporting context metadata.
- */
-async function createDocument(docDataOrFileName, sourceType = 'ManualUpload', authorityRank = 4, allowedUserGroups = null) {
-    let opts = {};
-    if (typeof docDataOrFileName === 'object' && docDataOrFileName !== null) {
-        opts = docDataOrFileName;
-    } else {
-        opts = {
-            fileName: docDataOrFileName,
-            sourceType,
-            authorityRank,
-            allowedUserGroups
-        };
-    }
-
-    const rank = opts.authorityRank || 4;
-    const sType = opts.sourceType || 'ManualUpload';
-    await ensureDefaultAuthorityRank(rank, sType);
-
-    const createdEmail = opts.createdByEmail || opts.uploaderEmail || opts.modifiedUserEmail || null;
-    const modifiedEmail = opts.modifiedByEmail || opts.uploaderEmail || opts.modifiedUserEmail || null;
-    const createdName = opts.createdByName || opts.createdByUserName || null;
-    const modifiedName = opts.modifiedByName || opts.modifiedByUserName || null;
-
+async function createDocument(fileName, sourceType = 'ManualUpload', authorityRank = 4, allowedUserGroups = null) {
+    await ensureDefaultAuthorityRank(authorityRank, sourceType);
     const p = await getPool();
     const result = await p.request()
         .input('FileName', sql.NVarChar(260), opts.fileName)
@@ -2278,7 +2176,6 @@ module.exports = {
     startIngestionRun,
     completeIngestionRun,
     updateIngestionRunProgress,
-    getIngestionRunSummary,
     createDocument,
     updateDocumentStatus,
     updateDocumentMetadata,
