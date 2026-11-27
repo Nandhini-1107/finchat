@@ -15,10 +15,13 @@
     "@azure/search-documents": "^13.0.0",
     "@microsoft/microsoft-graph-client": "^3.0.7",
     "botbuilder": "^4.23.3",
+    "buffer": "^6.0.3",
     "dotenv": "^18.0.9",
+    "inherits": "^2.0.4",
     "mssql": "^12.7.13",
     "openai": "^7.45.1",
     "pdf-parse": "^2.4.5",
+    "readable-stream": "^4.8.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {

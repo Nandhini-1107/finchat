@@ -159,6 +159,8 @@ function classifyIntentByRules(question) {
 
     // Extract dates or fiscal periods (e.g. October 2026, Q1, FY24, ٢٠٢٤)
     const periodMatches = question.match(/(?:(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+\d{4}|q[1-4](?:\s+\d{4})?|fy\s*\d{2,4}|\d{4}|الربع\s+(?:الأول|الثاني|الثالث|الرابع)|٢٠\d{2})/gi) || [];
+    const metrics = extractMetricsFromQuestion(question);
+    const entities = extractEntitiesFromQuestion(question);
 
     if ((isFinancialMetric || isComparison) && !isQualitative) {
         return {
