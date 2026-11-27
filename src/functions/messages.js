@@ -247,9 +247,12 @@ class FinchatTeamsBot extends ActivityHandler {
 
                 // Preserve source references returned by the backend if not already cited in answer text
                 if (Array.isArray(result.sources) && result.sources.length > 0) {
-                    const alreadyCited = result.sources.some(s => typeof s === 'string' && finalAnswer.includes(s));
-                    if (!alreadyCited && !finalAnswer.includes('Sources:') && !finalAnswer.includes('**Sources:**')) {
-                        finalAnswer += `\n\n**Sources:** ${result.sources.join(', ')}`;
+                    const sourceLabels = result.sources
+                        .map(s => (typeof s === 'string' ? s : (s && (s.citation || s.source || s.fileName || s.title)) || ''))
+                        .filter(Boolean);
+                    const alreadyCited = sourceLabels.some(s => finalAnswer.includes(s));
+                    if (sourceLabels.length > 0 && !alreadyCited && !finalAnswer.includes('Sources:') && !finalAnswer.includes('**Sources:**')) {
+                        finalAnswer += `\n\n**Sources:** ${sourceLabels.join(', ')}`;
                     }
                 }
 
