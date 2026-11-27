@@ -2,6 +2,12 @@ require('../utils/config');
 const { chatCompletion } = require('./model-client');
 const { AppError } = require('../utils/errors');
 
+const MAX_OUTPUT_TOKENS = Number(process.env.LLM_MAX_TOKENS || process.env.GROQ_MAX_TOKENS || 1200);
+const MAX_CHUNK_CONTENT_CHARS = 1200;
+const MAX_CHUNKS_COUNT = 6;
+const MAX_FACTS_COUNT = 25;
+const MAX_TOTAL_EVIDENCE_CHARS = 8000;
+
 const SYSTEM_PROMPT = `You are Finora AI, an enterprise financial and HR document intelligence assistant.
 Your answers must be grounded STRICTLY and ONLY in the provided evidence (verified database facts, deterministic calculations, and retrieved document excerpts).
 
@@ -117,7 +123,7 @@ async function generateAnswer(question, chunks = [], facts = [], calculations = 
             jobId
         });
 
-        const answerText = response.text || '';
+        let answerText = response.text || '';
         const insufficientPattern = /do not contain|not provided|not mentioned|insufficient information|no relevant information|cannot be found/i;
         const insufficientEvidence = insufficientPattern.test(answerText);
 
@@ -197,6 +203,50 @@ function appendConflictDetailsToAnswer(answer, facts = []) {
         }
     }
 
+    return lines.join('\n').trim();
+}
+
+/**
+ * Builds a deterministic conflict-aware answer when unresolved or resolved conflicts exist.
+ *
+ * @param {string} question
+ * @param {Array} unresolvedConflicts
+ * @param {Array} resolvedConflicts
+ * @returns {string}
+ */
+function buildConflictAnswer(question, unresolvedConflicts = [], resolvedConflicts = []) {
+    const lines = [];
+    if (unresolvedConflicts.length > 0) {
+        lines.push('⚠️ **Unresolved Data Conflicts Detected:**');
+        for (const f of unresolvedConflicts) {
+            const metric = f.Metric || f.metric || 'Financial Metric';
+            const entity = f.Entity || f.entity || 'Global';
+            const period = f.PeriodLabel || f.periodLabel || 'N/A';
+            const val = f.NumericValue ?? f.numericValue ?? f.TextValue ?? 'N/A';
+            const unit = f.Currency || f.currency || f.Unit || f.unit || '';
+            const status = f.conflictStatus || 'Unresolved - Review Required';
+            lines.push(`• **${metric}** (${entity}, ${period}): ${val} ${unit} — **${status}**`);
+            if (f.conflictExplanation) {
+                lines.push(`  ${f.conflictExplanation}`);
+            }
+        }
+    }
+    if (resolvedConflicts.length > 0) {
+        if (lines.length > 0) lines.push('');
+        lines.push('ℹ️ **Resolved Source Conflicts:**');
+        for (const f of resolvedConflicts) {
+            const metric = f.Metric || f.metric || 'Financial Metric';
+            const entity = f.Entity || f.entity || 'Global';
+            const period = f.PeriodLabel || f.periodLabel || 'N/A';
+            const val = f.NumericValue ?? f.numericValue ?? f.TextValue ?? 'N/A';
+            const unit = f.Currency || f.currency || f.Unit || f.unit || '';
+            const status = f.conflictStatus || 'Resolved';
+            lines.push(`• **${metric}** (${entity}, ${period}): ${val} ${unit} — **${status}**`);
+            if (f.conflictExplanation) {
+                lines.push(`  ${f.conflictExplanation}`);
+            }
+        }
+    }
     return lines.join('\n').trim();
 }
 
