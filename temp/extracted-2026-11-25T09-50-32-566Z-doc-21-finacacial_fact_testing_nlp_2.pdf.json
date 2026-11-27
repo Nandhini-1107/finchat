@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T09:50:32.566Z",
+    "correlationId": "ingest-1795600232056-8hyzt-21",
+    "documentId": "21",
+    "fileName": "finacacial fact testing nlp 2.pdf",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 4,
+    "tableCount": 0,
+    "paragraphCount": 4,
+    "contentLength": 2574,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "Financial Performance Report – FY 2025\nand FY 2026\nCompany: Astravion Technologies\nReporting Currency: AED\nDocument Version: 1.0\n1. Annual Financial Performance\nAll monetary amounts are expressed in AED millions.\nFinancial Particulars \tFY 2025 FY 2026\nRevenue \t15.50 20.75\nCost of Revenue \t5.20 \t7.10\nGross Profit \t10.30 13.65\nOperating Expenses \t4.50 \t5.25\nNet Profit \t5.80 \t8.40\nDigital Infrastructure Recovery Benefits 0.45 \t0.85\nIntelligent Resource Optimization Savings 0.25 \t0.60\n2. Quarterly Financial Performance\nCompany: Nexovanta\nCurrency: USD"
+      },
+      {
+        "pageNumber": 2,
+        "text": "Reporting Period Revenue Net Profit Cloud Optimization\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\nQ3 2026 1,150,00\n0 210,000 85,000\n3. Multi-Company Financial Summary\nOrganization \tFinancial Metric \tPeriod Currency Amount\nAstravion Technologies Capital Expenditure \tFY 2026 AED \t750,000\nNexovanta \tOperating Profit \tFY 2025 USD \t450,000\nVelmora Energy Recovery\nBenefits FY 2026 EUR \t325,250.75\nQuantivex \tNet Profit \tFY 2025 INR 1,25,00,00\n0\n4. Financial Performance in Paragraphs\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n2025. Its operating expenses amounted to INR 85 lakh.\nVelmora recorded automated infrastructure efficiency gains of EUR 450,000 and sustainable\nenergy recovery savings of EUR 125,000 during FY 2026.\nQuantivex reported revenue of AED 12 million in FY 2025 and AED 18 million in FY 2026."
+      },
+      {
+        "pageNumber": 3,
+        "text": "5. Financial and Operational Ratios\nCompany: Nexovanta\nReporting Period: FY 2026\nCurrency for monetary amounts: USD\nIndicator \tValue\nOperating Loss \t(250,000)\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nTotal Assets 8,500,00\n0\nDeferred Tax Adjustment N/A\n6. Actual and Budget Performance\nCompany: Astravion Technologies\nAll monetary amounts are expressed in AED millions.\nFinancial Metric FY 2026 Actual FY 2026 Budget\nRevenue \t20.75 \t22.00\nNet Profit \t8.40 \t9.00"
+      },
+      {
+        "pageNumber": 4,
+        "text": "Operating\nExpenses 5.25 \t5.50\n7. Additional Information\nAstravion Technologies was established in 1998.\nThe report was approved on 25 November 2026 under reference number 45821.\nAstravion Technologies reported administrative expenses of AED 2025 for FY 2026.\nEnd of Report\nExpected testing results\nSection Expected\nfacts\nAnnual financial performance 14\nQuarterly financial performance 9\nMulti-company summary \t4\nFinancial paragraphs \t7\nFinancial and operational ratios 5\nActual and budget performance 6\nAdditional financial information 1\nTotal \t46"
+      }
+    ],
+    "tables": [],
+    "paragraphs": [
+      {
+        "content": "Financial Performance Report – FY 2025\nand FY 2026\nCompany: Astravion Technologies\nReporting Currency: AED\nDocument Version: 1.0\n1. Annual Financial Performance\nAll monetary amounts are expressed in AED millions.\nFinancial Particulars \tFY 2025 FY 2026\nRevenue \t15.50 20.75\nCost of Revenue \t5.20 \t7.10\nGross Profit \t10.30 13.65\nOperating Expenses \t4.50 \t5.25\nNet Profit \t5.80 \t8.40\nDigital Infrastructure Recovery Benefits 0.45 \t0.85\nIntelligent Resource Optimization Savings 0.25 \t0.60\n2. Quarterly Financial Performance\nCompany: Nexovanta\nCurrency: USD",
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Reporting Period Revenue Net Profit Cloud Optimization\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\nQ3 2026 1,150,00\n0 210,000 85,000\n3. Multi-Company Financial Summary\nOrganization \tFinancial Metric \tPeriod Currency Amount\nAstravion Technologies Capital Expenditure \tFY 2026 AED \t750,000\nNexovanta \tOperating Profit \tFY 2025 USD \t450,000\nVelmora Energy Recovery\nBenefits FY 2026 EUR \t325,250.75\nQuantivex \tNet Profit \tFY 2025 INR 1,25,00,00\n0\n4. Financial Performance in Paragraphs\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n2025. Its operating expenses amounted to INR 85 lakh.\nVelmora recorded automated infrastructure efficiency gains of EUR 450,000 and sustainable\nenergy recovery savings of EUR 125,000 during FY 2026.\nQuantivex reported revenue of AED 12 million in FY 2025 and AED 18 million in FY 2026.",
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "5. Financial and Operational Ratios\nCompany: Nexovanta\nReporting Period: FY 2026\nCurrency for monetary amounts: USD\nIndicator \tValue\nOperating Loss \t(250,000)\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nTotal Assets 8,500,00\n0\nDeferred Tax Adjustment N/A\n6. Actual and Budget Performance\nCompany: Astravion Technologies\nAll monetary amounts are expressed in AED millions.\nFinancial Metric FY 2026 Actual FY 2026 Budget\nRevenue \t20.75 \t22.00\nNet Profit \t8.40 \t9.00",
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "Operating\nExpenses 5.25 \t5.50\n7. Additional Information\nAstravion Technologies was established in 1998.\nThe report was approved on 25 November 2026 under reference number 45821.\nAstravion Technologies reported administrative expenses of AED 2025 for FY 2026.\nEnd of Report\nExpected testing results\nSection Expected\nfacts\nAnnual financial performance 14\nQuarterly financial performance 9\nMulti-company summary \t4\nFinancial paragraphs \t7\nFinancial and operational ratios 5\nActual and budget performance 6\nAdditional financial information 1\nTotal \t46",
+        "boundingRegions": [
+          {
+            "pageNumber": 4
+          }
+        ]
+      }
+    ],
+    "rawContent": "<!-- Page 1 -->\n\nFinancial Performance Report – FY 2025\nand FY 2026\nCompany: Astravion Technologies\nReporting Currency: AED\nDocument Version: 1.0\n## 1. Annual Financial Performance\nAll monetary amounts are expressed in AED millions.\nFinancial Particulars \tFY 2025 FY 2026\nRevenue \t15.50 20.75\nCost of Revenue \t5.20 \t7.10\nGross Profit \t10.30 13.65\nOperating Expenses \t4.50 \t5.25\nNet Profit \t5.80 \t8.40\nDigital Infrastructure Recovery Benefits 0.45 \t0.85\nIntelligent Resource Optimization Savings 0.25 \t0.60\n## 2. Quarterly Financial Performance\nCompany: Nexovanta\nCurrency: USD\n\n<!-- Page 2 -->\n\nReporting Period Revenue Net Profit Cloud Optimization\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\nQ3 2026 1,150,00\n0 210,000 85,000\n## 3. Multi-Company Financial Summary\nOrganization \tFinancial Metric \tPeriod Currency Amount\nAstravion Technologies Capital Expenditure \tFY 2026 AED \t750,000\nNexovanta \tOperating Profit \tFY 2025 USD \t450,000\nVelmora Energy Recovery\nBenefits FY 2026 EUR \t325,250.75\nQuantivex \tNet Profit \tFY 2025 INR 1,25,00,00\n0\n## 4. Financial Performance in Paragraphs\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n## 2025. Its operating expenses amounted to INR 85 lakh.\nVelmora recorded automated infrastructure efficiency gains of EUR 450,000 and sustainable\nenergy recovery savings of EUR 125,000 during FY 2026.\nQuantivex reported revenue of AED 12 million in FY 2025 and AED 18 million in FY 2026.\n\n<!-- Page 3 -->\n\n## 5. Financial and Operational Ratios\nCompany: Nexovanta\nReporting Period: FY 2026\nCurrency for monetary amounts: USD\nIndicator \tValue\nOperating Loss \t(250,000)\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nTotal Assets 8,500,00\n0\nDeferred Tax Adjustment N/A\n## 6. Actual and Budget Performance\nCompany: Astravion Technologies\nAll monetary amounts are expressed in AED millions.\nFinancial Metric FY 2026 Actual FY 2026 Budget\nRevenue \t20.75 \t22.00\nNet Profit \t8.40 \t9.00\n\n<!-- Page 4 -->\n\nOperating\nExpenses 5.25 \t5.50\n## 7. Additional Information\nAstravion Technologies was established in 1998.\nThe report was approved on 25 November 2026 under reference number 45821.\nAstravion Technologies reported administrative expenses of AED 2025 for FY 2026.\nEnd of Report\nExpected testing results\nSection Expected\nfacts\nAnnual financial performance 14\nQuarterly financial performance 9\nMulti-company summary \t4\nFinancial paragraphs \t7\nFinancial and operational ratios 5\nActual and budget performance 6\nAdditional financial information 1\nTotal \t46"
+  },
+  "normalizedContent": {
+    "document_id": "21",
+    "tables": [],
+    "paragraphs": [
+      {
+        "element_id": "doc_21_p_1",
+        "document_id": "21",
+        "element_type": "paragraph",
+        "content": "Financial Performance Report – FY 2025\nand FY 2026\nCompany: Astravion Technologies\nReporting Currency: AED\nDocument Version: 1.0\n1. Annual Financial Performance\nAll monetary amounts are expressed in AED millions.\nFinancial Particulars \tFY 2025 FY 2026\nRevenue \t15.50 20.75\nCost of Revenue \t5.20 \t7.10\nGross Profit \t10.30 13.65\nOperating Expenses \t4.50 \t5.25\nNet Profit \t5.80 \t8.40\nDigital Infrastructure Recovery Benefits 0.45 \t0.85\nIntelligent Resource Optimization Savings 0.25 \t0.60\n2. Quarterly Financial Performance\nCompany: Nexovanta\nCurrency: USD",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_21_p_2",
+        "document_id": "21",
+        "element_type": "paragraph",
+        "content": "Reporting Period Revenue Net Profit Cloud Optimization\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\nQ3 2026 1,150,00\n0 210,000 85,000\n3. Multi-Company Financial Summary\nOrganization \tFinancial Metric \tPeriod Currency Amount\nAstravion Technologies Capital Expenditure \tFY 2026 AED \t750,000\nNexovanta \tOperating Profit \tFY 2025 USD \t450,000\nVelmora Energy Recovery\nBenefits FY 2026 EUR \t325,250.75\nQuantivex \tNet Profit \tFY 2025 INR 1,25,00,00\n0\n4. Financial Performance in Paragraphs\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n2025. Its operating expenses amounted to INR 85 lakh.\nVelmora recorded automated infrastructure efficiency gains of EUR 450,000 and sustainable\nenergy recovery savings of EUR 125,000 during FY 2026.\nQuantivex reported revenue of AED 12 million in FY 2025 and AED 18 million in FY 2026.",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_21_p_3",
+        "document_id": "21",
+        "element_type": "paragraph",
+        "content": "5. Financial and Operational Ratios\nCompany: Nexovanta\nReporting Period: FY 2026\nCurrency for monetary amounts: USD\nIndicator \tValue\nOperating Loss \t(250,000)\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nTotal Assets 8,500,00\n0\nDeferred Tax Adjustment N/A\n6. Actual and Budget Performance\nCompany: Astravion Technologies\nAll monetary amounts are expressed in AED millions.\nFinancial Metric FY 2026 Actual FY 2026 Budget\nRevenue \t20.75 \t22.00\nNet Profit \t8.40 \t9.00",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_21_p_4",
+        "document_id": "21",
+        "element_type": "paragraph",
+        "content": "Operating\nExpenses 5.25 \t5.50\n7. Additional Information\nAstravion Technologies was established in 1998.\nThe report was approved on 25 November 2026 under reference number 45821.\nAstravion Technologies reported administrative expenses of AED 2025 for FY 2026.\nEnd of Report\nExpected testing results\nSection Expected\nfacts\nAnnual financial performance 14\nQuarterly financial performance 9\nMulti-company summary \t4\nFinancial paragraphs \t7\nFinancial and operational ratios 5\nActual and budget performance 6\nAdditional financial information 1\nTotal \t46",
+        "page_number": 4
+      }
+    ],
+    "fullMarkdown": "<!-- Page 1 -->\n\nFinancial Performance Report – FY 2025\nand FY 2026\nCompany: Astravion Technologies\nReporting Currency: AED\nDocument Version: 1.0\n## 1. Annual Financial Performance\nAll monetary amounts are expressed in AED millions.\nFinancial Particulars \tFY 2025 FY 2026\nRevenue \t15.50 20.75\nCost of Revenue \t5.20 \t7.10\nGross Profit \t10.30 13.65\nOperating Expenses \t4.50 \t5.25\nNet Profit \t5.80 \t8.40\nDigital Infrastructure Recovery Benefits 0.45 \t0.85\nIntelligent Resource Optimization Savings 0.25 \t0.60\n## 2. Quarterly Financial Performance\nCompany: Nexovanta\nCurrency: USD\n\n<!-- Page 2 -->\n\nReporting Period Revenue Net Profit Cloud Optimization\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\nQ3 2026 1,150,00\n0 210,000 85,000\n## 3. Multi-Company Financial Summary\nOrganization \tFinancial Metric \tPeriod Currency Amount\nAstravion Technologies Capital Expenditure \tFY 2026 AED \t750,000\nNexovanta \tOperating Profit \tFY 2025 USD \t450,000\nVelmora Energy Recovery\nBenefits FY 2026 EUR \t325,250.75\nQuantivex \tNet Profit \tFY 2025 INR 1,25,00,00\n0\n## 4. Financial Performance in Paragraphs\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n## 2025. Its operating expenses amounted to INR 85 lakh.\nVelmora recorded automated infrastructure efficiency gains of EUR 450,000 and sustainable\nenergy recovery savings of EUR 125,000 during FY 2026.\nQuantivex reported revenue of AED 12 million in FY 2025 and AED 18 million in FY 2026.\n\n<!-- Page 3 -->\n\n## 5. Financial and Operational Ratios\nCompany: Nexovanta\nReporting Period: FY 2026\nCurrency for monetary amounts: USD\nIndicator \tValue\nOperating Loss \t(250,000)\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nTotal Assets 8,500,00\n0\nDeferred Tax Adjustment N/A\n## 6. Actual and Budget Performance\nCompany: Astravion Technologies\nAll monetary amounts are expressed in AED millions.\nFinancial Metric FY 2026 Actual FY 2026 Budget\nRevenue \t20.75 \t22.00\nNet Profit \t8.40 \t9.00\n\n<!-- Page 4 -->\n\nOperating\nExpenses 5.25 \t5.50\n## 7. Additional Information\nAstravion Technologies was established in 1998.\nThe report was approved on 25 November 2026 under reference number 45821.\nAstravion Technologies reported administrative expenses of AED 2025 for FY 2026.\nEnd of Report\nExpected testing results\nSection Expected\nfacts\nAnnual financial performance 14\nQuarterly financial performance 9\nMulti-company summary \t4\nFinancial paragraphs \t7\nFinancial and operational ratios 5\nActual and budget performance 6\nAdditional financial information 1\nTotal \t46"
+  },
+  "extractedFacts": [],
+  "conflicts": [],
+  "chunks": []
+}

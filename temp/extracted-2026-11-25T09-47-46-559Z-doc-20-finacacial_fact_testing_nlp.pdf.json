@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T09:47:46.559Z",
+    "correlationId": "ingest-1795600065804-p9mw0-20",
+    "documentId": "20",
+    "fileName": "finacacial fact testing nlp.pdf",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 3,
+    "tableCount": 0,
+    "paragraphCount": 3,
+    "contentLength": 2153,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "FINANCIAL PERFORMANCE REPORT\nDocument Version: 1.0\nReporting Period: FY 2024–2026\nClassification: Internal Financial Report\n1. Zenvora — Annual Financial Statements\nAll monetary amounts are expressed in AED millions.\nFinancial Indicator \tFY 2024 FY 2025\nRevenue \t12.50 15.75\nNet Profit \t2.50 \t3.80\nOperating Expenses \t4.20 \t5.10\nIntelligent Resource Recovery\nBenefits 0.45 \t0.72\n2. Nexavion — Quarterly Financial Performance\nAll monetary amounts are expressed in USD.\nReporting Period Revenu\ne Net Profit Digital Optimization\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\n3. Multi-Company Financial Summary\nOrganization \tFinancial Measure \tPeriod Currency Amount\nZenvora \tCapital Expenditure \tFY 2026 AED \t500,000\nNexavion \tOperating Profit \tFY 2026 USD \t750,000\nOrvantis Sustainable Energy\nRecovery FY 2025 EUR 450,250.7\n5\n4. Orvantis — Financial and Operational Indicators\nReporting period: FY 2025. Monetary amounts are expressed in EUR."
+      },
+      {
+        "pageNumber": 2,
+        "text": "Performance Indicator Value\nOperating Loss \t(250,000)\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nDeferred Tax Adjustment N/A\n5. Financial Narrative\nMeridian Technologies\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n2025. Its operating expenses amounted to INR 85 lakh.\nLumivex\nLumivex recorded automated infrastructure efficiency gains of AED 450,000 and renewable\nresource recovery savings of AED 125,000 during FY 2026.\nEurovanta\nEurovanta reported revenue of EUR 1.250.000,50 for FY 2025. The amount uses European\nnumerical formatting.\n6. Actual and Budget Comparison\nEntity: Zenvora\nCurrency: AED\nAmounts are expressed in millions.\nFinancial\nMeasure FY 2026 Actual FY 2026 Budget\nRevenue \t20.50 \t22.00\n7. Nonfinancial Information\nZenvora was established in 1998.\nThe financial report was approved on 15 November 2026 under reference number 45821.\nZenvora reported administrative expenses of AED 2025 for FY 2026."
+      },
+      {
+        "pageNumber": 3,
+        "text": "End of Report\nAll information in this document is synthetic and intended exclusively for financial extraction\ntesting."
+      }
+    ],
+    "tables": [],
+    "paragraphs": [
+      {
+        "content": "FINANCIAL PERFORMANCE REPORT\nDocument Version: 1.0\nReporting Period: FY 2024–2026\nClassification: Internal Financial Report\n1. Zenvora — Annual Financial Statements\nAll monetary amounts are expressed in AED millions.\nFinancial Indicator \tFY 2024 FY 2025\nRevenue \t12.50 15.75\nNet Profit \t2.50 \t3.80\nOperating Expenses \t4.20 \t5.10\nIntelligent Resource Recovery\nBenefits 0.45 \t0.72\n2. Nexavion — Quarterly Financial Performance\nAll monetary amounts are expressed in USD.\nReporting Period Revenu\ne Net Profit Digital Optimization\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\n3. Multi-Company Financial Summary\nOrganization \tFinancial Measure \tPeriod Currency Amount\nZenvora \tCapital Expenditure \tFY 2026 AED \t500,000\nNexavion \tOperating Profit \tFY 2026 USD \t750,000\nOrvantis Sustainable Energy\nRecovery FY 2025 EUR 450,250.7\n5\n4. Orvantis — Financial and Operational Indicators\nReporting period: FY 2025. Monetary amounts are expressed in EUR.",
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Performance Indicator Value\nOperating Loss \t(250,000)\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nDeferred Tax Adjustment N/A\n5. Financial Narrative\nMeridian Technologies\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n2025. Its operating expenses amounted to INR 85 lakh.\nLumivex\nLumivex recorded automated infrastructure efficiency gains of AED 450,000 and renewable\nresource recovery savings of AED 125,000 during FY 2026.\nEurovanta\nEurovanta reported revenue of EUR 1.250.000,50 for FY 2025. The amount uses European\nnumerical formatting.\n6. Actual and Budget Comparison\nEntity: Zenvora\nCurrency: AED\nAmounts are expressed in millions.\nFinancial\nMeasure FY 2026 Actual FY 2026 Budget\nRevenue \t20.50 \t22.00\n7. Nonfinancial Information\nZenvora was established in 1998.\nThe financial report was approved on 15 November 2026 under reference number 45821.\nZenvora reported administrative expenses of AED 2025 for FY 2026.",
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "End of Report\nAll information in this document is synthetic and intended exclusively for financial extraction\ntesting.",
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      }
+    ],
+    "rawContent": "<!-- Page 1 -->\n\nFINANCIAL PERFORMANCE REPORT\nDocument Version: 1.0\nReporting Period: FY 2024–2026\nClassification: Internal Financial Report\n## 1. Zenvora — Annual Financial Statements\nAll monetary amounts are expressed in AED millions.\nFinancial Indicator \tFY 2024 FY 2025\nRevenue \t12.50 15.75\nNet Profit \t2.50 \t3.80\nOperating Expenses \t4.20 \t5.10\nIntelligent Resource Recovery\nBenefits 0.45 \t0.72\n## 2. Nexavion — Quarterly Financial Performance\nAll monetary amounts are expressed in USD.\nReporting Period Revenu\ne Net Profit Digital Optimization\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\n## 3. Multi-Company Financial Summary\nOrganization \tFinancial Measure \tPeriod Currency Amount\nZenvora \tCapital Expenditure \tFY 2026 AED \t500,000\nNexavion \tOperating Profit \tFY 2026 USD \t750,000\nOrvantis Sustainable Energy\nRecovery FY 2025 EUR 450,250.7\n5\n## 4. Orvantis — Financial and Operational Indicators\nReporting period: FY 2025. Monetary amounts are expressed in EUR.\n\n<!-- Page 2 -->\n\nPerformance Indicator Value\nOperating Loss \t(250,000)\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nDeferred Tax Adjustment N/A\n## 5. Financial Narrative\nMeridian Technologies\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n## 2025. Its operating expenses amounted to INR 85 lakh.\nLumivex\nLumivex recorded automated infrastructure efficiency gains of AED 450,000 and renewable\nresource recovery savings of AED 125,000 during FY 2026.\nEurovanta\nEurovanta reported revenue of EUR 1.250.000,50 for FY 2025. The amount uses European\nnumerical formatting.\n## 6. Actual and Budget Comparison\nEntity: Zenvora\nCurrency: AED\nAmounts are expressed in millions.\nFinancial\nMeasure FY 2026 Actual FY 2026 Budget\nRevenue \t20.50 \t22.00\n## 7. Nonfinancial Information\nZenvora was established in 1998.\nThe financial report was approved on 15 November 2026 under reference number 45821.\nZenvora reported administrative expenses of AED 2025 for FY 2026.\n\n<!-- Page 3 -->\n\nEnd of Report\nAll information in this document is synthetic and intended exclusively for financial extraction\ntesting."
+  },
+  "normalizedContent": {
+    "document_id": "20",
+    "tables": [],
+    "paragraphs": [
+      {
+        "element_id": "doc_20_p_1",
+        "document_id": "20",
+        "element_type": "paragraph",
+        "content": "FINANCIAL PERFORMANCE REPORT\nDocument Version: 1.0\nReporting Period: FY 2024–2026\nClassification: Internal Financial Report\n1. Zenvora — Annual Financial Statements\nAll monetary amounts are expressed in AED millions.\nFinancial Indicator \tFY 2024 FY 2025\nRevenue \t12.50 15.75\nNet Profit \t2.50 \t3.80\nOperating Expenses \t4.20 \t5.10\nIntelligent Resource Recovery\nBenefits 0.45 \t0.72\n2. Nexavion — Quarterly Financial Performance\nAll monetary amounts are expressed in USD.\nReporting Period Revenu\ne Net Profit Digital Optimization\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\n3. Multi-Company Financial Summary\nOrganization \tFinancial Measure \tPeriod Currency Amount\nZenvora \tCapital Expenditure \tFY 2026 AED \t500,000\nNexavion \tOperating Profit \tFY 2026 USD \t750,000\nOrvantis Sustainable Energy\nRecovery FY 2025 EUR 450,250.7\n5\n4. Orvantis — Financial and Operational Indicators\nReporting period: FY 2025. Monetary amounts are expressed in EUR.",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_20_p_2",
+        "document_id": "20",
+        "element_type": "paragraph",
+        "content": "Performance Indicator Value\nOperating Loss \t(250,000)\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nDeferred Tax Adjustment N/A\n5. Financial Narrative\nMeridian Technologies\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n2025. Its operating expenses amounted to INR 85 lakh.\nLumivex\nLumivex recorded automated infrastructure efficiency gains of AED 450,000 and renewable\nresource recovery savings of AED 125,000 during FY 2026.\nEurovanta\nEurovanta reported revenue of EUR 1.250.000,50 for FY 2025. The amount uses European\nnumerical formatting.\n6. Actual and Budget Comparison\nEntity: Zenvora\nCurrency: AED\nAmounts are expressed in millions.\nFinancial\nMeasure FY 2026 Actual FY 2026 Budget\nRevenue \t20.50 \t22.00\n7. Nonfinancial Information\nZenvora was established in 1998.\nThe financial report was approved on 15 November 2026 under reference number 45821.\nZenvora reported administrative expenses of AED 2025 for FY 2026.",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_20_p_3",
+        "document_id": "20",
+        "element_type": "paragraph",
+        "content": "End of Report\nAll information in this document is synthetic and intended exclusively for financial extraction\ntesting.",
+        "page_number": 3
+      }
+    ],
+    "fullMarkdown": "<!-- Page 1 -->\n\nFINANCIAL PERFORMANCE REPORT\nDocument Version: 1.0\nReporting Period: FY 2024–2026\nClassification: Internal Financial Report\n## 1. Zenvora — Annual Financial Statements\nAll monetary amounts are expressed in AED millions.\nFinancial Indicator \tFY 2024 FY 2025\nRevenue \t12.50 15.75\nNet Profit \t2.50 \t3.80\nOperating Expenses \t4.20 \t5.10\nIntelligent Resource Recovery\nBenefits 0.45 \t0.72\n## 2. Nexavion — Quarterly Financial Performance\nAll monetary amounts are expressed in USD.\nReporting Period Revenu\ne Net Profit Digital Optimization\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\n## 3. Multi-Company Financial Summary\nOrganization \tFinancial Measure \tPeriod Currency Amount\nZenvora \tCapital Expenditure \tFY 2026 AED \t500,000\nNexavion \tOperating Profit \tFY 2026 USD \t750,000\nOrvantis Sustainable Energy\nRecovery FY 2025 EUR 450,250.7\n5\n## 4. Orvantis — Financial and Operational Indicators\nReporting period: FY 2025. Monetary amounts are expressed in EUR.\n\n<!-- Page 2 -->\n\nPerformance Indicator Value\nOperating Loss \t(250,000)\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nDeferred Tax Adjustment N/A\n## 5. Financial Narrative\nMeridian Technologies\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n## 2025. Its operating expenses amounted to INR 85 lakh.\nLumivex\nLumivex recorded automated infrastructure efficiency gains of AED 450,000 and renewable\nresource recovery savings of AED 125,000 during FY 2026.\nEurovanta\nEurovanta reported revenue of EUR 1.250.000,50 for FY 2025. The amount uses European\nnumerical formatting.\n## 6. Actual and Budget Comparison\nEntity: Zenvora\nCurrency: AED\nAmounts are expressed in millions.\nFinancial\nMeasure FY 2026 Actual FY 2026 Budget\nRevenue \t20.50 \t22.00\n## 7. Nonfinancial Information\nZenvora was established in 1998.\nThe financial report was approved on 15 November 2026 under reference number 45821.\nZenvora reported administrative expenses of AED 2025 for FY 2026.\n\n<!-- Page 3 -->\n\nEnd of Report\nAll information in this document is synthetic and intended exclusively for financial extraction\ntesting."
+  },
+  "extractedFacts": [],
+  "conflicts": [],
+  "chunks": []
+}

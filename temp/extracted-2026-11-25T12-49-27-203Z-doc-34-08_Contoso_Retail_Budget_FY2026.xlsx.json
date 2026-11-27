@@ -1,0 +1,925 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T12:49:27.203Z",
+    "correlationId": "ingest-1795610967107-3wm6y-34",
+    "documentId": "34",
+    "fileName": "08_Contoso_Retail_Budget_FY2026.xlsx",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 1,
+    "tableCount": 1,
+    "paragraphCount": 1,
+    "contentLength": 1036,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "| Contoso Retail LLC – Budget FY2026 |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- |\n| Approved budget  |  Approved 15 December 2025  |  Currency: AED  |  Synthetic data for training only |  |  |  |  |  |\n|  |  |  |  |  |  |\n| Line item | Q1 2026 | Q2 2026 | Q3 2026 | Q4 2026 | FY 2026 |\n| Revenue | 12000000 | 13500000 | 13800000 | 14700000 | 54000000 |\n| Cost of sales | 7560000 | 8505000 | 8694000 | 9261000 | 34020000 |\n| Gross profit | 4440000 | 4995000 | 5106000 | 5439000 | 19980000 |\n| Operating expenses | 2950000 | 3080000 | 3150000 | 3300000 | 12480000 |\n| Operating profit | 1490000 | 1915000 | 1956000 | 2139000 | 7500000 |\n| Finance costs | 190000 | 185000 | 180000 | 175000 | 730000 |\n| Profit before tax | 1300000 | 1730000 | 1776000 | 1964000 | 6770000 |\n| Corporate tax (9%) | 117000 | 155700 | 159840 | 176760 | 609300 |\n| Net profit | 1183000 | 1574300 | 1616160 | 1787240 | 6160700 |\n|  |  |  |  |  |  |\n| Blue figures are budget inputs; black figures are formulas. |  |  |  |  |  |"
+      }
+    ],
+    "tables": [
+      {
+        "rowCount": 15,
+        "columnCount": 6,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Contoso Retail LLC – Budget FY2026"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": ""
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 4,
+            "content": ""
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 5,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Approved budget  |  Approved 15 December 2025  |  Currency: AED  |  Synthetic data for training only"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 4,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 5,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 4,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 5,
+            "content": ""
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Line item"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "Q1 2026"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 2,
+            "content": "Q2 2026"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 3,
+            "content": "Q3 2026"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 4,
+            "content": "Q4 2026"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 5,
+            "content": "FY 2026"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "12000000"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 2,
+            "content": "13500000"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 3,
+            "content": "13800000"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 4,
+            "content": "14700000"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 5,
+            "content": "54000000"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 0,
+            "content": "Cost of sales"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 1,
+            "content": "7560000"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 2,
+            "content": "8505000"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 3,
+            "content": "8694000"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 4,
+            "content": "9261000"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 5,
+            "content": "34020000"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 0,
+            "content": "Gross profit"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 1,
+            "content": "4440000"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 2,
+            "content": "4995000"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 3,
+            "content": "5106000"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 4,
+            "content": "5439000"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 5,
+            "content": "19980000"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 0,
+            "content": "Operating expenses"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 1,
+            "content": "2950000"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 2,
+            "content": "3080000"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 3,
+            "content": "3150000"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 4,
+            "content": "3300000"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 5,
+            "content": "12480000"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 0,
+            "content": "Operating profit"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 1,
+            "content": "1490000"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 2,
+            "content": "1915000"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 3,
+            "content": "1956000"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 4,
+            "content": "2139000"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 5,
+            "content": "7500000"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 0,
+            "content": "Finance costs"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 1,
+            "content": "190000"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 2,
+            "content": "185000"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 3,
+            "content": "180000"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 4,
+            "content": "175000"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 5,
+            "content": "730000"
+          },
+          {
+            "rowIndex": 10,
+            "columnIndex": 0,
+            "content": "Profit before tax"
+          },
+          {
+            "rowIndex": 10,
+            "columnIndex": 1,
+            "content": "1300000"
+          },
+          {
+            "rowIndex": 10,
+            "columnIndex": 2,
+            "content": "1730000"
+          },
+          {
+            "rowIndex": 10,
+            "columnIndex": 3,
+            "content": "1776000"
+          },
+          {
+            "rowIndex": 10,
+            "columnIndex": 4,
+            "content": "1964000"
+          },
+          {
+            "rowIndex": 10,
+            "columnIndex": 5,
+            "content": "6770000"
+          },
+          {
+            "rowIndex": 11,
+            "columnIndex": 0,
+            "content": "Corporate tax (9%)"
+          },
+          {
+            "rowIndex": 11,
+            "columnIndex": 1,
+            "content": "117000"
+          },
+          {
+            "rowIndex": 11,
+            "columnIndex": 2,
+            "content": "155700"
+          },
+          {
+            "rowIndex": 11,
+            "columnIndex": 3,
+            "content": "159840"
+          },
+          {
+            "rowIndex": 11,
+            "columnIndex": 4,
+            "content": "176760"
+          },
+          {
+            "rowIndex": 11,
+            "columnIndex": 5,
+            "content": "609300"
+          },
+          {
+            "rowIndex": 12,
+            "columnIndex": 0,
+            "content": "Net profit"
+          },
+          {
+            "rowIndex": 12,
+            "columnIndex": 1,
+            "content": "1183000"
+          },
+          {
+            "rowIndex": 12,
+            "columnIndex": 2,
+            "content": "1574300"
+          },
+          {
+            "rowIndex": 12,
+            "columnIndex": 3,
+            "content": "1616160"
+          },
+          {
+            "rowIndex": 12,
+            "columnIndex": 4,
+            "content": "1787240"
+          },
+          {
+            "rowIndex": 12,
+            "columnIndex": 5,
+            "content": "6160700"
+          },
+          {
+            "rowIndex": 13,
+            "columnIndex": 0,
+            "content": ""
+          },
+          {
+            "rowIndex": 13,
+            "columnIndex": 1,
+            "content": ""
+          },
+          {
+            "rowIndex": 13,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 13,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 13,
+            "columnIndex": 4,
+            "content": ""
+          },
+          {
+            "rowIndex": 13,
+            "columnIndex": 5,
+            "content": ""
+          },
+          {
+            "rowIndex": 14,
+            "columnIndex": 0,
+            "content": "Blue figures are budget inputs; black figures are formulas."
+          },
+          {
+            "rowIndex": 14,
+            "columnIndex": 1,
+            "content": ""
+          },
+          {
+            "rowIndex": 14,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 14,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 14,
+            "columnIndex": 4,
+            "content": ""
+          },
+          {
+            "rowIndex": 14,
+            "columnIndex": 5,
+            "content": ""
+          }
+        ],
+        "sheetName": "Budget FY2026",
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      }
+    ],
+    "paragraphs": [
+      {
+        "content": "Sheet Budget FY2026 data table with 14 records.",
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      }
+    ],
+    "rawContent": "## Sheet: Budget FY2026\n\n| Contoso Retail LLC – Budget FY2026 |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- |\n| Approved budget  |  Approved 15 December 2025  |  Currency: AED  |  Synthetic data for training only |  |  |  |  |  |\n|  |  |  |  |  |  |\n| Line item | Q1 2026 | Q2 2026 | Q3 2026 | Q4 2026 | FY 2026 |\n| Revenue | 12000000 | 13500000 | 13800000 | 14700000 | 54000000 |\n| Cost of sales | 7560000 | 8505000 | 8694000 | 9261000 | 34020000 |\n| Gross profit | 4440000 | 4995000 | 5106000 | 5439000 | 19980000 |\n| Operating expenses | 2950000 | 3080000 | 3150000 | 3300000 | 12480000 |\n| Operating profit | 1490000 | 1915000 | 1956000 | 2139000 | 7500000 |\n| Finance costs | 190000 | 185000 | 180000 | 175000 | 730000 |\n| Profit before tax | 1300000 | 1730000 | 1776000 | 1964000 | 6770000 |\n| Corporate tax (9%) | 117000 | 155700 | 159840 | 176760 | 609300 |\n| Net profit | 1183000 | 1574300 | 1616160 | 1787240 | 6160700 |\n|  |  |  |  |  |  |\n| Blue figures are budget inputs; black figures are formulas. |  |  |  |  |  |"
+  },
+  "normalizedContent": {
+    "document_id": "34",
+    "tables": [
+      {
+        "element_id": "doc_34_table_1",
+        "document_id": "34",
+        "element_type": "table",
+        "table_id": 1,
+        "row_count": 15,
+        "column_count": 6,
+        "headers": [
+          "Contoso Retail LLC – Budget FY2026",
+          "Col_2",
+          "Col_3",
+          "Col_4",
+          "Col_5",
+          "Col_6"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Approved budget  |  Approved 15 December 2025  |  Currency: AED  |  Synthetic data for training only",
+              "Col_2": "",
+              "Col_3": "",
+              "Col_4": "",
+              "Col_5": "",
+              "Col_6": ""
+            },
+            "rawValues": [
+              "Approved budget  |  Approved 15 December 2025  |  Currency: AED  |  Synthetic data for training only",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "",
+              "Col_2": "",
+              "Col_3": "",
+              "Col_4": "",
+              "Col_5": "",
+              "Col_6": ""
+            },
+            "rawValues": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Line item",
+              "Col_2": "Q1 2026",
+              "Col_3": "Q2 2026",
+              "Col_4": "Q3 2026",
+              "Col_5": "Q4 2026",
+              "Col_6": "FY 2026"
+            },
+            "rawValues": [
+              "Line item",
+              "Q1 2026",
+              "Q2 2026",
+              "Q3 2026",
+              "Q4 2026",
+              "FY 2026"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Revenue",
+              "Col_2": "12000000",
+              "Col_3": "13500000",
+              "Col_4": "13800000",
+              "Col_5": "14700000",
+              "Col_6": "54000000"
+            },
+            "rawValues": [
+              "Revenue",
+              "12000000",
+              "13500000",
+              "13800000",
+              "14700000",
+              "54000000"
+            ]
+          },
+          {
+            "rowIndex": 5,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Cost of sales",
+              "Col_2": "7560000",
+              "Col_3": "8505000",
+              "Col_4": "8694000",
+              "Col_5": "9261000",
+              "Col_6": "34020000"
+            },
+            "rawValues": [
+              "Cost of sales",
+              "7560000",
+              "8505000",
+              "8694000",
+              "9261000",
+              "34020000"
+            ]
+          },
+          {
+            "rowIndex": 6,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Gross profit",
+              "Col_2": "4440000",
+              "Col_3": "4995000",
+              "Col_4": "5106000",
+              "Col_5": "5439000",
+              "Col_6": "19980000"
+            },
+            "rawValues": [
+              "Gross profit",
+              "4440000",
+              "4995000",
+              "5106000",
+              "5439000",
+              "19980000"
+            ]
+          },
+          {
+            "rowIndex": 7,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Operating expenses",
+              "Col_2": "2950000",
+              "Col_3": "3080000",
+              "Col_4": "3150000",
+              "Col_5": "3300000",
+              "Col_6": "12480000"
+            },
+            "rawValues": [
+              "Operating expenses",
+              "2950000",
+              "3080000",
+              "3150000",
+              "3300000",
+              "12480000"
+            ]
+          },
+          {
+            "rowIndex": 8,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Operating profit",
+              "Col_2": "1490000",
+              "Col_3": "1915000",
+              "Col_4": "1956000",
+              "Col_5": "2139000",
+              "Col_6": "7500000"
+            },
+            "rawValues": [
+              "Operating profit",
+              "1490000",
+              "1915000",
+              "1956000",
+              "2139000",
+              "7500000"
+            ]
+          },
+          {
+            "rowIndex": 9,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Finance costs",
+              "Col_2": "190000",
+              "Col_3": "185000",
+              "Col_4": "180000",
+              "Col_5": "175000",
+              "Col_6": "730000"
+            },
+            "rawValues": [
+              "Finance costs",
+              "190000",
+              "185000",
+              "180000",
+              "175000",
+              "730000"
+            ]
+          },
+          {
+            "rowIndex": 10,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Profit before tax",
+              "Col_2": "1300000",
+              "Col_3": "1730000",
+              "Col_4": "1776000",
+              "Col_5": "1964000",
+              "Col_6": "6770000"
+            },
+            "rawValues": [
+              "Profit before tax",
+              "1300000",
+              "1730000",
+              "1776000",
+              "1964000",
+              "6770000"
+            ]
+          },
+          {
+            "rowIndex": 11,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Corporate tax (9%)",
+              "Col_2": "117000",
+              "Col_3": "155700",
+              "Col_4": "159840",
+              "Col_5": "176760",
+              "Col_6": "609300"
+            },
+            "rawValues": [
+              "Corporate tax (9%)",
+              "117000",
+              "155700",
+              "159840",
+              "176760",
+              "609300"
+            ]
+          },
+          {
+            "rowIndex": 12,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Net profit",
+              "Col_2": "1183000",
+              "Col_3": "1574300",
+              "Col_4": "1616160",
+              "Col_5": "1787240",
+              "Col_6": "6160700"
+            },
+            "rawValues": [
+              "Net profit",
+              "1183000",
+              "1574300",
+              "1616160",
+              "1787240",
+              "6160700"
+            ]
+          },
+          {
+            "rowIndex": 13,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "",
+              "Col_2": "",
+              "Col_3": "",
+              "Col_4": "",
+              "Col_5": "",
+              "Col_6": ""
+            },
+            "rawValues": [
+              "",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 14,
+            "cells": {
+              "Contoso Retail LLC – Budget FY2026": "Blue figures are budget inputs; black figures are formulas.",
+              "Col_2": "",
+              "Col_3": "",
+              "Col_4": "",
+              "Col_5": "",
+              "Col_6": ""
+            },
+            "rawValues": [
+              "Blue figures are budget inputs; black figures are formulas.",
+              "",
+              "",
+              "",
+              "",
+              ""
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| Contoso Retail LLC – Budget FY2026 | Col_2 | Col_3 | Col_4 | Col_5 | Col_6 |\n| --- | --- | --- | --- | --- | --- |\n| Approved budget  |  Approved 15 December 2025  |  Currency: AED  |  Synthetic data for training only |  |  |  |  |  |\n|  |  |  |  |  |  |\n| Line item | Q1 2026 | Q2 2026 | Q3 2026 | Q4 2026 | FY 2026 |\n| Revenue | 12000000 | 13500000 | 13800000 | 14700000 | 54000000 |\n| Cost of sales | 7560000 | 8505000 | 8694000 | 9261000 | 34020000 |\n| Gross profit | 4440000 | 4995000 | 5106000 | 5439000 | 19980000 |\n| Operating expenses | 2950000 | 3080000 | 3150000 | 3300000 | 12480000 |\n| Operating profit | 1490000 | 1915000 | 1956000 | 2139000 | 7500000 |\n| Finance costs | 190000 | 185000 | 180000 | 175000 | 730000 |\n| Profit before tax | 1300000 | 1730000 | 1776000 | 1964000 | 6770000 |\n| Corporate tax (9%) | 117000 | 155700 | 159840 | 176760 | 609300 |\n| Net profit | 1183000 | 1574300 | 1616160 | 1787240 | 6160700 |\n|  |  |  |  |  |  |\n| Blue figures are budget inputs; black figures are formulas. |  |  |  |  |  |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Contoso Retail LLC – Budget FY2026",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Approved budget  |  Approved 15 December 2025  |  Currency: AED  |  Synthetic data for training only",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Line item",
+            "Q1 2026",
+            "Q2 2026",
+            "Q3 2026",
+            "Q4 2026",
+            "FY 2026"
+          ],
+          [
+            "Revenue",
+            "12000000",
+            "13500000",
+            "13800000",
+            "14700000",
+            "54000000"
+          ],
+          [
+            "Cost of sales",
+            "7560000",
+            "8505000",
+            "8694000",
+            "9261000",
+            "34020000"
+          ],
+          [
+            "Gross profit",
+            "4440000",
+            "4995000",
+            "5106000",
+            "5439000",
+            "19980000"
+          ],
+          [
+            "Operating expenses",
+            "2950000",
+            "3080000",
+            "3150000",
+            "3300000",
+            "12480000"
+          ],
+          [
+            "Operating profit",
+            "1490000",
+            "1915000",
+            "1956000",
+            "2139000",
+            "7500000"
+          ],
+          [
+            "Finance costs",
+            "190000",
+            "185000",
+            "180000",
+            "175000",
+            "730000"
+          ],
+          [
+            "Profit before tax",
+            "1300000",
+            "1730000",
+            "1776000",
+            "1964000",
+            "6770000"
+          ],
+          [
+            "Corporate tax (9%)",
+            "117000",
+            "155700",
+            "159840",
+            "176760",
+            "609300"
+          ],
+          [
+            "Net profit",
+            "1183000",
+            "1574300",
+            "1616160",
+            "1787240",
+            "6160700"
+          ],
+          [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Blue figures are budget inputs; black figures are formulas.",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "element_id": "doc_34_p_1",
+        "document_id": "34",
+        "element_type": "paragraph",
+        "content": "Sheet Budget FY2026 data table with 14 records.",
+        "page_number": 1
+      }
+    ],
+    "fullMarkdown": "## Sheet: Budget FY2026\n\n| Contoso Retail LLC – Budget FY2026 |  |  |  |  |  |\n| --- | --- | --- | --- | --- | --- |\n| Approved budget  |  Approved 15 December 2025  |  Currency: AED  |  Synthetic data for training only |  |  |  |  |  |\n|  |  |  |  |  |  |\n| Line item | Q1 2026 | Q2 2026 | Q3 2026 | Q4 2026 | FY 2026 |\n| Revenue | 12000000 | 13500000 | 13800000 | 14700000 | 54000000 |\n| Cost of sales | 7560000 | 8505000 | 8694000 | 9261000 | 34020000 |\n| Gross profit | 4440000 | 4995000 | 5106000 | 5439000 | 19980000 |\n| Operating expenses | 2950000 | 3080000 | 3150000 | 3300000 | 12480000 |\n| Operating profit | 1490000 | 1915000 | 1956000 | 2139000 | 7500000 |\n| Finance costs | 190000 | 185000 | 180000 | 175000 | 730000 |\n| Profit before tax | 1300000 | 1730000 | 1776000 | 1964000 | 6770000 |\n| Corporate tax (9%) | 117000 | 155700 | 159840 | 176760 | 609300 |\n| Net profit | 1183000 | 1574300 | 1616160 | 1787240 | 6160700 |\n|  |  |  |  |  |  |\n| Blue figures are budget inputs; black figures are formulas. |  |  |  |  |  |"
+  },
+  "extractedFacts": [],
+  "conflicts": [],
+  "chunks": []
+}

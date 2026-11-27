@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T12:42:11.024Z",
+    "correlationId": "ingest-1795610530874-0hjtk-33",
+    "documentId": "33",
+    "fileName": "05_Contoso_Logistics_Management_Pack_Q2_2026_v2_FINAL.pdf",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 1,
+    "tableCount": 2,
+    "paragraphCount": 2,
+    "contentLength": 1126,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "Contoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED\nAED Q2 2026\nRevenue 9,350,000\nDirect operating costs (6,591,800)\nGross profit 2,758,200\nOperating expenses (1,468,200)\nOperating profit 1,290,000\nFinance costs (139,500)\nProfit before tax 1,150,500\nCorporate tax (9%) (103,545)\nNet profit for the period 1,046,955\nNotes\n1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)\nContoso Logistics LLC | Final management pack (unaudited) – supersedes v1 | Prepared 16 July 2026 | Synthetic data for training only Page 1"
+      }
+    ],
+    "tables": [
+      {
+        "tableId": "P1-T1",
+        "rowCount": 10,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "AED"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Q2 2026"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "9,350,000"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Direct operating costs"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "(6,591,800)"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Gross profit"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "2,758,200"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Operating expenses"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "(1,468,200)"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 0,
+            "content": "Operating profit"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 1,
+            "content": "1,290,000"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 0,
+            "content": "Finance costs"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 1,
+            "content": "(139,500)"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 0,
+            "content": "Profit before tax"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 1,
+            "content": "1,150,500"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 0,
+            "content": "Corporate tax (9%)"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 1,
+            "content": "(103,545)"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 0,
+            "content": "Net profit for the period"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 1,
+            "content": "1,046,955"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T2",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Contoso Logistics LLC"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Final management pack (unaudited) – supersedes v1"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Prepared 16 July 2026"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "Synthetic data for training only Page 1"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "content": "Contoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Notes\n1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      }
+    ],
+    "rawContent": "<!-- Page 1 -->\n\nContoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED\nAED Q2 2026\nRevenue 9,350,000\nDirect operating costs (6,591,800)\nGross profit 2,758,200\nOperating expenses (1,468,200)\nOperating profit 1,290,000\nFinance costs (139,500)\nProfit before tax 1,150,500\nCorporate tax (9%) (103,545)\nNet profit for the period 1,046,955\nNotes\n## 1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)\nContoso Logistics LLC | Final management pack (unaudited) – supersedes v1 | Prepared 16 July 2026 | Synthetic data for training only Page 1"
+  },
+  "normalizedContent": {
+    "document_id": "33",
+    "tables": [
+      {
+        "element_id": "doc_33_table_1",
+        "document_id": "33",
+        "element_type": "table",
+        "table_id": 1,
+        "row_count": 10,
+        "column_count": 2,
+        "headers": [
+          "AED",
+          "Q2 2026"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "AED": "Revenue",
+              "Q2 2026": "9,350,000"
+            },
+            "rawValues": [
+              "Revenue",
+              "9,350,000"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "AED": "Direct operating costs",
+              "Q2 2026": "(6,591,800)"
+            },
+            "rawValues": [
+              "Direct operating costs",
+              "(6,591,800)"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "AED": "Gross profit",
+              "Q2 2026": "2,758,200"
+            },
+            "rawValues": [
+              "Gross profit",
+              "2,758,200"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "AED": "Operating expenses",
+              "Q2 2026": "(1,468,200)"
+            },
+            "rawValues": [
+              "Operating expenses",
+              "(1,468,200)"
+            ]
+          },
+          {
+            "rowIndex": 5,
+            "cells": {
+              "AED": "Operating profit",
+              "Q2 2026": "1,290,000"
+            },
+            "rawValues": [
+              "Operating profit",
+              "1,290,000"
+            ]
+          },
+          {
+            "rowIndex": 6,
+            "cells": {
+              "AED": "Finance costs",
+              "Q2 2026": "(139,500)"
+            },
+            "rawValues": [
+              "Finance costs",
+              "(139,500)"
+            ]
+          },
+          {
+            "rowIndex": 7,
+            "cells": {
+              "AED": "Profit before tax",
+              "Q2 2026": "1,150,500"
+            },
+            "rawValues": [
+              "Profit before tax",
+              "1,150,500"
+            ]
+          },
+          {
+            "rowIndex": 8,
+            "cells": {
+              "AED": "Corporate tax (9%)",
+              "Q2 2026": "(103,545)"
+            },
+            "rawValues": [
+              "Corporate tax (9%)",
+              "(103,545)"
+            ]
+          },
+          {
+            "rowIndex": 9,
+            "cells": {
+              "AED": "Net profit for the period",
+              "Q2 2026": "1,046,955"
+            },
+            "rawValues": [
+              "Net profit for the period",
+              "1,046,955"
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| AED | Q2 2026 |\n| --- | --- |\n| Revenue | 9,350,000 |\n| Direct operating costs | (6,591,800) |\n| Gross profit | 2,758,200 |\n| Operating expenses | (1,468,200) |\n| Operating profit | 1,290,000 |\n| Finance costs | (139,500) |\n| Profit before tax | 1,150,500 |\n| Corporate tax (9%) | (103,545) |\n| Net profit for the period | 1,046,955 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "AED",
+            "Q2 2026"
+          ],
+          [
+            "Revenue",
+            "9,350,000"
+          ],
+          [
+            "Direct operating costs",
+            "(6,591,800)"
+          ],
+          [
+            "Gross profit",
+            "2,758,200"
+          ],
+          [
+            "Operating expenses",
+            "(1,468,200)"
+          ],
+          [
+            "Operating profit",
+            "1,290,000"
+          ],
+          [
+            "Finance costs",
+            "(139,500)"
+          ],
+          [
+            "Profit before tax",
+            "1,150,500"
+          ],
+          [
+            "Corporate tax (9%)",
+            "(103,545)"
+          ],
+          [
+            "Net profit for the period",
+            "1,046,955"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_33_table_2",
+        "document_id": "33",
+        "element_type": "table",
+        "table_id": 2,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "Contoso Logistics LLC",
+          "Final management pack (unaudited) – supersedes v1",
+          "Prepared 16 July 2026",
+          "Synthetic data for training only Page 1"
+        ],
+        "rows": [],
+        "page_number": 1,
+        "content": "| Contoso Logistics LLC | Final management pack (unaudited) – supersedes v1 | Prepared 16 July 2026 | Synthetic data for training only Page 1 |\n| --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Contoso Logistics LLC",
+            "Final management pack (unaudited) – supersedes v1",
+            "Prepared 16 July 2026",
+            "Synthetic data for training only Page 1"
+          ]
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "element_id": "doc_33_p_1",
+        "document_id": "33",
+        "element_type": "paragraph",
+        "content": "Contoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_33_p_2",
+        "document_id": "33",
+        "element_type": "paragraph",
+        "content": "Notes\n1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)",
+        "page_number": 1
+      }
+    ],
+    "fullMarkdown": "<!-- Page 1 -->\n\nContoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED\nAED Q2 2026\nRevenue 9,350,000\nDirect operating costs (6,591,800)\nGross profit 2,758,200\nOperating expenses (1,468,200)\nOperating profit 1,290,000\nFinance costs (139,500)\nProfit before tax 1,150,500\nCorporate tax (9%) (103,545)\nNet profit for the period 1,046,955\nNotes\n## 1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)\nContoso Logistics LLC | Final management pack (unaudited) – supersedes v1 | Prepared 16 July 2026 | Synthetic data for training only Page 1"
+  },
+  "extractedFacts": [],
+  "conflicts": [],
+  "chunks": []
+}

@@ -1,0 +1,1670 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T11:37:26.545Z",
+    "correlationId": "ingest-1795606646050-bof6t-25",
+    "documentId": "25",
+    "fileName": "NOVENTRA GLOBAL HOLDINGS.pdf",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 4,
+    "tableCount": 14,
+    "paragraphCount": 21,
+    "contentLength": 3913,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "NOVENTRA GLOBAL HOLDINGS\nQuarterly Financial Performance Report\nReporting Period: Quarter ended 30 June 2026\nDocument Status: Final management report (unaudited)\nPrepared Date: 20 July 2026\nReporting Currency: AED\nClassification: Internal Financial Report\n1. Financial Performance by Entity\nAll monetary figures are expressed in AED thousands.\nRevenu Operating\nBusiness Entity Net Profit\ne Expenses\nNoventra Digital LLC 18,500 5,200 3,450\nVelmora Energy LLC 12,750 3,850 2,180\nAstravion Logistics LLC 9,250 2,450 1,620\nGroup Total 40,500 11,500 7,250\n2. Annual Financial Performance\nEntity: Noventra Digital LLC.\nAll monetary amounts are expressed in AED millions.\nFinancial Indicator FY 2024 FY 2025\nRevenue 45.50 52.75\nGross Profit 18.20 22.40\nNet Profit 8.50 10.25\nIntelligent Infrastructure Recovery Benefits 0.65 0.95\nAutomated Resource Optimization\n0.35 0.58\nSavings\n3. Actual and Budget Performance\nEntity: Velmora Energy LLC."
+      },
+      {
+        "pageNumber": 2,
+        "text": "Reporting period: Q2 2026.\nAll monetary amounts are expressed in AED.\nFinancial Measure Actual Budget\n12,750,00 13,500,00\nRevenue\n0 0\nOperating\n3,850,000 4,100,000\nExpenses\nCapital Expenditure 950,000 1,200,000\n4. International Business Operations\nReporting\nOrganization Financial Measure Currency Amount\nPeriod\nQuantivex\nFY 2025 Revenue INR 12.5 crore\nTechnologies\n850.250,7\nEurovanta Solutions FY 2025 Operating Profit EUR\n5\nNexovanta Systems Q2 2026 Net Profit USD 425,000\nSustainable Process\nLumivex Industries FY 2026 AED 675,000\nRecovery Benefits\n5. Financial and Operational Indicators\nEntity: Astravion Logistics LLC.\nReporting period: Q2 2026.\nMonetary amounts are expressed in AED.\nPerformance Indicator Value\nOperating Loss (125,000)\nNet Profit Margin 17.5%\nCurrent Ratio 2.15\nTotal Employees 245\nOutstanding\n750,000\nReceivables\nDeferred Tax Adjustment N/A\n6. Cash Position"
+      },
+      {
+        "pageNumber": 3,
+        "text": "Noventra Digital LLC reported closing cash of AED 2,450,000 as at 30 June 2026, against a\nminimum operating cash requirement of AED 3,000,000, resulting in a cash shortfall of AED\n550,000.\nCustomer collections amounting to AED 780,000 were received in July 2026 rather than June.\nThe company also paid AED 320,000 for infrastructure maintenance earlier than budgeted.\n7. Financial Commentary\nVelmora Energy LLC\nVelmora Energy LLC reported renewable infrastructure efficiency gains of AED 450,000 and\nsustainable resource recovery savings of AED 275,000 during Q2 2026.\nIts additional maintenance expenses amounted to AED 85,000 during the same quarter.\nMeridian Technologies\nMeridian Technologies generated revenue of INR 18.5 crore and net profit of INR 3.2 crore for\nFY 2025. Its operating expenses amounted to INR 95 lakh.\nEurovanta Solutions\nEurovanta Solutions recorded capital expenditure of EUR 1.450.000,50 during FY 2025.\nLumivex Industries\nDuring Q2 2026, Lumivex Industries spent AED 180,000 on digital infrastructure upgrades.\nThe company forecasts revenue of AED 8,500,000 for Q3 2026.\n8. Forecast and Target Performance\nEntity: Noventra Digital LLC.\nCurrency: AED.\nQ3 2026\nFinancial Indicator Q3 2026 Target\nForecast\nRevenue 20,500,000 22,000,000\nNet Profit 3,850,000 4,200,000"
+      },
+      {
+        "pageNumber": 4,
+        "text": "9. Additional Financial Information\nNoventra Digital LLC reported administrative expenses of AED 2026 during Q2 2026.\nVelmora Energy LLC recognized corporate tax expense of AED 180,000 for Q2 2026.\nThe applicable corporate tax rate was 9%.\n10. Administrative Information\nNoventra Global Holdings was established in 1998.\nDocument Version: 2.1.\nInternal approval reference: 78542.\nThe management report was approved on 20 July 2026.\nManagement expects the new regional office to open in September 2026.\nNo additional funding has been requested from the Group at this stage.\nEnd of Report\nAll information contained in this document is synthetic and intended exclusively for financial\nextraction testing."
+      }
+    ],
+    "tables": [
+      {
+        "tableId": "P1-T1",
+        "rowCount": 7,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Revenu"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Operating"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Business Entity"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "Net Profit"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "e"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "Expenses"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Noventra Digital LLC"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "18,500"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 2,
+            "content": "5,200"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 3,
+            "content": "3,450"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Velmora Energy LLC"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "12,750"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 2,
+            "content": "3,850"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 3,
+            "content": "2,180"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 0,
+            "content": "Astravion Logistics LLC 9,250"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 1,
+            "content": "2,450"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 2,
+            "content": "1,620"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 0,
+            "content": "Group Total"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 1,
+            "content": "40,500"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 2,
+            "content": "11,500"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 3,
+            "content": "7,250"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T2",
+        "rowCount": 5,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Financial Indicator"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "FY 2024 FY 2025"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "45.50"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": "52.75"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Gross Profit"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "18.20"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 2,
+            "content": "22.40"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Net Profit"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "8.50"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 2,
+            "content": "10.25"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Intelligent Infrastructure Recovery Benefits 0.65"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "0.95"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 2,
+            "content": ""
+          }
+        ],
+        "caption": null,
+        "note": "All monetary amounts are expressed in AED millions.",
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T3",
+        "rowCount": 1,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "0.35"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "0.58"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T1",
+        "rowCount": 1,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Financial Measure"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Actual"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Budget"
+          }
+        ],
+        "caption": null,
+        "note": "All monetary amounts are expressed in AED.",
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T2",
+        "rowCount": 1,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "0"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "0"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T3",
+        "rowCount": 1,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Capital Expenditure 950,000"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "1,200,000"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T4",
+        "rowCount": 1,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Organization"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Financial Measure"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Currency Amount"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T5",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "FY 2025"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "INR"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "12.5 crore"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T6",
+        "rowCount": 1,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Eurovanta Solutions FY 2025"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Operating Profit"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "EUR"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T7",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Nexovanta Systems Q2 2026"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Net Profit"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "USD"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "425,000"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T8",
+        "rowCount": 1,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Lumivex Industries FY 2026"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "AED"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "675,000"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T9",
+        "rowCount": 5,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Performance Indicator"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Value"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Operating Loss"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "(125,000)"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Net Profit Margin"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "17.5%"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Current Ratio"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "2.15"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Total Employees"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "245"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P3-T1",
+        "rowCount": 1,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Financial Indicator"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Q3 2026 Target"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P3-T2",
+        "rowCount": 2,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "20,500,000"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "22,000,000"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Net Profit"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "3,850,000"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": "4,200,000"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "content": "NOVENTRA GLOBAL HOLDINGS",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Quarterly Financial Performance Report\nReporting Period: Quarter ended 30 June 2026\nDocument Status: Final management report (unaudited)\nPrepared Date: 20 July 2026\nReporting Currency: AED\nClassification: Internal Financial Report",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "1. Financial Performance by Entity\nAll monetary figures are expressed in AED thousands.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "2. Annual Financial Performance\nEntity: Noventra Digital LLC.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Automated Resource Optimization",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Savings",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "3. Actual and Budget Performance\nEntity: Velmora Energy LLC.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Reporting period: Q2 2026.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "12,750,00 13,500,00\nRevenue",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Operating\n3,850,000 4,100,000\nExpenses",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "4. International Business Operations\nReporting",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Period\nQuantivex",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Technologies\n850.250,7",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "5",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Sustainable Process",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Recovery Benefits\n5. Financial and Operational Indicators\nEntity: Astravion Logistics LLC.\nReporting period: Q2 2026.\nMonetary amounts are expressed in AED.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Outstanding\n750,000\nReceivables\nDeferred Tax Adjustment N/A\n6. Cash Position",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Noventra Digital LLC reported closing cash of AED 2,450,000 as at 30 June 2026, against a\nminimum operating cash requirement of AED 3,000,000, resulting in a cash shortfall of AED\n550,000.\nCustomer collections amounting to AED 780,000 were received in July 2026 rather than June.\nThe company also paid AED 320,000 for infrastructure maintenance earlier than budgeted.\n7. Financial Commentary\nVelmora Energy LLC\nVelmora Energy LLC reported renewable infrastructure efficiency gains of AED 450,000 and\nsustainable resource recovery savings of AED 275,000 during Q2 2026.\nIts additional maintenance expenses amounted to AED 85,000 during the same quarter.\nMeridian Technologies\nMeridian Technologies generated revenue of INR 18.5 crore and net profit of INR 3.2 crore for\nFY 2025. Its operating expenses amounted to INR 95 lakh.\nEurovanta Solutions\nEurovanta Solutions recorded capital expenditure of EUR 1.450.000,50 during FY 2025.\nLumivex Industries\nDuring Q2 2026, Lumivex Industries spent AED 180,000 on digital infrastructure upgrades.\nThe company forecasts revenue of AED 8,500,000 for Q3 2026.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "8. Forecast and Target Performance\nEntity: Noventra Digital LLC.\nCurrency: AED.\nQ3 2026",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "Forecast",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "9. Additional Financial Information\nNoventra Digital LLC reported administrative expenses of AED 2026 during Q2 2026.\nVelmora Energy LLC recognized corporate tax expense of AED 180,000 for Q2 2026.\nThe applicable corporate tax rate was 9%.\n10. Administrative Information\nNoventra Global Holdings was established in 1998.\nDocument Version: 2.1.\nInternal approval reference: 78542.\nThe management report was approved on 20 July 2026.\nManagement expects the new regional office to open in September 2026.\nNo additional funding has been requested from the Group at this stage.\nEnd of Report\nAll information contained in this document is synthetic and intended exclusively for financial\nextraction testing.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 4
+          }
+        ]
+      }
+    ],
+    "rawContent": "<!-- Page 1 -->\n\nNOVENTRA GLOBAL HOLDINGS\nQuarterly Financial Performance Report\nReporting Period: Quarter ended 30 June 2026\nDocument Status: Final management report (unaudited)\nPrepared Date: 20 July 2026\nReporting Currency: AED\nClassification: Internal Financial Report\n## 1. Financial Performance by Entity\nAll monetary figures are expressed in AED thousands.\nRevenu Operating\nBusiness Entity Net Profit\ne Expenses\nNoventra Digital LLC 18,500 5,200 3,450\nVelmora Energy LLC 12,750 3,850 2,180\nAstravion Logistics LLC 9,250 2,450 1,620\nGroup Total 40,500 11,500 7,250\n## 2. Annual Financial Performance\nEntity: Noventra Digital LLC.\nAll monetary amounts are expressed in AED millions.\nFinancial Indicator FY 2024 FY 2025\nRevenue 45.50 52.75\nGross Profit 18.20 22.40\nNet Profit 8.50 10.25\nIntelligent Infrastructure Recovery Benefits 0.65 0.95\nAutomated Resource Optimization\n0.35 0.58\nSavings\n## 3. Actual and Budget Performance\nEntity: Velmora Energy LLC.\n\n<!-- Page 2 -->\n\nReporting period: Q2 2026.\nAll monetary amounts are expressed in AED.\nFinancial Measure Actual Budget\n12,750,00 13,500,00\nRevenue\n0 0\nOperating\n3,850,000 4,100,000\nExpenses\nCapital Expenditure 950,000 1,200,000\n## 4. International Business Operations\nReporting\nOrganization Financial Measure Currency Amount\nPeriod\nQuantivex\nFY 2025 Revenue INR 12.5 crore\nTechnologies\n850.250,7\nEurovanta Solutions FY 2025 Operating Profit EUR\n5\nNexovanta Systems Q2 2026 Net Profit USD 425,000\nSustainable Process\nLumivex Industries FY 2026 AED 675,000\nRecovery Benefits\n## 5. Financial and Operational Indicators\nEntity: Astravion Logistics LLC.\nReporting period: Q2 2026.\nMonetary amounts are expressed in AED.\nPerformance Indicator Value\nOperating Loss (125,000)\nNet Profit Margin 17.5%\nCurrent Ratio 2.15\nTotal Employees 245\nOutstanding\n750,000\nReceivables\nDeferred Tax Adjustment N/A\n## 6. Cash Position\n\n<!-- Page 3 -->\n\nNoventra Digital LLC reported closing cash of AED 2,450,000 as at 30 June 2026, against a\nminimum operating cash requirement of AED 3,000,000, resulting in a cash shortfall of AED\n550,000.\nCustomer collections amounting to AED 780,000 were received in July 2026 rather than June.\nThe company also paid AED 320,000 for infrastructure maintenance earlier than budgeted.\n## 7. Financial Commentary\nVelmora Energy LLC\nVelmora Energy LLC reported renewable infrastructure efficiency gains of AED 450,000 and\nsustainable resource recovery savings of AED 275,000 during Q2 2026.\nIts additional maintenance expenses amounted to AED 85,000 during the same quarter.\nMeridian Technologies\nMeridian Technologies generated revenue of INR 18.5 crore and net profit of INR 3.2 crore for\nFY 2025. Its operating expenses amounted to INR 95 lakh.\nEurovanta Solutions\nEurovanta Solutions recorded capital expenditure of EUR 1.450.000,50 during FY 2025.\nLumivex Industries\nDuring Q2 2026, Lumivex Industries spent AED 180,000 on digital infrastructure upgrades.\nThe company forecasts revenue of AED 8,500,000 for Q3 2026.\n## 8. Forecast and Target Performance\nEntity: Noventra Digital LLC.\nCurrency: AED.\nQ3 2026\nFinancial Indicator Q3 2026 Target\nForecast\nRevenue 20,500,000 22,000,000\nNet Profit 3,850,000 4,200,000\n\n<!-- Page 4 -->\n\n## 9. Additional Financial Information\nNoventra Digital LLC reported administrative expenses of AED 2026 during Q2 2026.\nVelmora Energy LLC recognized corporate tax expense of AED 180,000 for Q2 2026.\nThe applicable corporate tax rate was 9%.\n## 10. Administrative Information\nNoventra Global Holdings was established in 1998.\nDocument Version: 2.1.\nInternal approval reference: 78542.\nThe management report was approved on 20 July 2026.\nManagement expects the new regional office to open in September 2026.\nNo additional funding has been requested from the Group at this stage.\nEnd of Report\nAll information contained in this document is synthetic and intended exclusively for financial\nextraction testing."
+  },
+  "normalizedContent": {
+    "document_id": "25",
+    "tables": [
+      {
+        "element_id": "doc_25_table_1",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 1,
+        "row_count": 7,
+        "column_count": 4,
+        "headers": [
+          "Revenu",
+          "Operating",
+          "Col_3",
+          "Col_4"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Revenu": "Business Entity",
+              "Operating": "Net Profit",
+              "Col_3": "",
+              "Col_4": ""
+            },
+            "rawValues": [
+              "Business Entity",
+              "Net Profit",
+              "",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "Revenu": "e",
+              "Operating": "Expenses",
+              "Col_3": "",
+              "Col_4": ""
+            },
+            "rawValues": [
+              "e",
+              "Expenses",
+              "",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "Revenu": "Noventra Digital LLC",
+              "Operating": "18,500",
+              "Col_3": "5,200",
+              "Col_4": "3,450"
+            },
+            "rawValues": [
+              "Noventra Digital LLC",
+              "18,500",
+              "5,200",
+              "3,450"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "Revenu": "Velmora Energy LLC",
+              "Operating": "12,750",
+              "Col_3": "3,850",
+              "Col_4": "2,180"
+            },
+            "rawValues": [
+              "Velmora Energy LLC",
+              "12,750",
+              "3,850",
+              "2,180"
+            ]
+          },
+          {
+            "rowIndex": 5,
+            "cells": {
+              "Revenu": "Astravion Logistics LLC 9,250",
+              "Operating": "2,450",
+              "Col_3": "1,620",
+              "Col_4": ""
+            },
+            "rawValues": [
+              "Astravion Logistics LLC 9,250",
+              "2,450",
+              "1,620",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 6,
+            "cells": {
+              "Revenu": "Group Total",
+              "Operating": "40,500",
+              "Col_3": "11,500",
+              "Col_4": "7,250"
+            },
+            "rawValues": [
+              "Group Total",
+              "40,500",
+              "11,500",
+              "7,250"
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| Revenu | Operating | Col_3 | Col_4 |\n| --- | --- | --- | --- |\n| Business Entity | Net Profit |  |  |\n| e | Expenses |  |  |\n| Noventra Digital LLC | 18,500 | 5,200 | 3,450 |\n| Velmora Energy LLC | 12,750 | 3,850 | 2,180 |\n| Astravion Logistics LLC 9,250 | 2,450 | 1,620 |  |\n| Group Total | 40,500 | 11,500 | 7,250 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Revenu",
+            "Operating",
+            "",
+            ""
+          ],
+          [
+            "Business Entity",
+            "Net Profit",
+            "",
+            ""
+          ],
+          [
+            "e",
+            "Expenses",
+            "",
+            ""
+          ],
+          [
+            "Noventra Digital LLC",
+            "18,500",
+            "5,200",
+            "3,450"
+          ],
+          [
+            "Velmora Energy LLC",
+            "12,750",
+            "3,850",
+            "2,180"
+          ],
+          [
+            "Astravion Logistics LLC 9,250",
+            "2,450",
+            "1,620",
+            ""
+          ],
+          [
+            "Group Total",
+            "40,500",
+            "11,500",
+            "7,250"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_2",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 2,
+        "row_count": 5,
+        "column_count": 3,
+        "headers": [
+          "Financial Indicator",
+          "FY 2024 FY 2025",
+          "Col_3"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Financial Indicator": "Revenue",
+              "FY 2024 FY 2025": "45.50",
+              "Col_3": "52.75"
+            },
+            "rawValues": [
+              "Revenue",
+              "45.50",
+              "52.75"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "Financial Indicator": "Gross Profit",
+              "FY 2024 FY 2025": "18.20",
+              "Col_3": "22.40"
+            },
+            "rawValues": [
+              "Gross Profit",
+              "18.20",
+              "22.40"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "Financial Indicator": "Net Profit",
+              "FY 2024 FY 2025": "8.50",
+              "Col_3": "10.25"
+            },
+            "rawValues": [
+              "Net Profit",
+              "8.50",
+              "10.25"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "Financial Indicator": "Intelligent Infrastructure Recovery Benefits 0.65",
+              "FY 2024 FY 2025": "0.95",
+              "Col_3": ""
+            },
+            "rawValues": [
+              "Intelligent Infrastructure Recovery Benefits 0.65",
+              "0.95",
+              ""
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| Financial Indicator | FY 2024 FY 2025 | Col_3 |\n| --- | --- | --- |\n| Revenue | 45.50 | 52.75 |\n| Gross Profit | 18.20 | 22.40 |\n| Net Profit | 8.50 | 10.25 |\n| Intelligent Infrastructure Recovery Benefits 0.65 | 0.95 |  |",
+        "caption": null,
+        "note": "All monetary amounts are expressed in AED millions.",
+        "grid": [
+          [
+            "Financial Indicator",
+            "FY 2024 FY 2025",
+            ""
+          ],
+          [
+            "Revenue",
+            "45.50",
+            "52.75"
+          ],
+          [
+            "Gross Profit",
+            "18.20",
+            "22.40"
+          ],
+          [
+            "Net Profit",
+            "8.50",
+            "10.25"
+          ],
+          [
+            "Intelligent Infrastructure Recovery Benefits 0.65",
+            "0.95",
+            ""
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_3",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 3,
+        "row_count": 1,
+        "column_count": 2,
+        "headers": [
+          "0.35",
+          "0.58"
+        ],
+        "rows": [],
+        "page_number": 1,
+        "content": "| 0.35 | 0.58 |\n| --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "0.35",
+            "0.58"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_4",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 4,
+        "row_count": 1,
+        "column_count": 3,
+        "headers": [
+          "Financial Measure",
+          "Actual",
+          "Budget"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Financial Measure | Actual | Budget |\n| --- | --- | --- |",
+        "caption": null,
+        "note": "All monetary amounts are expressed in AED.",
+        "grid": [
+          [
+            "Financial Measure",
+            "Actual",
+            "Budget"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_5",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 5,
+        "row_count": 1,
+        "column_count": 2,
+        "headers": [
+          "0",
+          "0"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| 0 | 0 |\n| --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_6",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 6,
+        "row_count": 1,
+        "column_count": 2,
+        "headers": [
+          "Capital Expenditure 950,000",
+          "1,200,000"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Capital Expenditure 950,000 | 1,200,000 |\n| --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Capital Expenditure 950,000",
+            "1,200,000"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_7",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 7,
+        "row_count": 1,
+        "column_count": 3,
+        "headers": [
+          "Organization",
+          "Financial Measure",
+          "Currency Amount"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Organization | Financial Measure | Currency Amount |\n| --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Organization",
+            "Financial Measure",
+            "Currency Amount"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_8",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 8,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "FY 2025",
+          "Revenue",
+          "INR",
+          "12.5 crore"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| FY 2025 | Revenue | INR | 12.5 crore |\n| --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "FY 2025",
+            "Revenue",
+            "INR",
+            "12.5 crore"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_9",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 9,
+        "row_count": 1,
+        "column_count": 3,
+        "headers": [
+          "Eurovanta Solutions FY 2025",
+          "Operating Profit",
+          "EUR"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Eurovanta Solutions FY 2025 | Operating Profit | EUR |\n| --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Eurovanta Solutions FY 2025",
+            "Operating Profit",
+            "EUR"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_10",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 10,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "Nexovanta Systems Q2 2026",
+          "Net Profit",
+          "USD",
+          "425,000"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Nexovanta Systems Q2 2026 | Net Profit | USD | 425,000 |\n| --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Nexovanta Systems Q2 2026",
+            "Net Profit",
+            "USD",
+            "425,000"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_11",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 11,
+        "row_count": 1,
+        "column_count": 3,
+        "headers": [
+          "Lumivex Industries FY 2026",
+          "AED",
+          "675,000"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Lumivex Industries FY 2026 | AED | 675,000 |\n| --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Lumivex Industries FY 2026",
+            "AED",
+            "675,000"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_12",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 12,
+        "row_count": 5,
+        "column_count": 2,
+        "headers": [
+          "Performance Indicator",
+          "Value"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Performance Indicator": "Operating Loss",
+              "Value": "(125,000)"
+            },
+            "rawValues": [
+              "Operating Loss",
+              "(125,000)"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "Performance Indicator": "Net Profit Margin",
+              "Value": "17.5%"
+            },
+            "rawValues": [
+              "Net Profit Margin",
+              "17.5%"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "Performance Indicator": "Current Ratio",
+              "Value": "2.15"
+            },
+            "rawValues": [
+              "Current Ratio",
+              "2.15"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "Performance Indicator": "Total Employees",
+              "Value": "245"
+            },
+            "rawValues": [
+              "Total Employees",
+              "245"
+            ]
+          }
+        ],
+        "page_number": 2,
+        "content": "| Performance Indicator | Value |\n| --- | --- |\n| Operating Loss | (125,000) |\n| Net Profit Margin | 17.5% |\n| Current Ratio | 2.15 |\n| Total Employees | 245 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Performance Indicator",
+            "Value"
+          ],
+          [
+            "Operating Loss",
+            "(125,000)"
+          ],
+          [
+            "Net Profit Margin",
+            "17.5%"
+          ],
+          [
+            "Current Ratio",
+            "2.15"
+          ],
+          [
+            "Total Employees",
+            "245"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_13",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 13,
+        "row_count": 1,
+        "column_count": 2,
+        "headers": [
+          "Financial Indicator",
+          "Q3 2026 Target"
+        ],
+        "rows": [],
+        "page_number": 3,
+        "content": "| Financial Indicator | Q3 2026 Target |\n| --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Financial Indicator",
+            "Q3 2026 Target"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_25_table_14",
+        "document_id": "25",
+        "element_type": "table",
+        "table_id": 14,
+        "row_count": 2,
+        "column_count": 3,
+        "headers": [
+          "Revenue",
+          "20,500,000",
+          "22,000,000"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Revenue": "Net Profit",
+              "20,500,000": "3,850,000",
+              "22,000,000": "4,200,000"
+            },
+            "rawValues": [
+              "Net Profit",
+              "3,850,000",
+              "4,200,000"
+            ]
+          }
+        ],
+        "page_number": 3,
+        "content": "| Revenue | 20,500,000 | 22,000,000 |\n| --- | --- | --- |\n| Net Profit | 3,850,000 | 4,200,000 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Revenue",
+            "20,500,000",
+            "22,000,000"
+          ],
+          [
+            "Net Profit",
+            "3,850,000",
+            "4,200,000"
+          ]
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "element_id": "doc_25_p_1",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "NOVENTRA GLOBAL HOLDINGS",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_25_p_2",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Quarterly Financial Performance Report\nReporting Period: Quarter ended 30 June 2026\nDocument Status: Final management report (unaudited)\nPrepared Date: 20 July 2026\nReporting Currency: AED\nClassification: Internal Financial Report",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_25_p_3",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "1. Financial Performance by Entity\nAll monetary figures are expressed in AED thousands.",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_25_p_4",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "2. Annual Financial Performance\nEntity: Noventra Digital LLC.",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_25_p_5",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Automated Resource Optimization",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_25_p_6",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Savings",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_25_p_7",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "3. Actual and Budget Performance\nEntity: Velmora Energy LLC.",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_25_p_8",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Reporting period: Q2 2026.",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_25_p_9",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "12,750,00 13,500,00\nRevenue",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_25_p_10",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Operating\n3,850,000 4,100,000\nExpenses",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_25_p_11",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "4. International Business Operations\nReporting",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_25_p_12",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Period\nQuantivex",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_25_p_13",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Technologies\n850.250,7",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_25_p_14",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "5",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_25_p_15",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Sustainable Process",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_25_p_16",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Recovery Benefits\n5. Financial and Operational Indicators\nEntity: Astravion Logistics LLC.\nReporting period: Q2 2026.\nMonetary amounts are expressed in AED.",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_25_p_17",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Outstanding\n750,000\nReceivables\nDeferred Tax Adjustment N/A\n6. Cash Position",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_25_p_18",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Noventra Digital LLC reported closing cash of AED 2,450,000 as at 30 June 2026, against a\nminimum operating cash requirement of AED 3,000,000, resulting in a cash shortfall of AED\n550,000.\nCustomer collections amounting to AED 780,000 were received in July 2026 rather than June.\nThe company also paid AED 320,000 for infrastructure maintenance earlier than budgeted.\n7. Financial Commentary\nVelmora Energy LLC\nVelmora Energy LLC reported renewable infrastructure efficiency gains of AED 450,000 and\nsustainable resource recovery savings of AED 275,000 during Q2 2026.\nIts additional maintenance expenses amounted to AED 85,000 during the same quarter.\nMeridian Technologies\nMeridian Technologies generated revenue of INR 18.5 crore and net profit of INR 3.2 crore for\nFY 2025. Its operating expenses amounted to INR 95 lakh.\nEurovanta Solutions\nEurovanta Solutions recorded capital expenditure of EUR 1.450.000,50 during FY 2025.\nLumivex Industries\nDuring Q2 2026, Lumivex Industries spent AED 180,000 on digital infrastructure upgrades.\nThe company forecasts revenue of AED 8,500,000 for Q3 2026.",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_25_p_19",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "8. Forecast and Target Performance\nEntity: Noventra Digital LLC.\nCurrency: AED.\nQ3 2026",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_25_p_20",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "Forecast",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_25_p_21",
+        "document_id": "25",
+        "element_type": "paragraph",
+        "content": "9. Additional Financial Information\nNoventra Digital LLC reported administrative expenses of AED 2026 during Q2 2026.\nVelmora Energy LLC recognized corporate tax expense of AED 180,000 for Q2 2026.\nThe applicable corporate tax rate was 9%.\n10. Administrative Information\nNoventra Global Holdings was established in 1998.\nDocument Version: 2.1.\nInternal approval reference: 78542.\nThe management report was approved on 20 July 2026.\nManagement expects the new regional office to open in September 2026.\nNo additional funding has been requested from the Group at this stage.\nEnd of Report\nAll information contained in this document is synthetic and intended exclusively for financial\nextraction testing.",
+        "page_number": 4
+      }
+    ],
+    "fullMarkdown": "<!-- Page 1 -->\n\nNOVENTRA GLOBAL HOLDINGS\nQuarterly Financial Performance Report\nReporting Period: Quarter ended 30 June 2026\nDocument Status: Final management report (unaudited)\nPrepared Date: 20 July 2026\nReporting Currency: AED\nClassification: Internal Financial Report\n## 1. Financial Performance by Entity\nAll monetary figures are expressed in AED thousands.\nRevenu Operating\nBusiness Entity Net Profit\ne Expenses\nNoventra Digital LLC 18,500 5,200 3,450\nVelmora Energy LLC 12,750 3,850 2,180\nAstravion Logistics LLC 9,250 2,450 1,620\nGroup Total 40,500 11,500 7,250\n## 2. Annual Financial Performance\nEntity: Noventra Digital LLC.\nAll monetary amounts are expressed in AED millions.\nFinancial Indicator FY 2024 FY 2025\nRevenue 45.50 52.75\nGross Profit 18.20 22.40\nNet Profit 8.50 10.25\nIntelligent Infrastructure Recovery Benefits 0.65 0.95\nAutomated Resource Optimization\n0.35 0.58\nSavings\n## 3. Actual and Budget Performance\nEntity: Velmora Energy LLC.\n\n<!-- Page 2 -->\n\nReporting period: Q2 2026.\nAll monetary amounts are expressed in AED.\nFinancial Measure Actual Budget\n12,750,00 13,500,00\nRevenue\n0 0\nOperating\n3,850,000 4,100,000\nExpenses\nCapital Expenditure 950,000 1,200,000\n## 4. International Business Operations\nReporting\nOrganization Financial Measure Currency Amount\nPeriod\nQuantivex\nFY 2025 Revenue INR 12.5 crore\nTechnologies\n850.250,7\nEurovanta Solutions FY 2025 Operating Profit EUR\n5\nNexovanta Systems Q2 2026 Net Profit USD 425,000\nSustainable Process\nLumivex Industries FY 2026 AED 675,000\nRecovery Benefits\n## 5. Financial and Operational Indicators\nEntity: Astravion Logistics LLC.\nReporting period: Q2 2026.\nMonetary amounts are expressed in AED.\nPerformance Indicator Value\nOperating Loss (125,000)\nNet Profit Margin 17.5%\nCurrent Ratio 2.15\nTotal Employees 245\nOutstanding\n750,000\nReceivables\nDeferred Tax Adjustment N/A\n## 6. Cash Position\n\n<!-- Page 3 -->\n\nNoventra Digital LLC reported closing cash of AED 2,450,000 as at 30 June 2026, against a\nminimum operating cash requirement of AED 3,000,000, resulting in a cash shortfall of AED\n550,000.\nCustomer collections amounting to AED 780,000 were received in July 2026 rather than June.\nThe company also paid AED 320,000 for infrastructure maintenance earlier than budgeted.\n## 7. Financial Commentary\nVelmora Energy LLC\nVelmora Energy LLC reported renewable infrastructure efficiency gains of AED 450,000 and\nsustainable resource recovery savings of AED 275,000 during Q2 2026.\nIts additional maintenance expenses amounted to AED 85,000 during the same quarter.\nMeridian Technologies\nMeridian Technologies generated revenue of INR 18.5 crore and net profit of INR 3.2 crore for\nFY 2025. Its operating expenses amounted to INR 95 lakh.\nEurovanta Solutions\nEurovanta Solutions recorded capital expenditure of EUR 1.450.000,50 during FY 2025.\nLumivex Industries\nDuring Q2 2026, Lumivex Industries spent AED 180,000 on digital infrastructure upgrades.\nThe company forecasts revenue of AED 8,500,000 for Q3 2026.\n## 8. Forecast and Target Performance\nEntity: Noventra Digital LLC.\nCurrency: AED.\nQ3 2026\nFinancial Indicator Q3 2026 Target\nForecast\nRevenue 20,500,000 22,000,000\nNet Profit 3,850,000 4,200,000\n\n<!-- Page 4 -->\n\n## 9. Additional Financial Information\nNoventra Digital LLC reported administrative expenses of AED 2026 during Q2 2026.\nVelmora Energy LLC recognized corporate tax expense of AED 180,000 for Q2 2026.\nThe applicable corporate tax rate was 9%.\n## 10. Administrative Information\nNoventra Global Holdings was established in 1998.\nDocument Version: 2.1.\nInternal approval reference: 78542.\nThe management report was approved on 20 July 2026.\nManagement expects the new regional office to open in September 2026.\nNo additional funding has been requested from the Group at this stage.\nEnd of Report\nAll information contained in this document is synthetic and intended exclusively for financial\nextraction testing."
+  },
+  "extractedFacts": [],
+  "conflicts": [],
+  "chunks": []
+}

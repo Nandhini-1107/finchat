@@ -1,0 +1,4212 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T12:42:11.908Z",
+    "correlationId": "ingest-1795610530874-0hjtk-33",
+    "documentId": "33",
+    "fileName": "05_Contoso_Logistics_Management_Pack_Q2_2026_v2_FINAL.pdf",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 1,
+    "tableCount": 2,
+    "paragraphCount": 2,
+    "contentLength": 1126,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "Contoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED\nAED Q2 2026\nRevenue 9,350,000\nDirect operating costs (6,591,800)\nGross profit 2,758,200\nOperating expenses (1,468,200)\nOperating profit 1,290,000\nFinance costs (139,500)\nProfit before tax 1,150,500\nCorporate tax (9%) (103,545)\nNet profit for the period 1,046,955\nNotes\n1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)\nContoso Logistics LLC | Final management pack (unaudited) – supersedes v1 | Prepared 16 July 2026 | Synthetic data for training only Page 1"
+      }
+    ],
+    "tables": [
+      {
+        "tableId": "P1-T1",
+        "rowCount": 10,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "AED"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Q2 2026"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "9,350,000"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Direct operating costs"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "(6,591,800)"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Gross profit"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "2,758,200"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Operating expenses"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "(1,468,200)"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 0,
+            "content": "Operating profit"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 1,
+            "content": "1,290,000"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 0,
+            "content": "Finance costs"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 1,
+            "content": "(139,500)"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 0,
+            "content": "Profit before tax"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 1,
+            "content": "1,150,500"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 0,
+            "content": "Corporate tax (9%)"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 1,
+            "content": "(103,545)"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 0,
+            "content": "Net profit for the period"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 1,
+            "content": "1,046,955"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T2",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Contoso Logistics LLC"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Final management pack (unaudited) – supersedes v1"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Prepared 16 July 2026"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "Synthetic data for training only Page 1"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "content": "Contoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Notes\n1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      }
+    ],
+    "rawContent": "<!-- Page 1 -->\n\nContoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED\nAED Q2 2026\nRevenue 9,350,000\nDirect operating costs (6,591,800)\nGross profit 2,758,200\nOperating expenses (1,468,200)\nOperating profit 1,290,000\nFinance costs (139,500)\nProfit before tax 1,150,500\nCorporate tax (9%) (103,545)\nNet profit for the period 1,046,955\nNotes\n## 1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)\nContoso Logistics LLC | Final management pack (unaudited) – supersedes v1 | Prepared 16 July 2026 | Synthetic data for training only Page 1"
+  },
+  "normalizedContent": {
+    "document_id": "33",
+    "tables": [
+      {
+        "element_id": "doc_33_table_1",
+        "document_id": "33",
+        "element_type": "table",
+        "table_id": 1,
+        "row_count": 10,
+        "column_count": 2,
+        "headers": [
+          "AED",
+          "Q2 2026"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "AED": "Revenue",
+              "Q2 2026": "9,350,000"
+            },
+            "rawValues": [
+              "Revenue",
+              "9,350,000"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "AED": "Direct operating costs",
+              "Q2 2026": "(6,591,800)"
+            },
+            "rawValues": [
+              "Direct operating costs",
+              "(6,591,800)"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "AED": "Gross profit",
+              "Q2 2026": "2,758,200"
+            },
+            "rawValues": [
+              "Gross profit",
+              "2,758,200"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "AED": "Operating expenses",
+              "Q2 2026": "(1,468,200)"
+            },
+            "rawValues": [
+              "Operating expenses",
+              "(1,468,200)"
+            ]
+          },
+          {
+            "rowIndex": 5,
+            "cells": {
+              "AED": "Operating profit",
+              "Q2 2026": "1,290,000"
+            },
+            "rawValues": [
+              "Operating profit",
+              "1,290,000"
+            ]
+          },
+          {
+            "rowIndex": 6,
+            "cells": {
+              "AED": "Finance costs",
+              "Q2 2026": "(139,500)"
+            },
+            "rawValues": [
+              "Finance costs",
+              "(139,500)"
+            ]
+          },
+          {
+            "rowIndex": 7,
+            "cells": {
+              "AED": "Profit before tax",
+              "Q2 2026": "1,150,500"
+            },
+            "rawValues": [
+              "Profit before tax",
+              "1,150,500"
+            ]
+          },
+          {
+            "rowIndex": 8,
+            "cells": {
+              "AED": "Corporate tax (9%)",
+              "Q2 2026": "(103,545)"
+            },
+            "rawValues": [
+              "Corporate tax (9%)",
+              "(103,545)"
+            ]
+          },
+          {
+            "rowIndex": 9,
+            "cells": {
+              "AED": "Net profit for the period",
+              "Q2 2026": "1,046,955"
+            },
+            "rawValues": [
+              "Net profit for the period",
+              "1,046,955"
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| AED | Q2 2026 |\n| --- | --- |\n| Revenue | 9,350,000 |\n| Direct operating costs | (6,591,800) |\n| Gross profit | 2,758,200 |\n| Operating expenses | (1,468,200) |\n| Operating profit | 1,290,000 |\n| Finance costs | (139,500) |\n| Profit before tax | 1,150,500 |\n| Corporate tax (9%) | (103,545) |\n| Net profit for the period | 1,046,955 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "AED",
+            "Q2 2026"
+          ],
+          [
+            "Revenue",
+            "9,350,000"
+          ],
+          [
+            "Direct operating costs",
+            "(6,591,800)"
+          ],
+          [
+            "Gross profit",
+            "2,758,200"
+          ],
+          [
+            "Operating expenses",
+            "(1,468,200)"
+          ],
+          [
+            "Operating profit",
+            "1,290,000"
+          ],
+          [
+            "Finance costs",
+            "(139,500)"
+          ],
+          [
+            "Profit before tax",
+            "1,150,500"
+          ],
+          [
+            "Corporate tax (9%)",
+            "(103,545)"
+          ],
+          [
+            "Net profit for the period",
+            "1,046,955"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_33_table_2",
+        "document_id": "33",
+        "element_type": "table",
+        "table_id": 2,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "Contoso Logistics LLC",
+          "Final management pack (unaudited) – supersedes v1",
+          "Prepared 16 July 2026",
+          "Synthetic data for training only Page 1"
+        ],
+        "rows": [],
+        "page_number": 1,
+        "content": "| Contoso Logistics LLC | Final management pack (unaudited) – supersedes v1 | Prepared 16 July 2026 | Synthetic data for training only Page 1 |\n| --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Contoso Logistics LLC",
+            "Final management pack (unaudited) – supersedes v1",
+            "Prepared 16 July 2026",
+            "Synthetic data for training only Page 1"
+          ]
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "element_id": "doc_33_p_1",
+        "document_id": "33",
+        "element_type": "paragraph",
+        "content": "Contoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_33_p_2",
+        "document_id": "33",
+        "element_type": "paragraph",
+        "content": "Notes\n1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)",
+        "page_number": 1
+      }
+    ],
+    "fullMarkdown": "<!-- Page 1 -->\n\nContoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED\nAED Q2 2026\nRevenue 9,350,000\nDirect operating costs (6,591,800)\nGross profit 2,758,200\nOperating expenses (1,468,200)\nOperating profit 1,290,000\nFinance costs (139,500)\nProfit before tax 1,150,500\nCorporate tax (9%) (103,545)\nNet profit for the period 1,046,955\nNotes\n## 1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)\nContoso Logistics LLC | Final management pack (unaudited) – supersedes v1 | Prepared 16 July 2026 | Synthetic data for training only Page 1"
+  },
+  "extractedFacts": [
+    {
+      "candidateId": "P1-TT1-R1-C1",
+      "metric": "Revenue",
+      "originalMetricLabel": "Revenue",
+      "originalLabel": "Revenue",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "9,350,000",
+      "numericValue": 9350000,
+      "normalizedValue": 9350000,
+      "exactDecimal": "9350000",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 1,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 2, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 1,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q2 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Revenue | 9,350,000",
+      "contextEvidenceIds": [
+        "DOC-CURRENCY",
+        "DOC-PERIOD",
+        "DOC-BASIS",
+        "DOC-ASOF",
+        "DOC-ENTITY",
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table cell coordinates and raw content verified",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "9,350,000"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "9,350,000"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": "9350000",
+            "actual": "9350000"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"Revenue\" is a valid financial or operational label",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "Revenue"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Currency\" is valid",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+            "expected": null,
+            "actual": "Page 1, Table T1, Row 2, Col 2"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.7
+    },
+    {
+      "candidateId": "P1-TT1-R2-C1",
+      "metric": "Direct operating costs",
+      "originalMetricLabel": "Direct operating costs",
+      "originalLabel": "Direct operating costs",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "(6,591,800)",
+      "numericValue": -6591800,
+      "normalizedValue": -6591800,
+      "exactDecimal": "-6591800",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 2,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 3, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 2,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q2 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Direct operating costs | (6,591,800)",
+      "contextEvidenceIds": [
+        "DOC-CURRENCY",
+        "DOC-PERIOD",
+        "DOC-BASIS",
+        "DOC-ASOF",
+        "DOC-ENTITY",
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table cell coordinates and raw content verified",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "(6,591,800)"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "(6,591,800)"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": "-6591800",
+            "actual": "-6591800"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"Direct operating costs\" is a valid financial or operational label",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "Direct operating costs"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Currency\" is valid",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+            "expected": null,
+            "actual": "Page 1, Table T1, Row 3, Col 2"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.7
+    },
+    {
+      "candidateId": "P1-TT1-R3-C1",
+      "metric": "Gross profit",
+      "originalMetricLabel": "Gross profit",
+      "originalLabel": "Gross profit",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "2,758,200",
+      "numericValue": 2758200,
+      "normalizedValue": 2758200,
+      "exactDecimal": "2758200",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 3,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 4, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 3,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q2 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Gross profit | 2,758,200",
+      "contextEvidenceIds": [
+        "DOC-CURRENCY",
+        "DOC-PERIOD",
+        "DOC-BASIS",
+        "DOC-ASOF",
+        "DOC-ENTITY",
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table cell coordinates and raw content verified",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "2,758,200"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "2,758,200"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": "2758200",
+            "actual": "2758200"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"Gross profit\" is a valid financial or operational label",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "Gross profit"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Currency\" is valid",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+            "expected": null,
+            "actual": "Page 1, Table T1, Row 4, Col 2"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.7
+    },
+    {
+      "candidateId": "P1-TT1-R4-C1",
+      "metric": "Operating expenses",
+      "originalMetricLabel": "Operating expenses",
+      "originalLabel": "Operating expenses",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "(1,468,200)",
+      "numericValue": -1468200,
+      "normalizedValue": -1468200,
+      "exactDecimal": "-1468200",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 4,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 5, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 4,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q2 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Operating expenses | (1,468,200)",
+      "contextEvidenceIds": [
+        "DOC-CURRENCY",
+        "DOC-PERIOD",
+        "DOC-BASIS",
+        "DOC-ASOF",
+        "DOC-ENTITY",
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table cell coordinates and raw content verified",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "(1,468,200)"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "(1,468,200)"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": "-1468200",
+            "actual": "-1468200"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"Operating expenses\" is a valid financial or operational label",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "Operating expenses"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Currency\" is valid",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+            "expected": null,
+            "actual": "Page 1, Table T1, Row 5, Col 2"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.7
+    },
+    {
+      "candidateId": "P1-TT1-R5-C1",
+      "metric": "Operating profit",
+      "originalMetricLabel": "Operating profit",
+      "originalLabel": "Operating profit",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "1,290,000",
+      "numericValue": 1290000,
+      "normalizedValue": 1290000,
+      "exactDecimal": "1290000",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 5,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 6, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 5,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q2 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Operating profit | 1,290,000",
+      "contextEvidenceIds": [
+        "DOC-CURRENCY",
+        "DOC-PERIOD",
+        "DOC-BASIS",
+        "DOC-ASOF",
+        "DOC-ENTITY",
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table cell coordinates and raw content verified",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "1,290,000"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "1,290,000"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": "1290000",
+            "actual": "1290000"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"Operating profit\" is a valid financial or operational label",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "Operating profit"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Currency\" is valid",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+            "expected": null,
+            "actual": "Page 1, Table T1, Row 6, Col 2"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.7
+    },
+    {
+      "candidateId": "P1-TT1-R6-C1",
+      "metric": "Finance costs",
+      "originalMetricLabel": "Finance costs",
+      "originalLabel": "Finance costs",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "(139,500)",
+      "numericValue": -139500,
+      "normalizedValue": -139500,
+      "exactDecimal": "-139500",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 6,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 7, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 6,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q2 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Finance costs | (139,500)",
+      "contextEvidenceIds": [
+        "DOC-CURRENCY",
+        "DOC-PERIOD",
+        "DOC-BASIS",
+        "DOC-ASOF",
+        "DOC-ENTITY",
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table cell coordinates and raw content verified",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "(139,500)"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "(139,500)"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": "-139500",
+            "actual": "-139500"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"Finance costs\" is a valid financial or operational label",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "Finance costs"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Currency\" is valid",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+            "expected": null,
+            "actual": "Page 1, Table T1, Row 7, Col 2"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.7
+    },
+    {
+      "candidateId": "P1-TT1-R7-C1",
+      "metric": "Profit before tax",
+      "originalMetricLabel": "Profit before tax",
+      "originalLabel": "Profit before tax",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "1,150,500",
+      "numericValue": 1150500,
+      "normalizedValue": 1150500,
+      "exactDecimal": "1150500",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 7,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 8, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 7,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q2 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Profit before tax | 1,150,500",
+      "contextEvidenceIds": [
+        "DOC-CURRENCY",
+        "DOC-PERIOD",
+        "DOC-BASIS",
+        "DOC-ASOF",
+        "DOC-ENTITY",
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table cell coordinates and raw content verified",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "1,150,500"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "1,150,500"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": "1150500",
+            "actual": "1150500"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"Profit before tax\" is a valid financial or operational label",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "Profit before tax"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Currency\" is valid",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+            "expected": null,
+            "actual": "Page 1, Table T1, Row 8, Col 2"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.7
+    },
+    {
+      "candidateId": "P1-TT1-R8-C1",
+      "metric": "Corporate tax (9%)",
+      "originalMetricLabel": "Corporate tax (9%)",
+      "originalLabel": "Corporate tax (9%)",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "(103,545)",
+      "numericValue": -103545,
+      "normalizedValue": -103545,
+      "exactDecimal": "-103545",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 8,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 9, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 8,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q2 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Corporate tax (9%) | (103,545)",
+      "contextEvidenceIds": [
+        "DOC-CURRENCY",
+        "DOC-PERIOD",
+        "DOC-BASIS",
+        "DOC-ASOF",
+        "DOC-ENTITY",
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table cell coordinates and raw content verified",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "(103,545)"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "(103,545)"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": "-103545",
+            "actual": "-103545"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"Corporate tax (9%)\" is a valid financial or operational label",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "Corporate tax (9%)"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Currency\" is valid",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+            "expected": null,
+            "actual": "Page 1, Table T1, Row 9, Col 2"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.7
+    },
+    {
+      "candidateId": "P1-TT1-R9-C1",
+      "metric": "Net profit for the period",
+      "originalMetricLabel": "Net profit for the period",
+      "originalLabel": "Net profit for the period",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "1,046,955",
+      "numericValue": 1046955,
+      "normalizedValue": 1046955,
+      "exactDecimal": "1046955",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 9,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 10, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 9,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q2 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Net profit for the period | 1,046,955",
+      "contextEvidenceIds": [
+        "DOC-CURRENCY",
+        "DOC-PERIOD",
+        "DOC-BASIS",
+        "DOC-ASOF",
+        "DOC-ENTITY",
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table cell coordinates and raw content verified",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "1,046,955"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "1,046,955"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": "1046955",
+            "actual": "1046955"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"Net profit for the period\" is a valid financial or operational label",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "Net profit for the period"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Currency\" is valid",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Table structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "DOC-CURRENCY",
+              "DOC-PERIOD",
+              "DOC-BASIS",
+              "DOC-ASOF",
+              "DOC-ENTITY",
+              "T1-HEADER-C1"
+            ],
+            "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+            "expected": null,
+            "actual": "Page 1, Table T1, Row 10, Col 2"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.7
+    },
+    {
+      "candidateId": "P1-Bdoc_33_p_2-S0-C0",
+      "metric": "Notes",
+      "originalMetricLabel": "Notes",
+      "originalLabel": "Notes",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "1",
+      "numericValue": 1,
+      "normalizedValue": 1,
+      "exactDecimal": "1",
+      "currency": "AED",
+      "unit": "Amount",
+      "normalizedUnit": "Amount",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Paragraph",
+      "sourcePage": 1,
+      "sourceBlockId": "doc_33_p_2",
+      "sourceSentenceIndex": 0,
+      "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+      "sourceLocationText": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+      "sourceLocationJson": {
+        "sourceType": "Paragraph",
+        "pageNumber": 1,
+        "blockId": "doc_33_p_2",
+        "sentenceIndex": 0
+      },
+      "sourceEvidence": "Notes 1.",
+      "contextEvidenceIds": [
+        "doc_33_p_2-ENTITY-INHERITED",
+        "doc_33_p_2-PERIOD-INHERITED"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "Amount"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Paragraph source block and raw token verified",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": "1",
+            "actual": "1"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"Notes\" is a valid financial or operational label",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "Notes"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Amount\" is valid",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "Amount"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Paragraph structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 1",
+            "expected": null,
+            "actual": "Page 1, Paragraph doc_33_p_2, Sentence 1"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.73
+    },
+    {
+      "candidateId": "P1-Bdoc_33_p_2-S2-C0",
+      "metric": "June revenue now reflects final invoicing for all key accounts, which increased revenue by",
+      "originalMetricLabel": "June revenue now reflects final invoicing for all key accounts, which increased revenue by",
+      "originalLabel": "June revenue now reflects final invoicing for all key accounts, which increased revenue by",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "AED 245,000",
+      "numericValue": 245000,
+      "normalizedValue": 245000,
+      "exactDecimal": "245000",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Paragraph",
+      "sourcePage": 1,
+      "sourceBlockId": "doc_33_p_2",
+      "sourceSentenceIndex": 2,
+      "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+      "sourceLocationText": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+      "sourceLocationJson": {
+        "sourceType": "Paragraph",
+        "pageNumber": 1,
+        "blockId": "doc_33_p_2",
+        "sentenceIndex": 2
+      },
+      "sourceEvidence": "June revenue now reflects final invoicing for all key accounts, which increased revenue by AED 245,000 compared with the draft.",
+      "contextEvidenceIds": [
+        "doc_33_p_2-ENTITY-INHERITED",
+        "doc_33_p_2-PERIOD-INHERITED"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "PASS",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Paragraph source block and raw token verified",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "AED 245,000"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "AED 245,000"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": "245000",
+            "actual": "245000"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"June revenue now reflects final invoicing for all key accounts, which increased revenue by\" is a valid financial or operational label",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "June revenue now reflects final invoicing for all key accounts, which increased revenue by"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Currency \"AED\" is supported by source evidence",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "AED"
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Currency\" is valid",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "Currency"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Paragraph structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 3",
+            "expected": null,
+            "actual": "Page 1, Paragraph doc_33_p_2, Sentence 3"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.73
+    },
+    {
+      "candidateId": "P1-Bdoc_33_p_2-S3-C0",
+      "metric": "CFO commentary Volumes on the Jebel Ali to Abu Dhabi corridor were up",
+      "originalMetricLabel": "CFO commentary Volumes on the Jebel Ali to Abu Dhabi corridor were up",
+      "originalLabel": "CFO commentary Volumes on the Jebel Ali to Abu Dhabi corridor were up",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": "Contoso Logistics",
+      "entityType": "Company",
+      "entityMappingStatus": "NewEntity",
+      "periodLabel": "Q2 2026",
+      "asOfDate": "8 July 2026",
+      "rawValue": "9%",
+      "numericValue": 9,
+      "normalizedValue": 9,
+      "exactDecimal": "9",
+      "currency": null,
+      "unit": "Percentage",
+      "normalizedUnit": "Percentage",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Unaudited",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Paragraph",
+      "sourcePage": 1,
+      "sourceBlockId": "doc_33_p_2",
+      "sourceSentenceIndex": 3,
+      "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+      "sourceLocationText": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+      "sourceLocationJson": {
+        "sourceType": "Paragraph",
+        "pageNumber": 1,
+        "blockId": "doc_33_p_2",
+        "sentenceIndex": 3
+      },
+      "sourceEvidence": "CFO commentary Volumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter.",
+      "contextEvidenceIds": [
+        "doc_33_p_2-ENTITY-INHERITED",
+        "doc_33_p_2-PERIOD-INHERITED"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "REPORTING_BASIS_AMBIGUOUS"
+      ],
+      "validation": {
+        "policyVersion": "financial-validation-v1",
+        "status": "NeedsReview",
+        "checks": {
+          "financialRelevance": "PASS",
+          "sourceEvidence": "PASS",
+          "numericIntegrity": "PASS",
+          "numericNormalization": "PASS",
+          "metricAssociation": "PASS",
+          "entityAssociation": "PASS",
+          "periodAssociation": "PASS",
+          "currencyAssociation": "NOT_APPLICABLE",
+          "unitAssociation": "PASS",
+          "scaleAssociation": "NOT_APPLICABLE",
+          "reportingBasis": "UNKNOWN",
+          "reportingScope": "NOT_APPLICABLE",
+          "sourceRelationship": "PASS"
+        },
+        "detailedChecks": [
+          {
+            "name": "financialRelevance",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Candidate represents a genuine financial or operational observation",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": "Percentage"
+          },
+          {
+            "name": "sourceEvidence",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Paragraph source block and raw token verified",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": "9%"
+          },
+          {
+            "name": "numericIntegrity",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Source numeric token is independent and structurally intact",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": "9%"
+          },
+          {
+            "name": "numericNormalization",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Normalized decimal value matches independent exact recalculation",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": "9",
+            "actual": "9"
+          },
+          {
+            "name": "metricAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Metric \"CFO commentary Volumes on the Jebel Ali to Abu Dhabi corridor were up\" is a valid financial or operational label",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": "CFO commentary Volumes on the Jebel Ali to Abu Dhabi corridor were up"
+          },
+          {
+            "name": "entityAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Entity \"Contoso Logistics\" is supported by document or local context",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": "Contoso Logistics"
+          },
+          {
+            "name": "periodAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Reporting period/date \"Q2 2026\" resolved",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": "Q2 2026"
+          },
+          {
+            "name": "currencyAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Currency is not applicable for Percentage observations",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "unitAssociation",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Measurement unit \"Percentage\" is valid",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": "Percentage"
+          },
+          {
+            "name": "scaleAssociation",
+            "mandatory": true,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Unscaled actual unit (scaleMultiplier = 1)",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": "1"
+          },
+          {
+            "name": "reportingBasis",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "UNKNOWN",
+            "reasonCode": "REPORTING_BASIS_AMBIGUOUS",
+            "explanation": "Reporting basis is ambiguous or unresolved: \"Unaudited\"",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": "Unaudited"
+          },
+          {
+            "name": "reportingScope",
+            "mandatory": false,
+            "applicable": false,
+            "outcome": "NOT_APPLICABLE",
+            "reasonCode": null,
+            "explanation": "Optional reporting scope not specified by source",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": null
+          },
+          {
+            "name": "sourceRelationship",
+            "mandatory": true,
+            "applicable": true,
+            "outcome": "PASS",
+            "reasonCode": null,
+            "explanation": "Paragraph structural relationship coherently links metric and value",
+            "evidenceIds": [
+              "doc_33_p_2-ENTITY-INHERITED",
+              "doc_33_p_2-PERIOD-INHERITED"
+            ],
+            "sourceLocation": "Page 1, Paragraph doc_33_p_2, Sentence 4",
+            "expected": null,
+            "actual": "Page 1, Paragraph doc_33_p_2, Sentence 4"
+          }
+        ],
+        "reviewReasons": [
+          "REPORTING_BASIS_AMBIGUOUS"
+        ]
+      },
+      "extractionConfidence": 0.72
+    }
+  ],
+  "conflicts": [],
+  "chunks": [
+    {
+      "title": "05_Contoso_Logistics_Management_Pack_Q2_2026_v2_FINAL.pdf - Section 1",
+      "content": "<!-- Page 1 -->\n\nContoso Logistics LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 30 June 2026 (version 2)\nStatus: Final management pack (unaudited) – supersedes v1 Prepared: 16 July 2026 Currency: AED\nAED Q2 2026\nRevenue 9,350,000\nDirect operating costs (6,591,800)\nGross profit 2,758,200\nOperating expenses (1,468,200)\nOperating profit 1,290,000\nFinance costs (139,500)\nProfit before tax 1,150,500\nCorporate tax (9%) (103,545)\nNet profit for the period 1,046,955\nNotes",
+      "heading": "Section 1",
+      "pageNumber": 1,
+      "sectionTitle": "Section 1",
+      "id": "doc_33_chunk_0",
+      "chunkIndex": 0,
+      "documentId": "33",
+      "source": "05_Contoso_Logistics_Management_Pack_Q2_2026_v2_FINAL.pdf"
+    },
+    {
+      "title": "05_Contoso_Logistics_Management_Pack_Q2_2026_v2_FINAL.pdf - 1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key",
+      "content": "## 1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key\naccounts, which increased revenue by AED 245,000 compared with the draft.\nCFO commentary\nVolumes on the Jebel Ali to Abu Dhabi corridor were up 9% on the first quarter. Fuel costs eased slightly,\nimproving the direct cost ratio. A new warehousing contract signed in June will start contributing in the third\nquarter.\n– Chief Financial Officer, Contoso Logistics LLC (fictional)\nContoso Logistics LLC | Final management pack (unaudited) – supersedes v1 | Prepared 16 July 2026 | Synthetic data for training only Page 1",
+      "heading": "1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key",
+      "pageNumber": null,
+      "sectionTitle": "1. This version supersedes version 1 dated 8 July 2026. June revenue now reflects final invoicing for all key",
+      "id": "doc_33_chunk_1",
+      "chunkIndex": 1,
+      "documentId": "33",
+      "source": "05_Contoso_Logistics_Management_Pack_Q2_2026_v2_FINAL.pdf"
+    },
+    {
+      "title": "05_Contoso_Logistics_Management_Pack_Q2_2026_v2_FINAL.pdf - Table 1 (Page 1)",
+      "content": "| AED | Q2 2026 |\n| --- | --- |\n| Revenue | 9,350,000 |\n| Direct operating costs | (6,591,800) |\n| Gross profit | 2,758,200 |\n| Operating expenses | (1,468,200) |\n| Operating profit | 1,290,000 |\n| Finance costs | (139,500) |\n| Profit before tax | 1,150,500 |\n| Corporate tax (9%) | (103,545) |\n| Net profit for the period | 1,046,955 |",
+      "heading": "Table 1",
+      "pageNumber": 1,
+      "sectionTitle": "Table 1",
+      "id": "doc_33_chunk_2",
+      "chunkIndex": 2,
+      "documentId": "33",
+      "source": "05_Contoso_Logistics_Management_Pack_Q2_2026_v2_FINAL.pdf"
+    },
+    {
+      "title": "05_Contoso_Logistics_Management_Pack_Q2_2026_v2_FINAL.pdf - Table 2 (Page 1)",
+      "content": "| Contoso Logistics LLC | Final management pack (unaudited) – supersedes v1 | Prepared 16 July 2026 | Synthetic data for training only Page 1 |\n| --- | --- | --- | --- |",
+      "heading": "Table 2",
+      "pageNumber": 1,
+      "sectionTitle": "Table 2",
+      "id": "doc_33_chunk_3",
+      "chunkIndex": 3,
+      "documentId": "33",
+      "source": "05_Contoso_Logistics_Management_Pack_Q2_2026_v2_FINAL.pdf"
+    }
+  ]
+}

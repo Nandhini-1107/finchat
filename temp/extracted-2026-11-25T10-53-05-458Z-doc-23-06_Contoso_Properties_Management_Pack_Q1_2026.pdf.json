@@ -1,0 +1,1150 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T10:53:05.458Z",
+    "correlationId": "ingest-1795603981337-t3cg0-23",
+    "documentId": "23",
+    "fileName": "06_Contoso_Properties_Management_Pack_Q1_2026.pdf",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 1,
+    "tableCount": 2,
+    "paragraphCount": 2,
+    "contentLength": 1231,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "Contoso Properties LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 31 March 2026\nStatus: Final management pack (unaudited) Prepared: 14 April 2026 Currency: AED\nAED Q1 2026\nRevenue 5,240,000\nDirect property costs (1,048,000)\nGross profit 4,192,000\nOperating expenses (3,215,400)\nOperating profit 976,600\nFinance costs (273,000)\nProfit before tax 703,600\nCorporate tax (9%) (63,324)\nNet profit for the period 640,276\nCash position\nClosing cash at 31 March 2026 was AED 1,180,000, against a minimum operating cash requirement of AED\n1,500,000, a shortfall of AED 320,000.\nCFO commentary\nThe cash shortfall at the end of the quarter is mainly timing. Rent collections from two commercial tenants, totalling\nAED 410,000, were received in the first week of April rather than in March. We also paid AED 260,000 of planned\nmaintenance on the Marina tower earlier than budgeted. We do not expect a shortfall at the end of the second\nquarter, and no additional funding from the Group is requested at this stage.\n– Chief Financial Officer, Contoso Properties LLC (fictional)\nContoso Properties LLC | Final management pack (unaudited) | Prepared 14 April 2026 | Synthetic data for training only Page 1"
+      }
+    ],
+    "tables": [
+      {
+        "tableId": "P1-T1",
+        "rowCount": 10,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "AED"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Q1 2026"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "5,240,000"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Direct property costs"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "(1,048,000)"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Gross profit"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "4,192,000"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Operating expenses"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "(3,215,400)"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 0,
+            "content": "Operating profit"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 1,
+            "content": "976,600"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 0,
+            "content": "Finance costs"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 1,
+            "content": "(273,000)"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 0,
+            "content": "Profit before tax"
+          },
+          {
+            "rowIndex": 7,
+            "columnIndex": 1,
+            "content": "703,600"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 0,
+            "content": "Corporate tax (9%)"
+          },
+          {
+            "rowIndex": 8,
+            "columnIndex": 1,
+            "content": "(63,324)"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 0,
+            "content": "Net profit for the period"
+          },
+          {
+            "rowIndex": 9,
+            "columnIndex": 1,
+            "content": "640,276"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T2",
+        "rowCount": 1,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Contoso Properties LLC | Final management pack (unaudited) | Prepared 14 April 2026 | Synthetic data for training only"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Page 1"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "content": "Contoso Properties LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 31 March 2026\nStatus: Final management pack (unaudited) Prepared: 14 April 2026 Currency: AED",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Cash position\nClosing cash at 31 March 2026 was AED 1,180,000, against a minimum operating cash requirement of AED\n1,500,000, a shortfall of AED 320,000.\nCFO commentary\nThe cash shortfall at the end of the quarter is mainly timing. Rent collections from two commercial tenants, totalling\nAED 410,000, were received in the first week of April rather than in March. We also paid AED 260,000 of planned\nmaintenance on the Marina tower earlier than budgeted. We do not expect a shortfall at the end of the second\nquarter, and no additional funding from the Group is requested at this stage.\n– Chief Financial Officer, Contoso Properties LLC (fictional)",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      }
+    ],
+    "rawContent": "<!-- Page 1 -->\n\nContoso Properties LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 31 March 2026\nStatus: Final management pack (unaudited) Prepared: 14 April 2026 Currency: AED\nAED Q1 2026\nRevenue 5,240,000\nDirect property costs (1,048,000)\nGross profit 4,192,000\nOperating expenses (3,215,400)\nOperating profit 976,600\nFinance costs (273,000)\nProfit before tax 703,600\nCorporate tax (9%) (63,324)\nNet profit for the period 640,276\nCash position\nClosing cash at 31 March 2026 was AED 1,180,000, against a minimum operating cash requirement of AED\n1,500,000, a shortfall of AED 320,000.\nCFO commentary\nThe cash shortfall at the end of the quarter is mainly timing. Rent collections from two commercial tenants, totalling\nAED 410,000, were received in the first week of April rather than in March. We also paid AED 260,000 of planned\nmaintenance on the Marina tower earlier than budgeted. We do not expect a shortfall at the end of the second\nquarter, and no additional funding from the Group is requested at this stage.\n– Chief Financial Officer, Contoso Properties LLC (fictional)\nContoso Properties LLC | Final management pack (unaudited) | Prepared 14 April 2026 | Synthetic data for training only Page 1"
+  },
+  "normalizedContent": {
+    "document_id": "23",
+    "tables": [
+      {
+        "element_id": "doc_23_table_1",
+        "document_id": "23",
+        "element_type": "table",
+        "table_id": 1,
+        "row_count": 10,
+        "column_count": 2,
+        "headers": [
+          "AED",
+          "Q1 2026"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "AED": "Revenue",
+              "Q1 2026": "5,240,000"
+            },
+            "rawValues": [
+              "Revenue",
+              "5,240,000"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "AED": "Direct property costs",
+              "Q1 2026": "(1,048,000)"
+            },
+            "rawValues": [
+              "Direct property costs",
+              "(1,048,000)"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "AED": "Gross profit",
+              "Q1 2026": "4,192,000"
+            },
+            "rawValues": [
+              "Gross profit",
+              "4,192,000"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "AED": "Operating expenses",
+              "Q1 2026": "(3,215,400)"
+            },
+            "rawValues": [
+              "Operating expenses",
+              "(3,215,400)"
+            ]
+          },
+          {
+            "rowIndex": 5,
+            "cells": {
+              "AED": "Operating profit",
+              "Q1 2026": "976,600"
+            },
+            "rawValues": [
+              "Operating profit",
+              "976,600"
+            ]
+          },
+          {
+            "rowIndex": 6,
+            "cells": {
+              "AED": "Finance costs",
+              "Q1 2026": "(273,000)"
+            },
+            "rawValues": [
+              "Finance costs",
+              "(273,000)"
+            ]
+          },
+          {
+            "rowIndex": 7,
+            "cells": {
+              "AED": "Profit before tax",
+              "Q1 2026": "703,600"
+            },
+            "rawValues": [
+              "Profit before tax",
+              "703,600"
+            ]
+          },
+          {
+            "rowIndex": 8,
+            "cells": {
+              "AED": "Corporate tax (9%)",
+              "Q1 2026": "(63,324)"
+            },
+            "rawValues": [
+              "Corporate tax (9%)",
+              "(63,324)"
+            ]
+          },
+          {
+            "rowIndex": 9,
+            "cells": {
+              "AED": "Net profit for the period",
+              "Q1 2026": "640,276"
+            },
+            "rawValues": [
+              "Net profit for the period",
+              "640,276"
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| AED | Q1 2026 |\n| --- | --- |\n| Revenue | 5,240,000 |\n| Direct property costs | (1,048,000) |\n| Gross profit | 4,192,000 |\n| Operating expenses | (3,215,400) |\n| Operating profit | 976,600 |\n| Finance costs | (273,000) |\n| Profit before tax | 703,600 |\n| Corporate tax (9%) | (63,324) |\n| Net profit for the period | 640,276 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "AED",
+            "Q1 2026"
+          ],
+          [
+            "Revenue",
+            "5,240,000"
+          ],
+          [
+            "Direct property costs",
+            "(1,048,000)"
+          ],
+          [
+            "Gross profit",
+            "4,192,000"
+          ],
+          [
+            "Operating expenses",
+            "(3,215,400)"
+          ],
+          [
+            "Operating profit",
+            "976,600"
+          ],
+          [
+            "Finance costs",
+            "(273,000)"
+          ],
+          [
+            "Profit before tax",
+            "703,600"
+          ],
+          [
+            "Corporate tax (9%)",
+            "(63,324)"
+          ],
+          [
+            "Net profit for the period",
+            "640,276"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_23_table_2",
+        "document_id": "23",
+        "element_type": "table",
+        "table_id": 2,
+        "row_count": 1,
+        "column_count": 2,
+        "headers": [
+          "Contoso Properties LLC | Final management pack (unaudited) | Prepared 14 April 2026 | Synthetic data for training only",
+          "Page 1"
+        ],
+        "rows": [],
+        "page_number": 1,
+        "content": "| Contoso Properties LLC | Final management pack (unaudited) | Prepared 14 April 2026 | Synthetic data for training only | Page 1 |\n| --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Contoso Properties LLC | Final management pack (unaudited) | Prepared 14 April 2026 | Synthetic data for training only",
+            "Page 1"
+          ]
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "element_id": "doc_23_p_1",
+        "document_id": "23",
+        "element_type": "paragraph",
+        "content": "Contoso Properties LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 31 March 2026\nStatus: Final management pack (unaudited) Prepared: 14 April 2026 Currency: AED",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_23_p_2",
+        "document_id": "23",
+        "element_type": "paragraph",
+        "content": "Cash position\nClosing cash at 31 March 2026 was AED 1,180,000, against a minimum operating cash requirement of AED\n1,500,000, a shortfall of AED 320,000.\nCFO commentary\nThe cash shortfall at the end of the quarter is mainly timing. Rent collections from two commercial tenants, totalling\nAED 410,000, were received in the first week of April rather than in March. We also paid AED 260,000 of planned\nmaintenance on the Marina tower earlier than budgeted. We do not expect a shortfall at the end of the second\nquarter, and no additional funding from the Group is requested at this stage.\n– Chief Financial Officer, Contoso Properties LLC (fictional)",
+        "page_number": 1
+      }
+    ],
+    "fullMarkdown": "<!-- Page 1 -->\n\nContoso Properties LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 31 March 2026\nStatus: Final management pack (unaudited) Prepared: 14 April 2026 Currency: AED\nAED Q1 2026\nRevenue 5,240,000\nDirect property costs (1,048,000)\nGross profit 4,192,000\nOperating expenses (3,215,400)\nOperating profit 976,600\nFinance costs (273,000)\nProfit before tax 703,600\nCorporate tax (9%) (63,324)\nNet profit for the period 640,276\nCash position\nClosing cash at 31 March 2026 was AED 1,180,000, against a minimum operating cash requirement of AED\n1,500,000, a shortfall of AED 320,000.\nCFO commentary\nThe cash shortfall at the end of the quarter is mainly timing. Rent collections from two commercial tenants, totalling\nAED 410,000, were received in the first week of April rather than in March. We also paid AED 260,000 of planned\nmaintenance on the Marina tower earlier than budgeted. We do not expect a shortfall at the end of the second\nquarter, and no additional funding from the Group is requested at this stage.\n– Chief Financial Officer, Contoso Properties LLC (fictional)\nContoso Properties LLC | Final management pack (unaudited) | Prepared 14 April 2026 | Synthetic data for training only Page 1"
+  },
+  "extractedFacts": [
+    {
+      "candidateId": "P1-TT1-R1-C1",
+      "metric": "Revenue",
+      "originalMetricLabel": "Revenue",
+      "originalLabel": "Revenue",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "Q1 2026",
+      "asOfDate": null,
+      "rawValue": "5,240,000",
+      "numericValue": 5240000,
+      "normalizedValue": 5240000,
+      "exactDecimal": "5240000",
+      "currency": null,
+      "unit": "Amount",
+      "normalizedUnit": "Amount",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 1,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 2, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 2, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 1,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q1 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Revenue | 5,240,000",
+      "contextEvidenceIds": [
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved",
+        "Currency unresolved"
+      ],
+      "extractionConfidence": 0.55
+    },
+    {
+      "candidateId": "P1-TT1-R2-C1",
+      "metric": "Direct property costs",
+      "originalMetricLabel": "Direct property costs",
+      "originalLabel": "Direct property costs",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "Q1 2026",
+      "asOfDate": null,
+      "rawValue": "(1,048,000)",
+      "numericValue": -1048000,
+      "normalizedValue": -1048000,
+      "exactDecimal": "-1048000",
+      "currency": null,
+      "unit": "Amount",
+      "normalizedUnit": "Amount",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 2,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 3, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 3, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 2,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q1 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Direct property costs | (1,048,000)",
+      "contextEvidenceIds": [
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved",
+        "Currency unresolved"
+      ],
+      "extractionConfidence": 0.55
+    },
+    {
+      "candidateId": "P1-TT1-R3-C1",
+      "metric": "Gross profit",
+      "originalMetricLabel": "Gross profit",
+      "originalLabel": "Gross profit",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "Q1 2026",
+      "asOfDate": null,
+      "rawValue": "4,192,000",
+      "numericValue": 4192000,
+      "normalizedValue": 4192000,
+      "exactDecimal": "4192000",
+      "currency": null,
+      "unit": "Amount",
+      "normalizedUnit": "Amount",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 3,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 4, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 4, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 3,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q1 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Gross profit | 4,192,000",
+      "contextEvidenceIds": [
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved",
+        "Currency unresolved"
+      ],
+      "extractionConfidence": 0.55
+    },
+    {
+      "candidateId": "P1-TT1-R4-C1",
+      "metric": "Operating expenses",
+      "originalMetricLabel": "Operating expenses",
+      "originalLabel": "Operating expenses",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "Q1 2026",
+      "asOfDate": null,
+      "rawValue": "(3,215,400)",
+      "numericValue": -3215400,
+      "normalizedValue": -3215400,
+      "exactDecimal": "-3215400",
+      "currency": null,
+      "unit": "Amount",
+      "normalizedUnit": "Amount",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 4,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 5, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 5, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 4,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q1 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Operating expenses | (3,215,400)",
+      "contextEvidenceIds": [
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved",
+        "Currency unresolved"
+      ],
+      "extractionConfidence": 0.55
+    },
+    {
+      "candidateId": "P1-TT1-R5-C1",
+      "metric": "Operating profit",
+      "originalMetricLabel": "Operating profit",
+      "originalLabel": "Operating profit",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "Q1 2026",
+      "asOfDate": null,
+      "rawValue": "976,600",
+      "numericValue": 976600,
+      "normalizedValue": 976600,
+      "exactDecimal": "976600",
+      "currency": null,
+      "unit": "Amount",
+      "normalizedUnit": "Amount",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 5,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 6, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 6, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 5,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q1 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Operating profit | 976,600",
+      "contextEvidenceIds": [
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved",
+        "Currency unresolved"
+      ],
+      "extractionConfidence": 0.55
+    },
+    {
+      "candidateId": "P1-TT1-R6-C1",
+      "metric": "Finance costs",
+      "originalMetricLabel": "Finance costs",
+      "originalLabel": "Finance costs",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "Q1 2026",
+      "asOfDate": null,
+      "rawValue": "(273,000)",
+      "numericValue": -273000,
+      "normalizedValue": -273000,
+      "exactDecimal": "-273000",
+      "currency": null,
+      "unit": "Amount",
+      "normalizedUnit": "Amount",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 6,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 7, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 7, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 6,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q1 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Finance costs | (273,000)",
+      "contextEvidenceIds": [
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved",
+        "Currency unresolved"
+      ],
+      "extractionConfidence": 0.55
+    },
+    {
+      "candidateId": "P1-TT1-R7-C1",
+      "metric": "Profit before tax",
+      "originalMetricLabel": "Profit before tax",
+      "originalLabel": "Profit before tax",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "Q1 2026",
+      "asOfDate": null,
+      "rawValue": "703,600",
+      "numericValue": 703600,
+      "normalizedValue": 703600,
+      "exactDecimal": "703600",
+      "currency": null,
+      "unit": "Amount",
+      "normalizedUnit": "Amount",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 7,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 8, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 8, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 7,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q1 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Profit before tax | 703,600",
+      "contextEvidenceIds": [
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved",
+        "Currency unresolved"
+      ],
+      "extractionConfidence": 0.55
+    },
+    {
+      "candidateId": "P1-TT1-R8-C1",
+      "metric": "Corporate tax (9%)",
+      "originalMetricLabel": "Corporate tax (9%)",
+      "originalLabel": "Corporate tax (9%)",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "Q1 2026",
+      "asOfDate": null,
+      "rawValue": "(63,324)",
+      "numericValue": -63324,
+      "normalizedValue": -63324,
+      "exactDecimal": "-63324",
+      "currency": null,
+      "unit": "Amount",
+      "normalizedUnit": "Amount",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 8,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 9, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 9, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 8,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q1 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Corporate tax (9%) | (63,324)",
+      "contextEvidenceIds": [
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved",
+        "Currency unresolved"
+      ],
+      "extractionConfidence": 0.55
+    },
+    {
+      "candidateId": "P1-TT1-R9-C1",
+      "metric": "Net profit for the period",
+      "originalMetricLabel": "Net profit for the period",
+      "originalLabel": "Net profit for the period",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "Q1 2026",
+      "asOfDate": null,
+      "rawValue": "640,276",
+      "numericValue": 640276,
+      "normalizedValue": 640276,
+      "exactDecimal": "640276",
+      "currency": null,
+      "unit": "Amount",
+      "normalizedUnit": "Amount",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": null,
+      "dimensions": {},
+      "sourceType": "Table",
+      "sourcePage": 1,
+      "sourceTableId": "T1",
+      "sourceRow": 9,
+      "sourceColumn": 1,
+      "sourceLocation": "Page 1, Table T1, Row 10, Col 2",
+      "sourceLocationText": "Page 1, Table T1, Row 10, Col 2",
+      "sourceLocationJson": {
+        "sourceType": "Table",
+        "pageNumber": 1,
+        "sheetName": null,
+        "tableId": "T1",
+        "rowIndex": 9,
+        "columnIndex": 1,
+        "headerPath": [
+          "Q1 2026"
+        ],
+        "dimensions": {}
+      },
+      "sourceEvidence": "Net profit for the period | 640,276",
+      "contextEvidenceIds": [
+        "T1-HEADER-C1"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved",
+        "Currency unresolved"
+      ],
+      "extractionConfidence": 0.55
+    },
+    {
+      "candidateId": "P1-Bdoc_23_p_2-S0-C1",
+      "metric": "Cash position Closing cash at 31 March",
+      "originalMetricLabel": "Cash position Closing cash at 31 March",
+      "originalLabel": "Cash position Closing cash at 31 March",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "2026",
+      "asOfDate": null,
+      "rawValue": "AED 1,180,000",
+      "numericValue": 1180000,
+      "normalizedValue": 1180000,
+      "exactDecimal": "1180000",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": "Consolidated",
+      "dimensions": {},
+      "sourceType": "Paragraph",
+      "sourcePage": 1,
+      "sourceBlockId": "doc_23_p_2",
+      "sourceSentenceIndex": 0,
+      "sourceLocation": "Page 1, Paragraph doc_23_p_2, Sentence 1",
+      "sourceLocationText": "Page 1, Paragraph doc_23_p_2, Sentence 1",
+      "sourceLocationJson": {
+        "sourceType": "Paragraph",
+        "pageNumber": 1,
+        "blockId": "doc_23_p_2",
+        "sentenceIndex": 0
+      },
+      "sourceEvidence": "Cash position Closing cash at 31 March 2026 was AED 1,180,000, against a minimum operating cash requirement of AED 1,500,000, a shortfall of AED 320,000.",
+      "contextEvidenceIds": [],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved"
+      ],
+      "extractionConfidence": 0.65
+    },
+    {
+      "candidateId": "P1-Bdoc_23_p_2-S0-C2",
+      "metric": "against a minimum operating cash requirement",
+      "originalMetricLabel": "against a minimum operating cash requirement",
+      "originalLabel": "against a minimum operating cash requirement",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "2026",
+      "asOfDate": null,
+      "rawValue": "AED 1,500,000",
+      "numericValue": 1500000,
+      "normalizedValue": 1500000,
+      "exactDecimal": "1500000",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": "Consolidated",
+      "dimensions": {},
+      "sourceType": "Paragraph",
+      "sourcePage": 1,
+      "sourceBlockId": "doc_23_p_2",
+      "sourceSentenceIndex": 0,
+      "sourceLocation": "Page 1, Paragraph doc_23_p_2, Sentence 1",
+      "sourceLocationText": "Page 1, Paragraph doc_23_p_2, Sentence 1",
+      "sourceLocationJson": {
+        "sourceType": "Paragraph",
+        "pageNumber": 1,
+        "blockId": "doc_23_p_2",
+        "sentenceIndex": 0
+      },
+      "sourceEvidence": "Cash position Closing cash at 31 March 2026 was AED 1,180,000, against a minimum operating cash requirement of AED 1,500,000, a shortfall of AED 320,000.",
+      "contextEvidenceIds": [],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved",
+        "Raw value \"AED 1,500,000\" not verified in source paragraph"
+      ],
+      "extractionConfidence": 0
+    },
+    {
+      "candidateId": "P1-Bdoc_23_p_2-S0-C3",
+      "metric": "shortfall",
+      "originalMetricLabel": "shortfall",
+      "originalLabel": "shortfall",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "2026",
+      "asOfDate": null,
+      "rawValue": "AED 320,000",
+      "numericValue": 320000,
+      "normalizedValue": 320000,
+      "exactDecimal": "320000",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": "Consolidated",
+      "dimensions": {},
+      "sourceType": "Paragraph",
+      "sourcePage": 1,
+      "sourceBlockId": "doc_23_p_2",
+      "sourceSentenceIndex": 0,
+      "sourceLocation": "Page 1, Paragraph doc_23_p_2, Sentence 1",
+      "sourceLocationText": "Page 1, Paragraph doc_23_p_2, Sentence 1",
+      "sourceLocationJson": {
+        "sourceType": "Paragraph",
+        "pageNumber": 1,
+        "blockId": "doc_23_p_2",
+        "sentenceIndex": 0
+      },
+      "sourceEvidence": "Cash position Closing cash at 31 March 2026 was AED 1,180,000, against a minimum operating cash requirement of AED 1,500,000, a shortfall of AED 320,000.",
+      "contextEvidenceIds": [],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved"
+      ],
+      "extractionConfidence": 0.65
+    },
+    {
+      "candidateId": "P1-Bdoc_23_p_2-S2-C0",
+      "metric": "Rent collections from two commercial tenants, totalling",
+      "originalMetricLabel": "Rent collections from two commercial tenants, totalling",
+      "originalLabel": "Rent collections from two commercial tenants, totalling",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "2026",
+      "asOfDate": null,
+      "rawValue": "AED 410,000",
+      "numericValue": 410000,
+      "normalizedValue": 410000,
+      "exactDecimal": "410000",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Actual",
+      "reportingScope": "Consolidated",
+      "dimensions": {},
+      "sourceType": "Paragraph",
+      "sourcePage": 1,
+      "sourceBlockId": "doc_23_p_2",
+      "sourceSentenceIndex": 2,
+      "sourceLocation": "Page 1, Paragraph doc_23_p_2, Sentence 3",
+      "sourceLocationText": "Page 1, Paragraph doc_23_p_2, Sentence 3",
+      "sourceLocationJson": {
+        "sourceType": "Paragraph",
+        "pageNumber": 1,
+        "blockId": "doc_23_p_2",
+        "sentenceIndex": 2
+      },
+      "sourceEvidence": "Rent collections from two commercial tenants, totalling AED 410,000, were received in the first week of April rather than in March.",
+      "contextEvidenceIds": [
+        "doc_23_p_2-PERIOD-INHERITED"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved"
+      ],
+      "extractionConfidence": 0.65
+    },
+    {
+      "candidateId": "P1-Bdoc_23_p_2-S3-C0",
+      "metric": "We also paid",
+      "originalMetricLabel": "We also paid",
+      "originalLabel": "We also paid",
+      "canonicalMetric": null,
+      "mappingStatus": "NewMetric",
+      "entity": null,
+      "entityType": "Company",
+      "entityMappingStatus": "Unmapped",
+      "periodLabel": "2026",
+      "asOfDate": null,
+      "rawValue": "AED 260,000",
+      "numericValue": 260000,
+      "normalizedValue": 260000,
+      "exactDecimal": "260000",
+      "currency": "AED",
+      "unit": "Currency",
+      "normalizedUnit": "Currency",
+      "scaleMultiplier": 1,
+      "reportingBasis": "Budget",
+      "reportingScope": "Consolidated",
+      "dimensions": {},
+      "sourceType": "Paragraph",
+      "sourcePage": 1,
+      "sourceBlockId": "doc_23_p_2",
+      "sourceSentenceIndex": 3,
+      "sourceLocation": "Page 1, Paragraph doc_23_p_2, Sentence 4",
+      "sourceLocationText": "Page 1, Paragraph doc_23_p_2, Sentence 4",
+      "sourceLocationJson": {
+        "sourceType": "Paragraph",
+        "pageNumber": 1,
+        "blockId": "doc_23_p_2",
+        "sentenceIndex": 3
+      },
+      "sourceEvidence": "We also paid AED 260,000 of planned maintenance on the Marina tower earlier than budgeted.",
+      "contextEvidenceIds": [
+        "doc_23_p_2-PERIOD-INHERITED"
+      ],
+      "extractionMethod": "StructuredNLP",
+      "validationStatus": "NeedsReview",
+      "reviewReasons": [
+        "Entity unresolved"
+      ],
+      "extractionConfidence": 0.65
+    }
+  ],
+  "conflicts": [],
+  "chunks": [
+    {
+      "title": "06_Contoso_Properties_Management_Pack_Q1_2026.pdf - Section 1 (Part 1)",
+      "content": "<!-- Page 1 -->\n\nContoso Properties LLC\nManagement Pack – Statement of Profit or Loss for the quarter ended 31 March 2026\nStatus: Final management pack (unaudited) Prepared: 14 April 2026 Currency: AED\nAED Q1 2026\nRevenue 5,240,000\nDirect property costs (1,048,000)\nGross profit 4,192,000\nOperating expenses (3,215,400)\nOperating profit 976,600\nFinance costs (273,000)\nProfit before tax 703,600\nCorporate tax (9%) (63,324)\nNet profit for the period 640,276\nCash position\nClosing cash at 31 March 2026 was AED 1,180,000, against a minimum operating cash requirement of AED\n1,500,000, a shortfall of AED 320,000.\nCFO commentary\nThe cash shortfall at the end of the quarter is mainly timing. Rent collections from two commercial tenants, totalling\nAED 410,000, were received in the first week of April rather than in March. We also paid AED 260,000 of planned\nmaintenance on the Marina tower earlier than budgeted. We do not expect a shortfall at the end of the second",
+      "heading": "Section 1",
+      "pageNumber": 1,
+      "sectionTitle": "Section 1",
+      "id": "doc_23_chunk_0",
+      "chunkIndex": 0,
+      "documentId": "23",
+      "source": "06_Contoso_Properties_Management_Pack_Q1_2026.pdf"
+    },
+    {
+      "title": "06_Contoso_Properties_Management_Pack_Q1_2026.pdf - Section 1 (Part 2)",
+      "content": "ceived in the first week of April rather than in March. We also paid AED 260,000 of planned\nmaintenance on the Marina tower earlier than budgeted. We do not expect a shortfall at the end of the second\nquarter, and no additional funding from the Group is requested at this stage.\n– Chief Financial Officer, Contoso Properties LLC (fictional)\nContoso Properties LLC | Final management pack (unaudited) | Prepared 14 April 2026 | Synthetic data for training only Page 1",
+      "heading": "Section 1",
+      "pageNumber": 1,
+      "sectionTitle": "Section 1",
+      "id": "doc_23_chunk_1",
+      "chunkIndex": 1,
+      "documentId": "23",
+      "source": "06_Contoso_Properties_Management_Pack_Q1_2026.pdf"
+    },
+    {
+      "title": "06_Contoso_Properties_Management_Pack_Q1_2026.pdf - Table 1 (Page 1)",
+      "content": "| AED | Q1 2026 |\n| --- | --- |\n| Revenue | 5,240,000 |\n| Direct property costs | (1,048,000) |\n| Gross profit | 4,192,000 |\n| Operating expenses | (3,215,400) |\n| Operating profit | 976,600 |\n| Finance costs | (273,000) |\n| Profit before tax | 703,600 |\n| Corporate tax (9%) | (63,324) |\n| Net profit for the period | 640,276 |",
+      "heading": "Table 1",
+      "pageNumber": 1,
+      "sectionTitle": "Table 1",
+      "id": "doc_23_chunk_2",
+      "chunkIndex": 2,
+      "documentId": "23",
+      "source": "06_Contoso_Properties_Management_Pack_Q1_2026.pdf"
+    },
+    {
+      "title": "06_Contoso_Properties_Management_Pack_Q1_2026.pdf - Table 2 (Page 1)",
+      "content": "| Contoso Properties LLC | Final management pack (unaudited) | Prepared 14 April 2026 | Synthetic data for training only | Page 1 |\n| --- | --- |",
+      "heading": "Table 2",
+      "pageNumber": 1,
+      "sectionTitle": "Table 2",
+      "id": "doc_23_chunk_3",
+      "chunkIndex": 3,
+      "documentId": "23",
+      "source": "06_Contoso_Properties_Management_Pack_Q1_2026.pdf"
+    }
+  ]
+}

@@ -1,0 +1,1629 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T13:02:34.306Z",
+    "correlationId": "ingest-1795611752975-15x9f-35",
+    "documentId": "35",
+    "fileName": "VERIDION TECHNOLOGIES LLC.pdf",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 4,
+    "tableCount": 15,
+    "paragraphCount": 15,
+    "contentLength": 3990,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "VERIDION TECHNOLOGIES LLC\nManagement Pack – Statement of Profit or Loss\nReporting Period: Quarter ended 30 September 2026\nDocument Status: Final management pack (unaudited) – supersedes version 1.\nPrepared Date: 18 October 2026.\nReporting Currency: AED.\n1. Statement of Profit or Loss\nAll monetary amounts are expressed in AED units.\nFinancial Metric Q3 2026\nRevenue 12,500,000\nDirect Operating\n(7,250,000)\nCosts\nGross Profit 5,250,000\nOperating Expenses (2,850,000)\nOperating Profit 2,400,000\nFinance Costs (150,000)\nProfit Before Tax 2,250,000\nCorporate Tax (9%) (202,500)\nNet Profit 2,047,500\nThe above figures represent actual financial results for the completed third quarter.\n2. Historical Financial Performance\nAll monetary amounts are expressed in AED thousands.\nFinancial Indicator FY 2024 FY 2025\nRevenue 35,500 42,750\nNet Profit 5,250 7,850\nIntelligent Infrastructure Recovery Benefits 450 725"
+      },
+      {
+        "pageNumber": 2,
+        "text": "Automated Service Optimization Savings 280 460\n3. Actual and Budget Comparison\nReporting Period: Q3 2026.\nAll monetary amounts are expressed in AED units.\nFinancial Metric Actual Budget\n850,00 950,00\nCapital Expenditure\n0 0\n325,00 400,00\nMarketing Expenses\n0 0\nResearch and Development 475,00 500,00\nExpenses 0 0\n4. Cash Position\nVeridion Technologies LLC reported closing cash of AED 2,750,000 as at 30 September 2026,\nagainst a minimum operating cash requirement of AED 3,200,000, resulting in a cash shortfall of\nAED 450,000.\nCustomer collections totaling AED 625,000 were received on 12 October 2026.\nThe company paid AED 175,000 for equipment maintenance on 25 September 2026, earlier\nthan originally budgeted.\nManagement forecasts closing cash of AED 4,100,000 as at 31 December 2026.\n5. Financial and Operational Indicators\nReporting Period: Q3 2026.\nMonetary amounts are expressed in AED units.\nIndicator Value\nNet Profit Margin 16.38%\nCurrent Ratio 2.45\nDebt-to-Equity Ratio 1.25\nTotal Employees 320\nOutstanding 1,850,00\nReceivables 0"
+      },
+      {
+        "pageNumber": 3,
+        "text": "Foreign Exchange Gain 0\nDeferred Tax Adjustment N/A\n6. International Financial Operations\nOrganization Financial Metric Period Currency Amount\nElvion Digital Services Revenue FY 2025 INR 16.5 crore\n1.250.450,7\nNorvexa Industries Capital Expenditure FY 2025 EUR\n5\nQ3\nTrevanta Systems Operating Profit USD 425,750.50\n2026\nMaintenance\nElvion Digital Services FY 2025 INR 75 lakh\nExpenses\n7. Financial Commentary\nVeridion Technologies LLC\nDuring Q3 2026, Veridion Technologies LLC recognized autonomous infrastructure efficiency\ngains of AED 350,000 and sustainable resource recovery benefits of AED 225,000.\nIts administrative expenses amounted to AED 2026 during the same quarter.\nService delivery volumes increased by 12.5% compared with Q2 2026.\nNorvexa Industries\nInfrastructure modernization expenditure of EUR 850.250,50 was incurred by Norvexa\nIndustries during FY 2025.\nThe company also reported equipment recovery benefits of EUR 125.000,75 during the same\nfinancial year.\n8. Forecast and Target Performance\nEntity: Veridion Technologies LLC.\nCurrency: AED units.\nQ4 2026\nFinancial Indicator Q4 2026 Target\nForecast\nRevenue 14,500,000 15,500,000"
+      },
+      {
+        "pageNumber": 4,
+        "text": "Net Profit 2,500,000 2,850,000\n9. Revision Notes\n1. This version supersedes version 1 dated 10 October 2026.\n2. September revenue increased by AED 275,000 compared with the previous draft\nfollowing completion of customer invoicing. This adjustment is already included in the\nreported quarterly revenue.\n3. The current document was finalized on 18 October 2026.\n10. Administrative Information\nVeridion Technologies LLC was established in 1998.\nDocument Version: 2.0.\nInternal Reference Number: 78452.\nThe next management meeting is scheduled for 25 November 2026.\nThe new regional office is expected to open in February 2027.\nPage 1 – Internal Management Reporting.\nAll information contained in this document is synthetic and intended exclusively for financial\nextraction testing."
+      }
+    ],
+    "tables": [
+      {
+        "tableId": "P1-T1",
+        "rowCount": 2,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Financial Metric"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Q3 2026"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "12,500,000"
+          }
+        ],
+        "caption": null,
+        "note": "All monetary amounts are expressed in AED units.",
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T2",
+        "rowCount": 7,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Gross Profit"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "5,250,000"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Operating Expenses"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "(2,850,000)"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Operating Profit"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "2,400,000"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Finance Costs"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "(150,000)"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Profit Before Tax"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "2,250,000"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 0,
+            "content": "Corporate Tax (9%)"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 1,
+            "content": "(202,500)"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 0,
+            "content": "Net Profit"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 1,
+            "content": "2,047,500"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T3",
+        "rowCount": 4,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Financial Indicator"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "FY 2024 FY 2025"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "35,500 42,750"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Net Profit"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "5,250"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 2,
+            "content": "7,850"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Intelligent Infrastructure Recovery Benefits 450"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "725"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 2,
+            "content": ""
+          }
+        ],
+        "caption": "2. Historical Financial Performance",
+        "note": "All monetary amounts are expressed in AED thousands.",
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T1",
+        "rowCount": 1,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Automated Service Optimization Savings 280"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "460"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T2",
+        "rowCount": 1,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Financial Metric"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Actual Budget"
+          }
+        ],
+        "caption": null,
+        "note": "All monetary amounts are expressed in AED units.",
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T3",
+        "rowCount": 1,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "0"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "0"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T4",
+        "rowCount": 3,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "0"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "0"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Research and Development"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "475,00 500,00"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Expenses"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "0"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 2,
+            "content": "0"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T5",
+        "rowCount": 7,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Indicator"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Value"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Net Profit Margin"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "16.38%"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Current Ratio"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "2.45"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Debt-to-Equity Ratio"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "1.25"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Total Employees"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "320"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 0,
+            "content": "Outstanding"
+          },
+          {
+            "rowIndex": 5,
+            "columnIndex": 1,
+            "content": "1,850,00"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 0,
+            "content": "Receivables"
+          },
+          {
+            "rowIndex": 6,
+            "columnIndex": 1,
+            "content": "0"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P3-T1",
+        "rowCount": 2,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Organization"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Financial Metric"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Period Currency"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "Amount"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Elvion Digital Services Revenue"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "FY 2025 INR"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": "16.5 crore"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 3,
+            "content": ""
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P3-T2",
+        "rowCount": 1,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Norvexa Industries"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Capital Expenditure"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "FY 2025 EUR"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P3-T3",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Trevanta Systems"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Operating Profit"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "USD"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "425,750.50"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P3-T4",
+        "rowCount": 1,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Elvion Digital Services"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "FY 2025 INR"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "75 lakh"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P3-T5",
+        "rowCount": 1,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Financial Indicator"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Q4 2026 Target"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P3-T6",
+        "rowCount": 1,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "14,500,000"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "15,500,000"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P4-T1",
+        "rowCount": 1,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Net Profit"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "2,500,000"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "2,850,000"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 4
+          }
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "content": "VERIDION TECHNOLOGIES LLC\nManagement Pack – Statement of Profit or Loss\nReporting Period: Quarter ended 30 September 2026\nDocument Status: Final management pack (unaudited) – supersedes version 1.\nPrepared Date: 18 October 2026.\nReporting Currency: AED.\n1. Statement of Profit or Loss",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Direct Operating\n(7,250,000)\nCosts",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "The above figures represent actual financial results for the completed third quarter.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "3. Actual and Budget Comparison\nReporting Period: Q3 2026.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "850,00 950,00\nCapital Expenditure",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "325,00 400,00\nMarketing Expenses",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "4. Cash Position\nVeridion Technologies LLC reported closing cash of AED 2,750,000 as at 30 September 2026,\nagainst a minimum operating cash requirement of AED 3,200,000, resulting in a cash shortfall of\nAED 450,000.\nCustomer collections totaling AED 625,000 were received on 12 October 2026.\nThe company paid AED 175,000 for equipment maintenance on 25 September 2026, earlier\nthan originally budgeted.\nManagement forecasts closing cash of AED 4,100,000 as at 31 December 2026.\n5. Financial and Operational Indicators\nReporting Period: Q3 2026.\nMonetary amounts are expressed in AED units.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Foreign Exchange Gain 0\nDeferred Tax Adjustment N/A\n6. International Financial Operations",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "1.250.450,7",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "5\nQ3",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "2026\nMaintenance",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "Expenses\n7. Financial Commentary\nVeridion Technologies LLC\nDuring Q3 2026, Veridion Technologies LLC recognized autonomous infrastructure efficiency\ngains of AED 350,000 and sustainable resource recovery benefits of AED 225,000.\nIts administrative expenses amounted to AED 2026 during the same quarter.\nService delivery volumes increased by 12.5% compared with Q2 2026.\nNorvexa Industries\nInfrastructure modernization expenditure of EUR 850.250,50 was incurred by Norvexa\nIndustries during FY 2025.\nThe company also reported equipment recovery benefits of EUR 125.000,75 during the same\nfinancial year.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "8. Forecast and Target Performance\nEntity: Veridion Technologies LLC.\nCurrency: AED units.\nQ4 2026",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "Forecast",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      },
+      {
+        "content": "9. Revision Notes\n1. This version supersedes version 1 dated 10 October 2026.\n2. September revenue increased by AED 275,000 compared with the previous draft\nfollowing completion of customer invoicing. This adjustment is already included in the\nreported quarterly revenue.\n3. The current document was finalized on 18 October 2026.\n10. Administrative Information\nVeridion Technologies LLC was established in 1998.\nDocument Version: 2.0.\nInternal Reference Number: 78452.\nThe next management meeting is scheduled for 25 November 2026.\nThe new regional office is expected to open in February 2027.\nPage 1 – Internal Management Reporting.\nAll information contained in this document is synthetic and intended exclusively for financial\nextraction testing.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 4
+          }
+        ]
+      }
+    ],
+    "rawContent": "<!-- Page 1 -->\n\nVERIDION TECHNOLOGIES LLC\nManagement Pack – Statement of Profit or Loss\nReporting Period: Quarter ended 30 September 2026\nDocument Status: Final management pack (unaudited) – supersedes version 1.\nPrepared Date: 18 October 2026.\nReporting Currency: AED.\n## 1. Statement of Profit or Loss\nAll monetary amounts are expressed in AED units.\nFinancial Metric Q3 2026\nRevenue 12,500,000\nDirect Operating\n(7,250,000)\nCosts\nGross Profit 5,250,000\nOperating Expenses (2,850,000)\nOperating Profit 2,400,000\nFinance Costs (150,000)\nProfit Before Tax 2,250,000\nCorporate Tax (9%) (202,500)\nNet Profit 2,047,500\nThe above figures represent actual financial results for the completed third quarter.\n## 2. Historical Financial Performance\nAll monetary amounts are expressed in AED thousands.\nFinancial Indicator FY 2024 FY 2025\nRevenue 35,500 42,750\nNet Profit 5,250 7,850\nIntelligent Infrastructure Recovery Benefits 450 725\n\n<!-- Page 2 -->\n\nAutomated Service Optimization Savings 280 460\n## 3. Actual and Budget Comparison\nReporting Period: Q3 2026.\nAll monetary amounts are expressed in AED units.\nFinancial Metric Actual Budget\n850,00 950,00\nCapital Expenditure\n0 0\n325,00 400,00\nMarketing Expenses\n0 0\nResearch and Development 475,00 500,00\nExpenses 0 0\n## 4. Cash Position\nVeridion Technologies LLC reported closing cash of AED 2,750,000 as at 30 September 2026,\nagainst a minimum operating cash requirement of AED 3,200,000, resulting in a cash shortfall of\nAED 450,000.\nCustomer collections totaling AED 625,000 were received on 12 October 2026.\nThe company paid AED 175,000 for equipment maintenance on 25 September 2026, earlier\nthan originally budgeted.\nManagement forecasts closing cash of AED 4,100,000 as at 31 December 2026.\n## 5. Financial and Operational Indicators\nReporting Period: Q3 2026.\nMonetary amounts are expressed in AED units.\nIndicator Value\nNet Profit Margin 16.38%\nCurrent Ratio 2.45\nDebt-to-Equity Ratio 1.25\nTotal Employees 320\nOutstanding 1,850,00\nReceivables 0\n\n<!-- Page 3 -->\n\nForeign Exchange Gain 0\nDeferred Tax Adjustment N/A\n## 6. International Financial Operations\nOrganization Financial Metric Period Currency Amount\nElvion Digital Services Revenue FY 2025 INR 16.5 crore\n1.250.450,7\nNorvexa Industries Capital Expenditure FY 2025 EUR\n5\nQ3\nTrevanta Systems Operating Profit USD 425,750.50\n2026\nMaintenance\nElvion Digital Services FY 2025 INR 75 lakh\nExpenses\n## 7. Financial Commentary\nVeridion Technologies LLC\nDuring Q3 2026, Veridion Technologies LLC recognized autonomous infrastructure efficiency\ngains of AED 350,000 and sustainable resource recovery benefits of AED 225,000.\nIts administrative expenses amounted to AED 2026 during the same quarter.\nService delivery volumes increased by 12.5% compared with Q2 2026.\nNorvexa Industries\nInfrastructure modernization expenditure of EUR 850.250,50 was incurred by Norvexa\nIndustries during FY 2025.\nThe company also reported equipment recovery benefits of EUR 125.000,75 during the same\nfinancial year.\n## 8. Forecast and Target Performance\nEntity: Veridion Technologies LLC.\nCurrency: AED units.\nQ4 2026\nFinancial Indicator Q4 2026 Target\nForecast\nRevenue 14,500,000 15,500,000\n\n<!-- Page 4 -->\n\nNet Profit 2,500,000 2,850,000\n## 9. Revision Notes\n## 1. This version supersedes version 1 dated 10 October 2026.\n## 2. September revenue increased by AED 275,000 compared with the previous draft\nfollowing completion of customer invoicing. This adjustment is already included in the\nreported quarterly revenue.\n## 3. The current document was finalized on 18 October 2026.\n## 10. Administrative Information\nVeridion Technologies LLC was established in 1998.\nDocument Version: 2.0.\nInternal Reference Number: 78452.\nThe next management meeting is scheduled for 25 November 2026.\nThe new regional office is expected to open in February 2027.\nPage 1 – Internal Management Reporting.\nAll information contained in this document is synthetic and intended exclusively for financial\nextraction testing."
+  },
+  "normalizedContent": {
+    "document_id": "35",
+    "tables": [
+      {
+        "element_id": "doc_35_table_1",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 1,
+        "row_count": 2,
+        "column_count": 2,
+        "headers": [
+          "Financial Metric",
+          "Q3 2026"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Financial Metric": "Revenue",
+              "Q3 2026": "12,500,000"
+            },
+            "rawValues": [
+              "Revenue",
+              "12,500,000"
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| Financial Metric | Q3 2026 |\n| --- | --- |\n| Revenue | 12,500,000 |",
+        "caption": null,
+        "note": "All monetary amounts are expressed in AED units.",
+        "grid": [
+          [
+            "Financial Metric",
+            "Q3 2026"
+          ],
+          [
+            "Revenue",
+            "12,500,000"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_2",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 2,
+        "row_count": 7,
+        "column_count": 2,
+        "headers": [
+          "Gross Profit",
+          "5,250,000"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Gross Profit": "Operating Expenses",
+              "5,250,000": "(2,850,000)"
+            },
+            "rawValues": [
+              "Operating Expenses",
+              "(2,850,000)"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "Gross Profit": "Operating Profit",
+              "5,250,000": "2,400,000"
+            },
+            "rawValues": [
+              "Operating Profit",
+              "2,400,000"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "Gross Profit": "Finance Costs",
+              "5,250,000": "(150,000)"
+            },
+            "rawValues": [
+              "Finance Costs",
+              "(150,000)"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "Gross Profit": "Profit Before Tax",
+              "5,250,000": "2,250,000"
+            },
+            "rawValues": [
+              "Profit Before Tax",
+              "2,250,000"
+            ]
+          },
+          {
+            "rowIndex": 5,
+            "cells": {
+              "Gross Profit": "Corporate Tax (9%)",
+              "5,250,000": "(202,500)"
+            },
+            "rawValues": [
+              "Corporate Tax (9%)",
+              "(202,500)"
+            ]
+          },
+          {
+            "rowIndex": 6,
+            "cells": {
+              "Gross Profit": "Net Profit",
+              "5,250,000": "2,047,500"
+            },
+            "rawValues": [
+              "Net Profit",
+              "2,047,500"
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| Gross Profit | 5,250,000 |\n| --- | --- |\n| Operating Expenses | (2,850,000) |\n| Operating Profit | 2,400,000 |\n| Finance Costs | (150,000) |\n| Profit Before Tax | 2,250,000 |\n| Corporate Tax (9%) | (202,500) |\n| Net Profit | 2,047,500 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Gross Profit",
+            "5,250,000"
+          ],
+          [
+            "Operating Expenses",
+            "(2,850,000)"
+          ],
+          [
+            "Operating Profit",
+            "2,400,000"
+          ],
+          [
+            "Finance Costs",
+            "(150,000)"
+          ],
+          [
+            "Profit Before Tax",
+            "2,250,000"
+          ],
+          [
+            "Corporate Tax (9%)",
+            "(202,500)"
+          ],
+          [
+            "Net Profit",
+            "2,047,500"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_3",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 3,
+        "row_count": 4,
+        "column_count": 3,
+        "headers": [
+          "Financial Indicator",
+          "FY 2024 FY 2025",
+          "Col_3"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Financial Indicator": "Revenue",
+              "FY 2024 FY 2025": "35,500 42,750",
+              "Col_3": ""
+            },
+            "rawValues": [
+              "Revenue",
+              "35,500 42,750",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "Financial Indicator": "Net Profit",
+              "FY 2024 FY 2025": "5,250",
+              "Col_3": "7,850"
+            },
+            "rawValues": [
+              "Net Profit",
+              "5,250",
+              "7,850"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "Financial Indicator": "Intelligent Infrastructure Recovery Benefits 450",
+              "FY 2024 FY 2025": "725",
+              "Col_3": ""
+            },
+            "rawValues": [
+              "Intelligent Infrastructure Recovery Benefits 450",
+              "725",
+              ""
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| Financial Indicator | FY 2024 FY 2025 | Col_3 |\n| --- | --- | --- |\n| Revenue | 35,500 42,750 |  |\n| Net Profit | 5,250 | 7,850 |\n| Intelligent Infrastructure Recovery Benefits 450 | 725 |  |",
+        "caption": "2. Historical Financial Performance",
+        "note": "All monetary amounts are expressed in AED thousands.",
+        "grid": [
+          [
+            "Financial Indicator",
+            "FY 2024 FY 2025",
+            ""
+          ],
+          [
+            "Revenue",
+            "35,500 42,750",
+            ""
+          ],
+          [
+            "Net Profit",
+            "5,250",
+            "7,850"
+          ],
+          [
+            "Intelligent Infrastructure Recovery Benefits 450",
+            "725",
+            ""
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_4",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 4,
+        "row_count": 1,
+        "column_count": 2,
+        "headers": [
+          "Automated Service Optimization Savings 280",
+          "460"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Automated Service Optimization Savings 280 | 460 |\n| --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Automated Service Optimization Savings 280",
+            "460"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_5",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 5,
+        "row_count": 1,
+        "column_count": 2,
+        "headers": [
+          "Financial Metric",
+          "Actual Budget"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Financial Metric | Actual Budget |\n| --- | --- |",
+        "caption": null,
+        "note": "All monetary amounts are expressed in AED units.",
+        "grid": [
+          [
+            "Financial Metric",
+            "Actual Budget"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_6",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 6,
+        "row_count": 1,
+        "column_count": 2,
+        "headers": [
+          "0",
+          "0"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| 0 | 0 |\n| --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_7",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 7,
+        "row_count": 3,
+        "column_count": 3,
+        "headers": [
+          "0",
+          "0",
+          "Col_3"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "0": "475,00 500,00",
+              "Col_3": ""
+            },
+            "rawValues": [
+              "Research and Development",
+              "475,00 500,00",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "0": "0",
+              "Col_3": "0"
+            },
+            "rawValues": [
+              "Expenses",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "page_number": 2,
+        "content": "| 0 | 0 | Col_3 |\n| --- | --- | --- |\n| 475,00 500,00 | 475,00 500,00 |  |\n| 0 | 0 | 0 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "0",
+            "0",
+            ""
+          ],
+          [
+            "Research and Development",
+            "475,00 500,00",
+            ""
+          ],
+          [
+            "Expenses",
+            "0",
+            "0"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_8",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 8,
+        "row_count": 7,
+        "column_count": 2,
+        "headers": [
+          "Indicator",
+          "Value"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Indicator": "Net Profit Margin",
+              "Value": "16.38%"
+            },
+            "rawValues": [
+              "Net Profit Margin",
+              "16.38%"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "Indicator": "Current Ratio",
+              "Value": "2.45"
+            },
+            "rawValues": [
+              "Current Ratio",
+              "2.45"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "Indicator": "Debt-to-Equity Ratio",
+              "Value": "1.25"
+            },
+            "rawValues": [
+              "Debt-to-Equity Ratio",
+              "1.25"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "Indicator": "Total Employees",
+              "Value": "320"
+            },
+            "rawValues": [
+              "Total Employees",
+              "320"
+            ]
+          },
+          {
+            "rowIndex": 5,
+            "cells": {
+              "Indicator": "Outstanding",
+              "Value": "1,850,00"
+            },
+            "rawValues": [
+              "Outstanding",
+              "1,850,00"
+            ]
+          },
+          {
+            "rowIndex": 6,
+            "cells": {
+              "Indicator": "Receivables",
+              "Value": "0"
+            },
+            "rawValues": [
+              "Receivables",
+              "0"
+            ]
+          }
+        ],
+        "page_number": 2,
+        "content": "| Indicator | Value |\n| --- | --- |\n| Net Profit Margin | 16.38% |\n| Current Ratio | 2.45 |\n| Debt-to-Equity Ratio | 1.25 |\n| Total Employees | 320 |\n| Outstanding | 1,850,00 |\n| Receivables | 0 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Indicator",
+            "Value"
+          ],
+          [
+            "Net Profit Margin",
+            "16.38%"
+          ],
+          [
+            "Current Ratio",
+            "2.45"
+          ],
+          [
+            "Debt-to-Equity Ratio",
+            "1.25"
+          ],
+          [
+            "Total Employees",
+            "320"
+          ],
+          [
+            "Outstanding",
+            "1,850,00"
+          ],
+          [
+            "Receivables",
+            "0"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_9",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 9,
+        "row_count": 2,
+        "column_count": 4,
+        "headers": [
+          "Organization",
+          "Financial Metric",
+          "Period Currency",
+          "Amount"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Organization": "Elvion Digital Services Revenue",
+              "Financial Metric": "FY 2025 INR",
+              "Period Currency": "16.5 crore",
+              "Amount": ""
+            },
+            "rawValues": [
+              "Elvion Digital Services Revenue",
+              "FY 2025 INR",
+              "16.5 crore",
+              ""
+            ]
+          }
+        ],
+        "page_number": 3,
+        "content": "| Organization | Financial Metric | Period Currency | Amount |\n| --- | --- | --- | --- |\n| Elvion Digital Services Revenue | FY 2025 INR | 16.5 crore |  |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Organization",
+            "Financial Metric",
+            "Period Currency",
+            "Amount"
+          ],
+          [
+            "Elvion Digital Services Revenue",
+            "FY 2025 INR",
+            "16.5 crore",
+            ""
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_10",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 10,
+        "row_count": 1,
+        "column_count": 3,
+        "headers": [
+          "Norvexa Industries",
+          "Capital Expenditure",
+          "FY 2025 EUR"
+        ],
+        "rows": [],
+        "page_number": 3,
+        "content": "| Norvexa Industries | Capital Expenditure | FY 2025 EUR |\n| --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Norvexa Industries",
+            "Capital Expenditure",
+            "FY 2025 EUR"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_11",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 11,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "Trevanta Systems",
+          "Operating Profit",
+          "USD",
+          "425,750.50"
+        ],
+        "rows": [],
+        "page_number": 3,
+        "content": "| Trevanta Systems | Operating Profit | USD | 425,750.50 |\n| --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Trevanta Systems",
+            "Operating Profit",
+            "USD",
+            "425,750.50"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_12",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 12,
+        "row_count": 1,
+        "column_count": 3,
+        "headers": [
+          "Elvion Digital Services",
+          "FY 2025 INR",
+          "75 lakh"
+        ],
+        "rows": [],
+        "page_number": 3,
+        "content": "| Elvion Digital Services | FY 2025 INR | 75 lakh |\n| --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Elvion Digital Services",
+            "FY 2025 INR",
+            "75 lakh"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_13",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 13,
+        "row_count": 1,
+        "column_count": 2,
+        "headers": [
+          "Financial Indicator",
+          "Q4 2026 Target"
+        ],
+        "rows": [],
+        "page_number": 3,
+        "content": "| Financial Indicator | Q4 2026 Target |\n| --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Financial Indicator",
+            "Q4 2026 Target"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_14",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 14,
+        "row_count": 1,
+        "column_count": 3,
+        "headers": [
+          "Revenue",
+          "14,500,000",
+          "15,500,000"
+        ],
+        "rows": [],
+        "page_number": 3,
+        "content": "| Revenue | 14,500,000 | 15,500,000 |\n| --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Revenue",
+            "14,500,000",
+            "15,500,000"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_35_table_15",
+        "document_id": "35",
+        "element_type": "table",
+        "table_id": 15,
+        "row_count": 1,
+        "column_count": 3,
+        "headers": [
+          "Net Profit",
+          "2,500,000",
+          "2,850,000"
+        ],
+        "rows": [],
+        "page_number": 4,
+        "content": "| Net Profit | 2,500,000 | 2,850,000 |\n| --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Net Profit",
+            "2,500,000",
+            "2,850,000"
+          ]
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "element_id": "doc_35_p_1",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "VERIDION TECHNOLOGIES LLC\nManagement Pack – Statement of Profit or Loss\nReporting Period: Quarter ended 30 September 2026\nDocument Status: Final management pack (unaudited) – supersedes version 1.\nPrepared Date: 18 October 2026.\nReporting Currency: AED.\n1. Statement of Profit or Loss",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_35_p_2",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "Direct Operating\n(7,250,000)\nCosts",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_35_p_3",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "The above figures represent actual financial results for the completed third quarter.",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_35_p_4",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "3. Actual and Budget Comparison\nReporting Period: Q3 2026.",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_35_p_5",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "850,00 950,00\nCapital Expenditure",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_35_p_6",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "325,00 400,00\nMarketing Expenses",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_35_p_7",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "4. Cash Position\nVeridion Technologies LLC reported closing cash of AED 2,750,000 as at 30 September 2026,\nagainst a minimum operating cash requirement of AED 3,200,000, resulting in a cash shortfall of\nAED 450,000.\nCustomer collections totaling AED 625,000 were received on 12 October 2026.\nThe company paid AED 175,000 for equipment maintenance on 25 September 2026, earlier\nthan originally budgeted.\nManagement forecasts closing cash of AED 4,100,000 as at 31 December 2026.\n5. Financial and Operational Indicators\nReporting Period: Q3 2026.\nMonetary amounts are expressed in AED units.",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_35_p_8",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "Foreign Exchange Gain 0\nDeferred Tax Adjustment N/A\n6. International Financial Operations",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_35_p_9",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "1.250.450,7",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_35_p_10",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "5\nQ3",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_35_p_11",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "2026\nMaintenance",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_35_p_12",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "Expenses\n7. Financial Commentary\nVeridion Technologies LLC\nDuring Q3 2026, Veridion Technologies LLC recognized autonomous infrastructure efficiency\ngains of AED 350,000 and sustainable resource recovery benefits of AED 225,000.\nIts administrative expenses amounted to AED 2026 during the same quarter.\nService delivery volumes increased by 12.5% compared with Q2 2026.\nNorvexa Industries\nInfrastructure modernization expenditure of EUR 850.250,50 was incurred by Norvexa\nIndustries during FY 2025.\nThe company also reported equipment recovery benefits of EUR 125.000,75 during the same\nfinancial year.",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_35_p_13",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "8. Forecast and Target Performance\nEntity: Veridion Technologies LLC.\nCurrency: AED units.\nQ4 2026",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_35_p_14",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "Forecast",
+        "page_number": 3
+      },
+      {
+        "element_id": "doc_35_p_15",
+        "document_id": "35",
+        "element_type": "paragraph",
+        "content": "9. Revision Notes\n1. This version supersedes version 1 dated 10 October 2026.\n2. September revenue increased by AED 275,000 compared with the previous draft\nfollowing completion of customer invoicing. This adjustment is already included in the\nreported quarterly revenue.\n3. The current document was finalized on 18 October 2026.\n10. Administrative Information\nVeridion Technologies LLC was established in 1998.\nDocument Version: 2.0.\nInternal Reference Number: 78452.\nThe next management meeting is scheduled for 25 November 2026.\nThe new regional office is expected to open in February 2027.\nPage 1 – Internal Management Reporting.\nAll information contained in this document is synthetic and intended exclusively for financial\nextraction testing.",
+        "page_number": 4
+      }
+    ],
+    "fullMarkdown": "<!-- Page 1 -->\n\nVERIDION TECHNOLOGIES LLC\nManagement Pack – Statement of Profit or Loss\nReporting Period: Quarter ended 30 September 2026\nDocument Status: Final management pack (unaudited) – supersedes version 1.\nPrepared Date: 18 October 2026.\nReporting Currency: AED.\n## 1. Statement of Profit or Loss\nAll monetary amounts are expressed in AED units.\nFinancial Metric Q3 2026\nRevenue 12,500,000\nDirect Operating\n(7,250,000)\nCosts\nGross Profit 5,250,000\nOperating Expenses (2,850,000)\nOperating Profit 2,400,000\nFinance Costs (150,000)\nProfit Before Tax 2,250,000\nCorporate Tax (9%) (202,500)\nNet Profit 2,047,500\nThe above figures represent actual financial results for the completed third quarter.\n## 2. Historical Financial Performance\nAll monetary amounts are expressed in AED thousands.\nFinancial Indicator FY 2024 FY 2025\nRevenue 35,500 42,750\nNet Profit 5,250 7,850\nIntelligent Infrastructure Recovery Benefits 450 725\n\n<!-- Page 2 -->\n\nAutomated Service Optimization Savings 280 460\n## 3. Actual and Budget Comparison\nReporting Period: Q3 2026.\nAll monetary amounts are expressed in AED units.\nFinancial Metric Actual Budget\n850,00 950,00\nCapital Expenditure\n0 0\n325,00 400,00\nMarketing Expenses\n0 0\nResearch and Development 475,00 500,00\nExpenses 0 0\n## 4. Cash Position\nVeridion Technologies LLC reported closing cash of AED 2,750,000 as at 30 September 2026,\nagainst a minimum operating cash requirement of AED 3,200,000, resulting in a cash shortfall of\nAED 450,000.\nCustomer collections totaling AED 625,000 were received on 12 October 2026.\nThe company paid AED 175,000 for equipment maintenance on 25 September 2026, earlier\nthan originally budgeted.\nManagement forecasts closing cash of AED 4,100,000 as at 31 December 2026.\n## 5. Financial and Operational Indicators\nReporting Period: Q3 2026.\nMonetary amounts are expressed in AED units.\nIndicator Value\nNet Profit Margin 16.38%\nCurrent Ratio 2.45\nDebt-to-Equity Ratio 1.25\nTotal Employees 320\nOutstanding 1,850,00\nReceivables 0\n\n<!-- Page 3 -->\n\nForeign Exchange Gain 0\nDeferred Tax Adjustment N/A\n## 6. International Financial Operations\nOrganization Financial Metric Period Currency Amount\nElvion Digital Services Revenue FY 2025 INR 16.5 crore\n1.250.450,7\nNorvexa Industries Capital Expenditure FY 2025 EUR\n5\nQ3\nTrevanta Systems Operating Profit USD 425,750.50\n2026\nMaintenance\nElvion Digital Services FY 2025 INR 75 lakh\nExpenses\n## 7. Financial Commentary\nVeridion Technologies LLC\nDuring Q3 2026, Veridion Technologies LLC recognized autonomous infrastructure efficiency\ngains of AED 350,000 and sustainable resource recovery benefits of AED 225,000.\nIts administrative expenses amounted to AED 2026 during the same quarter.\nService delivery volumes increased by 12.5% compared with Q2 2026.\nNorvexa Industries\nInfrastructure modernization expenditure of EUR 850.250,50 was incurred by Norvexa\nIndustries during FY 2025.\nThe company also reported equipment recovery benefits of EUR 125.000,75 during the same\nfinancial year.\n## 8. Forecast and Target Performance\nEntity: Veridion Technologies LLC.\nCurrency: AED units.\nQ4 2026\nFinancial Indicator Q4 2026 Target\nForecast\nRevenue 14,500,000 15,500,000\n\n<!-- Page 4 -->\n\nNet Profit 2,500,000 2,850,000\n## 9. Revision Notes\n## 1. This version supersedes version 1 dated 10 October 2026.\n## 2. September revenue increased by AED 275,000 compared with the previous draft\nfollowing completion of customer invoicing. This adjustment is already included in the\nreported quarterly revenue.\n## 3. The current document was finalized on 18 October 2026.\n## 10. Administrative Information\nVeridion Technologies LLC was established in 1998.\nDocument Version: 2.0.\nInternal Reference Number: 78452.\nThe next management meeting is scheduled for 25 November 2026.\nThe new regional office is expected to open in February 2027.\nPage 1 – Internal Management Reporting.\nAll information contained in this document is synthetic and intended exclusively for financial\nextraction testing."
+  },
+  "extractedFacts": [],
+  "conflicts": [],
+  "chunks": []
+}

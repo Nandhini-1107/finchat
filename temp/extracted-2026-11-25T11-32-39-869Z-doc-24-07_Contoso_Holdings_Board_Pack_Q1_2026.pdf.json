@@ -1,0 +1,346 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T11:32:39.870Z",
+    "correlationId": "ingest-1795606359779-vsqdi-24",
+    "documentId": "24",
+    "fileName": "07_Contoso_Holdings_Board_Pack_Q1_2026.pdf",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 1,
+    "tableCount": 2,
+    "paragraphCount": 2,
+    "contentLength": 980,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "Contoso Holdings\nBoard Pack – Group Financial Summary, quarter ended 31 March 2026\nStatus: Approved board pack (unaudited) Prepared: 05 May 2026 Currency: AED\n1. Financial summary by entity\nAED '000 Revenue Operating expenses Net profit\nContoso Retail LLC 12,840 2,995 1,307\nContoso Logistics LLC 8,720 1,402 896\nContoso Properties LLC 5,240 3,215 604\nGroup total 26,800 7,613 2,807\nAll figures in AED thousands, rounded.\n2. Highlights\nGroup revenue for the first quarter was ahead of budget, led by Contoso Retail. Contoso Logistics delivered steady\nvolumes. Contoso Properties reported a temporary cash shortfall at quarter end, which management expects to\nreverse in April.\n3. Matters for the Board\nThe Board is asked to note the first-quarter results and the revised timing of two new retail outlets, now expected to\nopen in May 2026.\nContoso Holdings | Approved board pack (unaudited) | Prepared 05 May 2026 | Synthetic data for training only Page 1"
+      }
+    ],
+    "tables": [
+      {
+        "tableId": "P1-T1",
+        "rowCount": 5,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "AED '000"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Operating expenses"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "Net profit"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Contoso Retail LLC"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "12,840"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": "2,995"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 3,
+            "content": "1,307"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Contoso Logistics LLC"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "8,720"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 2,
+            "content": "1,402"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 3,
+            "content": "896"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Contoso Properties LLC"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "5,240"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 2,
+            "content": "3,215"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 3,
+            "content": "604"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Group total"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "26,800"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 2,
+            "content": "7,613"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 3,
+            "content": "2,807"
+          }
+        ],
+        "caption": "1. Financial summary by entity",
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T2",
+        "rowCount": 1,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Contoso Holdings | Approved board pack (unaudited) | Prepared 05 May 2026 | Synthetic data for training only"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Page 1"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "content": "Contoso Holdings\nBoard Pack – Group Financial Summary, quarter ended 31 March 2026\nStatus: Approved board pack (unaudited) Prepared: 05 May 2026 Currency: AED",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "All figures in AED thousands, rounded.\n2. Highlights\nGroup revenue for the first quarter was ahead of budget, led by Contoso Retail. Contoso Logistics delivered steady\nvolumes. Contoso Properties reported a temporary cash shortfall at quarter end, which management expects to\nreverse in April.\n3. Matters for the Board\nThe Board is asked to note the first-quarter results and the revised timing of two new retail outlets, now expected to\nopen in May 2026.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      }
+    ],
+    "rawContent": "<!-- Page 1 -->\n\nContoso Holdings\nBoard Pack – Group Financial Summary, quarter ended 31 March 2026\nStatus: Approved board pack (unaudited) Prepared: 05 May 2026 Currency: AED\n## 1. Financial summary by entity\nAED '000 Revenue Operating expenses Net profit\nContoso Retail LLC 12,840 2,995 1,307\nContoso Logistics LLC 8,720 1,402 896\nContoso Properties LLC 5,240 3,215 604\nGroup total 26,800 7,613 2,807\nAll figures in AED thousands, rounded.\n## 2. Highlights\nGroup revenue for the first quarter was ahead of budget, led by Contoso Retail. Contoso Logistics delivered steady\nvolumes. Contoso Properties reported a temporary cash shortfall at quarter end, which management expects to\nreverse in April.\n## 3. Matters for the Board\nThe Board is asked to note the first-quarter results and the revised timing of two new retail outlets, now expected to\nopen in May 2026.\nContoso Holdings | Approved board pack (unaudited) | Prepared 05 May 2026 | Synthetic data for training only Page 1"
+  },
+  "normalizedContent": {
+    "document_id": "24",
+    "tables": [
+      {
+        "element_id": "doc_24_table_1",
+        "document_id": "24",
+        "element_type": "table",
+        "table_id": 1,
+        "row_count": 5,
+        "column_count": 4,
+        "headers": [
+          "AED '000",
+          "Revenue",
+          "Operating expenses",
+          "Net profit"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "AED '000": "Contoso Retail LLC",
+              "Revenue": "12,840",
+              "Operating expenses": "2,995",
+              "Net profit": "1,307"
+            },
+            "rawValues": [
+              "Contoso Retail LLC",
+              "12,840",
+              "2,995",
+              "1,307"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "AED '000": "Contoso Logistics LLC",
+              "Revenue": "8,720",
+              "Operating expenses": "1,402",
+              "Net profit": "896"
+            },
+            "rawValues": [
+              "Contoso Logistics LLC",
+              "8,720",
+              "1,402",
+              "896"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "AED '000": "Contoso Properties LLC",
+              "Revenue": "5,240",
+              "Operating expenses": "3,215",
+              "Net profit": "604"
+            },
+            "rawValues": [
+              "Contoso Properties LLC",
+              "5,240",
+              "3,215",
+              "604"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "AED '000": "Group total",
+              "Revenue": "26,800",
+              "Operating expenses": "7,613",
+              "Net profit": "2,807"
+            },
+            "rawValues": [
+              "Group total",
+              "26,800",
+              "7,613",
+              "2,807"
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| AED '000 | Revenue | Operating expenses | Net profit |\n| --- | --- | --- | --- |\n| Contoso Retail LLC | 12,840 | 2,995 | 1,307 |\n| Contoso Logistics LLC | 8,720 | 1,402 | 896 |\n| Contoso Properties LLC | 5,240 | 3,215 | 604 |\n| Group total | 26,800 | 7,613 | 2,807 |",
+        "caption": "1. Financial summary by entity",
+        "note": null,
+        "grid": [
+          [
+            "AED '000",
+            "Revenue",
+            "Operating expenses",
+            "Net profit"
+          ],
+          [
+            "Contoso Retail LLC",
+            "12,840",
+            "2,995",
+            "1,307"
+          ],
+          [
+            "Contoso Logistics LLC",
+            "8,720",
+            "1,402",
+            "896"
+          ],
+          [
+            "Contoso Properties LLC",
+            "5,240",
+            "3,215",
+            "604"
+          ],
+          [
+            "Group total",
+            "26,800",
+            "7,613",
+            "2,807"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_24_table_2",
+        "document_id": "24",
+        "element_type": "table",
+        "table_id": 2,
+        "row_count": 1,
+        "column_count": 2,
+        "headers": [
+          "Contoso Holdings | Approved board pack (unaudited) | Prepared 05 May 2026 | Synthetic data for training only",
+          "Page 1"
+        ],
+        "rows": [],
+        "page_number": 1,
+        "content": "| Contoso Holdings | Approved board pack (unaudited) | Prepared 05 May 2026 | Synthetic data for training only | Page 1 |\n| --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Contoso Holdings | Approved board pack (unaudited) | Prepared 05 May 2026 | Synthetic data for training only",
+            "Page 1"
+          ]
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "element_id": "doc_24_p_1",
+        "document_id": "24",
+        "element_type": "paragraph",
+        "content": "Contoso Holdings\nBoard Pack – Group Financial Summary, quarter ended 31 March 2026\nStatus: Approved board pack (unaudited) Prepared: 05 May 2026 Currency: AED",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_24_p_2",
+        "document_id": "24",
+        "element_type": "paragraph",
+        "content": "All figures in AED thousands, rounded.\n2. Highlights\nGroup revenue for the first quarter was ahead of budget, led by Contoso Retail. Contoso Logistics delivered steady\nvolumes. Contoso Properties reported a temporary cash shortfall at quarter end, which management expects to\nreverse in April.\n3. Matters for the Board\nThe Board is asked to note the first-quarter results and the revised timing of two new retail outlets, now expected to\nopen in May 2026.",
+        "page_number": 1
+      }
+    ],
+    "fullMarkdown": "<!-- Page 1 -->\n\nContoso Holdings\nBoard Pack – Group Financial Summary, quarter ended 31 March 2026\nStatus: Approved board pack (unaudited) Prepared: 05 May 2026 Currency: AED\n## 1. Financial summary by entity\nAED '000 Revenue Operating expenses Net profit\nContoso Retail LLC 12,840 2,995 1,307\nContoso Logistics LLC 8,720 1,402 896\nContoso Properties LLC 5,240 3,215 604\nGroup total 26,800 7,613 2,807\nAll figures in AED thousands, rounded.\n## 2. Highlights\nGroup revenue for the first quarter was ahead of budget, led by Contoso Retail. Contoso Logistics delivered steady\nvolumes. Contoso Properties reported a temporary cash shortfall at quarter end, which management expects to\nreverse in April.\n## 3. Matters for the Board\nThe Board is asked to note the first-quarter results and the revised timing of two new retail outlets, now expected to\nopen in May 2026.\nContoso Holdings | Approved board pack (unaudited) | Prepared 05 May 2026 | Synthetic data for training only Page 1"
+  },
+  "extractedFacts": [],
+  "conflicts": [],
+  "chunks": []
+}

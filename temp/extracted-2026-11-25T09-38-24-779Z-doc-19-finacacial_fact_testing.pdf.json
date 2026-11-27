@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T09:38:24.779Z",
+    "correlationId": "ingest-1795599501757-crhy8-19",
+    "documentId": "19",
+    "fileName": "finacacial fact testing.pdf",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 3,
+    "tableCount": 0,
+    "paragraphCount": 3,
+    "contentLength": 2846,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "CONSOLIDATED FINANCIAL\nPERFORMANCE REPORT\nReporting Period: FY 2024–2026\nDocument Version: 1.0\nClassification: Internal Financial Report\nPrepared Date: 25 November 2026\nReference Number: FIN-45821\n1. Aurevix — Annual Financial Performance\nAll monetary amounts in the following table are expressed in AED millions.\nFinancial Particulars \tFY 2024 FY 2025\nRevenue \t12.50 15.75\nCost of Revenue \t4.20 \t5.10\nGross Profit \t8.30 \t10.65\nOperating Expenses \t3.20 \t4.15\nNet Profit \t4.10 \t5.50\nQuantum Infrastructure Recovery\nGains 0.45 \t0.72\nDigital Resource Optimization Benefits 0.25 \t0.38\n2. Nexora — Quarterly Performance\nAll monetary amounts are expressed in USD.\nReporting\nCycle Revenue Net Profit Automated Compliance\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\nQ3 2026 1,150,00\n0 210,000 85,000\n3. Veltrion — Actual and Budget Comparison\nAll monetary amounts are expressed in INR crore."
+      },
+      {
+        "pageNumber": 2,
+        "text": "Business Indicator FY 2025\nActual\nFY 2025\nBudget\nFY 2026\nActual\nFY 2026\nBudget\nRevenue \t15.5 \t16.0 \t20.0 \t22.0\nNet Profit \t2.5 \t3.0 \t4.2 \t4.5\nSustainable Infrastructure\nRecovery 0.85 \t0.90 \t1.25 \t1.50\n4. Multi-Company Financial Summary\nOrganization Performance Measure Reporting\nPeriod Currency Recorded\nAmount\nAurevix \tRevenue \tFY 2026 \tAED \t18,500,000\nNexora \tOperating Profit \tFY 2026 \tUSD \t750,000\nVeltrion \tCapital Expenditure \tFY 2025 \tINR \t1,25,00,000\nOrvexa Intelligent Energy Recovery\nBenefits FY 2026 \tEUR \t450,250.75\n5. Orvexa — Financial and Operational Indicators\nReporting period: FY 2025. Monetary amounts are expressed in EUR.\nPerformance Indicator Recorded\nValue\nOperating Loss \t(250,000)\nCapital Expenditure \t1,250,000\nForeign Exchange\nAdjustment -75,500\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nDistribution Centres \t12\nDeferred Tax Adjustment \tN/A\nExceptional Income \t—\n6. Financial Narrative\n6.1 Meridian Technologies\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n2025. Its operating expenses amounted to INR 85 lakh."
+      },
+      {
+        "pageNumber": 3,
+        "text": "The company's research and development expenses reached INR 1.2 crore during the same\nfinancial year.\n6.2 Lumivanta\nLumivanta recorded renewable energy recovery savings of AED 450,000 and automated\ninfrastructure efficiency gains of AED 125,000 during FY 2026.\nIts intelligent resource balancing benefits amounted to AED 85,000 for the same reporting\nperiod.\n6.3 Multiple Organizations\nSolvex reported revenue of USD 8 million for FY 2024, while Arvion recorded revenue of INR 12\ncrore for FY 2025. Arvion's net profit reached INR 2.5 crore for FY 2025.\n6.4 Multiple Reporting Periods\nNoventra reported revenue of AED 10 million in FY 2024 and AED 14 million in FY 2025.\nIts net profit was AED 2 million in FY 2024 and AED 3.5 million in FY 2025."
+      }
+    ],
+    "tables": [],
+    "paragraphs": [
+      {
+        "content": "CONSOLIDATED FINANCIAL\nPERFORMANCE REPORT\nReporting Period: FY 2024–2026\nDocument Version: 1.0\nClassification: Internal Financial Report\nPrepared Date: 25 November 2026\nReference Number: FIN-45821\n1. Aurevix — Annual Financial Performance\nAll monetary amounts in the following table are expressed in AED millions.\nFinancial Particulars \tFY 2024 FY 2025\nRevenue \t12.50 15.75\nCost of Revenue \t4.20 \t5.10\nGross Profit \t8.30 \t10.65\nOperating Expenses \t3.20 \t4.15\nNet Profit \t4.10 \t5.50\nQuantum Infrastructure Recovery\nGains 0.45 \t0.72\nDigital Resource Optimization Benefits 0.25 \t0.38\n2. Nexora — Quarterly Performance\nAll monetary amounts are expressed in USD.\nReporting\nCycle Revenue Net Profit Automated Compliance\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\nQ3 2026 1,150,00\n0 210,000 85,000\n3. Veltrion — Actual and Budget Comparison\nAll monetary amounts are expressed in INR crore.",
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Business Indicator FY 2025\nActual\nFY 2025\nBudget\nFY 2026\nActual\nFY 2026\nBudget\nRevenue \t15.5 \t16.0 \t20.0 \t22.0\nNet Profit \t2.5 \t3.0 \t4.2 \t4.5\nSustainable Infrastructure\nRecovery 0.85 \t0.90 \t1.25 \t1.50\n4. Multi-Company Financial Summary\nOrganization Performance Measure Reporting\nPeriod Currency Recorded\nAmount\nAurevix \tRevenue \tFY 2026 \tAED \t18,500,000\nNexora \tOperating Profit \tFY 2026 \tUSD \t750,000\nVeltrion \tCapital Expenditure \tFY 2025 \tINR \t1,25,00,000\nOrvexa Intelligent Energy Recovery\nBenefits FY 2026 \tEUR \t450,250.75\n5. Orvexa — Financial and Operational Indicators\nReporting period: FY 2025. Monetary amounts are expressed in EUR.\nPerformance Indicator Recorded\nValue\nOperating Loss \t(250,000)\nCapital Expenditure \t1,250,000\nForeign Exchange\nAdjustment -75,500\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nDistribution Centres \t12\nDeferred Tax Adjustment \tN/A\nExceptional Income \t—\n6. Financial Narrative\n6.1 Meridian Technologies\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n2025. Its operating expenses amounted to INR 85 lakh.",
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "The company's research and development expenses reached INR 1.2 crore during the same\nfinancial year.\n6.2 Lumivanta\nLumivanta recorded renewable energy recovery savings of AED 450,000 and automated\ninfrastructure efficiency gains of AED 125,000 during FY 2026.\nIts intelligent resource balancing benefits amounted to AED 85,000 for the same reporting\nperiod.\n6.3 Multiple Organizations\nSolvex reported revenue of USD 8 million for FY 2024, while Arvion recorded revenue of INR 12\ncrore for FY 2025. Arvion's net profit reached INR 2.5 crore for FY 2025.\n6.4 Multiple Reporting Periods\nNoventra reported revenue of AED 10 million in FY 2024 and AED 14 million in FY 2025.\nIts net profit was AED 2 million in FY 2024 and AED 3.5 million in FY 2025.",
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      }
+    ],
+    "rawContent": "<!-- Page 1 -->\n\nCONSOLIDATED FINANCIAL\nPERFORMANCE REPORT\nReporting Period: FY 2024–2026\nDocument Version: 1.0\nClassification: Internal Financial Report\nPrepared Date: 25 November 2026\nReference Number: FIN-45821\n## 1. Aurevix — Annual Financial Performance\nAll monetary amounts in the following table are expressed in AED millions.\nFinancial Particulars \tFY 2024 FY 2025\nRevenue \t12.50 15.75\nCost of Revenue \t4.20 \t5.10\nGross Profit \t8.30 \t10.65\nOperating Expenses \t3.20 \t4.15\nNet Profit \t4.10 \t5.50\nQuantum Infrastructure Recovery\nGains 0.45 \t0.72\nDigital Resource Optimization Benefits 0.25 \t0.38\n## 2. Nexora — Quarterly Performance\nAll monetary amounts are expressed in USD.\nReporting\nCycle Revenue Net Profit Automated Compliance\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\nQ3 2026 1,150,00\n0 210,000 85,000\n## 3. Veltrion — Actual and Budget Comparison\nAll monetary amounts are expressed in INR crore.\n\n<!-- Page 2 -->\n\nBusiness Indicator FY 2025\nActual\nFY 2025\nBudget\nFY 2026\nActual\nFY 2026\nBudget\nRevenue \t15.5 \t16.0 \t20.0 \t22.0\nNet Profit \t2.5 \t3.0 \t4.2 \t4.5\nSustainable Infrastructure\nRecovery 0.85 \t0.90 \t1.25 \t1.50\n## 4. Multi-Company Financial Summary\nOrganization Performance Measure Reporting\nPeriod Currency Recorded\nAmount\nAurevix \tRevenue \tFY 2026 \tAED \t18,500,000\nNexora \tOperating Profit \tFY 2026 \tUSD \t750,000\nVeltrion \tCapital Expenditure \tFY 2025 \tINR \t1,25,00,000\nOrvexa Intelligent Energy Recovery\nBenefits FY 2026 \tEUR \t450,250.75\n## 5. Orvexa — Financial and Operational Indicators\nReporting period: FY 2025. Monetary amounts are expressed in EUR.\nPerformance Indicator Recorded\nValue\nOperating Loss \t(250,000)\nCapital Expenditure \t1,250,000\nForeign Exchange\nAdjustment -75,500\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nDistribution Centres \t12\nDeferred Tax Adjustment \tN/A\nExceptional Income \t—\n## 6. Financial Narrative\n6.1 Meridian Technologies\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n## 2025. Its operating expenses amounted to INR 85 lakh.\n\n<!-- Page 3 -->\n\nThe company's research and development expenses reached INR 1.2 crore during the same\nfinancial year.\n6.2 Lumivanta\nLumivanta recorded renewable energy recovery savings of AED 450,000 and automated\ninfrastructure efficiency gains of AED 125,000 during FY 2026.\nIts intelligent resource balancing benefits amounted to AED 85,000 for the same reporting\nperiod.\n6.3 Multiple Organizations\nSolvex reported revenue of USD 8 million for FY 2024, while Arvion recorded revenue of INR 12\ncrore for FY 2025. Arvion's net profit reached INR 2.5 crore for FY 2025.\n6.4 Multiple Reporting Periods\nNoventra reported revenue of AED 10 million in FY 2024 and AED 14 million in FY 2025.\nIts net profit was AED 2 million in FY 2024 and AED 3.5 million in FY 2025."
+  },
+  "normalizedContent": {
+    "document_id": "19",
+    "tables": [],
+    "paragraphs": [
+      {
+        "element_id": "doc_19_p_1",
+        "document_id": "19",
+        "element_type": "paragraph",
+        "content": "CONSOLIDATED FINANCIAL\nPERFORMANCE REPORT\nReporting Period: FY 2024–2026\nDocument Version: 1.0\nClassification: Internal Financial Report\nPrepared Date: 25 November 2026\nReference Number: FIN-45821\n1. Aurevix — Annual Financial Performance\nAll monetary amounts in the following table are expressed in AED millions.\nFinancial Particulars \tFY 2024 FY 2025\nRevenue \t12.50 15.75\nCost of Revenue \t4.20 \t5.10\nGross Profit \t8.30 \t10.65\nOperating Expenses \t3.20 \t4.15\nNet Profit \t4.10 \t5.50\nQuantum Infrastructure Recovery\nGains 0.45 \t0.72\nDigital Resource Optimization Benefits 0.25 \t0.38\n2. Nexora — Quarterly Performance\nAll monetary amounts are expressed in USD.\nReporting\nCycle Revenue Net Profit Automated Compliance\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\nQ3 2026 1,150,00\n0 210,000 85,000\n3. Veltrion — Actual and Budget Comparison\nAll monetary amounts are expressed in INR crore.",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_19_p_2",
+        "document_id": "19",
+        "element_type": "paragraph",
+        "content": "Business Indicator FY 2025\nActual\nFY 2025\nBudget\nFY 2026\nActual\nFY 2026\nBudget\nRevenue \t15.5 \t16.0 \t20.0 \t22.0\nNet Profit \t2.5 \t3.0 \t4.2 \t4.5\nSustainable Infrastructure\nRecovery 0.85 \t0.90 \t1.25 \t1.50\n4. Multi-Company Financial Summary\nOrganization Performance Measure Reporting\nPeriod Currency Recorded\nAmount\nAurevix \tRevenue \tFY 2026 \tAED \t18,500,000\nNexora \tOperating Profit \tFY 2026 \tUSD \t750,000\nVeltrion \tCapital Expenditure \tFY 2025 \tINR \t1,25,00,000\nOrvexa Intelligent Energy Recovery\nBenefits FY 2026 \tEUR \t450,250.75\n5. Orvexa — Financial and Operational Indicators\nReporting period: FY 2025. Monetary amounts are expressed in EUR.\nPerformance Indicator Recorded\nValue\nOperating Loss \t(250,000)\nCapital Expenditure \t1,250,000\nForeign Exchange\nAdjustment -75,500\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nDistribution Centres \t12\nDeferred Tax Adjustment \tN/A\nExceptional Income \t—\n6. Financial Narrative\n6.1 Meridian Technologies\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n2025. Its operating expenses amounted to INR 85 lakh.",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_19_p_3",
+        "document_id": "19",
+        "element_type": "paragraph",
+        "content": "The company's research and development expenses reached INR 1.2 crore during the same\nfinancial year.\n6.2 Lumivanta\nLumivanta recorded renewable energy recovery savings of AED 450,000 and automated\ninfrastructure efficiency gains of AED 125,000 during FY 2026.\nIts intelligent resource balancing benefits amounted to AED 85,000 for the same reporting\nperiod.\n6.3 Multiple Organizations\nSolvex reported revenue of USD 8 million for FY 2024, while Arvion recorded revenue of INR 12\ncrore for FY 2025. Arvion's net profit reached INR 2.5 crore for FY 2025.\n6.4 Multiple Reporting Periods\nNoventra reported revenue of AED 10 million in FY 2024 and AED 14 million in FY 2025.\nIts net profit was AED 2 million in FY 2024 and AED 3.5 million in FY 2025.",
+        "page_number": 3
+      }
+    ],
+    "fullMarkdown": "<!-- Page 1 -->\n\nCONSOLIDATED FINANCIAL\nPERFORMANCE REPORT\nReporting Period: FY 2024–2026\nDocument Version: 1.0\nClassification: Internal Financial Report\nPrepared Date: 25 November 2026\nReference Number: FIN-45821\n## 1. Aurevix — Annual Financial Performance\nAll monetary amounts in the following table are expressed in AED millions.\nFinancial Particulars \tFY 2024 FY 2025\nRevenue \t12.50 15.75\nCost of Revenue \t4.20 \t5.10\nGross Profit \t8.30 \t10.65\nOperating Expenses \t3.20 \t4.15\nNet Profit \t4.10 \t5.50\nQuantum Infrastructure Recovery\nGains 0.45 \t0.72\nDigital Resource Optimization Benefits 0.25 \t0.38\n## 2. Nexora — Quarterly Performance\nAll monetary amounts are expressed in USD.\nReporting\nCycle Revenue Net Profit Automated Compliance\nSavings\nQ1 2026 \t850,000 125,000 45,000\nQ2 2026 \t950,000 175,000 62,000\nQ3 2026 1,150,00\n0 210,000 85,000\n## 3. Veltrion — Actual and Budget Comparison\nAll monetary amounts are expressed in INR crore.\n\n<!-- Page 2 -->\n\nBusiness Indicator FY 2025\nActual\nFY 2025\nBudget\nFY 2026\nActual\nFY 2026\nBudget\nRevenue \t15.5 \t16.0 \t20.0 \t22.0\nNet Profit \t2.5 \t3.0 \t4.2 \t4.5\nSustainable Infrastructure\nRecovery 0.85 \t0.90 \t1.25 \t1.50\n## 4. Multi-Company Financial Summary\nOrganization Performance Measure Reporting\nPeriod Currency Recorded\nAmount\nAurevix \tRevenue \tFY 2026 \tAED \t18,500,000\nNexora \tOperating Profit \tFY 2026 \tUSD \t750,000\nVeltrion \tCapital Expenditure \tFY 2025 \tINR \t1,25,00,000\nOrvexa Intelligent Energy Recovery\nBenefits FY 2026 \tEUR \t450,250.75\n## 5. Orvexa — Financial and Operational Indicators\nReporting period: FY 2025. Monetary amounts are expressed in EUR.\nPerformance Indicator Recorded\nValue\nOperating Loss \t(250,000)\nCapital Expenditure \t1,250,000\nForeign Exchange\nAdjustment -75,500\nNet Profit Margin \t18.5%\nCurrent Ratio \t1.75\nTotal Employees \t135\nDistribution Centres \t12\nDeferred Tax Adjustment \tN/A\nExceptional Income \t—\n## 6. Financial Narrative\n6.1 Meridian Technologies\nMeridian Technologies reported revenue of INR 15.5 crore and net profit of INR 2.5 crore for FY\n## 2025. Its operating expenses amounted to INR 85 lakh.\n\n<!-- Page 3 -->\n\nThe company's research and development expenses reached INR 1.2 crore during the same\nfinancial year.\n6.2 Lumivanta\nLumivanta recorded renewable energy recovery savings of AED 450,000 and automated\ninfrastructure efficiency gains of AED 125,000 during FY 2026.\nIts intelligent resource balancing benefits amounted to AED 85,000 for the same reporting\nperiod.\n6.3 Multiple Organizations\nSolvex reported revenue of USD 8 million for FY 2024, while Arvion recorded revenue of INR 12\ncrore for FY 2025. Arvion's net profit reached INR 2.5 crore for FY 2025.\n6.4 Multiple Reporting Periods\nNoventra reported revenue of AED 10 million in FY 2024 and AED 14 million in FY 2025.\nIts net profit was AED 2 million in FY 2024 and AED 3.5 million in FY 2025."
+  },
+  "extractedFacts": [],
+  "conflicts": [],
+  "chunks": []
+}

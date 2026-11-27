@@ -1,0 +1,1404 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-25T12:31:51.312Z",
+    "correlationId": "ingest-1795609908984-tb7h9-30",
+    "documentId": "30",
+    "fileName": "NOVENTRA  HOLDINGS (1).pdf",
+    "authorityRank": 4
+  },
+  "rawExtraction": {
+    "pageCount": 3,
+    "tableCount": 12,
+    "paragraphCount": 15,
+    "contentLength": 2211,
+    "pages": [
+      {
+        "pageNumber": 1,
+        "text": "STERVION INTERNATIONAL HOLDINGS\nFinancial and Operational Performance Report\nReporting Period: Half-year ended 30 June 2026\nDocument Status: Final management report (unaudited)\nPrepared Date: 18 July 2026\nReporting Currency: AED\n1. Financial Performance by Business Division\nAll monetary amounts are expressed in AED thousands.\nBusiness Revenu Direct Gross\nNet Profit\nDivision e Costs Profit\nIndustrial Solutions 24,500 12,300 12,200 4,850\nDigital Services 18,750 8,250 10,500 3,620\nRenewable Energy 15,800 7,400 8,400 2,950\nGroup Total 59,050 27,950 31,100 11,420\nThe above figures represent actual financial performance for the completed half-year.\n3. Actual, Budget and Forecast Comparison\nEntity: Calvion Digital LLC.\nReporting period: Q2 2026.\nAll monetary amounts are expressed in AED units.\nFinancial Measure Actual Budget Forecast\n8,500,00 9,000,00 8,750,00\nRevenue\n0 0 0\nOperating 2,450,00 2,700,00 2,550,00\nExpenses 0 0 0\n1,850,00 2,000,00 1,950,00\nNet Profit\n0 0 0"
+      },
+      {
+        "pageNumber": 2,
+        "text": "4. International Financial Transactions\nReporting\nReporting Entity Financial Metric Currency Amount\nPeriod\nTrevion\nRevenue INR FY 2025 28.5 crore\nTechnologies\n2.350.750,5\nElvaris Industries Capital Expenditure EUR FY 2025\n0\nVenthor Systems Operating Profit USD Q2 2026 875,250.75\nAdaptive Resource Recovery\nOryvex Solutions AED Q2 2026 425,000\nBenefits\nNexvanta\nMaintenance Expenses INR FY 2025 65 lakh\nEngineering\n5. Operational and Financial Indicators\nEntity: Stervion Manufacturing LLC.\nReporting period: H1 2026.\nMonetary figures are expressed in AED units.\nReported\nIndicator\nValue\nOperating Loss (285,000)\nGross Profit Margin 28.75%\nDebt-to-Equity Ratio 1.45\nCurrent Ratio 2.25\nTotal Employees 485\nOutstanding Customer\n1,250,000\nReceivables\n6. Cash Flow and Financial Requirements\nCalvion Digital LLC reported closing cash of AED 1,850,000 as at 30 June 2026, against a\nminimum operating cash requirement of AED 2,500,000, resulting in a cash shortfall of AED\n650,000.\nCustomer payments totaling AED 425,000 were received on 10 July 2026.\nThe company paid AED 185,000 for infrastructure maintenance on 25 June 2026, earlier than\noriginally budgeted."
+      },
+      {
+        "pageNumber": 3,
+        "text": "Management"
+      }
+    ],
+    "tables": [
+      {
+        "tableId": "P1-T1",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Business"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Revenu"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Direct"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "Gross"
+          }
+        ],
+        "caption": "1. Financial Performance by Business Division",
+        "note": "All monetary amounts are expressed in AED thousands.",
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T2",
+        "rowCount": 5,
+        "columnCount": 5,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Division"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "e"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Costs"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "Profit"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 4,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Industrial Solutions 24,500"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "12,300"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": "12,200"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 3,
+            "content": "4,850"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 4,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Digital Services"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "18,750"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 2,
+            "content": "8,250"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 3,
+            "content": "10,500"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 4,
+            "content": "3,620"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Renewable Energy 15,800"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "7,400"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 2,
+            "content": "8,400"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 3,
+            "content": "2,950"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 4,
+            "content": ""
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Group Total"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "59,050"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 2,
+            "content": "27,950"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 3,
+            "content": "31,100"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 4,
+            "content": "11,420"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T3",
+        "rowCount": 1,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Financial Measure"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Actual"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Budget Forecast"
+          }
+        ],
+        "caption": null,
+        "note": "All monetary amounts are expressed in AED units.",
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T4",
+        "rowCount": 3,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "0"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "0"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "0"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Operating"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "2,450,00 2,700,00 2,550,00"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 2,
+            "content": ""
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 3,
+            "content": ""
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Expenses"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "0"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 2,
+            "content": "0"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 3,
+            "content": "0"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P1-T5",
+        "rowCount": 1,
+        "columnCount": 3,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "0"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "0"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "0"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T1",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Reporting Entity"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Financial Metric"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Currency"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "Amount"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T2",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Revenue"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "INR"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "FY 2025"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "28.5 crore"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T3",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Elvaris Industries"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Capital Expenditure"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "EUR"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "FY 2025"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T4",
+        "rowCount": 1,
+        "columnCount": 5,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Venthor Systems"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "Operating Profit"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "USD"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "Q2 2026"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 4,
+            "content": "875,250.75"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T5",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Oryvex Solutions"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "AED"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "Q2 2026"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "425,000"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T6",
+        "rowCount": 1,
+        "columnCount": 4,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Maintenance Expenses"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "INR"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 2,
+            "content": "FY 2025"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 3,
+            "content": "65 lakh"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "tableId": "P2-T7",
+        "rowCount": 5,
+        "columnCount": 2,
+        "cells": [
+          {
+            "rowIndex": 0,
+            "columnIndex": 0,
+            "content": "Operating Loss"
+          },
+          {
+            "rowIndex": 0,
+            "columnIndex": 1,
+            "content": "(285,000)"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 0,
+            "content": "Gross Profit Margin"
+          },
+          {
+            "rowIndex": 1,
+            "columnIndex": 1,
+            "content": "28.75%"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 0,
+            "content": "Debt-to-Equity Ratio"
+          },
+          {
+            "rowIndex": 2,
+            "columnIndex": 1,
+            "content": "1.45"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 0,
+            "content": "Current Ratio"
+          },
+          {
+            "rowIndex": 3,
+            "columnIndex": 1,
+            "content": "2.25"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 0,
+            "content": "Total Employees"
+          },
+          {
+            "rowIndex": 4,
+            "columnIndex": 1,
+            "content": "485"
+          }
+        ],
+        "caption": null,
+        "note": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "content": "STERVION INTERNATIONAL HOLDINGS",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Financial and Operational Performance Report\nReporting Period: Half-year ended 30 June 2026\nDocument Status: Final management report (unaudited)\nPrepared Date: 18 July 2026\nReporting Currency: AED",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "Net Profit",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "The above figures represent actual financial performance for the completed half-year.\n3. Actual, Budget and Forecast Comparison\nEntity: Calvion Digital LLC.\nReporting period: Q2 2026.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "8,500,00 9,000,00 8,750,00\nRevenue",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "1,850,00 2,000,00 1,950,00\nNet Profit",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 1
+          }
+        ]
+      },
+      {
+        "content": "4. International Financial Transactions\nReporting",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Period\nTrevion",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Technologies\n2.350.750,5",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "0",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Adaptive Resource Recovery",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Benefits\nNexvanta",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Engineering\n5. Operational and Financial Indicators\nEntity: Stervion Manufacturing LLC.\nReporting period: H1 2026.\nMonetary figures are expressed in AED units.\nReported\nIndicator\nValue",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Outstanding Customer\n1,250,000\nReceivables\n6. Cash Flow and Financial Requirements\nCalvion Digital LLC reported closing cash of AED 1,850,000 as at 30 June 2026, against a\nminimum operating cash requirement of AED 2,500,000, resulting in a cash shortfall of AED\n650,000.\nCustomer payments totaling AED 425,000 were received on 10 July 2026.\nThe company paid AED 185,000 for infrastructure maintenance on 25 June 2026, earlier than\noriginally budgeted.",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 2
+          }
+        ]
+      },
+      {
+        "content": "Management",
+        "heading": null,
+        "boundingRegions": [
+          {
+            "pageNumber": 3
+          }
+        ]
+      }
+    ],
+    "rawContent": "<!-- Page 1 -->\n\nSTERVION INTERNATIONAL HOLDINGS\nFinancial and Operational Performance Report\nReporting Period: Half-year ended 30 June 2026\nDocument Status: Final management report (unaudited)\nPrepared Date: 18 July 2026\nReporting Currency: AED\n## 1. Financial Performance by Business Division\nAll monetary amounts are expressed in AED thousands.\nBusiness Revenu Direct Gross\nNet Profit\nDivision e Costs Profit\nIndustrial Solutions 24,500 12,300 12,200 4,850\nDigital Services 18,750 8,250 10,500 3,620\nRenewable Energy 15,800 7,400 8,400 2,950\nGroup Total 59,050 27,950 31,100 11,420\nThe above figures represent actual financial performance for the completed half-year.\n## 3. Actual, Budget and Forecast Comparison\nEntity: Calvion Digital LLC.\nReporting period: Q2 2026.\nAll monetary amounts are expressed in AED units.\nFinancial Measure Actual Budget Forecast\n8,500,00 9,000,00 8,750,00\nRevenue\n0 0 0\nOperating 2,450,00 2,700,00 2,550,00\nExpenses 0 0 0\n1,850,00 2,000,00 1,950,00\nNet Profit\n0 0 0\n\n<!-- Page 2 -->\n\n## 4. International Financial Transactions\nReporting\nReporting Entity Financial Metric Currency Amount\nPeriod\nTrevion\nRevenue INR FY 2025 28.5 crore\nTechnologies\n2.350.750,5\nElvaris Industries Capital Expenditure EUR FY 2025\n0\nVenthor Systems Operating Profit USD Q2 2026 875,250.75\nAdaptive Resource Recovery\nOryvex Solutions AED Q2 2026 425,000\nBenefits\nNexvanta\nMaintenance Expenses INR FY 2025 65 lakh\nEngineering\n## 5. Operational and Financial Indicators\nEntity: Stervion Manufacturing LLC.\nReporting period: H1 2026.\nMonetary figures are expressed in AED units.\nReported\nIndicator\nValue\nOperating Loss (285,000)\nGross Profit Margin 28.75%\nDebt-to-Equity Ratio 1.45\nCurrent Ratio 2.25\nTotal Employees 485\nOutstanding Customer\n1,250,000\nReceivables\n## 6. Cash Flow and Financial Requirements\nCalvion Digital LLC reported closing cash of AED 1,850,000 as at 30 June 2026, against a\nminimum operating cash requirement of AED 2,500,000, resulting in a cash shortfall of AED\n650,000.\nCustomer payments totaling AED 425,000 were received on 10 July 2026.\nThe company paid AED 185,000 for infrastructure maintenance on 25 June 2026, earlier than\noriginally budgeted.\n\n<!-- Page 3 -->\n\nManagement"
+  },
+  "normalizedContent": {
+    "document_id": "30",
+    "tables": [
+      {
+        "element_id": "doc_30_table_1",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 1,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "Business",
+          "Revenu",
+          "Direct",
+          "Gross"
+        ],
+        "rows": [],
+        "page_number": 1,
+        "content": "| Business | Revenu | Direct | Gross |\n| --- | --- | --- | --- |",
+        "caption": "1. Financial Performance by Business Division",
+        "note": "All monetary amounts are expressed in AED thousands.",
+        "grid": [
+          [
+            "Business",
+            "Revenu",
+            "Direct",
+            "Gross"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_2",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 2,
+        "row_count": 5,
+        "column_count": 5,
+        "headers": [
+          "Division",
+          "e",
+          "Costs",
+          "Profit",
+          "Col_5"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Division": "Industrial Solutions 24,500",
+              "e": "12,300",
+              "Costs": "12,200",
+              "Profit": "4,850",
+              "Col_5": ""
+            },
+            "rawValues": [
+              "Industrial Solutions 24,500",
+              "12,300",
+              "12,200",
+              "4,850",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "Division": "Digital Services",
+              "e": "18,750",
+              "Costs": "8,250",
+              "Profit": "10,500",
+              "Col_5": "3,620"
+            },
+            "rawValues": [
+              "Digital Services",
+              "18,750",
+              "8,250",
+              "10,500",
+              "3,620"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "Division": "Renewable Energy 15,800",
+              "e": "7,400",
+              "Costs": "8,400",
+              "Profit": "2,950",
+              "Col_5": ""
+            },
+            "rawValues": [
+              "Renewable Energy 15,800",
+              "7,400",
+              "8,400",
+              "2,950",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "Division": "Group Total",
+              "e": "59,050",
+              "Costs": "27,950",
+              "Profit": "31,100",
+              "Col_5": "11,420"
+            },
+            "rawValues": [
+              "Group Total",
+              "59,050",
+              "27,950",
+              "31,100",
+              "11,420"
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| Division | e | Costs | Profit | Col_5 |\n| --- | --- | --- | --- | --- |\n| Industrial Solutions 24,500 | 12,300 | 12,200 | 4,850 |  |\n| Digital Services | 18,750 | 8,250 | 10,500 | 3,620 |\n| Renewable Energy 15,800 | 7,400 | 8,400 | 2,950 |  |\n| Group Total | 59,050 | 27,950 | 31,100 | 11,420 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Division",
+            "e",
+            "Costs",
+            "Profit",
+            ""
+          ],
+          [
+            "Industrial Solutions 24,500",
+            "12,300",
+            "12,200",
+            "4,850",
+            ""
+          ],
+          [
+            "Digital Services",
+            "18,750",
+            "8,250",
+            "10,500",
+            "3,620"
+          ],
+          [
+            "Renewable Energy 15,800",
+            "7,400",
+            "8,400",
+            "2,950",
+            ""
+          ],
+          [
+            "Group Total",
+            "59,050",
+            "27,950",
+            "31,100",
+            "11,420"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_3",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 3,
+        "row_count": 1,
+        "column_count": 3,
+        "headers": [
+          "Financial Measure",
+          "Actual",
+          "Budget Forecast"
+        ],
+        "rows": [],
+        "page_number": 1,
+        "content": "| Financial Measure | Actual | Budget Forecast |\n| --- | --- | --- |",
+        "caption": null,
+        "note": "All monetary amounts are expressed in AED units.",
+        "grid": [
+          [
+            "Financial Measure",
+            "Actual",
+            "Budget Forecast"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_4",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 4,
+        "row_count": 3,
+        "column_count": 4,
+        "headers": [
+          "0",
+          "0",
+          "0",
+          "Col_4"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "0": "",
+              "Col_4": ""
+            },
+            "rawValues": [
+              "Operating",
+              "2,450,00 2,700,00 2,550,00",
+              "",
+              ""
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "0": "0",
+              "Col_4": "0"
+            },
+            "rawValues": [
+              "Expenses",
+              "0",
+              "0",
+              "0"
+            ]
+          }
+        ],
+        "page_number": 1,
+        "content": "| 0 | 0 | 0 | Col_4 |\n| --- | --- | --- | --- |\n|  |  |  |  |\n| 0 | 0 | 0 | 0 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "0",
+            "0",
+            "0",
+            ""
+          ],
+          [
+            "Operating",
+            "2,450,00 2,700,00 2,550,00",
+            "",
+            ""
+          ],
+          [
+            "Expenses",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_5",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 5,
+        "row_count": 1,
+        "column_count": 3,
+        "headers": [
+          "0",
+          "0",
+          "0"
+        ],
+        "rows": [],
+        "page_number": 1,
+        "content": "| 0 | 0 | 0 |\n| --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_6",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 6,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "Reporting Entity",
+          "Financial Metric",
+          "Currency",
+          "Amount"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Reporting Entity | Financial Metric | Currency | Amount |\n| --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Reporting Entity",
+            "Financial Metric",
+            "Currency",
+            "Amount"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_7",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 7,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "Revenue",
+          "INR",
+          "FY 2025",
+          "28.5 crore"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Revenue | INR | FY 2025 | 28.5 crore |\n| --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Revenue",
+            "INR",
+            "FY 2025",
+            "28.5 crore"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_8",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 8,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "Elvaris Industries",
+          "Capital Expenditure",
+          "EUR",
+          "FY 2025"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Elvaris Industries | Capital Expenditure | EUR | FY 2025 |\n| --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Elvaris Industries",
+            "Capital Expenditure",
+            "EUR",
+            "FY 2025"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_9",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 9,
+        "row_count": 1,
+        "column_count": 5,
+        "headers": [
+          "Venthor Systems",
+          "Operating Profit",
+          "USD",
+          "Q2 2026",
+          "875,250.75"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Venthor Systems | Operating Profit | USD | Q2 2026 | 875,250.75 |\n| --- | --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Venthor Systems",
+            "Operating Profit",
+            "USD",
+            "Q2 2026",
+            "875,250.75"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_10",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 10,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "Oryvex Solutions",
+          "AED",
+          "Q2 2026",
+          "425,000"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Oryvex Solutions | AED | Q2 2026 | 425,000 |\n| --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Oryvex Solutions",
+            "AED",
+            "Q2 2026",
+            "425,000"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_11",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 11,
+        "row_count": 1,
+        "column_count": 4,
+        "headers": [
+          "Maintenance Expenses",
+          "INR",
+          "FY 2025",
+          "65 lakh"
+        ],
+        "rows": [],
+        "page_number": 2,
+        "content": "| Maintenance Expenses | INR | FY 2025 | 65 lakh |\n| --- | --- | --- | --- |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Maintenance Expenses",
+            "INR",
+            "FY 2025",
+            "65 lakh"
+          ]
+        ],
+        "isNonFinancial": false
+      },
+      {
+        "element_id": "doc_30_table_12",
+        "document_id": "30",
+        "element_type": "table",
+        "table_id": 12,
+        "row_count": 5,
+        "column_count": 2,
+        "headers": [
+          "Operating Loss",
+          "(285,000)"
+        ],
+        "rows": [
+          {
+            "rowIndex": 1,
+            "cells": {
+              "Operating Loss": "Gross Profit Margin",
+              "(285,000)": "28.75%"
+            },
+            "rawValues": [
+              "Gross Profit Margin",
+              "28.75%"
+            ]
+          },
+          {
+            "rowIndex": 2,
+            "cells": {
+              "Operating Loss": "Debt-to-Equity Ratio",
+              "(285,000)": "1.45"
+            },
+            "rawValues": [
+              "Debt-to-Equity Ratio",
+              "1.45"
+            ]
+          },
+          {
+            "rowIndex": 3,
+            "cells": {
+              "Operating Loss": "Current Ratio",
+              "(285,000)": "2.25"
+            },
+            "rawValues": [
+              "Current Ratio",
+              "2.25"
+            ]
+          },
+          {
+            "rowIndex": 4,
+            "cells": {
+              "Operating Loss": "Total Employees",
+              "(285,000)": "485"
+            },
+            "rawValues": [
+              "Total Employees",
+              "485"
+            ]
+          }
+        ],
+        "page_number": 2,
+        "content": "| Operating Loss | (285,000) |\n| --- | --- |\n| Gross Profit Margin | 28.75% |\n| Debt-to-Equity Ratio | 1.45 |\n| Current Ratio | 2.25 |\n| Total Employees | 485 |",
+        "caption": null,
+        "note": null,
+        "grid": [
+          [
+            "Operating Loss",
+            "(285,000)"
+          ],
+          [
+            "Gross Profit Margin",
+            "28.75%"
+          ],
+          [
+            "Debt-to-Equity Ratio",
+            "1.45"
+          ],
+          [
+            "Current Ratio",
+            "2.25"
+          ],
+          [
+            "Total Employees",
+            "485"
+          ]
+        ],
+        "isNonFinancial": false
+      }
+    ],
+    "paragraphs": [
+      {
+        "element_id": "doc_30_p_1",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "STERVION INTERNATIONAL HOLDINGS",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_30_p_2",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "Financial and Operational Performance Report\nReporting Period: Half-year ended 30 June 2026\nDocument Status: Final management report (unaudited)\nPrepared Date: 18 July 2026\nReporting Currency: AED",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_30_p_3",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "Net Profit",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_30_p_4",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "The above figures represent actual financial performance for the completed half-year.\n3. Actual, Budget and Forecast Comparison\nEntity: Calvion Digital LLC.\nReporting period: Q2 2026.",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_30_p_5",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "8,500,00 9,000,00 8,750,00\nRevenue",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_30_p_6",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "1,850,00 2,000,00 1,950,00\nNet Profit",
+        "page_number": 1
+      },
+      {
+        "element_id": "doc_30_p_7",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "4. International Financial Transactions\nReporting",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_30_p_8",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "Period\nTrevion",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_30_p_9",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "Technologies\n2.350.750,5",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_30_p_10",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "0",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_30_p_11",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "Adaptive Resource Recovery",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_30_p_12",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "Benefits\nNexvanta",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_30_p_13",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "Engineering\n5. Operational and Financial Indicators\nEntity: Stervion Manufacturing LLC.\nReporting period: H1 2026.\nMonetary figures are expressed in AED units.\nReported\nIndicator\nValue",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_30_p_14",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "Outstanding Customer\n1,250,000\nReceivables\n6. Cash Flow and Financial Requirements\nCalvion Digital LLC reported closing cash of AED 1,850,000 as at 30 June 2026, against a\nminimum operating cash requirement of AED 2,500,000, resulting in a cash shortfall of AED\n650,000.\nCustomer payments totaling AED 425,000 were received on 10 July 2026.\nThe company paid AED 185,000 for infrastructure maintenance on 25 June 2026, earlier than\noriginally budgeted.",
+        "page_number": 2
+      },
+      {
+        "element_id": "doc_30_p_15",
+        "document_id": "30",
+        "element_type": "paragraph",
+        "content": "Management",
+        "page_number": 3
+      }
+    ],
+    "fullMarkdown": "<!-- Page 1 -->\n\nSTERVION INTERNATIONAL HOLDINGS\nFinancial and Operational Performance Report\nReporting Period: Half-year ended 30 June 2026\nDocument Status: Final management report (unaudited)\nPrepared Date: 18 July 2026\nReporting Currency: AED\n## 1. Financial Performance by Business Division\nAll monetary amounts are expressed in AED thousands.\nBusiness Revenu Direct Gross\nNet Profit\nDivision e Costs Profit\nIndustrial Solutions 24,500 12,300 12,200 4,850\nDigital Services 18,750 8,250 10,500 3,620\nRenewable Energy 15,800 7,400 8,400 2,950\nGroup Total 59,050 27,950 31,100 11,420\nThe above figures represent actual financial performance for the completed half-year.\n## 3. Actual, Budget and Forecast Comparison\nEntity: Calvion Digital LLC.\nReporting period: Q2 2026.\nAll monetary amounts are expressed in AED units.\nFinancial Measure Actual Budget Forecast\n8,500,00 9,000,00 8,750,00\nRevenue\n0 0 0\nOperating 2,450,00 2,700,00 2,550,00\nExpenses 0 0 0\n1,850,00 2,000,00 1,950,00\nNet Profit\n0 0 0\n\n<!-- Page 2 -->\n\n## 4. International Financial Transactions\nReporting\nReporting Entity Financial Metric Currency Amount\nPeriod\nTrevion\nRevenue INR FY 2025 28.5 crore\nTechnologies\n2.350.750,5\nElvaris Industries Capital Expenditure EUR FY 2025\n0\nVenthor Systems Operating Profit USD Q2 2026 875,250.75\nAdaptive Resource Recovery\nOryvex Solutions AED Q2 2026 425,000\nBenefits\nNexvanta\nMaintenance Expenses INR FY 2025 65 lakh\nEngineering\n## 5. Operational and Financial Indicators\nEntity: Stervion Manufacturing LLC.\nReporting period: H1 2026.\nMonetary figures are expressed in AED units.\nReported\nIndicator\nValue\nOperating Loss (285,000)\nGross Profit Margin 28.75%\nDebt-to-Equity Ratio 1.45\nCurrent Ratio 2.25\nTotal Employees 485\nOutstanding Customer\n1,250,000\nReceivables\n## 6. Cash Flow and Financial Requirements\nCalvion Digital LLC reported closing cash of AED 1,850,000 as at 30 June 2026, against a\nminimum operating cash requirement of AED 2,500,000, resulting in a cash shortfall of AED\n650,000.\nCustomer payments totaling AED 425,000 were received on 10 July 2026.\nThe company paid AED 185,000 for infrastructure maintenance on 25 June 2026, earlier than\noriginally budgeted.\n\n<!-- Page 3 -->\n\nManagement"
+  },
+  "extractedFacts": [],
+  "conflicts": [],
+  "chunks": []
+}
