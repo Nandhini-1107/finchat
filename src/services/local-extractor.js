@@ -38,11 +38,38 @@ if (typeof globalThis.DOMMatrix === 'undefined') {
 
 const xlsx = require('xlsx');
 const { AppError } = require('../utils/errors');
+const {
+    extractPdfLayout,
+    detectTablesAndParagraphsFromLines
+} = require('./financial-extraction/layout/pdf-layout-adapter');
 
 function extractTablesFromPdfText(fullText, pages = []) {
-    const tables = [];
     const lines = fullText.split('\n').map(l => l.trim()).filter(Boolean);
+    const { tables: detectedTables } = detectTablesAndParagraphsFromLines(lines, 1);
 
+    const formattedTables = [];
+    for (const dt of detectedTables) {
+        if (!dt.grid || dt.grid.length < 2) continue;
+        const cells = [];
+        dt.grid.forEach((row, rIdx) => {
+            row.forEach((content, cIdx) => {
+                cells.push({ rowIndex: rIdx, columnIndex: cIdx, content });
+            });
+        });
+        formattedTables.push({
+            rowCount: dt.grid.length,
+            columnCount: dt.columnCount || (dt.grid[0] ? dt.grid[0].length : 0),
+            cells,
+            caption: dt.caption || null,
+            note: dt.contextText || null,
+            boundingRegions: [{ pageNumber: dt.pageNumber || 1 }],
+            isNonFinancial: dt.isNonFinancial || false
+        });
+    }
+
+    if (formattedTables.length > 0) return formattedTables;
+
+    // Legacy fallback check for summary header
     const summaryHeaderIdx = lines.findIndex(l => /metric\s+count\s+amount/i.test(l));
     if (summaryHeaderIdx !== -1) {
         const headers = ['Metric', 'Count', 'Amount (USD)', 'Interpretation'];
@@ -66,20 +93,68 @@ function extractTablesFromPdfText(fullText, pages = []) {
                 });
             });
 
-            tables.push({
+            return [{
                 rowCount: grid.length,
                 columnCount: 4,
                 cells,
                 boundingRegions: [{ pageNumber: 1 }]
-            });
+            }];
         }
     }
 
-    return tables;
+    return [];
 }
 
 async function extractFromPdf(pdfBuffer) {
     try {
+        // Try coordinate-aware layout extraction first (Sections 6-9)
+        let layoutResult = null;
+        try {
+            layoutResult = await extractPdfLayout(pdfBuffer);
+        } catch {
+            layoutResult = null;
+        }
+
+        if (layoutResult && (layoutResult.tables.length > 0 || layoutResult.paragraphs.length > 0)) {
+            const formattedTables = layoutResult.tables.map((dt, idx) => {
+                const cells = [];
+                (dt.grid || []).forEach((row, rIdx) => {
+                    row.forEach((content, cIdx) => {
+                        cells.push({ rowIndex: rIdx, columnIndex: cIdx, content });
+                    });
+                });
+                return {
+                    tableId: dt.tableId || `T${idx + 1}`,
+                    rowCount: dt.rowCount || (dt.grid ? dt.grid.length : 0),
+                    columnCount: dt.columnCount || (dt.grid && dt.grid[0] ? dt.grid[0].length : 0),
+                    cells,
+                    caption: dt.caption || null,
+                    note: dt.contextText || null,
+                    boundingRegions: [{ pageNumber: dt.pageNumber || 1 }],
+                    isNonFinancial: dt.isNonFinancial || false
+                };
+            });
+
+            const formattedParas = layoutResult.paragraphs.map(p => ({
+                content: p.content,
+                heading: p.heading || null,
+                boundingRegions: [{ pageNumber: p.pageNumber || 1 }]
+            }));
+
+            const markdownLines = [];
+            layoutResult.pages.forEach(p => {
+                markdownLines.push(`\n<!-- Page ${p.pageNumber} -->\n`);
+                markdownLines.push(p.text.replace(/(\n|^)(\d+\.\s+[^\n]+)/g, '$1## $2'));
+            });
+
+            return {
+                content: markdownLines.join('\n').trim(),
+                pages: layoutResult.pages,
+                tables: formattedTables,
+                paragraphs: formattedParas
+            };
+        }
+
         const pdfModule = require('pdf-parse');
         let fullText = '';
         let rawPages = [];

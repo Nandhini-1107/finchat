@@ -44,7 +44,11 @@ function normalizeTable(table, tableIndex, documentId) {
         headers,
         rows,
         page_number: pageNumber,
-        content: markdown
+        content: markdown,
+        caption: table.caption || null,
+        note: table.note || null,
+        grid,
+        isNonFinancial: table.isNonFinancial || false
     };
 }
 

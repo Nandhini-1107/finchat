@@ -336,6 +336,14 @@ async function ensureDatabaseSchema(p) {
                 ALTER TABLE dbo.FinancialFacts ADD FactIdentityHash CHAR(64) NULL;
             IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE object_id = OBJECT_ID('dbo.FinancialFacts') AND name = 'SourceLocationHash')
                 ALTER TABLE dbo.FinancialFacts ADD SourceLocationHash CHAR(64) NULL;
+            IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE object_id = OBJECT_ID('dbo.FinancialFacts') AND name = 'ValidationPolicyVersion')
+                ALTER TABLE dbo.FinancialFacts ADD ValidationPolicyVersion NVARCHAR(50) NULL;
+            IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE object_id = OBJECT_ID('dbo.FinancialFacts') AND name = 'ValidationChecksJson')
+                ALTER TABLE dbo.FinancialFacts ADD ValidationChecksJson NVARCHAR(MAX) NULL;
+            IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE object_id = OBJECT_ID('dbo.FinancialFacts') AND name = 'ReviewReasonsJson')
+                ALTER TABLE dbo.FinancialFacts ADD ReviewReasonsJson NVARCHAR(MAX) NULL;
+            IF NOT EXISTS (SELECT 1 FROM sys.columns WHERE object_id = OBJECT_ID('dbo.FinancialFacts') AND name = 'ValidatedAt')
+                ALTER TABLE dbo.FinancialFacts ADD ValidatedAt DATETIME2 NULL;
 
             IF NOT EXISTS (SELECT 1 FROM sys.indexes WHERE name = 'IX_FinancialFacts_IdentityHash' AND object_id = OBJECT_ID('dbo.FinancialFacts'))
                 CREATE INDEX IX_FinancialFacts_IdentityHash ON dbo.FinancialFacts(FactIdentityHash);
@@ -560,6 +568,7 @@ async function getPool() {
 
     const config = {
         server: process.env.AZURE_SQL_SERVER,
+        port: Number(process.env.AZURE_SQL_PORT || 64270),
         database: process.env.AZURE_SQL_DATABASE,
         user: process.env.AZURE_SQL_USER,
         password: process.env.AZURE_SQL_PASSWORD,
@@ -1204,6 +1213,20 @@ async function insertFinancialFacts(documentId, facts, defaultRank = 4, sourceFi
             mappingStatus = 'NeedsReview';
         }
 
+        // Evidence validation status independence: never allow missing required fields or missing status to become Validated
+        let safeValidationStatus = ['Validated', 'NeedsReview', 'Rejected'].includes(fact.validationStatus)
+            ? fact.validationStatus
+            : 'NeedsReview';
+        if (isMissingRequiredFields && safeValidationStatus === 'Validated') {
+            safeValidationStatus = 'NeedsReview';
+        }
+
+        const validationPolicyVersion = fact.validation?.policyVersion || null;
+        const validationChecksJson = fact.validation?.checks ? JSON.stringify(fact.validation.checks) : null;
+        const reviewReasonsJson = (fact.validation?.reviewReasons || fact.reviewReasons)
+            ? JSON.stringify(fact.validation?.reviewReasons || fact.reviewReasons)
+            : null;
+
         // Logical Identity Hash
         let factIdentityHash = fact.factIdentityHash || fact.identityHash || (fact.logicalIdentity && fact.logicalIdentity.keyHash) || null;
         if (!factIdentityHash) {
@@ -1212,9 +1235,28 @@ async function insertFinancialFacts(documentId, facts, defaultRank = 4, sourceFi
         }
 
         const factFileName = fact.sourceFileName || sourceFileName || null;
-        const asOfDate = fact.asOfDate || fact.factDate || null;
-        const normVal = fact.normalizedValue !== undefined ? fact.normalizedValue : fact.numericValue;
-        const origVal = fact.originalValue !== undefined ? fact.originalValue : fact.numericValue;
+        const rawAsOfDate = fact.asOfDate || fact.factDate || null;
+        const toSqlCalendarDate = (d) => {
+            if (!d) return null;
+            if (d instanceof Date) {
+                if (Number.isNaN(d.getTime())) return null;
+                return new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+            }
+            const s = String(d).trim();
+            const iso = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
+            if (iso) return new Date(Date.UTC(Number(iso[1]), Number(iso[2]) - 1, Number(iso[3])));
+            const parsed = new Date(s);
+            if (Number.isNaN(parsed.getTime())) return null;
+            return new Date(Date.UTC(parsed.getFullYear(), parsed.getMonth(), parsed.getDate()));
+        };
+        const safeAsOfDate = toSqlCalendarDate(rawAsOfDate);
+        const safeFactDate = toSqlCalendarDate(fact.factDate);
+
+        const rawNormVal = fact.normalizedValue !== undefined ? fact.normalizedValue : fact.numericValue;
+        const rawOrigVal = fact.originalValue !== undefined ? fact.originalValue : fact.numericValue;
+        const normVal = (rawNormVal !== null && rawNormVal !== undefined && Number.isFinite(Number(rawNormVal))) ? Number(rawNormVal) : null;
+        const origVal = (rawOrigVal !== null && rawOrigVal !== undefined && Number.isFinite(Number(rawOrigVal))) ? Number(rawOrigVal) : null;
+        const legacyNumericVal = (normVal !== null && Math.abs(normVal) < 1e15) ? normVal : null;
         const sourceLocJson = typeof fact.sourceLocationJson === 'object' && fact.sourceLocationJson !== null
             ? JSON.stringify(fact.sourceLocationJson)
             : (fact.sourceLocationJson || null);
@@ -1232,7 +1274,7 @@ async function insertFinancialFacts(documentId, facts, defaultRank = 4, sourceFi
             .input('MetricId', sql.BigInt, metricId)
             .input('PeriodId', sql.BigInt, periodId)
             .input('ReportingBasis', sql.NVarChar(50), fact.reportingBasis || 'Actual')
-            .input('ReportingScope', sql.NVarChar(50), fact.reportingScope || 'Consolidated')
+            .input('ReportingScope', sql.NVarChar(50), fact.reportingScope || null)
             .input('FactCategory', sql.NVarChar(100), fact.factCategory || null)
             .input('OriginalLabel', sql.NVarChar(300), fact.originalLabel || fact.metric || null)
             .input('OriginalValue', sql.Decimal(28, 8), origVal !== undefined ? origVal : null)
@@ -1245,7 +1287,10 @@ async function insertFinancialFacts(documentId, facts, defaultRank = 4, sourceFi
             .input('SourceLocationText', sql.NVarChar(500), fact.sourceLocationText || fact.sourceLocation || null)
             .input('ExtractionMethod', sql.NVarChar(50), fact.extractionMethod || 'LocalExtractor')
             .input('ExtractionConfidence', sql.Decimal(5, 4), fact.extractionConfidence !== undefined ? fact.extractionConfidence : null)
-            .input('ValidationStatus', sql.NVarChar(30), fact.validationStatus || 'Validated')
+            .input('ValidationStatus', sql.NVarChar(30), safeValidationStatus)
+            .input('ValidationPolicyVersion', sql.NVarChar(50), validationPolicyVersion)
+            .input('ValidationChecksJson', sql.NVarChar(sql.MAX), validationChecksJson)
+            .input('ReviewReasonsJson', sql.NVarChar(sql.MAX), reviewReasonsJson)
             .input('MappingStatus', sql.NVarChar(30), mappingStatus)
             .input('FactIdentityHash', sql.Char(64), factIdentityHash)
             .input('SourceLocationHash', sql.Char(64), sourceLocationHash)
@@ -1253,9 +1298,9 @@ async function insertFinancialFacts(documentId, facts, defaultRank = 4, sourceFi
             .input('Metric', sql.NVarChar(200), fact.metric || fact.originalLabel)
             .input('Entity', sql.NVarChar(200), fact.entity || null)
             .input('PeriodLabel', sql.NVarChar(100), fact.periodLabel || 'Not specified')
-            .input('FactDate', sql.Date, fact.factDate || null)
-            .input('AsOfDate', sql.Date, asOfDate ? new Date(asOfDate) : null)
-            .input('NumericValue', sql.Decimal(19, 4), normVal !== undefined ? normVal : null)
+            .input('FactDate', sql.Date, safeFactDate)
+            .input('AsOfDate', sql.Date, safeAsOfDate)
+            .input('NumericValue', sql.Decimal(19, 4), legacyNumericVal)
             .input('TextValue', sql.NVarChar(2000), fact.textValue || null)
             .input('Unit', sql.NVarChar(50), fact.unit || fact.normalizedUnit || null)
             .input('SourceLocation', sql.NVarChar(300), fact.sourceLocation || fact.sourceLocationText || null)
@@ -1274,7 +1319,8 @@ async function insertFinancialFacts(documentId, facts, defaultRank = 4, sourceFi
                     (DocumentId, EntityId, MetricId, PeriodId, ReportingBasis, ReportingScope, FactCategory,
                      OriginalLabel, OriginalValue, OriginalTextValue, OriginalUnit, NormalizedValue, NormalizedUnit,
                      Currency, SourceLocationJson, SourceLocationText, ExtractionMethod, ExtractionConfidence,
-                     ValidationStatus, MappingStatus, CreatedAt,
+                     ValidationStatus, ValidationPolicyVersion, ValidationChecksJson, ReviewReasonsJson, ValidatedAt,
+                     MappingStatus, CreatedAt,
                      Metric, Entity, PeriodLabel, FactDate, AsOfDate, NumericValue, TextValue, Unit,
                      SourceLocation, SourceFileName, AuthorityRank, FactIdentityHash, SourceLocationHash)
                 OUTPUT INSERTED.FactId
@@ -1282,7 +1328,8 @@ async function insertFinancialFacts(documentId, facts, defaultRank = 4, sourceFi
                     (@DocumentId, @EntityId, @MetricId, @PeriodId, @ReportingBasis, @ReportingScope, @FactCategory,
                      @OriginalLabel, @OriginalValue, @OriginalTextValue, @OriginalUnit, @NormalizedValue, @NormalizedUnit,
                      @Currency, @SourceLocationJson, @SourceLocationText, @ExtractionMethod, @ExtractionConfidence,
-                     @ValidationStatus, @MappingStatus, SYSUTCDATETIME(),
+                     @ValidationStatus, @ValidationPolicyVersion, @ValidationChecksJson, @ReviewReasonsJson, SYSUTCDATETIME(),
+                     @MappingStatus, SYSUTCDATETIME(),
                      @Metric, @Entity, @PeriodLabel, @FactDate, @AsOfDate, @NumericValue, @TextValue, @Unit,
                      @SourceLocation, @SourceFileName, @AuthorityRank, @FactIdentityHash, @SourceLocationHash)
             END
@@ -1299,7 +1346,7 @@ async function insertFinancialFacts(documentId, facts, defaultRank = 4, sourceFi
                 actionType: 'Extracted',
                 newValue: String(normVal ?? origVal ?? ''),
                 actionReason: `Extracted via ${fact.extractionMethod || 'pipeline'}`
-            }).catch(() => {});
+            }).catch(() => { });
         }
     }
 
@@ -1994,7 +2041,7 @@ async function resolveConflictDecisionTransaction({
                 .query(`
                     INSERT INTO dbo.FactAudit (FactId, DocumentId, ActionType, OldValue, NewValue, ActionReason, ActionBy, ActionAt)
                     VALUES (@FactId, @DocId, @ActionType, @OldVal, @NewVal, @Reason, @By, SYSUTCDATETIME())
-                `).catch(() => {});
+                `).catch(() => { });
 
             // If incoming fact was accepted, check if all facts in existing document are now superseded
             if (cleanAction === 'accept_incoming') {
@@ -2038,7 +2085,7 @@ async function resolveConflictDecisionTransaction({
                 .query(`
                     INSERT INTO dbo.FactAudit (FactId, DocumentId, ActionType, OldValue, NewValue, ActionReason, ActionBy, ActionAt)
                     VALUES (@FactId, @DocId, @ActionType, @OldVal, @NewVal, @Reason, @By, SYSUTCDATETIME())
-                `).catch(() => {});
+                `).catch(() => { });
         }
 
         // Check if all conflicts for incoming document are resolved
@@ -2105,10 +2152,10 @@ async function resolveConflictDecisionTransaction({
         await transaction.commit();
 
         if (conflict.IncomingDocumentId) {
-            await recomputeDocumentHold(conflict.IncomingDocumentId).catch(() => {});
+            await recomputeDocumentHold(conflict.IncomingDocumentId).catch(() => { });
         }
         if (conflict.ExistingDocumentId) {
-            await recomputeDocumentHold(conflict.ExistingDocumentId).catch(() => {});
+            await recomputeDocumentHold(conflict.ExistingDocumentId).catch(() => { });
         }
 
         return {
@@ -2120,7 +2167,7 @@ async function resolveConflictDecisionTransaction({
             resolutionReason
         };
     } catch (err) {
-        await transaction.rollback().catch(() => {});
+        await transaction.rollback().catch(() => { });
         throw err;
     }
 }
@@ -2213,7 +2260,7 @@ async function updateFactStatus(factId, { validationStatus = null, mappingStatus
         newValue: `Validation: ${validationStatus || 'unchanged'}, Mapping: ${mappingStatus || 'unchanged'}`,
         actionReason,
         actionBy
-    }).catch(() => {});
+    }).catch(() => { });
 }
 
 /**

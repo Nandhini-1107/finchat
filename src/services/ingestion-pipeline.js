@@ -7,6 +7,7 @@ const { ValidationError, sanitizeErrorMessage } = require('../utils/errors');
 const { analyzeDocument } = require('./document-intelligence');
 const { normalizeContent } = require('./content-normalizer');
 const { extractFinancialFacts } = require('./fact-extraction');
+const { extractFinancialFactsUnified, getConfiguredProvider } = require('./financial-extraction-client');
 const { createChunks } = require('./chunking');
 const { generateBatchEmbeddings } = require('./embeddings');
 const { uploadChunks, deleteReplacedChunks } = require('./azure-search');
@@ -287,7 +288,14 @@ async function processDocumentIngestion({
         currentStep = 'STEP 5: STRUCTURED FACT EXTRACTION';
         log(`=== ${currentStep} ===`);
 
-        const extractedFacts = extractFinancialFacts(normalized);
+        const extractedFacts = getConfiguredProvider() === 'structured_nlp'
+            ? await extractFinancialFactsUnified(normalized, {
+                documentId,
+                fileName,
+                authorityRank,
+                correlationId: corrId
+            })
+            : extractFinancialFacts(normalized);
         log(`Step 5 Output (Extracted Facts Count): ${extractedFacts.length}`);
         if (extractedFacts.length > 0) {
             const sampleLimit = Math.min(extractedFacts.length, 4);
