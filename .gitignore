@@ -1,10 +1,16 @@
-node_modules
-.azurite
+# Dependencies
+node_modules/
+
+# Local Azure development
+.azurite/
 .env
 local.settings.json
-*.log
 
-# Test execution outputs and scratch
+# Logs
+*.log
+*.test.log
+
+# Test execution outputs
 coverage/
 .nyc_output/
 test-results/
@@ -12,24 +18,33 @@ junit.xml
 tests/local/
 tests/scratch/
 tests/temp/
-*.test.log
 
-# Ignore all binary office, financial, PDF and Excel documents anywhere in repo
+# Financial and office documents
 *.pdf
 *.xlsx
 *.xlsm
 *.xls
 *.docx
 *.csv
+
+# Markdown documentation
+*.md
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.old
+*.backup
+~$*
+
+# Temporary directories
+temp/
+tmp/
+scratch/
+.cache/
 
 # Legacy test scripts
 test-acceptance-suite.js
 test-sharepoint-queue.js
-
-# Ignore all binary office, financial, PDF and Excel documents anywhere in repo
-*.pdf
-*.xlsx
-*.xlsm
-*.xls
-*.docx
-*.csv
